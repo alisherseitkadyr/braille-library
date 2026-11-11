@@ -10,9 +10,11 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/alisher/braille-library/internal/config"
-	httpapi "github.com/alisher/braille-library/internal/http"
-	"github.com/alisher/braille-library/internal/repository/mongo"
+	"github.com/alisherseitkadyr/braille-library/internal/auth"
+	"github.com/alisherseitkadyr/braille-library/internal/config"
+	httpapi "github.com/alisherseitkadyr/braille-library/internal/http"
+	"github.com/alisherseitkadyr/braille-library/internal/repository/mongo"
+	"github.com/alisherseitkadyr/braille-library/internal/service"
 )
 
 func main() {
@@ -33,9 +35,19 @@ func main() {
 	}
 	log.Println("indexes ready")
 
+	tokens := auth.NewTokenManager(cfg.JWTSecret, time.Duration(cfg.JWTTTLHours)*time.Hour)
+	userRepo := mongo.NewUserRepository(db)
+
+	router := httpapi.NewRouter(httpapi.Deps{
+		Mongo:  client,
+		Tokens: tokens,
+		Auth:   service.NewAuthService(userRepo, tokens),
+		Users:  service.NewUserService(userRepo),
+	})
+
 	srv := &http.Server{
 		Addr:              ":" + cfg.Port,
-		Handler:           httpapi.NewRouter(client),
+		Handler:           router,
 		ReadHeaderTimeout: 5 * time.Second,
 	}
 
