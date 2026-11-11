@@ -1,0 +1,2 @@
+// ObjectIDs are shown as hex strings in the API.
+replace go.mongodb.org/mongo-driver/v2/bson.ObjectID string

@@ -10,6 +10,7 @@ import (
 	"syscall"
 	"time"
 
+	_ "github.com/alisherseitkadyr/braille-library/docs"
 	"github.com/alisherseitkadyr/braille-library/internal/auth"
 	"github.com/alisherseitkadyr/braille-library/internal/config"
 	httpapi "github.com/alisherseitkadyr/braille-library/internal/http"
@@ -17,6 +18,16 @@ import (
 	"github.com/alisherseitkadyr/braille-library/internal/service"
 )
 
+// @title       Braille Library API
+// @version     1.0
+// @description Digital library of Kazakh Braille texts digitized by a recognition model.
+// @description Readers can rate texts and correct recognition errors; corrections become training data.
+// @BasePath    /
+//
+// @securityDefinitions.apikey BearerAuth
+// @in   header
+// @name Authorization
+// @description Enter "Bearer <token>" with the token from POST /auth/login.
 func main() {
 	cfg, err := config.Load()
 	if err != nil {

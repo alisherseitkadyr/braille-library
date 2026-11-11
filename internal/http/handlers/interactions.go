@@ -16,8 +16,23 @@ func NewInteractionHandler(interactions *service.InteractionService) *Interactio
 	return &InteractionHandler{interactions: interactions}
 }
 
-// Create returns 201 for a new interaction, 200 when an existing rating
-// was updated or the favorite already existed.
+// Create godoc
+// @Summary  Record an interaction
+// @Description value: read = progress 0-100, rate = 1-5, other types must not have it.
+// @Description correction {position, original, suggested} is required for type correction only.
+// @Description rate is an upsert (one rating per user and item) and updates the item's avgRating.
+// @Description favorite is stored once per user and item.
+// @Tags     interactions
+// @Accept   json
+// @Produce  json
+// @Security BearerAuth
+// @Param    body body service.InteractionInput true "Interaction"
+// @Success  201 {object} domain.Interaction "created"
+// @Success  200 {object} domain.Interaction "rating updated or favorite already existed"
+// @Failure  400 {object} ErrorResponse
+// @Failure  401 {object} ErrorResponse
+// @Failure  404 {object} ErrorResponse "item not found"
+// @Router   /interactions [post]
 func (h *InteractionHandler) Create(w http.ResponseWriter, r *http.Request) {
 	var in service.InteractionInput
 	if !decodeJSON(w, r, &in) {
@@ -35,6 +50,19 @@ func (h *InteractionHandler) Create(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, status, it)
 }
 
+// History godoc
+// @Summary  My interaction history
+// @Description Newest first, with the item title (empty if the item was deleted).
+// @Tags     users
+// @Produce  json
+// @Security BearerAuth
+// @Param    type  query string false "Interaction type" Enums(view, read, listen, rate, favorite, correction)
+// @Param    page  query int    false "Page" minimum(1) default(1)
+// @Param    limit query int    false "Page size (max 100)" minimum(1) maximum(100) default(20)
+// @Success  200 {object} service.HistoryPage
+// @Failure  400 {object} ErrorResponse
+// @Failure  401 {object} ErrorResponse
+// @Router   /users/me/history [get]
 func (h *InteractionHandler) History(w http.ResponseWriter, r *http.Request) {
 	page, limit, err := parsePagination(r)
 	if err != nil {

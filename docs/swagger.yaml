@@ -1,0 +1,735 @@
+basePath: /
+definitions:
+  domain.Category:
+    enum:
+    - fiction
+    - textbook
+    - children
+    - news
+    - exercises
+    type: string
+    x-enum-varnames:
+    - CategoryFiction
+    - CategoryTextbook
+    - CategoryChildren
+    - CategoryNews
+    - CategoryExercises
+  domain.Correction:
+    properties:
+      original:
+        type: string
+      position:
+        type: integer
+      suggested:
+        type: string
+    type: object
+  domain.HistoryEntry:
+    properties:
+      correction:
+        $ref: '#/definitions/domain.Correction'
+      createdAt:
+        type: string
+      id:
+        type: string
+      itemId:
+        type: string
+      itemTitle:
+        type: string
+      type:
+        $ref: '#/definitions/domain.InteractionType'
+      userId:
+        type: string
+      value:
+        type: integer
+    type: object
+  domain.Interaction:
+    properties:
+      correction:
+        $ref: '#/definitions/domain.Correction'
+      createdAt:
+        type: string
+      id:
+        type: string
+      itemId:
+        type: string
+      type:
+        $ref: '#/definitions/domain.InteractionType'
+      userId:
+        type: string
+      value:
+        type: integer
+    type: object
+  domain.InteractionType:
+    enum:
+    - view
+    - read
+    - listen
+    - rate
+    - favorite
+    - correction
+    type: string
+    x-enum-varnames:
+    - InteractionView
+    - InteractionRead
+    - InteractionListen
+    - InteractionRate
+    - InteractionFavorite
+    - InteractionCorrection
+  domain.Item:
+    properties:
+      author:
+        type: string
+      avgRating:
+        type: number
+      brailleGrade:
+        type: integer
+      category:
+        $ref: '#/definitions/domain.Category'
+      createdAt:
+        type: string
+      description:
+        type: string
+      hasAudio:
+        type: boolean
+      id:
+        type: string
+      language:
+        $ref: '#/definitions/domain.Language'
+      level:
+        $ref: '#/definitions/domain.Level'
+      pages:
+        type: integer
+      ratingsCount:
+        type: integer
+      recognitionAccuracy:
+        type: number
+      tags:
+        items:
+          type: string
+        type: array
+      title:
+        type: string
+      updatedAt:
+        type: string
+    type: object
+  domain.Language:
+    enum:
+    - kk
+    - ru
+    type: string
+    x-enum-varnames:
+    - LangKazakh
+    - LangRussian
+  domain.Level:
+    enum:
+    - beginner
+    - intermediate
+    - advanced
+    type: string
+    x-enum-varnames:
+    - LevelBeginner
+    - LevelIntermediate
+    - LevelAdvanced
+  domain.Role:
+    enum:
+    - reader
+    - learner
+    - teacher
+    - admin
+    type: string
+    x-enum-varnames:
+    - RoleReader
+    - RoleLearner
+    - RoleTeacher
+    - RoleAdmin
+  domain.User:
+    properties:
+      createdAt:
+        type: string
+      email:
+        type: string
+      id:
+        type: string
+      interests:
+        items:
+          $ref: '#/definitions/domain.Category'
+        type: array
+      name:
+        type: string
+      preferredLanguage:
+        $ref: '#/definitions/domain.Language'
+      prefersAudio:
+        type: boolean
+      readingLevel:
+        $ref: '#/definitions/domain.Level'
+      role:
+        $ref: '#/definitions/domain.Role'
+      updatedAt:
+        type: string
+    type: object
+  handlers.ErrorResponse:
+    properties:
+      error:
+        example: not found
+        type: string
+    type: object
+  handlers.HealthResponse:
+    properties:
+      mongo:
+        example: ok
+        type: string
+      status:
+        example: ok
+        type: string
+    type: object
+  handlers.LoginRequest:
+    properties:
+      email:
+        example: reader@demo.kz
+        type: string
+      password:
+        example: Demo12345
+        type: string
+    type: object
+  handlers.LoginResponse:
+    properties:
+      token:
+        type: string
+      user:
+        $ref: '#/definitions/domain.User'
+    type: object
+  service.HistoryPage:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/domain.HistoryEntry'
+        type: array
+      limit:
+        type: integer
+      page:
+        type: integer
+      total:
+        type: integer
+    type: object
+  service.InteractionInput:
+    properties:
+      correction:
+        $ref: '#/definitions/domain.Correction'
+      itemId:
+        type: string
+      type:
+        $ref: '#/definitions/domain.InteractionType'
+      value:
+        type: integer
+    type: object
+  service.ItemInput:
+    properties:
+      author:
+        type: string
+      brailleGrade:
+        type: integer
+      category:
+        $ref: '#/definitions/domain.Category'
+      description:
+        type: string
+      hasAudio:
+        type: boolean
+      language:
+        $ref: '#/definitions/domain.Language'
+      level:
+        $ref: '#/definitions/domain.Level'
+      pages:
+        type: integer
+      recognitionAccuracy:
+        type: number
+      tags:
+        items:
+          type: string
+        type: array
+      title:
+        type: string
+    type: object
+  service.ItemPage:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/domain.Item'
+        type: array
+      limit:
+        type: integer
+      page:
+        type: integer
+      total:
+        type: integer
+    type: object
+  service.RegisterInput:
+    properties:
+      email:
+        type: string
+      interests:
+        items:
+          $ref: '#/definitions/domain.Category'
+        type: array
+      name:
+        type: string
+      password:
+        type: string
+      preferredLanguage:
+        $ref: '#/definitions/domain.Language'
+      prefersAudio:
+        type: boolean
+      readingLevel:
+        $ref: '#/definitions/domain.Level'
+      role:
+        $ref: '#/definitions/domain.Role'
+    type: object
+  service.UpdateProfileInput:
+    properties:
+      interests:
+        items:
+          $ref: '#/definitions/domain.Category'
+        type: array
+      name:
+        type: string
+      preferredLanguage:
+        $ref: '#/definitions/domain.Language'
+      prefersAudio:
+        type: boolean
+      readingLevel:
+        $ref: '#/definitions/domain.Level'
+    type: object
+info:
+  contact: {}
+  description: |-
+    Digital library of Kazakh Braille texts digitized by a recognition model.
+    Readers can rate texts and correct recognition errors; corrections become training data.
+  title: Braille Library API
+  version: "1.0"
+paths:
+  /auth/login:
+    post:
+      consumes:
+      - application/json
+      description: Returns a JWT. Use it in the Authorize dialog as "Bearer <token>".
+      parameters:
+      - description: Credentials
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/handlers.LoginRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handlers.LoginResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+        "401":
+          description: wrong email or password
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      summary: Log in
+      tags:
+      - auth
+  /auth/register:
+    post:
+      consumes:
+      - application/json
+      description: |-
+        Role can be reader, learner or teacher (default reader); admin is not allowed.
+        Password needs at least 8 characters. Defaults: preferredLanguage kk, readingLevel beginner.
+      parameters:
+      - description: New user
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/service.RegisterInput'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/domain.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+        "409":
+          description: email already registered
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      summary: Register a new user
+      tags:
+      - auth
+  /health:
+    get:
+      description: Checks that the API is running and MongoDB answers a ping.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handlers.HealthResponse'
+        "503":
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/handlers.HealthResponse'
+      summary: Health check
+      tags:
+      - health
+  /interactions:
+    post:
+      consumes:
+      - application/json
+      description: |-
+        value: read = progress 0-100, rate = 1-5, other types must not have it.
+        correction {position, original, suggested} is required for type correction only.
+        rate is an upsert (one rating per user and item) and updates the item's avgRating.
+        favorite is stored once per user and item.
+      parameters:
+      - description: Interaction
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/service.InteractionInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: rating updated or favorite already existed
+          schema:
+            $ref: '#/definitions/domain.Interaction'
+        "201":
+          description: created
+          schema:
+            $ref: '#/definitions/domain.Interaction'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+        "404":
+          description: item not found
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: Record an interaction
+      tags:
+      - interactions
+  /items:
+    get:
+      description: |-
+        q is a full-text search over title, description and tags (sorted by text score, sort is ignored).
+        Without q, sort=new (default) is newest first and sort=rating is highest rated first.
+      parameters:
+      - description: Search words
+        in: query
+        name: q
+        type: string
+      - description: Category
+        enum:
+        - fiction
+        - textbook
+        - children
+        - news
+        - exercises
+        in: query
+        name: category
+        type: string
+      - description: Level
+        enum:
+        - beginner
+        - intermediate
+        - advanced
+        in: query
+        name: level
+        type: string
+      - description: Language
+        enum:
+        - kk
+        - ru
+        in: query
+        name: language
+        type: string
+      - default: new
+        description: Sort order
+        enum:
+        - new
+        - rating
+        in: query
+        name: sort
+        type: string
+      - default: 1
+        description: Page
+        in: query
+        minimum: 1
+        name: page
+        type: integer
+      - default: 20
+        description: Page size (max 100)
+        in: query
+        maximum: 100
+        minimum: 1
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/service.ItemPage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      summary: Search the catalog
+      tags:
+      - items
+    post:
+      consumes:
+      - application/json
+      description: avgRating and ratingsCount are computed from ratings and cannot
+        be set.
+      parameters:
+      - description: New item
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/service.ItemInput'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/domain.Item'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+        "403":
+          description: not an admin
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: Create an item (admin)
+      tags:
+      - items
+  /items/{id}:
+    delete:
+      parameters:
+      - description: Item ID
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "204":
+          description: No Content
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+        "403":
+          description: not an admin
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: Delete an item (admin)
+      tags:
+      - items
+    get:
+      parameters:
+      - description: Item ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/domain.Item'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      summary: Get an item
+      tags:
+      - items
+    put:
+      consumes:
+      - application/json
+      description: Replaces all editable fields; send the whole item.
+      parameters:
+      - description: Item ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Item
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/service.ItemInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/domain.Item'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+        "403":
+          description: not an admin
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: Update an item (admin)
+      tags:
+      - items
+  /users/me:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/domain.User'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: Get my profile
+      tags:
+      - users
+    put:
+      consumes:
+      - application/json
+      description: Only the fields that are sent are changed. Email, role and password
+        cannot be changed here.
+      parameters:
+      - description: Fields to change
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/service.UpdateProfileInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/domain.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: Update my profile
+      tags:
+      - users
+  /users/me/history:
+    get:
+      description: Newest first, with the item title (empty if the item was deleted).
+      parameters:
+      - description: Interaction type
+        enum:
+        - view
+        - read
+        - listen
+        - rate
+        - favorite
+        - correction
+        in: query
+        name: type
+        type: string
+      - default: 1
+        description: Page
+        in: query
+        minimum: 1
+        name: page
+        type: integer
+      - default: 20
+        description: Page size (max 100)
+        in: query
+        maximum: 100
+        minimum: 1
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/service.HistoryPage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: My interaction history
+      tags:
+      - users
+securityDefinitions:
+  BearerAuth:
+    description: Enter "Bearer <token>" with the token from POST /auth/login.
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

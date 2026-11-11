@@ -14,7 +14,7 @@ seed:
 	go run ./cmd/seed $(ARGS)
 
 swag:
-	swag init -g cmd/api/main.go -o docs
+	swag init -g cmd/api/main.go -o docs --parseInternal
 
 test:
 	go test ./...

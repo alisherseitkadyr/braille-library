@@ -5,6 +5,7 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	chimw "github.com/go-chi/chi/v5/middleware"
+	httpSwagger "github.com/swaggo/http-swagger/v2"
 	"go.mongodb.org/mongo-driver/v2/mongo"
 
 	"github.com/alisherseitkadyr/braille-library/internal/auth"
@@ -37,6 +38,10 @@ func NewRouter(d Deps) http.Handler {
 	interactionsH := handlers.NewInteractionHandler(d.Interactions)
 
 	r.Get("/health", health.Health)
+	r.Get("/docs", func(w http.ResponseWriter, r *http.Request) {
+		http.Redirect(w, r, "/docs/index.html", http.StatusMovedPermanently)
+	})
+	r.Get("/docs/*", httpSwagger.Handler(httpSwagger.URL("/docs/doc.json")))
 
 	r.Post("/auth/register", authH.Register)
 	r.Post("/auth/login", authH.Login)
