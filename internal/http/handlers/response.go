@@ -1,10 +1,13 @@
 package handlers
 
 import (
+	"bytes"
 	"encoding/json"
 	"errors"
+	"io"
 	"log"
 	"net/http"
+	"unicode/utf8"
 
 	"github.com/alisherseitkadyr/braille-library/internal/domain"
 )
@@ -41,9 +44,19 @@ func writeServiceError(w http.ResponseWriter, err error) {
 	}
 }
 
+// decodeJSON rejects bodies that are not valid UTF-8; otherwise Go would
+// silently replace bad bytes and corrupt Kazakh text.
 func decodeJSON(w http.ResponseWriter, r *http.Request, dst any) bool {
-	r.Body = http.MaxBytesReader(w, r.Body, maxBodyBytes)
-	dec := json.NewDecoder(r.Body)
+	body, err := io.ReadAll(http.MaxBytesReader(w, r.Body, maxBodyBytes))
+	if err != nil {
+		writeError(w, http.StatusBadRequest, "cannot read request body")
+		return false
+	}
+	if !utf8.Valid(body) {
+		writeError(w, http.StatusBadRequest, "request body must be UTF-8")
+		return false
+	}
+	dec := json.NewDecoder(bytes.NewReader(body))
 	dec.DisallowUnknownFields()
 	if err := dec.Decode(dst); err != nil {
 		writeError(w, http.StatusBadRequest, "invalid JSON body: "+err.Error())

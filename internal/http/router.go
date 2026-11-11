@@ -8,6 +8,7 @@ import (
 	"go.mongodb.org/mongo-driver/v2/mongo"
 
 	"github.com/alisherseitkadyr/braille-library/internal/auth"
+	"github.com/alisherseitkadyr/braille-library/internal/domain"
 	"github.com/alisherseitkadyr/braille-library/internal/http/handlers"
 	"github.com/alisherseitkadyr/braille-library/internal/http/middleware"
 	"github.com/alisherseitkadyr/braille-library/internal/service"
@@ -18,6 +19,7 @@ type Deps struct {
 	Tokens *auth.TokenManager
 	Auth   *service.AuthService
 	Users  *service.UserService
+	Items  *service.ItemService
 }
 
 func NewRouter(d Deps) http.Handler {
@@ -29,16 +31,27 @@ func NewRouter(d Deps) http.Handler {
 	health := handlers.NewHealthHandler(d.Mongo)
 	authH := handlers.NewAuthHandler(d.Auth)
 	usersH := handlers.NewUserHandler(d.Users)
+	itemsH := handlers.NewItemHandler(d.Items)
 
 	r.Get("/health", health.Health)
 
 	r.Post("/auth/register", authH.Register)
 	r.Post("/auth/login", authH.Login)
 
+	r.Get("/items", itemsH.List)
+	r.Get("/items/{id}", itemsH.Get)
+
 	r.Group(func(r chi.Router) {
 		r.Use(middleware.Authenticate(d.Tokens))
 		r.Get("/users/me", usersH.GetMe)
 		r.Put("/users/me", usersH.UpdateMe)
+
+		r.Group(func(r chi.Router) {
+			r.Use(middleware.RequireRole(domain.RoleAdmin))
+			r.Post("/items", itemsH.Create)
+			r.Put("/items/{id}", itemsH.Update)
+			r.Delete("/items/{id}", itemsH.Delete)
+		})
 	})
 
 	return r

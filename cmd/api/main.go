@@ -43,6 +43,7 @@ func main() {
 		Tokens: tokens,
 		Auth:   service.NewAuthService(userRepo, tokens),
 		Users:  service.NewUserService(userRepo),
+		Items:  service.NewItemService(mongo.NewItemRepository(db)),
 	})
 
 	srv := &http.Server{

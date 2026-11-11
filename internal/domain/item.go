@@ -38,6 +38,22 @@ type Item struct {
 	UpdatedAt           time.Time     `bson:"updatedAt" json:"updatedAt"`
 }
 
+const (
+	SortNew    = "new"
+	SortRating = "rating"
+)
+
+// ItemFilter describes a search in the catalog. Empty fields mean "any".
+type ItemFilter struct {
+	Query    string
+	Category Category
+	Level    Level
+	Language Language
+	Sort     string
+	Page     int
+	Limit    int
+}
+
 func (c Category) Valid() bool {
 	for _, v := range Categories {
 		if c == v {
