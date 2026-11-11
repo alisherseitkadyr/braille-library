@@ -20,6 +20,8 @@ type Deps struct {
 	Auth   *service.AuthService
 	Users  *service.UserService
 	Items  *service.ItemService
+
+	Interactions *service.InteractionService
 }
 
 func NewRouter(d Deps) http.Handler {
@@ -32,6 +34,7 @@ func NewRouter(d Deps) http.Handler {
 	authH := handlers.NewAuthHandler(d.Auth)
 	usersH := handlers.NewUserHandler(d.Users)
 	itemsH := handlers.NewItemHandler(d.Items)
+	interactionsH := handlers.NewInteractionHandler(d.Interactions)
 
 	r.Get("/health", health.Health)
 
@@ -45,6 +48,8 @@ func NewRouter(d Deps) http.Handler {
 		r.Use(middleware.Authenticate(d.Tokens))
 		r.Get("/users/me", usersH.GetMe)
 		r.Put("/users/me", usersH.UpdateMe)
+		r.Get("/users/me/history", interactionsH.History)
+		r.Post("/interactions", interactionsH.Create)
 
 		r.Group(func(r chi.Router) {
 			r.Use(middleware.RequireRole(domain.RoleAdmin))

@@ -51,6 +51,12 @@ func (r *ItemRepository) Update(ctx context.Context, item *domain.Item) error {
 	return nil
 }
 
+func (r *ItemRepository) SetRating(ctx context.Context, id bson.ObjectID, avg float64, count int) error {
+	_, err := r.coll.UpdateOne(ctx, bson.M{"_id": id},
+		bson.M{"$set": bson.M{"avgRating": avg, "ratingsCount": count}})
+	return err
+}
+
 func (r *ItemRepository) Delete(ctx context.Context, id bson.ObjectID) error {
 	res, err := r.coll.DeleteOne(ctx, bson.M{"_id": id})
 	if err != nil {

@@ -36,6 +36,13 @@ type Interaction struct {
 	CreatedAt  time.Time       `bson:"createdAt" json:"createdAt"`
 }
 
+// HistoryEntry is an interaction with the item title joined via $lookup.
+// ItemTitle is empty if the item was deleted.
+type HistoryEntry struct {
+	Interaction `bson:",inline"`
+	ItemTitle   string `bson:"itemTitle" json:"itemTitle"`
+}
+
 func (t InteractionType) Valid() bool {
 	switch t {
 	case InteractionView, InteractionRead, InteractionListen,

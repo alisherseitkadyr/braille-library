@@ -37,13 +37,15 @@ func main() {
 
 	tokens := auth.NewTokenManager(cfg.JWTSecret, time.Duration(cfg.JWTTTLHours)*time.Hour)
 	userRepo := mongo.NewUserRepository(db)
+	itemRepo := mongo.NewItemRepository(db)
 
 	router := httpapi.NewRouter(httpapi.Deps{
-		Mongo:  client,
-		Tokens: tokens,
-		Auth:   service.NewAuthService(userRepo, tokens),
-		Users:  service.NewUserService(userRepo),
-		Items:  service.NewItemService(mongo.NewItemRepository(db)),
+		Mongo:        client,
+		Tokens:       tokens,
+		Auth:         service.NewAuthService(userRepo, tokens),
+		Users:        service.NewUserService(userRepo),
+		Items:        service.NewItemService(itemRepo),
+		Interactions: service.NewInteractionService(mongo.NewInteractionRepository(db), itemRepo),
 	})
 
 	srv := &http.Server{
