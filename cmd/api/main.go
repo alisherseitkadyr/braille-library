@@ -22,11 +22,16 @@ func main() {
 	}
 
 	ctx := context.Background()
-	client, _, err := mongo.Connect(ctx, cfg.MongoURI, cfg.MongoDB)
+	client, db, err := mongo.Connect(ctx, cfg.MongoURI, cfg.MongoDB)
 	if err != nil {
 		log.Fatalf("mongo: %v", err)
 	}
 	defer client.Disconnect(ctx)
+
+	if err := mongo.EnsureIndexes(ctx, db); err != nil {
+		log.Fatalf("indexes: %v", err)
+	}
+	log.Println("indexes ready")
 
 	srv := &http.Server{
 		Addr:              ":" + cfg.Port,
