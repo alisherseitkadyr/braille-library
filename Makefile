@@ -9,8 +9,9 @@ down:
 run:
 	go run ./cmd/api
 
+# make seed ARGS=--reset to replace existing data
 seed:
-	go run ./cmd/seed
+	go run ./cmd/seed $(ARGS)
 
 swag:
 	swag init -g cmd/api/main.go -o docs

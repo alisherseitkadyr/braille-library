@@ -3,6 +3,7 @@ module github.com/alisherseitkadyr/braille-library
 go 1.26.0
 
 require (
+	github.com/brianvoe/gofakeit/v7 v7.18.2
 	github.com/go-chi/chi/v5 v5.5.0
 	github.com/golang-jwt/jwt/v5 v5.3.1
 	go.mongodb.org/mongo-driver/v2 v2.10.0
