@@ -52,6 +52,7 @@ func main() {
 
 	router := httpapi.NewRouter(httpapi.Deps{
 		Mongo:        client,
+		CORSOrigins:  cfg.CORSOrigins,
 		Tokens:       tokens,
 		Auth:         service.NewAuthService(userRepo, tokens),
 		Users:        service.NewUserService(userRepo),

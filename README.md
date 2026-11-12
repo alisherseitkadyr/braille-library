@@ -21,6 +21,7 @@ gofakeit (seed data), Docker Compose with mongo-express.
 
 - Docker with Docker Compose
 - Go 1.26+ (for the seed, the tests and running the API locally)
+- Node.js 20+ (only to run the web UI outside Docker)
 - `make` is optional: every target has a plain command next to it below
 
 ## Configuration
@@ -39,6 +40,7 @@ Copy-Item .env.example .env          # Windows PowerShell
 | `MONGO_DB` | Database name | `braille_library` |
 | `JWT_SECRET` | Secret for signing tokens, **required** | a long random string |
 | `JWT_TTL_HOURS` | Token lifetime in hours | `24` |
+| `CORS_ORIGINS` | Web UI origins allowed to call the API, comma-separated | `http://localhost:3000,http://localhost:5173` |
 | `MONGO_EXPRESS_USER` | mongo-express login (Docker Compose only) | `admin` |
 | `MONGO_EXPRESS_PASSWORD` | mongo-express password (Docker Compose only) | a password |
 
@@ -54,6 +56,7 @@ docker compose up -d --build         # make up
 
 | Service | URL |
 |---|---|
+| Web UI | http://localhost:3000 |
 | API | http://localhost:8080 |
 | Swagger UI | http://localhost:8080/docs |
 | mongo-express (basic auth from `.env`) | http://localhost:8081 |
@@ -146,6 +149,48 @@ curl -X POST localhost:8080/interactions \
 `POST /interactions` returns 201 when it creates a document, and 200 when an existing rating
 was updated or the favorite already existed.
 
+## Web UI
+
+A React + TypeScript single-page app in `web/` (Vite, react-router, plain CSS). Docker Compose
+builds it and serves it with nginx:
+
+1. `docker compose up -d --build`
+2. If the database is empty, seed it and build the similarities:
+   `go run ./cmd/seed --reset` and `go run ./cmd/recompute`
+3. Open http://localhost:3000 and log in as `reader@demo.kz` / `Demo12345`
+
+| Page | What it does |
+|---|---|
+| Log in, Register | account; registration also asks for reading preferences |
+| Recommended (home) | "Recommended for you" with the reason for each text |
+| Catalog | search with filters for category, level, language and sort |
+| Text page | details; rate 1-5, add to favorites, save reading progress, listen (texts with audio), report a recognition error; "Similar texts" |
+| History | all my actions, newest first, with a filter by type |
+| Profile | name, interests, reading level, language, audio preference |
+
+Opening a text page while logged in records a `view`.
+
+**Accessibility.** Many users are blind or have low vision and use screen readers, so the UI
+uses semantic HTML (landmarks, headings, lists, `fieldset`/`legend`) and every input has a
+label. It works fully with the keyboard and has a "Skip to main content" link. A thick
+yellow-and-black focus ring is visible on any background, and text contrast is at least 7:1.
+After each navigation, focus moves to the page heading so screen readers announce the new page.
+Status and error messages are announced through live regions. A text size switch (A / A+ /
+A++) is in the header, and the choice is remembered. Titles and descriptions carry
+`lang="kk"` or `lang="ru"` so screen readers use the right voice.
+
+The browser calls the API directly, so the API must allow the UI's origin (`CORS_ORIGINS`).
+The API address is set at build time with `VITE_API_URL` (a build arg in `docker-compose.yml`,
+default `http://localhost:8080`).
+
+Run it outside Docker with hot reload (the API must be running):
+
+```bash
+cd web
+npm install
+npm run dev                          # http://localhost:5173
+```
+
 ## Data model and indexes
 
 | Collection | Main fields | Indexes |
@@ -186,9 +231,10 @@ internal/
   http/
     router.go           routes
     handlers/           HTTP handlers (with Swagger annotations)
-    middleware/         authentication and role check
+    middleware/         authentication, role check and CORS
 docs/                   generated Swagger spec
-docker-compose.yml      mongo, mongo-express, api
+web/                    React web UI (Vite), its Dockerfile and nginx.conf
+docker-compose.yml      mongo, mongo-express, api, web
 Dockerfile              multi-stage build of the API
 Makefile                shortcuts: up, down, run, seed, swag, test
 .env.example            example configuration

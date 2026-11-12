@@ -14,16 +14,18 @@ type Config struct {
 	MongoDB     string
 	JWTSecret   string
 	JWTTTLHours int
+	CORSOrigins []string
 }
 
 func Load() (Config, error) {
 	loadDotEnv(".env")
 
 	cfg := Config{
-		Port:      getEnv("PORT", "8080"),
-		MongoURI:  getEnv("MONGO_URI", "mongodb://localhost:27017"),
-		MongoDB:   getEnv("MONGO_DB", "braille_library"),
-		JWTSecret: os.Getenv("JWT_SECRET"),
+		Port:        getEnv("PORT", "8080"),
+		MongoURI:    getEnv("MONGO_URI", "mongodb://localhost:27017"),
+		MongoDB:     getEnv("MONGO_DB", "braille_library"),
+		JWTSecret:   os.Getenv("JWT_SECRET"),
+		CORSOrigins: splitList(getEnv("CORS_ORIGINS", "http://localhost:3000,http://localhost:5173")),
 	}
 	if cfg.JWTSecret == "" {
 		return cfg, errors.New("JWT_SECRET is required")
@@ -69,4 +71,15 @@ func loadDotEnv(path string) {
 			os.Setenv(key, value)
 		}
 	}
+}
+
+// splitList splits a comma-separated value and drops empty parts.
+func splitList(s string) []string {
+	var out []string
+	for _, part := range strings.Split(s, ",") {
+		if part = strings.TrimSpace(part); part != "" {
+			out = append(out, part)
+		}
+	}
+	return out
 }

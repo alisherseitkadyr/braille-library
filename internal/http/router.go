@@ -16,11 +16,12 @@ import (
 )
 
 type Deps struct {
-	Mongo  *mongo.Client
-	Tokens *auth.TokenManager
-	Auth   *service.AuthService
-	Users  *service.UserService
-	Items  *service.ItemService
+	Mongo       *mongo.Client
+	CORSOrigins []string
+	Tokens      *auth.TokenManager
+	Auth        *service.AuthService
+	Users       *service.UserService
+	Items       *service.ItemService
 
 	Interactions    *service.InteractionService
 	Recommendations *service.RecommendationService
@@ -31,6 +32,7 @@ func NewRouter(d Deps) http.Handler {
 	r.Use(chimw.RequestID)
 	r.Use(chimw.Logger)
 	r.Use(chimw.Recoverer)
+	r.Use(middleware.CORS(d.CORSOrigins))
 
 	health := handlers.NewHealthHandler(d.Mongo)
 	authH := handlers.NewAuthHandler(d.Auth)
