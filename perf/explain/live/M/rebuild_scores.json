@@ -1,0 +1,506 @@
+{
+  "serverParameters": {
+    "internalQueryFacetBufferSizeBytes": 104857600,
+    "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+    "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+    "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryMaxAddToSetBytes": 104857600,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "command": {
+    "aggregate": "interactions",
+    "pipeline": [
+      {
+        "$match": {}
+      },
+      {
+        "$group": {
+          "rating": {
+            "$max": {
+              "$cond": [
+                {
+                  "$eq": [
+                    "$type",
+                    "rate"
+                  ]
+                },
+                {
+                  "$switch": {
+                    "branches": [
+                      {
+                        "then": 1.0,
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "view"
+                          ]
+                        }
+                      },
+                      {
+                        "then": 2.0,
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "listen"
+                          ]
+                        }
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "correction"
+                          ]
+                        },
+                        "then": 1.0
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "favorite"
+                          ]
+                        },
+                        "then": 4.0
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "read"
+                          ]
+                        },
+                        "then": {
+                          "$cond": [
+                            {
+                              "$gte": [
+                                "$value",
+                                80
+                              ]
+                            },
+                            3.0,
+                            1.5
+                          ]
+                        }
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "rate"
+                          ]
+                        },
+                        "then": {
+                          "$switch": {
+                            "branches": [
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    1
+                                  ]
+                                },
+                                "then": -2.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    2
+                                  ]
+                                },
+                                "then": -1.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    3
+                                  ]
+                                },
+                                "then": 1.0
+                              },
+                              {
+                                "then": 3.0,
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    4
+                                  ]
+                                }
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    5
+                                  ]
+                                },
+                                "then": 5.0
+                              }
+                            ],
+                            "default": 0
+                          }
+                        }
+                      }
+                    ],
+                    "default": 0
+                  }
+                },
+                null
+              ]
+            }
+          },
+          "implicit": {
+            "$max": {
+              "$cond": [
+                {
+                  "$eq": [
+                    "$type",
+                    "rate"
+                  ]
+                },
+                null,
+                {
+                  "$switch": {
+                    "branches": [
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "view"
+                          ]
+                        },
+                        "then": 1.0
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "listen"
+                          ]
+                        },
+                        "then": 2.0
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "correction"
+                          ]
+                        },
+                        "then": 1.0
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "favorite"
+                          ]
+                        },
+                        "then": 4.0
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "read"
+                          ]
+                        },
+                        "then": {
+                          "$cond": [
+                            {
+                              "$gte": [
+                                "$value",
+                                80
+                              ]
+                            },
+                            3.0,
+                            1.5
+                          ]
+                        }
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "rate"
+                          ]
+                        },
+                        "then": {
+                          "$switch": {
+                            "branches": [
+                              {
+                                "then": -2.0,
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    1
+                                  ]
+                                }
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    2
+                                  ]
+                                },
+                                "then": -1.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    3
+                                  ]
+                                },
+                                "then": 1.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    4
+                                  ]
+                                },
+                                "then": 3.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    5
+                                  ]
+                                },
+                                "then": 5.0
+                              }
+                            ],
+                            "default": 0
+                          }
+                        }
+                      }
+                    ],
+                    "default": 0
+                  }
+                }
+              ]
+            }
+          },
+          "_id": {
+            "userId": "$userId",
+            "itemId": "$itemId"
+          },
+          "lastAt": {
+            "$max": "$createdAt"
+          }
+        }
+      },
+      {
+        "$project": {
+          "_id": 0,
+          "userId": "$_id.userId",
+          "itemId": "$_id.itemId",
+          "score": {
+            "$ifNull": [
+              "$rating",
+              "$implicit"
+            ]
+          },
+          "lastAt": 1
+        }
+      },
+      {
+        "$match": {
+          "score": {
+            "$gt": 0
+          }
+        }
+      }
+    ],
+    "cursor": {},
+    "$db": "braille_library"
+  },
+  "ok": 1.0,
+  "explainVersion": "2",
+  "stages": [
+    {
+      "$cursor": {
+        "queryPlanner": {
+          "namespace": "braille_library.interactions",
+          "parsedQuery": {},
+          "indexFilterSet": false,
+          "queryHash": "A6DC489D",
+          "planCacheShapeHash": "A6DC489D",
+          "planCacheKey": "2A3EDA81",
+          "optimizationTimeMillis": 1,
+          "cursorType": "regular",
+          "maxIndexedOrSolutionsReached": false,
+          "maxIndexedAndSolutionsReached": false,
+          "maxScansToExplodeReached": false,
+          "prunedSimilarIndexes": false,
+          "winningPlan": {
+            "isCached": false,
+            "queryPlan": {
+              "stage": "GROUP",
+              "planNodeId": 3,
+              "inputStage": {
+                "stage": "COLLSCAN",
+                "planNodeId": 1,
+                "filter": {},
+                "nss": "braille_library.interactions",
+                "direction": "forward"
+              }
+            },
+            "slotBasedPlan": {
+              "slots": "$$RESULT=s18 env: {  }",
+              "stages": "[3] project [s18 = newObj(\"_id\", s14, \"rating\", s15, \"implicit\", s16, \"lastAt\", s17)] \n[3] project [s14 = newObj(\"userId\", s6, \"itemId\", s4), s15 = (s9 ?: null), s16 = (s11 ?: null), s17 = (s13 ?: null)] \n[3] group [s6, s4] [s9 = max(fillType(\n    if (((s5 <=> \"rate\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n    then \n        if (((s5 <=> \"view\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 1L \n        elif (((s5 <=> \"listen\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 2L \n        elif (((s5 <=> \"correction\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 1L \n        elif (((s5 <=> \"favorite\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 4L \n        elif (((s5 <=> \"read\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then \n            if (((s7 <=> 80) >= 0) ?: ((exists(s7) && typeMatch(s7, -65)) >= true)) \n            then 3L \n            else 1.5L \n        \n        elif (((s5 <=> \"rate\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then \n            if (((s7 <=> 1) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then -2L \n            elif (((s7 <=> 2) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then -1L \n            elif (((s7 <=> 3) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then 1L \n            elif (((s7 <=> 4) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then 3L \n            elif (((s7 <=> 5) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then 5L \n            else 0 \n        \n        else 0 \n    \n    else null \n, 1088, Nothing)), s11 = max(fillType(\n    if (((s5 <=> \"rate\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n    then null \n    else \n        if (((s5 <=> \"view\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 1L \n        elif (((s5 <=> \"listen\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 2L \n        elif (((s5 <=> \"correction\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 1L \n        elif (((s5 <=> \"favorite\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 4L \n        elif (((s5 <=> \"read\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then \n            if (((s7 <=> 80) >= 0) ?: ((exists(s7) && typeMatch(s7, -65)) >= true)) \n            then 3L \n            else 1.5L \n        \n        elif (((s5 <=> \"rate\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then \n            if (((s7 <=> 1) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then -2L \n            elif (((s7 <=> 2) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then -1L \n            elif (((s7 <=> 3) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then 1L \n            elif (((s7 <=> 4) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then 3L \n            elif (((s7 <=> 5) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then 5L \n            else 0 \n        \n        else 0 \n, 1088, Nothing)), s13 = max(fillType(s3, 1088, Nothing))] spillSlots[s8, s10, s12] mergingExprs[max(fillType(s8, 1088, Nothing)), max(fillType(s10, 1088, Nothing)), max(fillType(s12, 1088, Nothing))] \n[1] scan generic [s1 = record, s2 = recordId] [s3 = createdAt, s4 = itemId, s5 = type, s6 = userId, s7 = value] @\"d6afec0e-fefc-423c-a0f5-7e76f67f71d1\" "
+            }
+          },
+          "rejectedPlans": []
+        },
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 44469,
+          "executionTimeMillis": 490,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 100000,
+          "executionStages": {
+            "stage": "project",
+            "planNodeId": 3,
+            "nReturned": 44469,
+            "executionTimeMillisEstimate": 327,
+            "opens": 1,
+            "closes": 1,
+            "saveState": 37,
+            "restoreState": 36,
+            "isEOF": 1,
+            "projections": {
+              "18": "newObj(\"_id\", s14, \"rating\", s15, \"implicit\", s16, \"lastAt\", s17) "
+            },
+            "inputStage": {
+              "stage": "project",
+              "planNodeId": 3,
+              "nReturned": 44469,
+              "executionTimeMillisEstimate": 255,
+              "opens": 1,
+              "closes": 1,
+              "saveState": 37,
+              "restoreState": 36,
+              "isEOF": 1,
+              "projections": {
+                "14": "newObj(\"userId\", s6, \"itemId\", s4) ",
+                "15": "(s9 ?: null) ",
+                "16": "(s11 ?: null) ",
+                "17": "(s13 ?: null) "
+              },
+              "inputStage": {
+                "stage": "group",
+                "planNodeId": 3,
+                "nReturned": 44469,
+                "executionTimeMillisEstimate": 171,
+                "opens": 1,
+                "closes": 1,
+                "saveState": 37,
+                "restoreState": 36,
+                "isEOF": 1,
+                "groupBySlots": [
+                  6,
+                  4
+                ],
+                "expressions": {
+                  "9": "max(fillType(\n    if (((s5 <=> \"rate\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n    then \n        if (((s5 <=> \"view\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 1L \n        elif (((s5 <=> \"listen\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 2L \n        elif (((s5 <=> \"correction\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 1L \n        elif (((s5 <=> \"favorite\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 4L \n        elif (((s5 <=> \"read\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then \n            if (((s7 <=> 80) >= 0) ?: ((exists(s7) && typeMatch(s7, -65)) >= true)) \n            then 3L \n            else 1.5L \n        \n        elif (((s5 <=> \"rate\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then \n            if (((s7 <=> 1) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then -2L \n            elif (((s7 <=> 2) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then -1L \n            elif (((s7 <=> 3) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then 1L \n            elif (((s7 <=> 4) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then 3L \n            elif (((s7 <=> 5) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then 5L \n            else 0 \n        \n        else 0 \n    \n    else null \n, 1088, Nothing)) ",
+                  "11": "max(fillType(\n    if (((s5 <=> \"rate\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n    then null \n    else \n        if (((s5 <=> \"view\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 1L \n        elif (((s5 <=> \"listen\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 2L \n        elif (((s5 <=> \"correction\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 1L \n        elif (((s5 <=> \"favorite\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then 4L \n        elif (((s5 <=> \"read\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then \n            if (((s7 <=> 80) >= 0) ?: ((exists(s7) && typeMatch(s7, -65)) >= true)) \n            then 3L \n            else 1.5L \n        \n        elif (((s5 <=> \"rate\") == 0) ?: (exists(s5) && typeMatch(s5, -65))) \n        then \n            if (((s7 <=> 1) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then -2L \n            elif (((s7 <=> 2) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then -1L \n            elif (((s7 <=> 3) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then 1L \n            elif (((s7 <=> 4) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then 3L \n            elif (((s7 <=> 5) == 0) ?: (exists(s7) && typeMatch(s7, -65))) \n            then 5L \n            else 0 \n        \n        else 0 \n, 1088, Nothing)) ",
+                  "13": "max(fillType(s3, 1088, Nothing)) ",
+                  "initExprs": {
+                    "9": null,
+                    "11": null,
+                    "13": null,
+                    "mergingExprs": {
+                      "8": "max(fillType(s8, 1088, Nothing)) ",
+                      "10": "max(fillType(s10, 1088, Nothing)) ",
+                      "12": "max(fillType(s12, 1088, Nothing)) "
+                    }
+                  }
+                },
+                "usedDisk": false,
+                "spills": 0,
+                "spilledBytes": 0,
+                "spilledRecords": 0,
+                "spilledDataStorageSize": 0,
+                "peakTrackedMemBytes": 4459958,
+                "inputStage": {
+                  "stage": "scan",
+                  "planNodeId": 1,
+                  "nReturned": 100000,
+                  "executionTimeMillisEstimate": 39,
+                  "opens": 1,
+                  "closes": 1,
+                  "saveState": 37,
+                  "restoreState": 36,
+                  "isEOF": 1,
+                  "numReads": 100000,
+                  "recordSlot": 1,
+                  "recordIdSlot": 2,
+                  "scanFieldNames": [
+                    "createdAt",
+                    "itemId",
+                    "type",
+                    "userId",
+                    "value"
+                  ],
+                  "scanFieldSlots": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "nReturned": 44469,
+      "executionTimeMillisEstimate": 388
+    },
+    {
+      "$project": {
+        "lastAt": true,
+        "userId": "$_id.userId",
+        "itemId": "$_id.itemId",
+        "score": {
+          "$ifNull": [
+            "$rating",
+            "$implicit"
+          ]
+        },
+        "_id": false
+      },
+      "nReturned": 44469,
+      "executionTimeMillisEstimate": 467
+    },
+    {
+      "$match": {
+        "score": {
+          "$gt": 0
+        }
+      },
+      "nReturned": 43883,
+      "executionTimeMillisEstimate": 482
+    }
+  ],
+  "queryShapeHash": "21FED27B00CD2881BEADD89079D6024A9637A44360D15E472E8336D6EFF3A28A",
+  "peakTrackedMemBytes": 4459958,
+  "serverInfo": {
+    "host": "39f69c592185",
+    "port": 27017,
+    "version": "8.3.13",
+    "gitVersion": "3b8a5e1f78cf7b94c40a78ad3fe93708cdca8323"
+  }
+}

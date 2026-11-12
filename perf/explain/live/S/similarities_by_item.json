@@ -1,0 +1,488 @@
+{
+  "queryShapeHash": "FC3D0A9496C926503CC0B11FFD8CF5DA5BE72DB26E0996B28AB3BED7CE5848BD",
+  "command": {
+    "find": "item_similarities",
+    "filter": {
+      "itemId": {
+        "$in": [
+          {
+            "$oid": "6af5fd827fb2c3659da7ee50"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ed94"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee06"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edfb"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edb4"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ed9c"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee41"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee15"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edfa"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef36"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef01"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eece"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eecf"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ed7c"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ed87"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee3c"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee6e"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eed0"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edbe"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef3e"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eee0"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef03"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ed86"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee08"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef2c"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edd9"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edf1"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee7e"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edd5"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee29"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eebc"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef30"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eeda"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee87"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eeac"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eef4"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edad"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee4e"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef4b"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ed83"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee4c"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee04"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef33"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ed9f"
+          }
+        ]
+      }
+    },
+    "$db": "braille_library"
+  },
+  "serverInfo": {
+    "host": "39f69c592185",
+    "port": 27017,
+    "version": "8.3.13",
+    "gitVersion": "3b8a5e1f78cf7b94c40a78ad3fe93708cdca8323"
+  },
+  "serverParameters": {
+    "internalQueryFacetBufferSizeBytes": 104857600,
+    "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+    "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+    "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryMaxAddToSetBytes": 104857600,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "ok": 1.0,
+  "explainVersion": "1",
+  "queryPlanner": {
+    "namespace": "braille_library.item_similarities",
+    "parsedQuery": {
+      "itemId": {
+        "$in": [
+          {
+            "$oid": "6af5fd827fb2c3659da7ed7c"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ed83"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ed86"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ed87"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ed94"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ed9c"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ed9f"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edad"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edb4"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edbe"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edd5"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edd9"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edf1"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edfa"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7edfb"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee04"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee06"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee08"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee15"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee29"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee3c"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee41"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee4c"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee4e"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee50"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee6e"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee7e"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ee87"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eeac"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eebc"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eece"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eecf"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eed0"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eeda"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eee0"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7eef4"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef01"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef03"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef2c"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef30"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef33"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef36"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef3e"
+          },
+          {
+            "$oid": "6af5fd827fb2c3659da7ef4b"
+          }
+        ]
+      }
+    },
+    "indexFilterSet": false,
+    "queryHash": "C2F90856",
+    "planCacheShapeHash": "C2F90856",
+    "planCacheKey": "C755CAC1",
+    "optimizationTimeMillis": 0,
+    "maxIndexedOrSolutionsReached": false,
+    "maxIndexedAndSolutionsReached": false,
+    "maxScansToExplodeReached": false,
+    "prunedSimilarIndexes": false,
+    "winningPlan": {
+      "isCached": false,
+      "stage": "FETCH",
+      "nss": "braille_library.item_similarities",
+      "inputStage": {
+        "stage": "IXSCAN",
+        "nss": "braille_library.item_similarities",
+        "keyPattern": {
+          "itemId": 1
+        },
+        "indexName": "itemId_unique",
+        "isMultiKey": false,
+        "multiKeyPaths": {
+          "itemId": []
+        },
+        "isUnique": true,
+        "isSparse": false,
+        "isPartial": false,
+        "indexVersion": 2,
+        "direction": "forward",
+        "indexBounds": {
+          "itemId": [
+            "[ObjectId('6af5fd827fb2c3659da7ed7c'), ObjectId('6af5fd827fb2c3659da7ed7c')]",
+            "[ObjectId('6af5fd827fb2c3659da7ed83'), ObjectId('6af5fd827fb2c3659da7ed83')]",
+            "[ObjectId('6af5fd827fb2c3659da7ed86'), ObjectId('6af5fd827fb2c3659da7ed86')]",
+            "[ObjectId('6af5fd827fb2c3659da7ed87'), ObjectId('6af5fd827fb2c3659da7ed87')]",
+            "[ObjectId('6af5fd827fb2c3659da7ed94'), ObjectId('6af5fd827fb2c3659da7ed94')]",
+            "[ObjectId('6af5fd827fb2c3659da7ed9c'), ObjectId('6af5fd827fb2c3659da7ed9c')]",
+            "[ObjectId('6af5fd827fb2c3659da7ed9f'), ObjectId('6af5fd827fb2c3659da7ed9f')]",
+            "[ObjectId('6af5fd827fb2c3659da7edad'), ObjectId('6af5fd827fb2c3659da7edad')]",
+            "[ObjectId('6af5fd827fb2c3659da7edb4'), ObjectId('6af5fd827fb2c3659da7edb4')]",
+            "[ObjectId('6af5fd827fb2c3659da7edbe'), ObjectId('6af5fd827fb2c3659da7edbe')]",
+            "[ObjectId('6af5fd827fb2c3659da7edd5'), ObjectId('6af5fd827fb2c3659da7edd5')]",
+            "[ObjectId('6af5fd827fb2c3659da7edd9'), ObjectId('6af5fd827fb2c3659da7edd9')]",
+            "[ObjectId('6af5fd827fb2c3659da7edf1'), ObjectId('6af5fd827fb2c3659da7edf1')]",
+            "[ObjectId('6af5fd827fb2c3659da7edfa'), ObjectId('6af5fd827fb2c3659da7edfa')]",
+            "[ObjectId('6af5fd827fb2c3659da7edfb'), ObjectId('6af5fd827fb2c3659da7edfb')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee04'), ObjectId('6af5fd827fb2c3659da7ee04')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee06'), ObjectId('6af5fd827fb2c3659da7ee06')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee08'), ObjectId('6af5fd827fb2c3659da7ee08')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee15'), ObjectId('6af5fd827fb2c3659da7ee15')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee29'), ObjectId('6af5fd827fb2c3659da7ee29')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee3c'), ObjectId('6af5fd827fb2c3659da7ee3c')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee41'), ObjectId('6af5fd827fb2c3659da7ee41')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee4c'), ObjectId('6af5fd827fb2c3659da7ee4c')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee4e'), ObjectId('6af5fd827fb2c3659da7ee4e')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee50'), ObjectId('6af5fd827fb2c3659da7ee50')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee6e'), ObjectId('6af5fd827fb2c3659da7ee6e')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee7e'), ObjectId('6af5fd827fb2c3659da7ee7e')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee87'), ObjectId('6af5fd827fb2c3659da7ee87')]",
+            "[ObjectId('6af5fd827fb2c3659da7eeac'), ObjectId('6af5fd827fb2c3659da7eeac')]",
+            "[ObjectId('6af5fd827fb2c3659da7eebc'), ObjectId('6af5fd827fb2c3659da7eebc')]",
+            "[ObjectId('6af5fd827fb2c3659da7eece'), ObjectId('6af5fd827fb2c3659da7eece')]",
+            "[ObjectId('6af5fd827fb2c3659da7eecf'), ObjectId('6af5fd827fb2c3659da7eecf')]",
+            "[ObjectId('6af5fd827fb2c3659da7eed0'), ObjectId('6af5fd827fb2c3659da7eed0')]",
+            "[ObjectId('6af5fd827fb2c3659da7eeda'), ObjectId('6af5fd827fb2c3659da7eeda')]",
+            "[ObjectId('6af5fd827fb2c3659da7eee0'), ObjectId('6af5fd827fb2c3659da7eee0')]",
+            "[ObjectId('6af5fd827fb2c3659da7eef4'), ObjectId('6af5fd827fb2c3659da7eef4')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef01'), ObjectId('6af5fd827fb2c3659da7ef01')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef03'), ObjectId('6af5fd827fb2c3659da7ef03')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef2c'), ObjectId('6af5fd827fb2c3659da7ef2c')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef30'), ObjectId('6af5fd827fb2c3659da7ef30')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef33'), ObjectId('6af5fd827fb2c3659da7ef33')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef36'), ObjectId('6af5fd827fb2c3659da7ef36')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef3e'), ObjectId('6af5fd827fb2c3659da7ef3e')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef4b'), ObjectId('6af5fd827fb2c3659da7ef4b')]"
+          ]
+        }
+      }
+    },
+    "rejectedPlans": []
+  },
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 0,
+    "executionTimeMillis": 0,
+    "totalKeysExamined": 0,
+    "totalDocsExamined": 0,
+    "executionStages": {
+      "isCached": false,
+      "stage": "FETCH",
+      "nReturned": 0,
+      "executionTimeMillisEstimate": 0,
+      "works": 1,
+      "advanced": 0,
+      "needTime": 0,
+      "needYield": 0,
+      "saveState": 0,
+      "restoreState": 0,
+      "isEOF": 1,
+      "nss": "braille_library.item_similarities",
+      "docsExamined": 0,
+      "alreadyHasObj": 0,
+      "inputStage": {
+        "stage": "IXSCAN",
+        "nReturned": 0,
+        "executionTimeMillisEstimate": 0,
+        "works": 1,
+        "advanced": 0,
+        "needTime": 0,
+        "needYield": 0,
+        "saveState": 0,
+        "restoreState": 0,
+        "isEOF": 1,
+        "nss": "braille_library.item_similarities",
+        "keyPattern": {
+          "itemId": 1
+        },
+        "indexName": "itemId_unique",
+        "isMultiKey": false,
+        "multiKeyPaths": {
+          "itemId": []
+        },
+        "isUnique": true,
+        "isSparse": false,
+        "isPartial": false,
+        "indexVersion": 2,
+        "direction": "forward",
+        "indexBounds": {
+          "itemId": [
+            "[ObjectId('6af5fd827fb2c3659da7ed7c'), ObjectId('6af5fd827fb2c3659da7ed7c')]",
+            "[ObjectId('6af5fd827fb2c3659da7ed83'), ObjectId('6af5fd827fb2c3659da7ed83')]",
+            "[ObjectId('6af5fd827fb2c3659da7ed86'), ObjectId('6af5fd827fb2c3659da7ed86')]",
+            "[ObjectId('6af5fd827fb2c3659da7ed87'), ObjectId('6af5fd827fb2c3659da7ed87')]",
+            "[ObjectId('6af5fd827fb2c3659da7ed94'), ObjectId('6af5fd827fb2c3659da7ed94')]",
+            "[ObjectId('6af5fd827fb2c3659da7ed9c'), ObjectId('6af5fd827fb2c3659da7ed9c')]",
+            "[ObjectId('6af5fd827fb2c3659da7ed9f'), ObjectId('6af5fd827fb2c3659da7ed9f')]",
+            "[ObjectId('6af5fd827fb2c3659da7edad'), ObjectId('6af5fd827fb2c3659da7edad')]",
+            "[ObjectId('6af5fd827fb2c3659da7edb4'), ObjectId('6af5fd827fb2c3659da7edb4')]",
+            "[ObjectId('6af5fd827fb2c3659da7edbe'), ObjectId('6af5fd827fb2c3659da7edbe')]",
+            "[ObjectId('6af5fd827fb2c3659da7edd5'), ObjectId('6af5fd827fb2c3659da7edd5')]",
+            "[ObjectId('6af5fd827fb2c3659da7edd9'), ObjectId('6af5fd827fb2c3659da7edd9')]",
+            "[ObjectId('6af5fd827fb2c3659da7edf1'), ObjectId('6af5fd827fb2c3659da7edf1')]",
+            "[ObjectId('6af5fd827fb2c3659da7edfa'), ObjectId('6af5fd827fb2c3659da7edfa')]",
+            "[ObjectId('6af5fd827fb2c3659da7edfb'), ObjectId('6af5fd827fb2c3659da7edfb')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee04'), ObjectId('6af5fd827fb2c3659da7ee04')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee06'), ObjectId('6af5fd827fb2c3659da7ee06')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee08'), ObjectId('6af5fd827fb2c3659da7ee08')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee15'), ObjectId('6af5fd827fb2c3659da7ee15')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee29'), ObjectId('6af5fd827fb2c3659da7ee29')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee3c'), ObjectId('6af5fd827fb2c3659da7ee3c')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee41'), ObjectId('6af5fd827fb2c3659da7ee41')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee4c'), ObjectId('6af5fd827fb2c3659da7ee4c')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee4e'), ObjectId('6af5fd827fb2c3659da7ee4e')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee50'), ObjectId('6af5fd827fb2c3659da7ee50')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee6e'), ObjectId('6af5fd827fb2c3659da7ee6e')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee7e'), ObjectId('6af5fd827fb2c3659da7ee7e')]",
+            "[ObjectId('6af5fd827fb2c3659da7ee87'), ObjectId('6af5fd827fb2c3659da7ee87')]",
+            "[ObjectId('6af5fd827fb2c3659da7eeac'), ObjectId('6af5fd827fb2c3659da7eeac')]",
+            "[ObjectId('6af5fd827fb2c3659da7eebc'), ObjectId('6af5fd827fb2c3659da7eebc')]",
+            "[ObjectId('6af5fd827fb2c3659da7eece'), ObjectId('6af5fd827fb2c3659da7eece')]",
+            "[ObjectId('6af5fd827fb2c3659da7eecf'), ObjectId('6af5fd827fb2c3659da7eecf')]",
+            "[ObjectId('6af5fd827fb2c3659da7eed0'), ObjectId('6af5fd827fb2c3659da7eed0')]",
+            "[ObjectId('6af5fd827fb2c3659da7eeda'), ObjectId('6af5fd827fb2c3659da7eeda')]",
+            "[ObjectId('6af5fd827fb2c3659da7eee0'), ObjectId('6af5fd827fb2c3659da7eee0')]",
+            "[ObjectId('6af5fd827fb2c3659da7eef4'), ObjectId('6af5fd827fb2c3659da7eef4')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef01'), ObjectId('6af5fd827fb2c3659da7ef01')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef03'), ObjectId('6af5fd827fb2c3659da7ef03')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef2c'), ObjectId('6af5fd827fb2c3659da7ef2c')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef30'), ObjectId('6af5fd827fb2c3659da7ef30')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef33'), ObjectId('6af5fd827fb2c3659da7ef33')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef36'), ObjectId('6af5fd827fb2c3659da7ef36')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef3e'), ObjectId('6af5fd827fb2c3659da7ef3e')]",
+            "[ObjectId('6af5fd827fb2c3659da7ef4b'), ObjectId('6af5fd827fb2c3659da7ef4b')]"
+          ]
+        },
+        "keysExamined": 0,
+        "seeks": 1,
+        "dupsTested": 0,
+        "dupsDropped": 0,
+        "peakTrackedMemBytes": 0
+      }
+    }
+  }
+}

@@ -193,3 +193,76 @@ func TestLikedHistoryKeepsLastLiked(t *testing.T) {
 		t.Errorf("first item = %+v, want the newest liked one", liked[0])
 	}
 }
+
+// The live mode builds neighbors from pair statistics; they must equal the
+// precomputed ones for the same data.
+func TestNeighborsFromStatsMatchesSimilarities(t *testing.T) {
+	users := make([]bson.ObjectID, 30)
+	items := make([]bson.ObjectID, 40)
+	for i := range users {
+		users[i] = bson.NewObjectID()
+	}
+	for i := range items {
+		items[i] = bson.NewObjectID()
+	}
+	// A fixed pattern: user u likes items (u*7+k) % 40 with different scores.
+	var scores []UserItemScore
+	byUser := map[bson.ObjectID]map[bson.ObjectID]float64{}
+	for u, uid := range users {
+		byUser[uid] = map[bson.ObjectID]float64{}
+		for k := range 8 {
+			item := items[(u*7+k*k)%len(items)]
+			s := float64((u+k)%5 + 1)
+			if _, dup := byUser[uid][item]; dup {
+				continue
+			}
+			byUser[uid][item] = s
+			scores = append(scores, UserItemScore{UserID: uid, ItemID: item, Score: s})
+		}
+	}
+
+	norms := map[bson.ObjectID]float64{}
+	type key struct{ i, j bson.ObjectID }
+	stats := map[key]*PairStat{}
+	for _, liked := range byUser {
+		for i, si := range liked {
+			norms[i] += si * si
+			for j, sj := range liked {
+				if i == j {
+					continue
+				}
+				p := stats[key{i, j}]
+				if p == nil {
+					p = &PairStat{ItemI: i, ItemJ: j}
+					stats[key{i, j}] = p
+				}
+				p.Dot += si * sj
+				p.Common++
+			}
+		}
+	}
+	for id, sq := range norms {
+		norms[id] = math.Sqrt(sq)
+	}
+	var pairs []PairStat
+	for _, p := range stats {
+		pairs = append(pairs, *p)
+	}
+
+	want := Similarities(scores)
+	got := NeighborsFromStats(pairs, norms)
+	if len(got) != len(want) {
+		t.Fatalf("got neighbors for %d items, want %d", len(got), len(want))
+	}
+	for id, w := range want {
+		g := got[id]
+		if len(g) != len(w) {
+			t.Fatalf("item %s: %d neighbors, want %d", id.Hex(), len(g), len(w))
+		}
+		for k := range w {
+			if g[k].ItemID != w[k].ItemID || !near(g[k].Score, w[k].Score) {
+				t.Fatalf("item %s neighbor %d = %+v, want %+v", id.Hex(), k, g[k], w[k])
+			}
+		}
+	}
+}

@@ -45,6 +45,7 @@ func main() {
 		log.Fatalf("indexes: %v", err)
 	}
 	log.Println("indexes ready")
+	log.Printf("recommendations mode: %s", cfg.RecsMode)
 
 	tokens := auth.NewTokenManager(cfg.JWTSecret, time.Duration(cfg.JWTTTLHours)*time.Hour)
 	userRepo := mongo.NewUserRepository(db)
@@ -59,7 +60,7 @@ func main() {
 		Items:        service.NewItemService(itemRepo),
 		Interactions: service.NewInteractionService(mongo.NewInteractionRepository(db), itemRepo),
 		Recommendations: service.NewRecommendationService(
-			mongo.NewRecommendationRepository(db), itemRepo, userRepo),
+			mongo.NewRecommendationRepository(db), itemRepo, userRepo, cfg.RecsMode),
 	})
 
 	srv := &http.Server{

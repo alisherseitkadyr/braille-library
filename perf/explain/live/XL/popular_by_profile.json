@@ -1,0 +1,1229 @@
+{
+  "explainVersion": "1",
+  "queryPlanner": {
+    "namespace": "braille_library.items",
+    "parsedQuery": {
+      "$and": [
+        {
+          "language": {
+            "$eq": "ru"
+          }
+        },
+        {
+          "level": {
+            "$eq": "beginner"
+          }
+        },
+        {
+          "category": {
+            "$in": [
+              "exercises",
+              "textbook"
+            ]
+          }
+        },
+        {
+          "_id": {
+            "$not": {
+              "$in": [
+                {
+                  "$oid": "6af5fe4d050fa7b7b6ae6850"
+                },
+                {
+                  "$oid": "6af5fe4d050fa7b7b6ae6861"
+                },
+                {
+                  "$oid": "6af5fe4d050fa7b7b6ae6881"
+                },
+                {
+                  "$oid": "6af5fe4d050fa7b7b6ae68bc"
+                },
+                {
+                  "$oid": "6af5fe4d050fa7b7b6ae6973"
+                },
+                {
+                  "$oid": "6af5fe4d050fa7b7b6ae697a"
+                },
+                {
+                  "$oid": "6af5fe4d050fa7b7b6ae69a0"
+                },
+                {
+                  "$oid": "6af5fe4d050fa7b7b6ae69bb"
+                },
+                {
+                  "$oid": "6af5fe4d050fa7b7b6ae69d9"
+                },
+                {
+                  "$oid": "6af5fe4d050fa7b7b6ae69e0"
+                },
+                {
+                  "$oid": "6af5fe4d050fa7b7b6ae6a71"
+                },
+                {
+                  "$oid": "6af5fe4d050fa7b7b6ae6b54"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae6d07"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae6d0e"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae6d1e"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae6d39"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae6dfa"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae6f47"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae6f93"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae6ffd"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae7013"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae7040"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae705c"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae7099"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae70b1"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae70c0"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae711a"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae71b6"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae7222"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae7231"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae72c2"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae72db"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae72f3"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae72f8"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae7413"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae75bf"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae75cd"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae75df"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae75f8"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae760a"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae7614"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae765a"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae769e"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae76eb"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae7701"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae7754"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae77ac"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae784b"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae7881"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae78ab"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae791c"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae7967"
+                },
+                {
+                  "$oid": "6af5fe4e050fa7b7b6ae7aef"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "indexFilterSet": false,
+    "queryHash": "806D3CAD",
+    "planCacheShapeHash": "806D3CAD",
+    "planCacheKey": "6C709160",
+    "optimizationTimeMillis": 11,
+    "maxIndexedOrSolutionsReached": false,
+    "maxIndexedAndSolutionsReached": false,
+    "maxScansToExplodeReached": false,
+    "prunedSimilarIndexes": false,
+    "winningPlan": {
+      "isCached": false,
+      "stage": "SORT",
+      "sortPattern": {
+        "ratingsCount": -1,
+        "avgRating": -1,
+        "_id": 1
+      },
+      "memLimit": 104857600,
+      "limitAmount": 10,
+      "type": "simple",
+      "inputStage": {
+        "stage": "FETCH",
+        "filter": {
+          "$and": [
+            {
+              "_id": {
+                "$not": {
+                  "$in": [
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae6850"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae6861"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae6881"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae68bc"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae6973"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae697a"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae69a0"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae69bb"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae69d9"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae69e0"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae6a71"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae6b54"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6d07"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6d0e"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6d1e"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6d39"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6dfa"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6f47"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6f93"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6ffd"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7013"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7040"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae705c"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7099"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae70b1"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae70c0"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae711a"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae71b6"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7222"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7231"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae72c2"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae72db"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae72f3"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae72f8"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7413"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae75bf"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae75cd"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae75df"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae75f8"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae760a"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7614"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae765a"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae769e"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae76eb"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7701"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7754"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae77ac"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae784b"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7881"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae78ab"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae791c"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7967"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7aef"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "language": {
+                "$eq": "ru"
+              }
+            }
+          ]
+        },
+        "nss": "braille_library.items",
+        "inputStage": {
+          "stage": "IXSCAN",
+          "nss": "braille_library.items",
+          "keyPattern": {
+            "category": 1,
+            "level": 1
+          },
+          "indexName": "category_level",
+          "isMultiKey": false,
+          "multiKeyPaths": {
+            "category": [],
+            "level": []
+          },
+          "isUnique": false,
+          "isSparse": false,
+          "isPartial": false,
+          "indexVersion": 2,
+          "direction": "forward",
+          "indexBounds": {
+            "category": [
+              "[\"exercises\", \"exercises\"]",
+              "[\"textbook\", \"textbook\"]"
+            ],
+            "level": [
+              "[\"beginner\", \"beginner\"]"
+            ]
+          }
+        }
+      }
+    },
+    "rejectedPlans": [
+      {
+        "isCached": false,
+        "stage": "SORT",
+        "sortPattern": {
+          "ratingsCount": -1,
+          "avgRating": -1,
+          "_id": 1
+        },
+        "memLimit": 104857600,
+        "limitAmount": 10,
+        "type": "simple",
+        "inputStage": {
+          "stage": "FETCH",
+          "filter": {
+            "$and": [
+              {
+                "category": {
+                  "$in": [
+                    "exercises",
+                    "textbook"
+                  ]
+                }
+              },
+              {
+                "language": {
+                  "$eq": "ru"
+                }
+              },
+              {
+                "level": {
+                  "$eq": "beginner"
+                }
+              }
+            ]
+          },
+          "nss": "braille_library.items",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nss": "braille_library.items",
+            "keyPattern": {
+              "_id": 1
+            },
+            "indexName": "_id_",
+            "isMultiKey": false,
+            "isUnique": true,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "_id": [
+                "[MinKey, ObjectId('6af5fe4d050fa7b7b6ae6850'))",
+                "(ObjectId('6af5fe4d050fa7b7b6ae6850'), ObjectId('6af5fe4d050fa7b7b6ae6861'))",
+                "(ObjectId('6af5fe4d050fa7b7b6ae6861'), ObjectId('6af5fe4d050fa7b7b6ae6881'))",
+                "(ObjectId('6af5fe4d050fa7b7b6ae6881'), ObjectId('6af5fe4d050fa7b7b6ae68bc'))",
+                "(ObjectId('6af5fe4d050fa7b7b6ae68bc'), ObjectId('6af5fe4d050fa7b7b6ae6973'))",
+                "(ObjectId('6af5fe4d050fa7b7b6ae6973'), ObjectId('6af5fe4d050fa7b7b6ae697a'))",
+                "(ObjectId('6af5fe4d050fa7b7b6ae697a'), ObjectId('6af5fe4d050fa7b7b6ae69a0'))",
+                "(ObjectId('6af5fe4d050fa7b7b6ae69a0'), ObjectId('6af5fe4d050fa7b7b6ae69bb'))",
+                "(ObjectId('6af5fe4d050fa7b7b6ae69bb'), ObjectId('6af5fe4d050fa7b7b6ae69d9'))",
+                "(ObjectId('6af5fe4d050fa7b7b6ae69d9'), ObjectId('6af5fe4d050fa7b7b6ae69e0'))",
+                "(ObjectId('6af5fe4d050fa7b7b6ae69e0'), ObjectId('6af5fe4d050fa7b7b6ae6a71'))",
+                "(ObjectId('6af5fe4d050fa7b7b6ae6a71'), ObjectId('6af5fe4d050fa7b7b6ae6b54'))",
+                "(ObjectId('6af5fe4d050fa7b7b6ae6b54'), ObjectId('6af5fe4e050fa7b7b6ae6d07'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae6d07'), ObjectId('6af5fe4e050fa7b7b6ae6d0e'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae6d0e'), ObjectId('6af5fe4e050fa7b7b6ae6d1e'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae6d1e'), ObjectId('6af5fe4e050fa7b7b6ae6d39'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae6d39'), ObjectId('6af5fe4e050fa7b7b6ae6dfa'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae6dfa'), ObjectId('6af5fe4e050fa7b7b6ae6f47'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae6f47'), ObjectId('6af5fe4e050fa7b7b6ae6f93'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae6f93'), ObjectId('6af5fe4e050fa7b7b6ae6ffd'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae6ffd'), ObjectId('6af5fe4e050fa7b7b6ae7013'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae7013'), ObjectId('6af5fe4e050fa7b7b6ae7040'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae7040'), ObjectId('6af5fe4e050fa7b7b6ae705c'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae705c'), ObjectId('6af5fe4e050fa7b7b6ae7099'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae7099'), ObjectId('6af5fe4e050fa7b7b6ae70b1'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae70b1'), ObjectId('6af5fe4e050fa7b7b6ae70c0'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae70c0'), ObjectId('6af5fe4e050fa7b7b6ae711a'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae711a'), ObjectId('6af5fe4e050fa7b7b6ae71b6'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae71b6'), ObjectId('6af5fe4e050fa7b7b6ae7222'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae7222'), ObjectId('6af5fe4e050fa7b7b6ae7231'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae7231'), ObjectId('6af5fe4e050fa7b7b6ae72c2'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae72c2'), ObjectId('6af5fe4e050fa7b7b6ae72db'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae72db'), ObjectId('6af5fe4e050fa7b7b6ae72f3'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae72f3'), ObjectId('6af5fe4e050fa7b7b6ae72f8'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae72f8'), ObjectId('6af5fe4e050fa7b7b6ae7413'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae7413'), ObjectId('6af5fe4e050fa7b7b6ae75bf'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae75bf'), ObjectId('6af5fe4e050fa7b7b6ae75cd'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae75cd'), ObjectId('6af5fe4e050fa7b7b6ae75df'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae75df'), ObjectId('6af5fe4e050fa7b7b6ae75f8'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae75f8'), ObjectId('6af5fe4e050fa7b7b6ae760a'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae760a'), ObjectId('6af5fe4e050fa7b7b6ae7614'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae7614'), ObjectId('6af5fe4e050fa7b7b6ae765a'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae765a'), ObjectId('6af5fe4e050fa7b7b6ae769e'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae769e'), ObjectId('6af5fe4e050fa7b7b6ae76eb'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae76eb'), ObjectId('6af5fe4e050fa7b7b6ae7701'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae7701'), ObjectId('6af5fe4e050fa7b7b6ae7754'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae7754'), ObjectId('6af5fe4e050fa7b7b6ae77ac'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae77ac'), ObjectId('6af5fe4e050fa7b7b6ae784b'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae784b'), ObjectId('6af5fe4e050fa7b7b6ae7881'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae7881'), ObjectId('6af5fe4e050fa7b7b6ae78ab'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae78ab'), ObjectId('6af5fe4e050fa7b7b6ae791c'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae791c'), ObjectId('6af5fe4e050fa7b7b6ae7967'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae7967'), ObjectId('6af5fe4e050fa7b7b6ae7aef'))",
+                "(ObjectId('6af5fe4e050fa7b7b6ae7aef'), MaxKey]"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "isCached": false,
+        "stage": "SORT",
+        "sortPattern": {
+          "ratingsCount": -1,
+          "avgRating": -1,
+          "_id": 1
+        },
+        "memLimit": 104857600,
+        "limitAmount": 10,
+        "type": "simple",
+        "inputStage": {
+          "stage": "FETCH",
+          "filter": {
+            "$and": [
+              {
+                "_id": {
+                  "$not": {
+                    "$in": [
+                      {
+                        "$oid": "6af5fe4d050fa7b7b6ae6850"
+                      },
+                      {
+                        "$oid": "6af5fe4d050fa7b7b6ae6861"
+                      },
+                      {
+                        "$oid": "6af5fe4d050fa7b7b6ae6881"
+                      },
+                      {
+                        "$oid": "6af5fe4d050fa7b7b6ae68bc"
+                      },
+                      {
+                        "$oid": "6af5fe4d050fa7b7b6ae6973"
+                      },
+                      {
+                        "$oid": "6af5fe4d050fa7b7b6ae697a"
+                      },
+                      {
+                        "$oid": "6af5fe4d050fa7b7b6ae69a0"
+                      },
+                      {
+                        "$oid": "6af5fe4d050fa7b7b6ae69bb"
+                      },
+                      {
+                        "$oid": "6af5fe4d050fa7b7b6ae69d9"
+                      },
+                      {
+                        "$oid": "6af5fe4d050fa7b7b6ae69e0"
+                      },
+                      {
+                        "$oid": "6af5fe4d050fa7b7b6ae6a71"
+                      },
+                      {
+                        "$oid": "6af5fe4d050fa7b7b6ae6b54"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae6d07"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae6d0e"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae6d1e"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae6d39"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae6dfa"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae6f47"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae6f93"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae6ffd"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae7013"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae7040"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae705c"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae7099"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae70b1"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae70c0"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae711a"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae71b6"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae7222"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae7231"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae72c2"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae72db"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae72f3"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae72f8"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae7413"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae75bf"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae75cd"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae75df"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae75f8"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae760a"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae7614"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae765a"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae769e"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae76eb"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae7701"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae7754"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae77ac"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae784b"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae7881"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae78ab"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae791c"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae7967"
+                      },
+                      {
+                        "$oid": "6af5fe4e050fa7b7b6ae7aef"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": {
+                  "$in": [
+                    "exercises",
+                    "textbook"
+                  ]
+                }
+              },
+              {
+                "level": {
+                  "$eq": "beginner"
+                }
+              }
+            ]
+          },
+          "nss": "braille_library.items",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nss": "braille_library.items",
+            "keyPattern": {
+              "language": 1
+            },
+            "indexName": "language",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "language": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "language": [
+                "[\"ru\", \"ru\"]"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 10,
+    "executionTimeMillis": 11,
+    "totalKeysExamined": 839,
+    "totalDocsExamined": 836,
+    "executionStages": {
+      "isCached": false,
+      "stage": "SORT",
+      "nReturned": 10,
+      "executionTimeMillisEstimate": 10,
+      "works": 850,
+      "advanced": 10,
+      "needTime": 839,
+      "needYield": 0,
+      "saveState": 1,
+      "restoreState": 1,
+      "isEOF": 1,
+      "sortPattern": {
+        "ratingsCount": -1,
+        "avgRating": -1,
+        "_id": 1
+      },
+      "memLimit": 104857600,
+      "limitAmount": 10,
+      "type": "simple",
+      "totalDataSizeSorted": 6475,
+      "usedDisk": false,
+      "spills": 0,
+      "spilledRecords": 0,
+      "spilledBytes": 0,
+      "spilledDataStorageSize": 0,
+      "peakTrackedMemBytes": 6540,
+      "inputStage": {
+        "stage": "FETCH",
+        "filter": {
+          "$and": [
+            {
+              "_id": {
+                "$not": {
+                  "$in": [
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae6850"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae6861"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae6881"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae68bc"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae6973"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae697a"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae69a0"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae69bb"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae69d9"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae69e0"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae6a71"
+                    },
+                    {
+                      "$oid": "6af5fe4d050fa7b7b6ae6b54"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6d07"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6d0e"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6d1e"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6d39"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6dfa"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6f47"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6f93"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae6ffd"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7013"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7040"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae705c"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7099"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae70b1"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae70c0"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae711a"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae71b6"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7222"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7231"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae72c2"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae72db"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae72f3"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae72f8"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7413"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae75bf"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae75cd"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae75df"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae75f8"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae760a"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7614"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae765a"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae769e"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae76eb"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7701"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7754"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae77ac"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae784b"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7881"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae78ab"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae791c"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7967"
+                    },
+                    {
+                      "$oid": "6af5fe4e050fa7b7b6ae7aef"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "language": {
+                "$eq": "ru"
+              }
+            }
+          ]
+        },
+        "nReturned": 313,
+        "executionTimeMillisEstimate": 10,
+        "works": 839,
+        "advanced": 313,
+        "needTime": 525,
+        "needYield": 0,
+        "saveState": 1,
+        "restoreState": 1,
+        "isEOF": 1,
+        "nss": "braille_library.items",
+        "docsExamined": 836,
+        "alreadyHasObj": 0,
+        "inputStage": {
+          "stage": "IXSCAN",
+          "nReturned": 836,
+          "executionTimeMillisEstimate": 0,
+          "works": 839,
+          "advanced": 836,
+          "needTime": 2,
+          "needYield": 0,
+          "saveState": 1,
+          "restoreState": 1,
+          "isEOF": 1,
+          "nss": "braille_library.items",
+          "keyPattern": {
+            "category": 1,
+            "level": 1
+          },
+          "indexName": "category_level",
+          "isMultiKey": false,
+          "multiKeyPaths": {
+            "category": [],
+            "level": []
+          },
+          "isUnique": false,
+          "isSparse": false,
+          "isPartial": false,
+          "indexVersion": 2,
+          "direction": "forward",
+          "indexBounds": {
+            "category": [
+              "[\"exercises\", \"exercises\"]",
+              "[\"textbook\", \"textbook\"]"
+            ],
+            "level": [
+              "[\"beginner\", \"beginner\"]"
+            ]
+          },
+          "keysExamined": 839,
+          "seeks": 3,
+          "dupsTested": 0,
+          "dupsDropped": 0,
+          "peakTrackedMemBytes": 0
+        }
+      }
+    }
+  },
+  "queryShapeHash": "7EDE09FFAAD0608C933CE249B829697E3E624DD2923911EAC78CCB49BD554954",
+  "command": {
+    "find": "items",
+    "filter": {
+      "_id": {
+        "$nin": [
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae6f47"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae765a"
+          },
+          {
+            "$oid": "6af5fe4d050fa7b7b6ae69e0"
+          },
+          {
+            "$oid": "6af5fe4d050fa7b7b6ae6850"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae7413"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae72db"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae769e"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae70c0"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae6dfa"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae75bf"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae760a"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae7231"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae7881"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae76eb"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae71b6"
+          },
+          {
+            "$oid": "6af5fe4d050fa7b7b6ae68bc"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae784b"
+          },
+          {
+            "$oid": "6af5fe4d050fa7b7b6ae6b54"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae7040"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae6f93"
+          },
+          {
+            "$oid": "6af5fe4d050fa7b7b6ae6861"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae6d1e"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae72c2"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae7967"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae72f8"
+          },
+          {
+            "$oid": "6af5fe4d050fa7b7b6ae69d9"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae70b1"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae6d39"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae7aef"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae75f8"
+          },
+          {
+            "$oid": "6af5fe4d050fa7b7b6ae6973"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae75cd"
+          },
+          {
+            "$oid": "6af5fe4d050fa7b7b6ae6a71"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae7222"
+          },
+          {
+            "$oid": "6af5fe4d050fa7b7b6ae697a"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae7754"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae7701"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae7013"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae6d0e"
+          },
+          {
+            "$oid": "6af5fe4d050fa7b7b6ae69a0"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae711a"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae77ac"
+          },
+          {
+            "$oid": "6af5fe4d050fa7b7b6ae6881"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae75df"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae72f3"
+          },
+          {
+            "$oid": "6af5fe4d050fa7b7b6ae69bb"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae6ffd"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae705c"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae7614"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae78ab"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae6d07"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae791c"
+          },
+          {
+            "$oid": "6af5fe4e050fa7b7b6ae7099"
+          }
+        ]
+      },
+      "category": {
+        "$in": [
+          "exercises",
+          "textbook"
+        ]
+      },
+      "level": "beginner",
+      "language": "ru"
+    },
+    "sort": {
+      "ratingsCount": -1,
+      "avgRating": -1,
+      "_id": 1
+    },
+    "limit": 10,
+    "$db": "braille_library"
+  },
+  "serverInfo": {
+    "host": "39f69c592185",
+    "port": 27017,
+    "version": "8.3.13",
+    "gitVersion": "3b8a5e1f78cf7b94c40a78ad3fe93708cdca8323"
+  },
+  "serverParameters": {
+    "internalQueryFacetBufferSizeBytes": 104857600,
+    "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+    "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+    "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryMaxAddToSetBytes": 104857600,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "ok": 1.0
+}

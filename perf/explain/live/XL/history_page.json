@@ -1,0 +1,189 @@
+{
+  "command": {
+    "find": "interactions",
+    "filter": {
+      "userId": {
+        "$oid": "6af5fe4d050fa7b7b6ae40a0"
+      }
+    },
+    "sort": {
+      "createdAt": -1,
+      "_id": -1
+    },
+    "limit": 20,
+    "$db": "braille_library"
+  },
+  "serverInfo": {
+    "host": "39f69c592185",
+    "port": 27017,
+    "version": "8.3.13",
+    "gitVersion": "3b8a5e1f78cf7b94c40a78ad3fe93708cdca8323"
+  },
+  "serverParameters": {
+    "internalQueryFacetBufferSizeBytes": 104857600,
+    "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+    "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+    "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryMaxAddToSetBytes": 104857600,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "ok": 1.0,
+  "explainVersion": "1",
+  "queryPlanner": {
+    "namespace": "braille_library.interactions",
+    "parsedQuery": {
+      "userId": {
+        "$eq": {
+          "$oid": "6af5fe4d050fa7b7b6ae40a0"
+        }
+      }
+    },
+    "indexFilterSet": false,
+    "queryHash": "3568697C",
+    "planCacheShapeHash": "3568697C",
+    "planCacheKey": "A3810D79",
+    "optimizationTimeMillis": 0,
+    "maxIndexedOrSolutionsReached": false,
+    "maxIndexedAndSolutionsReached": false,
+    "maxScansToExplodeReached": false,
+    "prunedSimilarIndexes": false,
+    "winningPlan": {
+      "isCached": false,
+      "stage": "SORT",
+      "sortPattern": {
+        "createdAt": -1,
+        "_id": -1
+      },
+      "memLimit": 104857600,
+      "limitAmount": 20,
+      "type": "simple",
+      "inputStage": {
+        "stage": "FETCH",
+        "nss": "braille_library.interactions",
+        "inputStage": {
+          "stage": "IXSCAN",
+          "nss": "braille_library.interactions",
+          "keyPattern": {
+            "userId": 1,
+            "createdAt": -1
+          },
+          "indexName": "user_createdAt",
+          "isMultiKey": false,
+          "multiKeyPaths": {
+            "userId": [],
+            "createdAt": []
+          },
+          "isUnique": false,
+          "isSparse": false,
+          "isPartial": false,
+          "indexVersion": 2,
+          "direction": "forward",
+          "indexBounds": {
+            "userId": [
+              "[ObjectId('6af5fe4d050fa7b7b6ae40a0'), ObjectId('6af5fe4d050fa7b7b6ae40a0')]"
+            ],
+            "createdAt": [
+              "[MaxKey, MinKey]"
+            ]
+          }
+        }
+      }
+    },
+    "rejectedPlans": []
+  },
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 20,
+    "executionTimeMillis": 0,
+    "totalKeysExamined": 122,
+    "totalDocsExamined": 122,
+    "executionStages": {
+      "isCached": false,
+      "stage": "SORT",
+      "nReturned": 20,
+      "executionTimeMillisEstimate": 0,
+      "works": 144,
+      "advanced": 20,
+      "needTime": 123,
+      "needYield": 0,
+      "saveState": 0,
+      "restoreState": 0,
+      "isEOF": 1,
+      "sortPattern": {
+        "createdAt": -1,
+        "_id": -1
+      },
+      "memLimit": 104857600,
+      "limitAmount": 20,
+      "type": "simple",
+      "totalDataSizeSorted": 4241,
+      "usedDisk": false,
+      "spills": 0,
+      "spilledRecords": 0,
+      "spilledBytes": 0,
+      "spilledDataStorageSize": 0,
+      "peakTrackedMemBytes": 4241,
+      "inputStage": {
+        "stage": "FETCH",
+        "nReturned": 122,
+        "executionTimeMillisEstimate": 0,
+        "works": 123,
+        "advanced": 122,
+        "needTime": 0,
+        "needYield": 0,
+        "saveState": 0,
+        "restoreState": 0,
+        "isEOF": 1,
+        "nss": "braille_library.interactions",
+        "docsExamined": 122,
+        "alreadyHasObj": 0,
+        "inputStage": {
+          "stage": "IXSCAN",
+          "nReturned": 122,
+          "executionTimeMillisEstimate": 0,
+          "works": 123,
+          "advanced": 122,
+          "needTime": 0,
+          "needYield": 0,
+          "saveState": 0,
+          "restoreState": 0,
+          "isEOF": 1,
+          "nss": "braille_library.interactions",
+          "keyPattern": {
+            "userId": 1,
+            "createdAt": -1
+          },
+          "indexName": "user_createdAt",
+          "isMultiKey": false,
+          "multiKeyPaths": {
+            "userId": [],
+            "createdAt": []
+          },
+          "isUnique": false,
+          "isSparse": false,
+          "isPartial": false,
+          "indexVersion": 2,
+          "direction": "forward",
+          "indexBounds": {
+            "userId": [
+              "[ObjectId('6af5fe4d050fa7b7b6ae40a0'), ObjectId('6af5fe4d050fa7b7b6ae40a0')]"
+            ],
+            "createdAt": [
+              "[MaxKey, MinKey]"
+            ]
+          },
+          "keysExamined": 122,
+          "seeks": 1,
+          "dupsTested": 0,
+          "dupsDropped": 0,
+          "peakTrackedMemBytes": 0
+        }
+      }
+    }
+  },
+  "queryShapeHash": "AA984052D14BFD41935B3C70F3C58770035CF1FF858630F51A25A30C6CF84BBC"
+}

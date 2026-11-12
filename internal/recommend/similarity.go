@@ -99,23 +99,60 @@ func Similarities(scores []UserItemScore) map[bson.ObjectID][]Neighbor {
 
 		var neighbors []Neighbor
 		for _, j := range touched {
-			n := float64(common[j])
-			sim := dot[j] / (norms[i] * norms[j]) * n / (n + Shrinkage)
-			if sim > 0 {
+			if sim := Similarity(dot[j], norms[i], norms[j], common[j]); sim > 0 {
 				neighbors = append(neighbors, Neighbor{ItemID: itemIDs[j], Score: sim})
 			}
 			dot[j], common[j] = 0, 0
 		}
-		if len(neighbors) == 0 {
-			continue
+		if neighbors = topNeighbors(neighbors); len(neighbors) > 0 {
+			result[itemIDs[i]] = neighbors
 		}
-		sortNeighbors(neighbors)
-		if len(neighbors) > TopNeighbors {
-			neighbors = neighbors[:TopNeighbors]
-		}
-		result[itemIDs[i]] = neighbors
 	}
 	return result
+}
+
+// Similarity is the cosine of two item vectors with shrinkage:
+// dot / (normI * normJ) * common / (common + Shrinkage).
+func Similarity(dot, normI, normJ float64, common int) float64 {
+	if normI == 0 || normJ == 0 {
+		return 0
+	}
+	n := float64(common)
+	return dot / (normI * normJ) * n / (n + Shrinkage)
+}
+
+// PairStat is the co-occurrence of two items: the sum over common users of
+// s(u,i)*s(u,j), and the number of common users.
+type PairStat struct {
+	ItemI  bson.ObjectID `bson:"i"`
+	ItemJ  bson.ObjectID `bson:"j"`
+	Dot    float64       `bson:"dot"`
+	Common int           `bson:"n"`
+}
+
+// NeighborsFromStats turns pair statistics and item norms (sqrt of the sum of
+// squared scores) into the same top neighbors as Similarities. It is used
+// when similarities are computed on request instead of precomputed.
+func NeighborsFromStats(pairs []PairStat, norms map[bson.ObjectID]float64) map[bson.ObjectID][]Neighbor {
+	byItem := map[bson.ObjectID][]Neighbor{}
+	for _, p := range pairs {
+		if sim := Similarity(p.Dot, norms[p.ItemI], norms[p.ItemJ], p.Common); sim > 0 {
+			byItem[p.ItemI] = append(byItem[p.ItemI], Neighbor{ItemID: p.ItemJ, Score: sim})
+		}
+	}
+	for id, ns := range byItem {
+		byItem[id] = topNeighbors(ns)
+	}
+	return byItem
+}
+
+// topNeighbors sorts and keeps the TopNeighbors best.
+func topNeighbors(ns []Neighbor) []Neighbor {
+	sortNeighbors(ns)
+	if len(ns) > TopNeighbors {
+		ns = ns[:TopNeighbors]
+	}
+	return ns
 }
 
 // sortNeighbors sorts by score, highest first; ties by id so results are stable.

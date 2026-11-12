@@ -7,10 +7,13 @@ import (
 	"log"
 	"math"
 	"slices"
+	"sort"
 	"time"
 
 	"github.com/brianvoe/gofakeit/v7"
 	"go.mongodb.org/mongo-driver/v2/bson"
+	mongodriver "go.mongodb.org/mongo-driver/v2/mongo"
+	"go.mongodb.org/mongo-driver/v2/mongo/options"
 
 	"github.com/alisherseitkadyr/braille-library/internal/auth"
 	"github.com/alisherseitkadyr/braille-library/internal/config"
@@ -21,8 +24,7 @@ import (
 const (
 	randomSeed   = 42
 	demoPassword = "Demo12345"
-	userCount    = 50
-	itemCount    = 200
+	insertBatch  = 10000
 )
 
 var (
@@ -32,8 +34,17 @@ var (
 )
 
 func main() {
-	reset := flag.Bool("reset", false, "delete existing users, items and interactions first")
+	reset := flag.Bool("reset", false, "delete existing users, items, interactions and similarities first")
+	userCount := flag.Int("users", 50, "number of users (including the two demo accounts)")
+	itemCount := flag.Int("items", 200, "number of items")
+	interactionCount := flag.Int("interactions", 0,
+		"exact number of interactions for performance tests; 0 = demo data (35-85 per user).\n"+
+			"With a value > 0, generated users get the emails user1@perf.kz, user2@perf.kz, ...")
 	flag.Parse()
+	if *userCount < 2 || *itemCount < 1 || *interactionCount < 0 {
+		log.Fatal("need --users >= 2, --items >= 1 and --interactions >= 0")
+	}
+	started := time.Now()
 
 	cfg, err := config.Load()
 	if err != nil {
@@ -55,7 +66,8 @@ func main() {
 	names := []string{mongo.UsersCollection, mongo.ItemsCollection, mongo.InteractionsCollection}
 	if *reset {
 		// DeleteMany instead of Drop, so the indexes stay in place.
-		for _, name := range names {
+		// Old similarities point to deleted items, so they go too.
+		for _, name := range append(names, mongo.ItemSimilaritiesCollection) {
 			if _, err := db.Collection(name).DeleteMany(ctx, bson.M{}); err != nil {
 				log.Fatalf("reset %s: %v", name, err)
 			}
@@ -66,28 +78,37 @@ func main() {
 		log.Fatal("database is not empty, run with --reset to replace the data")
 	}
 
-	users := makeUsers()
-	items := makeItems()
-	interactions := makeInteractions(users, items)
+	perf := *interactionCount > 0
+	users := makeUsers(*userCount, perf)
+	items := makeItems(*itemCount)
+	interactions := makeInteractions(users, items, *interactionCount)
 
-	if _, err := db.Collection(mongo.UsersCollection).InsertMany(ctx, users); err != nil {
-		log.Fatalf("insert users: %v", err)
-	}
-	if _, err := db.Collection(mongo.ItemsCollection).InsertMany(ctx, items); err != nil {
-		log.Fatalf("insert items: %v", err)
-	}
-	if _, err := db.Collection(mongo.InteractionsCollection).InsertMany(ctx, interactions); err != nil {
-		log.Fatalf("insert interactions: %v", err)
-	}
+	insertAll(ctx, db.Collection(mongo.UsersCollection), users)
+	insertAll(ctx, db.Collection(mongo.ItemsCollection), items)
+	insertAll(ctx, db.Collection(mongo.InteractionsCollection), interactions)
 
 	for _, name := range names {
 		n, _ := db.Collection(name).CountDocuments(ctx, bson.M{})
 		fmt.Printf("%-13s %d\n", name, n)
 	}
 	fmt.Printf("demo accounts: admin@demo.kz, reader@demo.kz (password %s)\n", demoPassword)
+	if perf {
+		fmt.Printf("generated users: user1@perf.kz ... user%d@perf.kz (same password)\n", len(users)-2)
+	}
+	fmt.Printf("done in %s\n", time.Since(started).Round(time.Millisecond))
 }
 
-func makeUsers() []domain.User {
+// insertAll inserts documents in unordered bulk batches.
+func insertAll[T any](ctx context.Context, coll *mongodriver.Collection, docs []T) {
+	for start := 0; start < len(docs); start += insertBatch {
+		batch := docs[start:min(start+insertBatch, len(docs))]
+		if _, err := coll.InsertMany(ctx, batch, options.InsertMany().SetOrdered(false)); err != nil {
+			log.Fatalf("insert into %s: %v", coll.Name(), err)
+		}
+	}
+}
+
+func makeUsers(count int, perf bool) []domain.User {
 	// Same hashing as registration, so demo accounts can log in through the API.
 	hash, err := auth.HashPassword(demoPassword)
 	if err != nil {
@@ -102,8 +123,8 @@ func makeUsers() []domain.User {
 
 	people := append(slices.Clone(kkPeople), ruPeople...)
 	f.ShuffleAnySlice(people)
-	for i := 0; len(users) < userCount; i++ {
-		p := people[i]
+	for i := 0; len(users) < count; i++ {
+		p := people[i%len(people)] // names repeat for big data sets
 		lang := domain.LangKazakh
 		if slices.Contains(ruPeople, p) {
 			lang = domain.LangRussian
@@ -130,6 +151,9 @@ func makeUsers() []domain.User {
 		}
 
 		email := fmt.Sprintf("%s@example.kz", p.login)
+		if perf {
+			email = fmt.Sprintf("user%d@perf.kz", len(users)-1)
+		}
 		users = append(users, newUser(email, p.name, role, lang, level, interests, f.Float64() < 0.3))
 	}
 
@@ -148,7 +172,7 @@ func newUser(email, name string, role domain.Role, lang domain.Language, level d
 	}
 }
 
-func makeItems() []domain.Item {
+func makeItems(itemCount int) []domain.Item {
 	seen := map[string]bool{}
 	items := make([]domain.Item, 0, itemCount)
 	for len(items) < itemCount {
@@ -229,74 +253,102 @@ func makeItems() []domain.Item {
 
 // makeInteractions simulates reading sessions. Each user picks items with weights based on
 // their interests, language and reading level, then views, reads, listens, rates, etc.
-func makeInteractions(users []domain.User, items []domain.Item) []domain.Interaction {
-	var result []domain.Interaction
+//
+// total = 0 gives the demo data (35-85 interactions per user). total > 0 gives exactly
+// that many interactions, about total/users per user, for performance tests.
+func makeInteractions(users []domain.User, items []domain.Item, total int) []domain.Interaction {
+	result := make([]domain.Interaction, 0, total)
 	ratings := map[bson.ObjectID][]int{}
+	// One rating and one favorite per user and item (unique index), across all passes.
+	type pair struct{ user, item bson.ObjectID }
+	rated := map[pair]bool{}
+	favorited := map[pair]bool{}
+	// Users with the same profile share the same cumulative item weights.
+	weightsByProfile := map[string][]float64{}
+	avg := max(1, total/len(users))
 
-	for _, u := range users {
-		budget := f.Number(35, 85)
-		if u.Role == domain.RoleAdmin {
-			budget = 5
-		}
-		weights := itemWeights(u, items)
-		rated := map[bson.ObjectID]bool{}
-		favorited := map[bson.ObjectID]bool{}
-
-		count := 0
-		for count < budget {
-			it := items[weightedIndex(weights)]
-			start := it.CreatedAt
-			if u.CreatedAt.After(start) {
-				start = u.CreatedAt
+	for {
+		for _, u := range users {
+			budget := f.Number(35, 85)
+			if u.Role == domain.RoleAdmin {
+				budget = 5
 			}
-			t := f.DateRange(start, now)
-			add := func(typ domain.InteractionType, value *int, c *domain.Correction) {
-				result = append(result, domain.Interaction{
-					ID: bson.NewObjectID(), UserID: u.ID, ItemID: it.ID,
-					Type: typ, Value: value, Correction: c, CreatedAt: t,
-				})
-				t = t.Add(time.Duration(f.Number(1, 40)) * time.Minute)
-				count++
+			if total > 0 {
+				budget = f.Number(max(1, avg/2), avg*3/2)
+			}
+			profile := fmt.Sprint(u.Role, u.PreferredLanguage, u.ReadingLevel, u.Interests, u.PrefersAudio)
+			weights, ok := weightsByProfile[profile]
+			if !ok {
+				weights = cumulativeWeights(itemWeights(u, items))
+				weightsByProfile[profile] = weights
 			}
 
-			add(domain.InteractionView, nil, nil)
+			count := 0
+			for count < budget && (total == 0 || len(result) < total) {
+				it := items[weightedIndex(weights)]
+				key := pair{u.ID, it.ID}
+				start := it.CreatedAt
+				if u.CreatedAt.After(start) {
+					start = u.CreatedAt
+				}
+				t := f.DateRange(start, now)
+				// add returns false once the requested total is reached.
+				add := func(typ domain.InteractionType, value *int, c *domain.Correction) bool {
+					if total > 0 && len(result) >= total {
+						return false
+					}
+					result = append(result, domain.Interaction{
+						ID: bson.NewObjectID(), UserID: u.ID, ItemID: it.ID,
+						Type: typ, Value: value, Correction: c, CreatedAt: t,
+					})
+					t = t.Add(time.Duration(f.Number(1, 40)) * time.Minute)
+					count++
+					return true
+				}
 
-			progress := 0
-			if f.Float64() < 0.6 {
-				progress = 100
+				add(domain.InteractionView, nil, nil)
+
+				progress := 0
 				if f.Float64() < 0.6 {
-					progress = f.Number(5, 95)
+					progress = 100
+					if f.Float64() < 0.6 {
+						progress = f.Number(5, 95)
+					}
+					add(domain.InteractionRead, intPtr(progress), nil)
 				}
-				add(domain.InteractionRead, intPtr(progress), nil)
-			}
 
-			listenChance := 0.1
-			if u.PrefersAudio {
-				listenChance = 0.6
-			}
-			if it.HasAudio && f.Float64() < listenChance {
-				add(domain.InteractionListen, nil, nil)
-			}
+				listenChance := 0.1
+				if u.PrefersAudio {
+					listenChance = 0.6
+				}
+				if it.HasAudio && f.Float64() < listenChance {
+					add(domain.InteractionListen, nil, nil)
+				}
 
-			if progress >= 50 && !rated[it.ID] && f.Float64() < 0.4 {
-				r := rating(u, it)
-				rated[it.ID] = true
-				ratings[it.ID] = append(ratings[it.ID], r)
-				add(domain.InteractionRate, intPtr(r), nil)
-				if r >= 4 && !favorited[it.ID] && f.Float64() < 0.35 {
-					favorited[it.ID] = true
-					add(domain.InteractionFavorite, nil, nil)
+				if progress >= 50 && !rated[key] && f.Float64() < 0.4 {
+					r := rating(u, it)
+					if add(domain.InteractionRate, intPtr(r), nil) {
+						rated[key] = true
+						ratings[it.ID] = append(ratings[it.ID], r)
+					}
+					if r >= 4 && !favorited[key] && f.Float64() < 0.35 && add(domain.InteractionFavorite, nil, nil) {
+						favorited[key] = true
+					}
+				}
+
+				// Lower recognition accuracy means more errors for readers to correct.
+				if progress > 0 && f.Float64() < (1-it.RecognitionAccuracy)*3 {
+					pairs := corrections[it.Language]
+					c := pairs[f.IntN(len(pairs))]
+					add(domain.InteractionCorrection, nil, &domain.Correction{
+						Position: f.Number(0, it.Pages*1200), Original: c[0], Suggested: c[1],
+					})
 				}
 			}
-
-			// Lower recognition accuracy means more errors for readers to correct.
-			if progress > 0 && f.Float64() < (1-it.RecognitionAccuracy)*3 {
-				pairs := corrections[it.Language]
-				c := pairs[f.IntN(len(pairs))]
-				add(domain.InteractionCorrection, nil, &domain.Correction{
-					Position: f.Number(0, it.Pages*1200), Original: c[0], Suggested: c[1],
-				})
-			}
+		}
+		// The demo data is one pass; a big data set loops until the total is reached.
+		if total == 0 || len(result) >= total {
+			break
 		}
 	}
 
@@ -349,18 +401,21 @@ func rating(u domain.User, it domain.Item) int {
 	return max(1, min(5, int(math.Round(score))))
 }
 
-func weightedIndex(weights []float64) int {
-	total := 0.0
-	for _, w := range weights {
-		total += w
-	}
-	r := f.Float64() * total
+func cumulativeWeights(weights []float64) []float64 {
+	cum := make([]float64, len(weights))
+	sum := 0.0
 	for i, w := range weights {
-		if r -= w; r < 0 {
-			return i
-		}
+		sum += w
+		cum[i] = sum
 	}
-	return len(weights) - 1
+	return cum
+}
+
+// weightedIndex picks an index with a binary search over cumulative weights,
+// so a pick is O(log n) even with thousands of items.
+func weightedIndex(cum []float64) int {
+	r := f.Float64() * cum[len(cum)-1]
+	return min(sort.Search(len(cum), func(i int) bool { return cum[i] > r }), len(cum)-1)
 }
 
 // pick returns a key chosen with the given percentage weights, in a stable order.

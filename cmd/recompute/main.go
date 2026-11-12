@@ -29,7 +29,7 @@ func main() {
 	}
 
 	recs := service.NewRecommendationService(mongo.NewRecommendationRepository(db),
-		mongo.NewItemRepository(db), mongo.NewUserRepository(db))
+		mongo.NewItemRepository(db), mongo.NewUserRepository(db), service.ModePrecomputed)
 	result, err := recs.Rebuild(ctx)
 	if err != nil {
 		log.Fatalf("rebuild: %v", err)

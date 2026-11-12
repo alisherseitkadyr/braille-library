@@ -132,6 +132,21 @@ func (r *ItemRepository) GetMany(ctx context.Context, ids []bson.ObjectID) ([]do
 // Popular returns items sorted by popularity (number of ratings, then
 // average rating), skipping the excluded ids. Empty filter fields mean "any".
 func (r *ItemRepository) Popular(ctx context.Context, f domain.PopularFilter, exclude []bson.ObjectID, limit int) ([]domain.Item, error) {
+	filter, sort := PopularQuery(f, exclude)
+	opts := options.Find().SetSort(sort).SetLimit(int64(limit))
+	cur, err := r.coll.Find(ctx, filter, opts)
+	if err != nil {
+		return nil, err
+	}
+	items := []domain.Item{}
+	if err := cur.All(ctx, &items); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
+// PopularQuery builds the filter and sort of Popular.
+func PopularQuery(f domain.PopularFilter, exclude []bson.ObjectID) (bson.M, bson.D) {
 	filter := bson.M{}
 	if len(exclude) > 0 {
 		filter["_id"] = bson.M{"$nin": exclude}
@@ -145,17 +160,5 @@ func (r *ItemRepository) Popular(ctx context.Context, f domain.PopularFilter, ex
 	if f.Language != "" {
 		filter["language"] = f.Language
 	}
-
-	opts := options.Find().
-		SetSort(bson.D{{Key: "ratingsCount", Value: -1}, {Key: "avgRating", Value: -1}, {Key: "_id", Value: 1}}).
-		SetLimit(int64(limit))
-	cur, err := r.coll.Find(ctx, filter, opts)
-	if err != nil {
-		return nil, err
-	}
-	items := []domain.Item{}
-	if err := cur.All(ctx, &items); err != nil {
-		return nil, err
-	}
-	return items, nil
+	return filter, bson.D{{Key: "ratingsCount", Value: -1}, {Key: "avgRating", Value: -1}, {Key: "_id", Value: 1}}
 }

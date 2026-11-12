@@ -1,0 +1,4151 @@
+{
+  "stages": [
+    {
+      "$cursor": {
+        "queryPlanner": {
+          "namespace": "braille_library.interactions",
+          "parsedQuery": {
+            "itemId": {
+              "$in": [
+                {
+                  "$oid": "6af5fd817fb2c3659da7ed58"
+                },
+                {
+                  "$oid": "6af5fd817fb2c3659da7ed59"
+                },
+                {
+                  "$oid": "6af5fd817fb2c3659da7ed5a"
+                },
+                {
+                  "$oid": "6af5fd817fb2c3659da7ed5b"
+                },
+                {
+                  "$oid": "6af5fd817fb2c3659da7ed5c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed5d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed5e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed5f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed60"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed61"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed62"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed63"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed64"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed65"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed66"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed67"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed68"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed69"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed6a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed6b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed6c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed6d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed6e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed6f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed70"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed71"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed72"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed73"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed74"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed75"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed76"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed77"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed78"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed79"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed7a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed7b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed7c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed7d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed7e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed7f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed80"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed81"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed82"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed83"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed84"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed85"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed86"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed87"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed88"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed89"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed8a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed8b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed8c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed8d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed8e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed8f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed90"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed91"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed92"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed93"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed94"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed95"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed96"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed97"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed98"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed99"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed9a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed9b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed9c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed9d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed9e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ed9f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eda0"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eda1"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eda2"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eda3"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eda4"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eda5"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eda6"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eda7"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eda8"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eda9"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edaa"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edab"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edac"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edad"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edae"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edaf"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edb0"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edb1"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edb2"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edb3"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edb4"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edb5"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edb6"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edb7"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edb8"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edb9"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edba"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edbb"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edbc"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edbd"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edbe"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edbf"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edc0"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edc1"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edc2"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edc3"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edc4"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edc5"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edc6"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edc7"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edc8"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edc9"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edca"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edcb"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edcc"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edcd"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edce"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edcf"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edd0"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edd1"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edd2"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edd3"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edd4"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edd5"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edd6"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edd7"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edd8"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edd9"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edda"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eddb"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eddc"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eddd"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edde"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eddf"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ede0"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ede1"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ede2"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ede3"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ede4"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ede5"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ede6"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ede7"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ede8"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ede9"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edea"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edeb"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edec"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eded"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edee"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edef"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edf0"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edf1"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edf2"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edf3"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edf4"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edf5"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edf6"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edf7"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edf8"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edf9"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edfa"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edfb"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edfc"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edfd"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edfe"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7edff"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee00"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee01"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee02"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee03"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee04"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee05"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee06"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee07"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee08"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee09"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee0a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee0b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee0c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee0d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee0e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee0f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee10"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee11"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee12"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee13"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee14"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee15"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee16"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee17"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee18"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee19"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee1a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee1b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee1c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee1d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee1e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee1f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee20"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee21"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee22"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee23"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee24"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee25"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee26"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee27"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee28"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee29"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee2a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee2b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee2c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee2d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee2e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee2f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee30"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee31"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee32"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee33"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee34"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee35"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee36"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee37"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee38"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee39"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee3a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee3b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee3c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee3d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee3e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee3f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee40"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee41"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee42"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee43"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee44"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee45"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee46"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee47"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee48"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee49"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee4b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee4c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee4d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee4e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee4f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee50"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee51"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee52"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee53"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee54"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee55"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee56"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee57"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee58"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee59"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee5a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee5b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee5c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee5d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee5e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee5f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee60"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee61"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee62"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee63"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee64"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee65"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee66"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee67"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee68"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee69"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee6a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee6b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee6c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee6d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee6e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee6f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee70"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee71"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee72"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee73"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee74"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee75"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee76"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee77"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee78"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee79"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee7a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee7b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee7c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee7d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee7e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee7f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee80"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee81"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee82"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee83"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee84"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee85"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee86"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee87"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee88"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee89"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee8a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee8b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee8c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee8d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee8e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee8f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee90"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee91"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee92"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee93"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee94"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee95"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee96"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee97"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee98"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee99"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee9a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee9b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee9c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee9d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee9e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ee9f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eea0"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eea1"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eea2"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eea3"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eea4"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eea5"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eea6"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eea7"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eea8"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eea9"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeaa"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeab"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeac"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eead"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeae"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeaf"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeb0"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeb1"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeb2"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeb3"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeb4"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeb5"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeb6"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeb7"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeb8"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeb9"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeba"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eebb"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eebc"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eebd"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eebe"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eebf"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eec0"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eec1"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eec2"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eec3"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eec4"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eec5"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eec6"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eec7"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eec8"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eec9"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeca"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eecb"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eecc"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eecd"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eece"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eecf"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eed0"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eed1"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eed2"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eed3"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eed4"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eed5"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eed6"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eed7"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eed8"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eed9"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeda"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eedb"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eedc"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eedd"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eede"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eedf"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eee0"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eee1"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eee2"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eee3"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eee4"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eee5"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eee6"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eee7"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eee8"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eee9"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeea"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeeb"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeec"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeed"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeee"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeef"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eef0"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eef1"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eef2"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eef3"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eef4"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eef5"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eef6"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eef7"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eef8"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eef9"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eefa"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eefb"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eefc"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eefd"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eefe"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7eeff"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef00"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef01"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef02"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef03"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef04"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef05"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef06"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef07"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef08"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef09"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef0a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef0b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef0c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef0d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef0e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef0f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef10"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef11"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef12"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef13"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef14"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef15"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef16"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef17"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef18"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef19"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef1a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef1b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef1c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef1d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef1e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef1f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef20"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef21"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef22"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef23"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef24"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef25"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef26"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef27"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef28"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef29"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef2a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef2b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef2c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef2d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef2e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef2f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef30"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef31"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef32"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef33"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef34"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef35"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef36"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef37"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef38"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef39"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef3a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef3b"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef3c"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef3d"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef3e"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef3f"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef40"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef41"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef42"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef43"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef44"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef45"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef46"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef47"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef48"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef49"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef4a"
+                },
+                {
+                  "$oid": "6af5fd827fb2c3659da7ef4b"
+                }
+              ]
+            }
+          },
+          "indexFilterSet": false,
+          "queryHash": "37CED41C",
+          "planCacheShapeHash": "37CED41C",
+          "planCacheKey": "E7488D3E",
+          "optimizationTimeMillis": 2,
+          "cursorType": "regular",
+          "maxIndexedOrSolutionsReached": false,
+          "maxIndexedAndSolutionsReached": false,
+          "maxScansToExplodeReached": false,
+          "prunedSimilarIndexes": false,
+          "winningPlan": {
+            "isCached": false,
+            "queryPlan": {
+              "stage": "GROUP",
+              "planNodeId": 4,
+              "inputStage": {
+                "stage": "FETCH",
+                "planNodeId": 2,
+                "nss": "braille_library.interactions",
+                "inputStage": {
+                  "stage": "IXSCAN",
+                  "planNodeId": 1,
+                  "nss": "braille_library.interactions",
+                  "keyPattern": {
+                    "itemId": 1,
+                    "type": 1
+                  },
+                  "indexName": "item_type",
+                  "isMultiKey": false,
+                  "multiKeyPaths": {
+                    "itemId": [],
+                    "type": []
+                  },
+                  "isUnique": false,
+                  "isSparse": false,
+                  "isPartial": false,
+                  "indexVersion": 2,
+                  "direction": "forward",
+                  "indexBounds": {
+                    "itemId": [
+                      "[ObjectId('6af5fd817fb2c3659da7ed58'), ObjectId('6af5fd817fb2c3659da7ed58')]",
+                      "[ObjectId('6af5fd817fb2c3659da7ed59'), ObjectId('6af5fd817fb2c3659da7ed59')]",
+                      "[ObjectId('6af5fd817fb2c3659da7ed5a'), ObjectId('6af5fd817fb2c3659da7ed5a')]",
+                      "[ObjectId('6af5fd817fb2c3659da7ed5b'), ObjectId('6af5fd817fb2c3659da7ed5b')]",
+                      "[ObjectId('6af5fd817fb2c3659da7ed5c'), ObjectId('6af5fd817fb2c3659da7ed5c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed5d'), ObjectId('6af5fd827fb2c3659da7ed5d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed5e'), ObjectId('6af5fd827fb2c3659da7ed5e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed5f'), ObjectId('6af5fd827fb2c3659da7ed5f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed60'), ObjectId('6af5fd827fb2c3659da7ed60')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed61'), ObjectId('6af5fd827fb2c3659da7ed61')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed62'), ObjectId('6af5fd827fb2c3659da7ed62')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed63'), ObjectId('6af5fd827fb2c3659da7ed63')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed64'), ObjectId('6af5fd827fb2c3659da7ed64')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed65'), ObjectId('6af5fd827fb2c3659da7ed65')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed66'), ObjectId('6af5fd827fb2c3659da7ed66')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed67'), ObjectId('6af5fd827fb2c3659da7ed67')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed68'), ObjectId('6af5fd827fb2c3659da7ed68')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed69'), ObjectId('6af5fd827fb2c3659da7ed69')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed6a'), ObjectId('6af5fd827fb2c3659da7ed6a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed6b'), ObjectId('6af5fd827fb2c3659da7ed6b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed6c'), ObjectId('6af5fd827fb2c3659da7ed6c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed6d'), ObjectId('6af5fd827fb2c3659da7ed6d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed6e'), ObjectId('6af5fd827fb2c3659da7ed6e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed6f'), ObjectId('6af5fd827fb2c3659da7ed6f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed70'), ObjectId('6af5fd827fb2c3659da7ed70')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed71'), ObjectId('6af5fd827fb2c3659da7ed71')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed72'), ObjectId('6af5fd827fb2c3659da7ed72')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed73'), ObjectId('6af5fd827fb2c3659da7ed73')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed74'), ObjectId('6af5fd827fb2c3659da7ed74')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed75'), ObjectId('6af5fd827fb2c3659da7ed75')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed76'), ObjectId('6af5fd827fb2c3659da7ed76')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed77'), ObjectId('6af5fd827fb2c3659da7ed77')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed78'), ObjectId('6af5fd827fb2c3659da7ed78')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed79'), ObjectId('6af5fd827fb2c3659da7ed79')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed7a'), ObjectId('6af5fd827fb2c3659da7ed7a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed7b'), ObjectId('6af5fd827fb2c3659da7ed7b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed7c'), ObjectId('6af5fd827fb2c3659da7ed7c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed7d'), ObjectId('6af5fd827fb2c3659da7ed7d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed7e'), ObjectId('6af5fd827fb2c3659da7ed7e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed7f'), ObjectId('6af5fd827fb2c3659da7ed7f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed80'), ObjectId('6af5fd827fb2c3659da7ed80')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed81'), ObjectId('6af5fd827fb2c3659da7ed81')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed82'), ObjectId('6af5fd827fb2c3659da7ed82')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed83'), ObjectId('6af5fd827fb2c3659da7ed83')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed84'), ObjectId('6af5fd827fb2c3659da7ed84')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed85'), ObjectId('6af5fd827fb2c3659da7ed85')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed86'), ObjectId('6af5fd827fb2c3659da7ed86')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed87'), ObjectId('6af5fd827fb2c3659da7ed87')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed88'), ObjectId('6af5fd827fb2c3659da7ed88')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed89'), ObjectId('6af5fd827fb2c3659da7ed89')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed8a'), ObjectId('6af5fd827fb2c3659da7ed8a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed8b'), ObjectId('6af5fd827fb2c3659da7ed8b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed8c'), ObjectId('6af5fd827fb2c3659da7ed8c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed8d'), ObjectId('6af5fd827fb2c3659da7ed8d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed8e'), ObjectId('6af5fd827fb2c3659da7ed8e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed8f'), ObjectId('6af5fd827fb2c3659da7ed8f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed90'), ObjectId('6af5fd827fb2c3659da7ed90')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed91'), ObjectId('6af5fd827fb2c3659da7ed91')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed92'), ObjectId('6af5fd827fb2c3659da7ed92')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed93'), ObjectId('6af5fd827fb2c3659da7ed93')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed94'), ObjectId('6af5fd827fb2c3659da7ed94')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed95'), ObjectId('6af5fd827fb2c3659da7ed95')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed96'), ObjectId('6af5fd827fb2c3659da7ed96')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed97'), ObjectId('6af5fd827fb2c3659da7ed97')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed98'), ObjectId('6af5fd827fb2c3659da7ed98')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed99'), ObjectId('6af5fd827fb2c3659da7ed99')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed9a'), ObjectId('6af5fd827fb2c3659da7ed9a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed9b'), ObjectId('6af5fd827fb2c3659da7ed9b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed9c'), ObjectId('6af5fd827fb2c3659da7ed9c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed9d'), ObjectId('6af5fd827fb2c3659da7ed9d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed9e'), ObjectId('6af5fd827fb2c3659da7ed9e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ed9f'), ObjectId('6af5fd827fb2c3659da7ed9f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eda0'), ObjectId('6af5fd827fb2c3659da7eda0')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eda1'), ObjectId('6af5fd827fb2c3659da7eda1')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eda2'), ObjectId('6af5fd827fb2c3659da7eda2')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eda3'), ObjectId('6af5fd827fb2c3659da7eda3')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eda4'), ObjectId('6af5fd827fb2c3659da7eda4')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eda5'), ObjectId('6af5fd827fb2c3659da7eda5')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eda6'), ObjectId('6af5fd827fb2c3659da7eda6')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eda7'), ObjectId('6af5fd827fb2c3659da7eda7')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eda8'), ObjectId('6af5fd827fb2c3659da7eda8')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eda9'), ObjectId('6af5fd827fb2c3659da7eda9')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edaa'), ObjectId('6af5fd827fb2c3659da7edaa')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edab'), ObjectId('6af5fd827fb2c3659da7edab')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edac'), ObjectId('6af5fd827fb2c3659da7edac')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edad'), ObjectId('6af5fd827fb2c3659da7edad')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edae'), ObjectId('6af5fd827fb2c3659da7edae')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edaf'), ObjectId('6af5fd827fb2c3659da7edaf')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edb0'), ObjectId('6af5fd827fb2c3659da7edb0')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edb1'), ObjectId('6af5fd827fb2c3659da7edb1')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edb2'), ObjectId('6af5fd827fb2c3659da7edb2')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edb3'), ObjectId('6af5fd827fb2c3659da7edb3')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edb4'), ObjectId('6af5fd827fb2c3659da7edb4')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edb5'), ObjectId('6af5fd827fb2c3659da7edb5')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edb6'), ObjectId('6af5fd827fb2c3659da7edb6')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edb7'), ObjectId('6af5fd827fb2c3659da7edb7')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edb8'), ObjectId('6af5fd827fb2c3659da7edb8')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edb9'), ObjectId('6af5fd827fb2c3659da7edb9')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edba'), ObjectId('6af5fd827fb2c3659da7edba')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edbb'), ObjectId('6af5fd827fb2c3659da7edbb')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edbc'), ObjectId('6af5fd827fb2c3659da7edbc')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edbd'), ObjectId('6af5fd827fb2c3659da7edbd')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edbe'), ObjectId('6af5fd827fb2c3659da7edbe')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edbf'), ObjectId('6af5fd827fb2c3659da7edbf')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edc0'), ObjectId('6af5fd827fb2c3659da7edc0')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edc1'), ObjectId('6af5fd827fb2c3659da7edc1')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edc2'), ObjectId('6af5fd827fb2c3659da7edc2')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edc3'), ObjectId('6af5fd827fb2c3659da7edc3')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edc4'), ObjectId('6af5fd827fb2c3659da7edc4')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edc5'), ObjectId('6af5fd827fb2c3659da7edc5')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edc6'), ObjectId('6af5fd827fb2c3659da7edc6')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edc7'), ObjectId('6af5fd827fb2c3659da7edc7')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edc8'), ObjectId('6af5fd827fb2c3659da7edc8')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edc9'), ObjectId('6af5fd827fb2c3659da7edc9')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edca'), ObjectId('6af5fd827fb2c3659da7edca')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edcb'), ObjectId('6af5fd827fb2c3659da7edcb')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edcc'), ObjectId('6af5fd827fb2c3659da7edcc')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edcd'), ObjectId('6af5fd827fb2c3659da7edcd')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edce'), ObjectId('6af5fd827fb2c3659da7edce')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edcf'), ObjectId('6af5fd827fb2c3659da7edcf')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edd0'), ObjectId('6af5fd827fb2c3659da7edd0')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edd1'), ObjectId('6af5fd827fb2c3659da7edd1')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edd2'), ObjectId('6af5fd827fb2c3659da7edd2')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edd3'), ObjectId('6af5fd827fb2c3659da7edd3')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edd4'), ObjectId('6af5fd827fb2c3659da7edd4')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edd5'), ObjectId('6af5fd827fb2c3659da7edd5')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edd6'), ObjectId('6af5fd827fb2c3659da7edd6')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edd7'), ObjectId('6af5fd827fb2c3659da7edd7')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edd8'), ObjectId('6af5fd827fb2c3659da7edd8')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edd9'), ObjectId('6af5fd827fb2c3659da7edd9')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edda'), ObjectId('6af5fd827fb2c3659da7edda')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eddb'), ObjectId('6af5fd827fb2c3659da7eddb')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eddc'), ObjectId('6af5fd827fb2c3659da7eddc')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eddd'), ObjectId('6af5fd827fb2c3659da7eddd')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edde'), ObjectId('6af5fd827fb2c3659da7edde')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eddf'), ObjectId('6af5fd827fb2c3659da7eddf')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ede0'), ObjectId('6af5fd827fb2c3659da7ede0')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ede1'), ObjectId('6af5fd827fb2c3659da7ede1')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ede2'), ObjectId('6af5fd827fb2c3659da7ede2')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ede3'), ObjectId('6af5fd827fb2c3659da7ede3')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ede4'), ObjectId('6af5fd827fb2c3659da7ede4')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ede5'), ObjectId('6af5fd827fb2c3659da7ede5')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ede6'), ObjectId('6af5fd827fb2c3659da7ede6')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ede7'), ObjectId('6af5fd827fb2c3659da7ede7')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ede8'), ObjectId('6af5fd827fb2c3659da7ede8')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ede9'), ObjectId('6af5fd827fb2c3659da7ede9')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edea'), ObjectId('6af5fd827fb2c3659da7edea')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edeb'), ObjectId('6af5fd827fb2c3659da7edeb')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edec'), ObjectId('6af5fd827fb2c3659da7edec')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eded'), ObjectId('6af5fd827fb2c3659da7eded')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edee'), ObjectId('6af5fd827fb2c3659da7edee')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edef'), ObjectId('6af5fd827fb2c3659da7edef')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edf0'), ObjectId('6af5fd827fb2c3659da7edf0')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edf1'), ObjectId('6af5fd827fb2c3659da7edf1')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edf2'), ObjectId('6af5fd827fb2c3659da7edf2')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edf3'), ObjectId('6af5fd827fb2c3659da7edf3')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edf4'), ObjectId('6af5fd827fb2c3659da7edf4')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edf5'), ObjectId('6af5fd827fb2c3659da7edf5')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edf6'), ObjectId('6af5fd827fb2c3659da7edf6')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edf7'), ObjectId('6af5fd827fb2c3659da7edf7')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edf8'), ObjectId('6af5fd827fb2c3659da7edf8')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edf9'), ObjectId('6af5fd827fb2c3659da7edf9')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edfa'), ObjectId('6af5fd827fb2c3659da7edfa')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edfb'), ObjectId('6af5fd827fb2c3659da7edfb')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edfc'), ObjectId('6af5fd827fb2c3659da7edfc')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edfd'), ObjectId('6af5fd827fb2c3659da7edfd')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edfe'), ObjectId('6af5fd827fb2c3659da7edfe')]",
+                      "[ObjectId('6af5fd827fb2c3659da7edff'), ObjectId('6af5fd827fb2c3659da7edff')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee00'), ObjectId('6af5fd827fb2c3659da7ee00')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee01'), ObjectId('6af5fd827fb2c3659da7ee01')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee02'), ObjectId('6af5fd827fb2c3659da7ee02')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee03'), ObjectId('6af5fd827fb2c3659da7ee03')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee04'), ObjectId('6af5fd827fb2c3659da7ee04')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee05'), ObjectId('6af5fd827fb2c3659da7ee05')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee06'), ObjectId('6af5fd827fb2c3659da7ee06')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee07'), ObjectId('6af5fd827fb2c3659da7ee07')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee08'), ObjectId('6af5fd827fb2c3659da7ee08')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee09'), ObjectId('6af5fd827fb2c3659da7ee09')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee0a'), ObjectId('6af5fd827fb2c3659da7ee0a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee0b'), ObjectId('6af5fd827fb2c3659da7ee0b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee0c'), ObjectId('6af5fd827fb2c3659da7ee0c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee0d'), ObjectId('6af5fd827fb2c3659da7ee0d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee0e'), ObjectId('6af5fd827fb2c3659da7ee0e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee0f'), ObjectId('6af5fd827fb2c3659da7ee0f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee10'), ObjectId('6af5fd827fb2c3659da7ee10')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee11'), ObjectId('6af5fd827fb2c3659da7ee11')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee12'), ObjectId('6af5fd827fb2c3659da7ee12')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee13'), ObjectId('6af5fd827fb2c3659da7ee13')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee14'), ObjectId('6af5fd827fb2c3659da7ee14')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee15'), ObjectId('6af5fd827fb2c3659da7ee15')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee16'), ObjectId('6af5fd827fb2c3659da7ee16')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee17'), ObjectId('6af5fd827fb2c3659da7ee17')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee18'), ObjectId('6af5fd827fb2c3659da7ee18')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee19'), ObjectId('6af5fd827fb2c3659da7ee19')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee1a'), ObjectId('6af5fd827fb2c3659da7ee1a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee1b'), ObjectId('6af5fd827fb2c3659da7ee1b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee1c'), ObjectId('6af5fd827fb2c3659da7ee1c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee1d'), ObjectId('6af5fd827fb2c3659da7ee1d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee1e'), ObjectId('6af5fd827fb2c3659da7ee1e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee1f'), ObjectId('6af5fd827fb2c3659da7ee1f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee20'), ObjectId('6af5fd827fb2c3659da7ee20')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee21'), ObjectId('6af5fd827fb2c3659da7ee21')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee22'), ObjectId('6af5fd827fb2c3659da7ee22')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee23'), ObjectId('6af5fd827fb2c3659da7ee23')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee24'), ObjectId('6af5fd827fb2c3659da7ee24')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee25'), ObjectId('6af5fd827fb2c3659da7ee25')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee26'), ObjectId('6af5fd827fb2c3659da7ee26')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee27'), ObjectId('6af5fd827fb2c3659da7ee27')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee28'), ObjectId('6af5fd827fb2c3659da7ee28')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee29'), ObjectId('6af5fd827fb2c3659da7ee29')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee2a'), ObjectId('6af5fd827fb2c3659da7ee2a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee2b'), ObjectId('6af5fd827fb2c3659da7ee2b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee2c'), ObjectId('6af5fd827fb2c3659da7ee2c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee2d'), ObjectId('6af5fd827fb2c3659da7ee2d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee2e'), ObjectId('6af5fd827fb2c3659da7ee2e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee2f'), ObjectId('6af5fd827fb2c3659da7ee2f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee30'), ObjectId('6af5fd827fb2c3659da7ee30')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee31'), ObjectId('6af5fd827fb2c3659da7ee31')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee32'), ObjectId('6af5fd827fb2c3659da7ee32')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee33'), ObjectId('6af5fd827fb2c3659da7ee33')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee34'), ObjectId('6af5fd827fb2c3659da7ee34')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee35'), ObjectId('6af5fd827fb2c3659da7ee35')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee36'), ObjectId('6af5fd827fb2c3659da7ee36')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee37'), ObjectId('6af5fd827fb2c3659da7ee37')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee38'), ObjectId('6af5fd827fb2c3659da7ee38')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee39'), ObjectId('6af5fd827fb2c3659da7ee39')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee3a'), ObjectId('6af5fd827fb2c3659da7ee3a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee3b'), ObjectId('6af5fd827fb2c3659da7ee3b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee3c'), ObjectId('6af5fd827fb2c3659da7ee3c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee3d'), ObjectId('6af5fd827fb2c3659da7ee3d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee3e'), ObjectId('6af5fd827fb2c3659da7ee3e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee3f'), ObjectId('6af5fd827fb2c3659da7ee3f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee40'), ObjectId('6af5fd827fb2c3659da7ee40')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee41'), ObjectId('6af5fd827fb2c3659da7ee41')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee42'), ObjectId('6af5fd827fb2c3659da7ee42')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee43'), ObjectId('6af5fd827fb2c3659da7ee43')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee44'), ObjectId('6af5fd827fb2c3659da7ee44')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee45'), ObjectId('6af5fd827fb2c3659da7ee45')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee46'), ObjectId('6af5fd827fb2c3659da7ee46')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee47'), ObjectId('6af5fd827fb2c3659da7ee47')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee48'), ObjectId('6af5fd827fb2c3659da7ee48')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee49'), ObjectId('6af5fd827fb2c3659da7ee49')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee4b'), ObjectId('6af5fd827fb2c3659da7ee4b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee4c'), ObjectId('6af5fd827fb2c3659da7ee4c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee4d'), ObjectId('6af5fd827fb2c3659da7ee4d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee4e'), ObjectId('6af5fd827fb2c3659da7ee4e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee4f'), ObjectId('6af5fd827fb2c3659da7ee4f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee50'), ObjectId('6af5fd827fb2c3659da7ee50')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee51'), ObjectId('6af5fd827fb2c3659da7ee51')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee52'), ObjectId('6af5fd827fb2c3659da7ee52')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee53'), ObjectId('6af5fd827fb2c3659da7ee53')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee54'), ObjectId('6af5fd827fb2c3659da7ee54')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee55'), ObjectId('6af5fd827fb2c3659da7ee55')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee56'), ObjectId('6af5fd827fb2c3659da7ee56')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee57'), ObjectId('6af5fd827fb2c3659da7ee57')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee58'), ObjectId('6af5fd827fb2c3659da7ee58')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee59'), ObjectId('6af5fd827fb2c3659da7ee59')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee5a'), ObjectId('6af5fd827fb2c3659da7ee5a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee5b'), ObjectId('6af5fd827fb2c3659da7ee5b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee5c'), ObjectId('6af5fd827fb2c3659da7ee5c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee5d'), ObjectId('6af5fd827fb2c3659da7ee5d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee5e'), ObjectId('6af5fd827fb2c3659da7ee5e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee5f'), ObjectId('6af5fd827fb2c3659da7ee5f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee60'), ObjectId('6af5fd827fb2c3659da7ee60')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee61'), ObjectId('6af5fd827fb2c3659da7ee61')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee62'), ObjectId('6af5fd827fb2c3659da7ee62')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee63'), ObjectId('6af5fd827fb2c3659da7ee63')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee64'), ObjectId('6af5fd827fb2c3659da7ee64')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee65'), ObjectId('6af5fd827fb2c3659da7ee65')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee66'), ObjectId('6af5fd827fb2c3659da7ee66')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee67'), ObjectId('6af5fd827fb2c3659da7ee67')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee68'), ObjectId('6af5fd827fb2c3659da7ee68')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee69'), ObjectId('6af5fd827fb2c3659da7ee69')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee6a'), ObjectId('6af5fd827fb2c3659da7ee6a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee6b'), ObjectId('6af5fd827fb2c3659da7ee6b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee6c'), ObjectId('6af5fd827fb2c3659da7ee6c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee6d'), ObjectId('6af5fd827fb2c3659da7ee6d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee6e'), ObjectId('6af5fd827fb2c3659da7ee6e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee6f'), ObjectId('6af5fd827fb2c3659da7ee6f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee70'), ObjectId('6af5fd827fb2c3659da7ee70')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee71'), ObjectId('6af5fd827fb2c3659da7ee71')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee72'), ObjectId('6af5fd827fb2c3659da7ee72')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee73'), ObjectId('6af5fd827fb2c3659da7ee73')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee74'), ObjectId('6af5fd827fb2c3659da7ee74')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee75'), ObjectId('6af5fd827fb2c3659da7ee75')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee76'), ObjectId('6af5fd827fb2c3659da7ee76')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee77'), ObjectId('6af5fd827fb2c3659da7ee77')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee78'), ObjectId('6af5fd827fb2c3659da7ee78')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee79'), ObjectId('6af5fd827fb2c3659da7ee79')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee7a'), ObjectId('6af5fd827fb2c3659da7ee7a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee7b'), ObjectId('6af5fd827fb2c3659da7ee7b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee7c'), ObjectId('6af5fd827fb2c3659da7ee7c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee7d'), ObjectId('6af5fd827fb2c3659da7ee7d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee7e'), ObjectId('6af5fd827fb2c3659da7ee7e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee7f'), ObjectId('6af5fd827fb2c3659da7ee7f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee80'), ObjectId('6af5fd827fb2c3659da7ee80')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee81'), ObjectId('6af5fd827fb2c3659da7ee81')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee82'), ObjectId('6af5fd827fb2c3659da7ee82')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee83'), ObjectId('6af5fd827fb2c3659da7ee83')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee84'), ObjectId('6af5fd827fb2c3659da7ee84')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee85'), ObjectId('6af5fd827fb2c3659da7ee85')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee86'), ObjectId('6af5fd827fb2c3659da7ee86')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee87'), ObjectId('6af5fd827fb2c3659da7ee87')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee88'), ObjectId('6af5fd827fb2c3659da7ee88')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee89'), ObjectId('6af5fd827fb2c3659da7ee89')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee8a'), ObjectId('6af5fd827fb2c3659da7ee8a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee8b'), ObjectId('6af5fd827fb2c3659da7ee8b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee8c'), ObjectId('6af5fd827fb2c3659da7ee8c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee8d'), ObjectId('6af5fd827fb2c3659da7ee8d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee8e'), ObjectId('6af5fd827fb2c3659da7ee8e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee8f'), ObjectId('6af5fd827fb2c3659da7ee8f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee90'), ObjectId('6af5fd827fb2c3659da7ee90')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee91'), ObjectId('6af5fd827fb2c3659da7ee91')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee92'), ObjectId('6af5fd827fb2c3659da7ee92')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee93'), ObjectId('6af5fd827fb2c3659da7ee93')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee94'), ObjectId('6af5fd827fb2c3659da7ee94')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee95'), ObjectId('6af5fd827fb2c3659da7ee95')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee96'), ObjectId('6af5fd827fb2c3659da7ee96')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee97'), ObjectId('6af5fd827fb2c3659da7ee97')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee98'), ObjectId('6af5fd827fb2c3659da7ee98')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee99'), ObjectId('6af5fd827fb2c3659da7ee99')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee9a'), ObjectId('6af5fd827fb2c3659da7ee9a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee9b'), ObjectId('6af5fd827fb2c3659da7ee9b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee9c'), ObjectId('6af5fd827fb2c3659da7ee9c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee9d'), ObjectId('6af5fd827fb2c3659da7ee9d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee9e'), ObjectId('6af5fd827fb2c3659da7ee9e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ee9f'), ObjectId('6af5fd827fb2c3659da7ee9f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eea0'), ObjectId('6af5fd827fb2c3659da7eea0')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eea1'), ObjectId('6af5fd827fb2c3659da7eea1')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eea2'), ObjectId('6af5fd827fb2c3659da7eea2')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eea3'), ObjectId('6af5fd827fb2c3659da7eea3')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eea4'), ObjectId('6af5fd827fb2c3659da7eea4')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eea5'), ObjectId('6af5fd827fb2c3659da7eea5')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eea6'), ObjectId('6af5fd827fb2c3659da7eea6')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eea7'), ObjectId('6af5fd827fb2c3659da7eea7')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eea8'), ObjectId('6af5fd827fb2c3659da7eea8')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eea9'), ObjectId('6af5fd827fb2c3659da7eea9')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeaa'), ObjectId('6af5fd827fb2c3659da7eeaa')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeab'), ObjectId('6af5fd827fb2c3659da7eeab')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeac'), ObjectId('6af5fd827fb2c3659da7eeac')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eead'), ObjectId('6af5fd827fb2c3659da7eead')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeae'), ObjectId('6af5fd827fb2c3659da7eeae')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeaf'), ObjectId('6af5fd827fb2c3659da7eeaf')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeb0'), ObjectId('6af5fd827fb2c3659da7eeb0')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeb1'), ObjectId('6af5fd827fb2c3659da7eeb1')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeb2'), ObjectId('6af5fd827fb2c3659da7eeb2')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeb3'), ObjectId('6af5fd827fb2c3659da7eeb3')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeb4'), ObjectId('6af5fd827fb2c3659da7eeb4')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeb5'), ObjectId('6af5fd827fb2c3659da7eeb5')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeb6'), ObjectId('6af5fd827fb2c3659da7eeb6')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeb7'), ObjectId('6af5fd827fb2c3659da7eeb7')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeb8'), ObjectId('6af5fd827fb2c3659da7eeb8')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeb9'), ObjectId('6af5fd827fb2c3659da7eeb9')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeba'), ObjectId('6af5fd827fb2c3659da7eeba')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eebb'), ObjectId('6af5fd827fb2c3659da7eebb')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eebc'), ObjectId('6af5fd827fb2c3659da7eebc')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eebd'), ObjectId('6af5fd827fb2c3659da7eebd')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eebe'), ObjectId('6af5fd827fb2c3659da7eebe')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eebf'), ObjectId('6af5fd827fb2c3659da7eebf')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eec0'), ObjectId('6af5fd827fb2c3659da7eec0')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eec1'), ObjectId('6af5fd827fb2c3659da7eec1')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eec2'), ObjectId('6af5fd827fb2c3659da7eec2')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eec3'), ObjectId('6af5fd827fb2c3659da7eec3')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eec4'), ObjectId('6af5fd827fb2c3659da7eec4')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eec5'), ObjectId('6af5fd827fb2c3659da7eec5')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eec6'), ObjectId('6af5fd827fb2c3659da7eec6')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eec7'), ObjectId('6af5fd827fb2c3659da7eec7')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eec8'), ObjectId('6af5fd827fb2c3659da7eec8')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eec9'), ObjectId('6af5fd827fb2c3659da7eec9')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeca'), ObjectId('6af5fd827fb2c3659da7eeca')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eecb'), ObjectId('6af5fd827fb2c3659da7eecb')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eecc'), ObjectId('6af5fd827fb2c3659da7eecc')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eecd'), ObjectId('6af5fd827fb2c3659da7eecd')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eece'), ObjectId('6af5fd827fb2c3659da7eece')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eecf'), ObjectId('6af5fd827fb2c3659da7eecf')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eed0'), ObjectId('6af5fd827fb2c3659da7eed0')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eed1'), ObjectId('6af5fd827fb2c3659da7eed1')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eed2'), ObjectId('6af5fd827fb2c3659da7eed2')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eed3'), ObjectId('6af5fd827fb2c3659da7eed3')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eed4'), ObjectId('6af5fd827fb2c3659da7eed4')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eed5'), ObjectId('6af5fd827fb2c3659da7eed5')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eed6'), ObjectId('6af5fd827fb2c3659da7eed6')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eed7'), ObjectId('6af5fd827fb2c3659da7eed7')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eed8'), ObjectId('6af5fd827fb2c3659da7eed8')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eed9'), ObjectId('6af5fd827fb2c3659da7eed9')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeda'), ObjectId('6af5fd827fb2c3659da7eeda')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eedb'), ObjectId('6af5fd827fb2c3659da7eedb')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eedc'), ObjectId('6af5fd827fb2c3659da7eedc')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eedd'), ObjectId('6af5fd827fb2c3659da7eedd')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eede'), ObjectId('6af5fd827fb2c3659da7eede')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eedf'), ObjectId('6af5fd827fb2c3659da7eedf')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eee0'), ObjectId('6af5fd827fb2c3659da7eee0')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eee1'), ObjectId('6af5fd827fb2c3659da7eee1')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eee2'), ObjectId('6af5fd827fb2c3659da7eee2')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eee3'), ObjectId('6af5fd827fb2c3659da7eee3')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eee4'), ObjectId('6af5fd827fb2c3659da7eee4')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eee5'), ObjectId('6af5fd827fb2c3659da7eee5')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eee6'), ObjectId('6af5fd827fb2c3659da7eee6')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eee7'), ObjectId('6af5fd827fb2c3659da7eee7')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eee8'), ObjectId('6af5fd827fb2c3659da7eee8')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eee9'), ObjectId('6af5fd827fb2c3659da7eee9')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeea'), ObjectId('6af5fd827fb2c3659da7eeea')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeeb'), ObjectId('6af5fd827fb2c3659da7eeeb')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeec'), ObjectId('6af5fd827fb2c3659da7eeec')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeed'), ObjectId('6af5fd827fb2c3659da7eeed')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeee'), ObjectId('6af5fd827fb2c3659da7eeee')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeef'), ObjectId('6af5fd827fb2c3659da7eeef')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eef0'), ObjectId('6af5fd827fb2c3659da7eef0')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eef1'), ObjectId('6af5fd827fb2c3659da7eef1')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eef2'), ObjectId('6af5fd827fb2c3659da7eef2')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eef3'), ObjectId('6af5fd827fb2c3659da7eef3')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eef4'), ObjectId('6af5fd827fb2c3659da7eef4')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eef5'), ObjectId('6af5fd827fb2c3659da7eef5')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eef6'), ObjectId('6af5fd827fb2c3659da7eef6')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eef7'), ObjectId('6af5fd827fb2c3659da7eef7')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eef8'), ObjectId('6af5fd827fb2c3659da7eef8')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eef9'), ObjectId('6af5fd827fb2c3659da7eef9')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eefa'), ObjectId('6af5fd827fb2c3659da7eefa')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eefb'), ObjectId('6af5fd827fb2c3659da7eefb')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eefc'), ObjectId('6af5fd827fb2c3659da7eefc')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eefd'), ObjectId('6af5fd827fb2c3659da7eefd')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eefe'), ObjectId('6af5fd827fb2c3659da7eefe')]",
+                      "[ObjectId('6af5fd827fb2c3659da7eeff'), ObjectId('6af5fd827fb2c3659da7eeff')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef00'), ObjectId('6af5fd827fb2c3659da7ef00')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef01'), ObjectId('6af5fd827fb2c3659da7ef01')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef02'), ObjectId('6af5fd827fb2c3659da7ef02')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef03'), ObjectId('6af5fd827fb2c3659da7ef03')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef04'), ObjectId('6af5fd827fb2c3659da7ef04')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef05'), ObjectId('6af5fd827fb2c3659da7ef05')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef06'), ObjectId('6af5fd827fb2c3659da7ef06')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef07'), ObjectId('6af5fd827fb2c3659da7ef07')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef08'), ObjectId('6af5fd827fb2c3659da7ef08')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef09'), ObjectId('6af5fd827fb2c3659da7ef09')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef0a'), ObjectId('6af5fd827fb2c3659da7ef0a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef0b'), ObjectId('6af5fd827fb2c3659da7ef0b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef0c'), ObjectId('6af5fd827fb2c3659da7ef0c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef0d'), ObjectId('6af5fd827fb2c3659da7ef0d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef0e'), ObjectId('6af5fd827fb2c3659da7ef0e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef0f'), ObjectId('6af5fd827fb2c3659da7ef0f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef10'), ObjectId('6af5fd827fb2c3659da7ef10')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef11'), ObjectId('6af5fd827fb2c3659da7ef11')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef12'), ObjectId('6af5fd827fb2c3659da7ef12')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef13'), ObjectId('6af5fd827fb2c3659da7ef13')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef14'), ObjectId('6af5fd827fb2c3659da7ef14')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef15'), ObjectId('6af5fd827fb2c3659da7ef15')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef16'), ObjectId('6af5fd827fb2c3659da7ef16')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef17'), ObjectId('6af5fd827fb2c3659da7ef17')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef18'), ObjectId('6af5fd827fb2c3659da7ef18')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef19'), ObjectId('6af5fd827fb2c3659da7ef19')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef1a'), ObjectId('6af5fd827fb2c3659da7ef1a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef1b'), ObjectId('6af5fd827fb2c3659da7ef1b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef1c'), ObjectId('6af5fd827fb2c3659da7ef1c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef1d'), ObjectId('6af5fd827fb2c3659da7ef1d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef1e'), ObjectId('6af5fd827fb2c3659da7ef1e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef1f'), ObjectId('6af5fd827fb2c3659da7ef1f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef20'), ObjectId('6af5fd827fb2c3659da7ef20')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef21'), ObjectId('6af5fd827fb2c3659da7ef21')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef22'), ObjectId('6af5fd827fb2c3659da7ef22')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef23'), ObjectId('6af5fd827fb2c3659da7ef23')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef24'), ObjectId('6af5fd827fb2c3659da7ef24')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef25'), ObjectId('6af5fd827fb2c3659da7ef25')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef26'), ObjectId('6af5fd827fb2c3659da7ef26')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef27'), ObjectId('6af5fd827fb2c3659da7ef27')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef28'), ObjectId('6af5fd827fb2c3659da7ef28')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef29'), ObjectId('6af5fd827fb2c3659da7ef29')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef2a'), ObjectId('6af5fd827fb2c3659da7ef2a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef2b'), ObjectId('6af5fd827fb2c3659da7ef2b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef2c'), ObjectId('6af5fd827fb2c3659da7ef2c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef2d'), ObjectId('6af5fd827fb2c3659da7ef2d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef2e'), ObjectId('6af5fd827fb2c3659da7ef2e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef2f'), ObjectId('6af5fd827fb2c3659da7ef2f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef30'), ObjectId('6af5fd827fb2c3659da7ef30')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef31'), ObjectId('6af5fd827fb2c3659da7ef31')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef32'), ObjectId('6af5fd827fb2c3659da7ef32')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef33'), ObjectId('6af5fd827fb2c3659da7ef33')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef34'), ObjectId('6af5fd827fb2c3659da7ef34')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef35'), ObjectId('6af5fd827fb2c3659da7ef35')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef36'), ObjectId('6af5fd827fb2c3659da7ef36')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef37'), ObjectId('6af5fd827fb2c3659da7ef37')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef38'), ObjectId('6af5fd827fb2c3659da7ef38')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef39'), ObjectId('6af5fd827fb2c3659da7ef39')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef3a'), ObjectId('6af5fd827fb2c3659da7ef3a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef3b'), ObjectId('6af5fd827fb2c3659da7ef3b')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef3c'), ObjectId('6af5fd827fb2c3659da7ef3c')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef3d'), ObjectId('6af5fd827fb2c3659da7ef3d')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef3e'), ObjectId('6af5fd827fb2c3659da7ef3e')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef3f'), ObjectId('6af5fd827fb2c3659da7ef3f')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef40'), ObjectId('6af5fd827fb2c3659da7ef40')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef41'), ObjectId('6af5fd827fb2c3659da7ef41')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef42'), ObjectId('6af5fd827fb2c3659da7ef42')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef43'), ObjectId('6af5fd827fb2c3659da7ef43')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef44'), ObjectId('6af5fd827fb2c3659da7ef44')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef45'), ObjectId('6af5fd827fb2c3659da7ef45')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef46'), ObjectId('6af5fd827fb2c3659da7ef46')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef47'), ObjectId('6af5fd827fb2c3659da7ef47')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef48'), ObjectId('6af5fd827fb2c3659da7ef48')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef49'), ObjectId('6af5fd827fb2c3659da7ef49')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef4a'), ObjectId('6af5fd827fb2c3659da7ef4a')]",
+                      "[ObjectId('6af5fd827fb2c3659da7ef4b'), ObjectId('6af5fd827fb2c3659da7ef4b')]"
+                    ],
+                    "type": [
+                      "[MinKey, MaxKey]"
+                    ]
+                  }
+                }
+              }
+            },
+            "slotBasedPlan": {
+              "slots": "$$RESULT=s24 env: { s1 = [{\"l\" : KS(646AF5FD817FB2C3659DA7ED580A01), \"h\" : KS(646AF5FD817FB2C3659DA7ED58F0FE)}, {\"l\" : KS(646AF5FD817FB2C3659DA7ED590A01), \"h\" : KS(646AF5FD817FB2C3659DA7ED59F0FE)}, {\"l\" : KS(646AF5FD817FB2C3659DA7ED5A0A01), \"h\" : KS(646AF5FD817FB2C3659DA7ED5AF0FE)}, {\"l\" : KS(646AF5FD817FB2C3659DA7ED5B0A01), \"h\" : KS(646AF5FD817FB2C3659DA7ED5BF0FE)}, {\"l\" : KS(646AF5FD817FB2C3659DA7ED5C0A01), \"h\" : KS(646AF5FD817FB2C3659DA7ED5CF0FE)}, {\"l\" : KS(646AF5FD827FB2C3659DA7ED5D0A01), \"h\" : KS(646AF5FD827FB2C3659DA7ED5DF0FE)}, {\"l\" : KS(646AF5FD827FB2C3659DA7ED5E0A01), \"h\" : KS(646AF5FD827FB2C3659DA7ED5EF0FE)}, {\"l\" : KS(646AF5FD827FB2C3659DA7ED5F0A01), \"h\" : KS(646AF5FD827FB2C3659DA7ED5FF0FE)}, {...}, ...], s10 = {\"itemId\" : 1, \"type\" : 1} }",
+              "stages": "[4] project [s24 = newObj(\"_id\", s21, \"rating\", s22, \"implicit\", s23)] \n[4] project [s21 = newObj(\"u\", s15, \"i\", s13), s22 = (s18 ?: null), s23 = (s20 ?: null)] \n[4] group [s15, s13] [s18 = max(fillType(\n    if (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n    then \n        if (((s14 <=> \"view\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"listen\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 2L \n        elif (((s14 <=> \"correction\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"favorite\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 4L \n        elif (((s14 <=> \"read\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 80) >= 0) ?: ((exists(s16) && typeMatch(s16, -65)) >= true)) \n            then 3L \n            else 1.5L \n        \n        elif (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 1) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -2L \n            elif (((s16 <=> 2) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -1L \n            elif (((s16 <=> 3) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 1L \n            elif (((s16 <=> 4) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 3L \n            elif (((s16 <=> 5) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 5L \n            else 0 \n        \n        else 0 \n    \n    else null \n, 1088, Nothing)), s20 = max(fillType(\n    if (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n    then null \n    else \n        if (((s14 <=> \"view\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"listen\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 2L \n        elif (((s14 <=> \"correction\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"favorite\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 4L \n        elif (((s14 <=> \"read\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 80) >= 0) ?: ((exists(s16) && typeMatch(s16, -65)) >= true)) \n            then 3L \n            else 1.5L \n        \n        elif (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 1) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -2L \n            elif (((s16 <=> 2) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -1L \n            elif (((s16 <=> 3) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 1L \n            elif (((s16 <=> 4) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 3L \n            elif (((s16 <=> 5) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 5L \n            else 0 \n        \n        else 0 \n, 1088, Nothing))] spillSlots[s17, s19] mergingExprs[max(fillType(s17, 1088, Nothing)), max(fillType(s19, 1088, Nothing))] \n[2] fetch s6 = seek, s11 = result, s12 = recordId, s9 = inSnapshotId, s7 = inIndexIdent, s8 = inIndexKey, s10 = inIndexKeyPattern [s13 = itemId, s14 = type, s15 = userId, s16 = value] @\"d6afec0e-fefc-423c-a0f5-7e76f67f71d1\" \n[1] nlj inner [] [s4, s5] \n    left \n        [1] project [s4 = getField(s2, \"l\"), s5 = getField(s2, \"h\")] \n        [1] unwind s2 = outField, s3 = outIndex, s1 = inField !_preserveNullAndEmptyArrays \n        [1] limit 1ll \n        [1] coscan \n    right \n        [1] ixseek seekKeyLow = s4 seekKeyHigh = s5 [s8 = indexKey, s6 = recordId, s9 = snapshotId, s7 = indexIdent] [] @\"d6afec0e-fefc-423c-a0f5-7e76f67f71d1\" @\"item_type\" forward \n"
+            }
+          },
+          "rejectedPlans": []
+        },
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 4578,
+          "executionTimeMillis": 45,
+          "totalKeysExamined": 9997,
+          "totalDocsExamined": 9997,
+          "executionStages": {
+            "stage": "project",
+            "planNodeId": 4,
+            "nReturned": 4578,
+            "executionTimeMillisEstimate": 14,
+            "opens": 1,
+            "closes": 1,
+            "saveState": 11,
+            "restoreState": 10,
+            "isEOF": 1,
+            "projections": {
+              "24": "newObj(\"_id\", s21, \"rating\", s22, \"implicit\", s23) "
+            },
+            "inputStage": {
+              "stage": "project",
+              "planNodeId": 4,
+              "nReturned": 4578,
+              "executionTimeMillisEstimate": 12,
+              "opens": 1,
+              "closes": 1,
+              "saveState": 11,
+              "restoreState": 10,
+              "isEOF": 1,
+              "projections": {
+                "21": "newObj(\"u\", s15, \"i\", s13) ",
+                "22": "(s18 ?: null) ",
+                "23": "(s20 ?: null) "
+              },
+              "inputStage": {
+                "stage": "group",
+                "planNodeId": 4,
+                "nReturned": 4578,
+                "executionTimeMillisEstimate": 12,
+                "opens": 1,
+                "closes": 1,
+                "saveState": 11,
+                "restoreState": 10,
+                "isEOF": 1,
+                "groupBySlots": [
+                  15,
+                  13
+                ],
+                "expressions": {
+                  "18": "max(fillType(\n    if (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n    then \n        if (((s14 <=> \"view\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"listen\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 2L \n        elif (((s14 <=> \"correction\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"favorite\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 4L \n        elif (((s14 <=> \"read\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 80) >= 0) ?: ((exists(s16) && typeMatch(s16, -65)) >= true)) \n            then 3L \n            else 1.5L \n        \n        elif (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 1) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -2L \n            elif (((s16 <=> 2) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -1L \n            elif (((s16 <=> 3) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 1L \n            elif (((s16 <=> 4) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 3L \n            elif (((s16 <=> 5) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 5L \n            else 0 \n        \n        else 0 \n    \n    else null \n, 1088, Nothing)) ",
+                  "20": "max(fillType(\n    if (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n    then null \n    else \n        if (((s14 <=> \"view\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"listen\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 2L \n        elif (((s14 <=> \"correction\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"favorite\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 4L \n        elif (((s14 <=> \"read\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 80) >= 0) ?: ((exists(s16) && typeMatch(s16, -65)) >= true)) \n            then 3L \n            else 1.5L \n        \n        elif (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 1) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -2L \n            elif (((s16 <=> 2) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -1L \n            elif (((s16 <=> 3) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 1L \n            elif (((s16 <=> 4) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 3L \n            elif (((s16 <=> 5) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 5L \n            else 0 \n        \n        else 0 \n, 1088, Nothing)) ",
+                  "initExprs": {
+                    "18": null,
+                    "20": null,
+                    "mergingExprs": {
+                      "17": "max(fillType(s17, 1088, Nothing)) ",
+                      "19": "max(fillType(s19, 1088, Nothing)) "
+                    }
+                  }
+                },
+                "usedDisk": false,
+                "spills": 0,
+                "spilledBytes": 0,
+                "spilledRecords": 0,
+                "spilledDataStorageSize": 0,
+                "peakTrackedMemBytes": 389068,
+                "inputStage": {
+                  "stage": "fetch",
+                  "planNodeId": 2,
+                  "nReturned": 9997,
+                  "executionTimeMillisEstimate": 7,
+                  "opens": 1,
+                  "closes": 1,
+                  "saveState": 11,
+                  "restoreState": 10,
+                  "isEOF": 1,
+                  "numReads": 9997,
+                  "inputStage": {
+                    "stage": "nlj",
+                    "planNodeId": 1,
+                    "nReturned": 9997,
+                    "executionTimeMillisEstimate": 0,
+                    "opens": 1,
+                    "closes": 1,
+                    "saveState": 11,
+                    "restoreState": 10,
+                    "isEOF": 1,
+                    "totalDocsExamined": 0,
+                    "totalKeysExamined": 9997,
+                    "collectionScans": 0,
+                    "collectionSeeks": 0,
+                    "indexScans": 0,
+                    "indexSeeks": 499,
+                    "indexesUsed": [
+                      "item_type"
+                    ],
+                    "innerOpens": 499,
+                    "innerCloses": 1,
+                    "outerProjects": [],
+                    "outerCorrelated": [
+                      4,
+                      5
+                    ],
+                    "outerStage": {
+                      "stage": "project",
+                      "planNodeId": 1,
+                      "nReturned": 499,
+                      "executionTimeMillisEstimate": 0,
+                      "opens": 1,
+                      "closes": 1,
+                      "saveState": 11,
+                      "restoreState": 10,
+                      "isEOF": 1,
+                      "projections": {
+                        "4": "getField(s2, \"l\") ",
+                        "5": "getField(s2, \"h\") "
+                      },
+                      "inputStage": {
+                        "stage": "unwind",
+                        "planNodeId": 1,
+                        "nReturned": 499,
+                        "executionTimeMillisEstimate": 0,
+                        "opens": 1,
+                        "closes": 1,
+                        "saveState": 11,
+                        "restoreState": 10,
+                        "isEOF": 1,
+                        "inputSlot": 1,
+                        "outSlot": 2,
+                        "outIndexSlot": 3,
+                        "preserveNullAndEmptyArrays": 0,
+                        "inputStage": {
+                          "stage": "limit",
+                          "planNodeId": 1,
+                          "nReturned": 1,
+                          "executionTimeMillisEstimate": 0,
+                          "opens": 1,
+                          "closes": 1,
+                          "saveState": 11,
+                          "restoreState": 10,
+                          "isEOF": 1,
+                          "limit": 1,
+                          "inputStage": {
+                            "stage": "coscan",
+                            "planNodeId": 1,
+                            "nReturned": 1,
+                            "executionTimeMillisEstimate": 0,
+                            "opens": 1,
+                            "closes": 1,
+                            "saveState": 11,
+                            "restoreState": 10,
+                            "isEOF": 0
+                          }
+                        }
+                      }
+                    },
+                    "innerStage": {
+                      "stage": "ixseek",
+                      "planNodeId": 1,
+                      "nReturned": 9997,
+                      "executionTimeMillisEstimate": 0,
+                      "opens": 499,
+                      "closes": 1,
+                      "saveState": 11,
+                      "restoreState": 10,
+                      "isEOF": 1,
+                      "indexName": "item_type",
+                      "keysExamined": 9997,
+                      "seeks": 499,
+                      "numReads": 10496,
+                      "indexKeySlot": 8,
+                      "recordIdSlot": 6,
+                      "snapshotIdSlot": 9,
+                      "indexIdentSlot": 7,
+                      "outputSlots": [],
+                      "indexKeysToInclude": "00000000000000000000000000000000",
+                      "seekKeyLow": "s4 ",
+                      "seekKeyHigh": "s5 "
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "nReturned": 4578,
+      "executionTimeMillisEstimate": 39
+    },
+    {
+      "$project": {
+        "u": "$_id.u",
+        "i": "$_id.i",
+        "s": {
+          "$ifNull": [
+            "$rating",
+            "$implicit"
+          ]
+        },
+        "_id": false
+      },
+      "nReturned": 4578,
+      "executionTimeMillisEstimate": 39
+    },
+    {
+      "$match": {
+        "s": {
+          "$gt": 0
+        }
+      },
+      "nReturned": 4522,
+      "executionTimeMillisEstimate": 40
+    },
+    {
+      "$group": {
+        "_id": "$i",
+        "sumSq": {
+          "$sum": {
+            "$multiply": [
+              "$s",
+              "$s"
+            ]
+          }
+        },
+        "$willBeMerged": false
+      },
+      "nReturned": 499,
+      "executionTimeMillisEstimate": 41,
+      "maxAccumulatorMemoryUsageBytes": {
+        "sumSq": 95808
+      },
+      "totalOutputDataSizeBytes": 118263,
+      "usedDisk": false,
+      "spills": 0,
+      "spilledDataStorageSize": 0,
+      "spilledBytes": 0,
+      "spilledRecords": 0,
+      "peakTrackedMemBytes": 103792
+    }
+  ],
+  "queryShapeHash": "C44781F27DD9F730267DAFF411C22F99429A084469BDAD8873C59E542083C8E0",
+  "peakTrackedMemBytes": 389068,
+  "serverInfo": {
+    "host": "39f69c592185",
+    "port": 27017,
+    "version": "8.3.13",
+    "gitVersion": "3b8a5e1f78cf7b94c40a78ad3fe93708cdca8323"
+  },
+  "serverParameters": {
+    "internalQueryFacetBufferSizeBytes": 104857600,
+    "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+    "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+    "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryMaxAddToSetBytes": 104857600,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "command": {
+    "aggregate": "interactions",
+    "pipeline": [
+      {
+        "$match": {
+          "itemId": {
+            "$in": [
+              {
+                "$oid": "6af5fd827fb2c3659da7ee50"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed94"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee06"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edfb"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edb4"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed9c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee41"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee15"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edfa"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef36"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef01"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eece"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eecf"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed7c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed87"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee3c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee6e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eed0"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edbe"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef3e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eee0"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef03"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed86"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee08"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef2c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edd9"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edf1"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee7e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edd5"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee29"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eebc"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef30"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeda"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee87"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeac"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eef4"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edad"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee4e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef4b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed83"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee4c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee04"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef33"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed9f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee1e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed76"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edae"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef3d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee59"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eef9"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef0b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef31"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edc1"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeca"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eecc"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed60"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee4b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee00"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eef2"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eec4"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee94"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ede8"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef21"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee6a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee67"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eef7"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eed1"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed95"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eec5"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee19"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeb1"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee42"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed81"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eebe"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edf9"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eec0"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee74"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edd6"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed65"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed72"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef3a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eddb"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eef6"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee9c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed90"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef27"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef0d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eddf"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eecb"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef4a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee46"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee9a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eda0"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ede4"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef32"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee44"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eed9"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed92"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee7a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eedd"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edc3"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed9e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eefe"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edc9"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee03"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee52"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee55"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edaf"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeb8"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eee4"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edb7"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eea8"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eea6"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee66"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed84"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eef0"
+              },
+              {
+                "$oid": "6af5fd817fb2c3659da7ed5a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee78"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eddc"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eef5"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee89"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edf7"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ede2"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef06"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef41"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ede6"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee88"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed91"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee79"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edb0"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eebd"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeec"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee3e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eec9"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edbf"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef08"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee3a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef3b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeb4"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef07"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef37"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edce"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee72"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed8d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef14"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eea7"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee6f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee62"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef48"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeb7"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee82"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeaa"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef00"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eefd"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee86"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eda8"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed96"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee85"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeed"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edb5"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed98"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef1a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edf3"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee80"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed62"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee23"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef43"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edbc"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edf6"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eef8"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee75"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef16"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee32"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef44"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee3d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef0f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee31"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef47"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef13"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeb6"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ede9"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edf2"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed61"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eea1"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eed4"
+              },
+              {
+                "$oid": "6af5fd817fb2c3659da7ed58"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eefa"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee8c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eee7"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee7d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed77"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edb8"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed8e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef39"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ede5"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee8b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eebf"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed8a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edea"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef38"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee8a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edf5"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edeb"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eda4"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eda7"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edda"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee34"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edca"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeae"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee5e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee98"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee9e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eedb"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeba"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edc5"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef49"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee2b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee30"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef11"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee0e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edef"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed66"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee6b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee22"
+              },
+              {
+                "$oid": "6af5fd817fb2c3659da7ed5b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed63"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee12"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee21"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eea4"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee77"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee63"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eee8"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edfc"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eecd"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed79"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edc4"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edaa"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edd7"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee6d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed88"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee5c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee99"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed8f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed85"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eddd"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee76"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee93"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef1d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eea5"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed82"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eee2"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef20"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee69"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edc6"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee92"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef35"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed6c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edb1"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edc0"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee96"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef29"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee2e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eebb"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee95"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee1c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef3f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee1d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed6f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef17"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eda3"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef24"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef12"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee58"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eea9"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee39"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edcc"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee45"
+              },
+              {
+                "$oid": "6af5fd817fb2c3659da7ed5c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef40"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee2a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeb5"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eead"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee5a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee28"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee07"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed8c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee5f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef05"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eded"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef25"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed69"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef0c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eede"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee43"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef2f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee16"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed75"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eea0"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edc8"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee4f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eed5"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee9b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edcf"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eed7"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee0f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee0b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee11"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee9d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee60"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee05"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee61"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed89"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edb9"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee33"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef26"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee73"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed6e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed68"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edd4"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee68"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee8e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed7a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef15"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed5f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edf0"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee91"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ede1"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eed6"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eee5"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edd3"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eda1"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eda9"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eee6"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed6d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed64"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee7f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edd1"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeab"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee8f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee37"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed5d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee1a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee10"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee2c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee51"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed78"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edee"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef22"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee0a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed71"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed7b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef1e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eed2"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eda2"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee54"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edff"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eef3"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef02"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeef"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee70"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed7e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edac"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eefc"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ede7"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed97"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee27"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eec7"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eedc"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee64"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef1b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee35"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef1c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eec8"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef18"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed5e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edbb"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed7f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee84"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edf4"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee48"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeee"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed6b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edb6"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee0d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edd0"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edd2"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee02"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee56"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee71"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed93"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eec2"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ede0"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee7c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee24"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eec6"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edd8"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eed3"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee1f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee17"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edfe"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edb2"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed7d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee36"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef2a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeea"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee5b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee5d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef34"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edc2"
+              },
+              {
+                "$oid": "6af5fd817fb2c3659da7ed59"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edfd"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eea3"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef04"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee83"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee38"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee6c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee81"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eec1"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee13"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef3c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef0a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeaf"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee26"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee09"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eee9"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee57"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef10"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eed8"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edcd"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeb0"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edb3"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed6a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edde"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeb9"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef45"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef2b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee14"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee2f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef19"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed74"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee49"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee7b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edc7"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edec"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eef1"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed80"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edab"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eee1"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef0e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee25"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eda6"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed9d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeb3"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef1f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef23"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee1b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee2d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee4d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee20"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeb2"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee47"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeff"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee3b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef2d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed70"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed73"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eea2"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef2e"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee53"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed67"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef46"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eec3"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edbd"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef09"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edf8"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed8b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed9a"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef42"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eeeb"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edba"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee3f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eedf"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee40"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee9f"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eda5"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee65"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee97"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed9b"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee0c"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eee3"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ef28"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ed99"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee18"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ede3"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7eefb"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee8d"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee01"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7ee90"
+              },
+              {
+                "$oid": "6af5fd827fb2c3659da7edcb"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "$group": {
+          "_id": {
+            "u": "$userId",
+            "i": "$itemId"
+          },
+          "rating": {
+            "$max": {
+              "$cond": [
+                {
+                  "$eq": [
+                    "$type",
+                    "rate"
+                  ]
+                },
+                {
+                  "$switch": {
+                    "branches": [
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "view"
+                          ]
+                        },
+                        "then": 1.0
+                      },
+                      {
+                        "then": 2.0,
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "listen"
+                          ]
+                        }
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "correction"
+                          ]
+                        },
+                        "then": 1.0
+                      },
+                      {
+                        "then": 4.0,
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "favorite"
+                          ]
+                        }
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "read"
+                          ]
+                        },
+                        "then": {
+                          "$cond": [
+                            {
+                              "$gte": [
+                                "$value",
+                                80
+                              ]
+                            },
+                            3.0,
+                            1.5
+                          ]
+                        }
+                      },
+                      {
+                        "then": {
+                          "$switch": {
+                            "branches": [
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    1
+                                  ]
+                                },
+                                "then": -2.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    2
+                                  ]
+                                },
+                                "then": -1.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    3
+                                  ]
+                                },
+                                "then": 1.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    4
+                                  ]
+                                },
+                                "then": 3.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    5
+                                  ]
+                                },
+                                "then": 5.0
+                              }
+                            ],
+                            "default": 0
+                          }
+                        },
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "rate"
+                          ]
+                        }
+                      }
+                    ],
+                    "default": 0
+                  }
+                },
+                null
+              ]
+            }
+          },
+          "implicit": {
+            "$max": {
+              "$cond": [
+                {
+                  "$eq": [
+                    "$type",
+                    "rate"
+                  ]
+                },
+                null,
+                {
+                  "$switch": {
+                    "branches": [
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "view"
+                          ]
+                        },
+                        "then": 1.0
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "listen"
+                          ]
+                        },
+                        "then": 2.0
+                      },
+                      {
+                        "then": 1.0,
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "correction"
+                          ]
+                        }
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "favorite"
+                          ]
+                        },
+                        "then": 4.0
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "read"
+                          ]
+                        },
+                        "then": {
+                          "$cond": [
+                            {
+                              "$gte": [
+                                "$value",
+                                80
+                              ]
+                            },
+                            3.0,
+                            1.5
+                          ]
+                        }
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "rate"
+                          ]
+                        },
+                        "then": {
+                          "$switch": {
+                            "branches": [
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    1
+                                  ]
+                                },
+                                "then": -2.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    2
+                                  ]
+                                },
+                                "then": -1.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    3
+                                  ]
+                                },
+                                "then": 1.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    4
+                                  ]
+                                },
+                                "then": 3.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    5
+                                  ]
+                                },
+                                "then": 5.0
+                              }
+                            ],
+                            "default": 0
+                          }
+                        }
+                      }
+                    ],
+                    "default": 0
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "$project": {
+          "_id": 0,
+          "u": "$_id.u",
+          "i": "$_id.i",
+          "s": {
+            "$ifNull": [
+              "$rating",
+              "$implicit"
+            ]
+          }
+        }
+      },
+      {
+        "$match": {
+          "s": {
+            "$gt": 0
+          }
+        }
+      },
+      {
+        "$group": {
+          "_id": "$i",
+          "sumSq": {
+            "$sum": {
+              "$multiply": [
+                "$s",
+                "$s"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "cursor": {},
+    "$db": "braille_library"
+  },
+  "ok": 1.0,
+  "explainVersion": "2"
+}

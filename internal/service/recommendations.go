@@ -14,6 +14,11 @@ import (
 const (
 	ReasonInterests = "matches your interests"
 	ReasonPopular   = "popular"
+
+	// ModePrecomputed reads neighbors from item_similarities (built by Rebuild).
+	ModePrecomputed = "precomputed"
+	// ModeLive computes neighbors on every request with aggregations (baseline).
+	ModeLive = "live"
 )
 
 type RecommendationRepository interface {
@@ -21,6 +26,7 @@ type RecommendationRepository interface {
 	UserScores(ctx context.Context, userID bson.ObjectID) ([]recommend.UserItemScore, error)
 	SaveSimilarities(ctx context.Context, sims map[bson.ObjectID][]recommend.Neighbor, at time.Time) error
 	Neighbors(ctx context.Context, itemIDs []bson.ObjectID) (map[bson.ObjectID][]recommend.Neighbor, error)
+	LiveNeighbors(ctx context.Context, itemIDs []bson.ObjectID) (map[bson.ObjectID][]recommend.Neighbor, error)
 }
 
 type RecommendationItems interface {
@@ -33,10 +39,20 @@ type RecommendationService struct {
 	recs  RecommendationRepository
 	items RecommendationItems
 	users UserRepository
+	mode  string
 }
 
-func NewRecommendationService(recs RecommendationRepository, items RecommendationItems, users UserRepository) *RecommendationService {
-	return &RecommendationService{recs: recs, items: items, users: users}
+// NewRecommendationService takes the mode: ModePrecomputed or ModeLive.
+func NewRecommendationService(recs RecommendationRepository, items RecommendationItems, users UserRepository, mode string) *RecommendationService {
+	return &RecommendationService{recs: recs, items: items, users: users, mode: mode}
+}
+
+// neighbors returns the neighbors of the given items from the source of the current mode.
+func (s *RecommendationService) neighbors(ctx context.Context, itemIDs []bson.ObjectID) (map[bson.ObjectID][]recommend.Neighbor, error) {
+	if s.mode == ModeLive {
+		return s.recs.LiveNeighbors(ctx, itemIDs)
+	}
+	return s.recs.Neighbors(ctx, itemIDs)
 }
 
 type Recommendation struct {
@@ -99,7 +115,7 @@ func (s *RecommendationService) ForUser(ctx context.Context, userID string, limi
 	for _, h := range recommend.LikedHistory(history) {
 		likedIDs = append(likedIDs, h.ItemID)
 	}
-	neighbors, err := s.recs.Neighbors(ctx, likedIDs)
+	neighbors, err := s.neighbors(ctx, likedIDs)
 	if err != nil {
 		return nil, err
 	}
@@ -172,7 +188,7 @@ func (s *RecommendationService) Similar(ctx context.Context, itemID string, limi
 	if _, err := s.items.GetByID(ctx, oid); err != nil {
 		return nil, err
 	}
-	all, err := s.recs.Neighbors(ctx, []bson.ObjectID{oid})
+	all, err := s.neighbors(ctx, []bson.ObjectID{oid})
 	if err != nil {
 		return nil, err
 	}

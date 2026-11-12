@@ -5,3 +5,6 @@
 *.out
 .vscode/
 .idea/
+
+# temporary k6 row written by scripts/perf/run.sh
+/perf/.row.csv

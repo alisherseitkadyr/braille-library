@@ -1,0 +1,464 @@
+{
+  "command": {
+    "find": "item_similarities",
+    "filter": {
+      "itemId": {
+        "$in": [
+          {
+            "$oid": "6af5fdada59c4ac5bf810a21"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810bd1"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810b75"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810aed"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810c7c"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a14"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810acb"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810aa0"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810cfb"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a45"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf8109fe"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810c0c"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d66"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810c46"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810c4e"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf8109eb"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d74"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a18"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810cfd"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a1d"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d23"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d32"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810b3b"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810c00"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a4c"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a06"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810b69"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d3d"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a9e"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810cbb"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810cbf"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a20"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810b1a"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d71"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810c47"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d2c"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a93"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a9c"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a43"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d1f"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810b02"
+          }
+        ]
+      }
+    },
+    "$db": "braille_library"
+  },
+  "serverInfo": {
+    "host": "39f69c592185",
+    "port": 27017,
+    "version": "8.3.13",
+    "gitVersion": "3b8a5e1f78cf7b94c40a78ad3fe93708cdca8323"
+  },
+  "serverParameters": {
+    "internalQueryFacetBufferSizeBytes": 104857600,
+    "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+    "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+    "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryMaxAddToSetBytes": 104857600,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "ok": 1.0,
+  "explainVersion": "1",
+  "queryPlanner": {
+    "namespace": "braille_library.item_similarities",
+    "parsedQuery": {
+      "itemId": {
+        "$in": [
+          {
+            "$oid": "6af5fdada59c4ac5bf8109eb"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf8109fe"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a06"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a14"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a18"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a1d"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a20"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a21"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a43"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a45"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a4c"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a93"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a9c"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810a9e"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810aa0"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810acb"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810aed"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810b02"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810b1a"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810b3b"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810b69"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810b75"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810bd1"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810c00"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810c0c"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810c46"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810c47"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810c4e"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810c7c"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810cbb"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810cbf"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810cfb"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810cfd"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d1f"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d23"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d2c"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d32"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d3d"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d66"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d71"
+          },
+          {
+            "$oid": "6af5fdada59c4ac5bf810d74"
+          }
+        ]
+      }
+    },
+    "indexFilterSet": false,
+    "queryHash": "C2F90856",
+    "planCacheShapeHash": "C2F90856",
+    "planCacheKey": "C755CAC1",
+    "optimizationTimeMillis": 0,
+    "maxIndexedOrSolutionsReached": false,
+    "maxIndexedAndSolutionsReached": false,
+    "maxScansToExplodeReached": false,
+    "prunedSimilarIndexes": false,
+    "winningPlan": {
+      "isCached": false,
+      "stage": "FETCH",
+      "nss": "braille_library.item_similarities",
+      "inputStage": {
+        "stage": "IXSCAN",
+        "nss": "braille_library.item_similarities",
+        "keyPattern": {
+          "itemId": 1
+        },
+        "indexName": "itemId_unique",
+        "isMultiKey": false,
+        "multiKeyPaths": {
+          "itemId": []
+        },
+        "isUnique": true,
+        "isSparse": false,
+        "isPartial": false,
+        "indexVersion": 2,
+        "direction": "forward",
+        "indexBounds": {
+          "itemId": [
+            "[ObjectId('6af5fdada59c4ac5bf8109eb'), ObjectId('6af5fdada59c4ac5bf8109eb')]",
+            "[ObjectId('6af5fdada59c4ac5bf8109fe'), ObjectId('6af5fdada59c4ac5bf8109fe')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a06'), ObjectId('6af5fdada59c4ac5bf810a06')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a14'), ObjectId('6af5fdada59c4ac5bf810a14')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a18'), ObjectId('6af5fdada59c4ac5bf810a18')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a1d'), ObjectId('6af5fdada59c4ac5bf810a1d')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a20'), ObjectId('6af5fdada59c4ac5bf810a20')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a21'), ObjectId('6af5fdada59c4ac5bf810a21')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a43'), ObjectId('6af5fdada59c4ac5bf810a43')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a45'), ObjectId('6af5fdada59c4ac5bf810a45')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a4c'), ObjectId('6af5fdada59c4ac5bf810a4c')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a93'), ObjectId('6af5fdada59c4ac5bf810a93')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a9c'), ObjectId('6af5fdada59c4ac5bf810a9c')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a9e'), ObjectId('6af5fdada59c4ac5bf810a9e')]",
+            "[ObjectId('6af5fdada59c4ac5bf810aa0'), ObjectId('6af5fdada59c4ac5bf810aa0')]",
+            "[ObjectId('6af5fdada59c4ac5bf810acb'), ObjectId('6af5fdada59c4ac5bf810acb')]",
+            "[ObjectId('6af5fdada59c4ac5bf810aed'), ObjectId('6af5fdada59c4ac5bf810aed')]",
+            "[ObjectId('6af5fdada59c4ac5bf810b02'), ObjectId('6af5fdada59c4ac5bf810b02')]",
+            "[ObjectId('6af5fdada59c4ac5bf810b1a'), ObjectId('6af5fdada59c4ac5bf810b1a')]",
+            "[ObjectId('6af5fdada59c4ac5bf810b3b'), ObjectId('6af5fdada59c4ac5bf810b3b')]",
+            "[ObjectId('6af5fdada59c4ac5bf810b69'), ObjectId('6af5fdada59c4ac5bf810b69')]",
+            "[ObjectId('6af5fdada59c4ac5bf810b75'), ObjectId('6af5fdada59c4ac5bf810b75')]",
+            "[ObjectId('6af5fdada59c4ac5bf810bd1'), ObjectId('6af5fdada59c4ac5bf810bd1')]",
+            "[ObjectId('6af5fdada59c4ac5bf810c00'), ObjectId('6af5fdada59c4ac5bf810c00')]",
+            "[ObjectId('6af5fdada59c4ac5bf810c0c'), ObjectId('6af5fdada59c4ac5bf810c0c')]",
+            "[ObjectId('6af5fdada59c4ac5bf810c46'), ObjectId('6af5fdada59c4ac5bf810c46')]",
+            "[ObjectId('6af5fdada59c4ac5bf810c47'), ObjectId('6af5fdada59c4ac5bf810c47')]",
+            "[ObjectId('6af5fdada59c4ac5bf810c4e'), ObjectId('6af5fdada59c4ac5bf810c4e')]",
+            "[ObjectId('6af5fdada59c4ac5bf810c7c'), ObjectId('6af5fdada59c4ac5bf810c7c')]",
+            "[ObjectId('6af5fdada59c4ac5bf810cbb'), ObjectId('6af5fdada59c4ac5bf810cbb')]",
+            "[ObjectId('6af5fdada59c4ac5bf810cbf'), ObjectId('6af5fdada59c4ac5bf810cbf')]",
+            "[ObjectId('6af5fdada59c4ac5bf810cfb'), ObjectId('6af5fdada59c4ac5bf810cfb')]",
+            "[ObjectId('6af5fdada59c4ac5bf810cfd'), ObjectId('6af5fdada59c4ac5bf810cfd')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d1f'), ObjectId('6af5fdada59c4ac5bf810d1f')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d23'), ObjectId('6af5fdada59c4ac5bf810d23')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d2c'), ObjectId('6af5fdada59c4ac5bf810d2c')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d32'), ObjectId('6af5fdada59c4ac5bf810d32')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d3d'), ObjectId('6af5fdada59c4ac5bf810d3d')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d66'), ObjectId('6af5fdada59c4ac5bf810d66')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d71'), ObjectId('6af5fdada59c4ac5bf810d71')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d74'), ObjectId('6af5fdada59c4ac5bf810d74')]"
+          ]
+        }
+      }
+    },
+    "rejectedPlans": []
+  },
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 0,
+    "executionTimeMillis": 0,
+    "totalKeysExamined": 0,
+    "totalDocsExamined": 0,
+    "executionStages": {
+      "isCached": false,
+      "stage": "FETCH",
+      "nReturned": 0,
+      "executionTimeMillisEstimate": 0,
+      "works": 1,
+      "advanced": 0,
+      "needTime": 0,
+      "needYield": 0,
+      "saveState": 0,
+      "restoreState": 0,
+      "isEOF": 1,
+      "nss": "braille_library.item_similarities",
+      "docsExamined": 0,
+      "alreadyHasObj": 0,
+      "inputStage": {
+        "stage": "IXSCAN",
+        "nReturned": 0,
+        "executionTimeMillisEstimate": 0,
+        "works": 1,
+        "advanced": 0,
+        "needTime": 0,
+        "needYield": 0,
+        "saveState": 0,
+        "restoreState": 0,
+        "isEOF": 1,
+        "nss": "braille_library.item_similarities",
+        "keyPattern": {
+          "itemId": 1
+        },
+        "indexName": "itemId_unique",
+        "isMultiKey": false,
+        "multiKeyPaths": {
+          "itemId": []
+        },
+        "isUnique": true,
+        "isSparse": false,
+        "isPartial": false,
+        "indexVersion": 2,
+        "direction": "forward",
+        "indexBounds": {
+          "itemId": [
+            "[ObjectId('6af5fdada59c4ac5bf8109eb'), ObjectId('6af5fdada59c4ac5bf8109eb')]",
+            "[ObjectId('6af5fdada59c4ac5bf8109fe'), ObjectId('6af5fdada59c4ac5bf8109fe')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a06'), ObjectId('6af5fdada59c4ac5bf810a06')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a14'), ObjectId('6af5fdada59c4ac5bf810a14')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a18'), ObjectId('6af5fdada59c4ac5bf810a18')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a1d'), ObjectId('6af5fdada59c4ac5bf810a1d')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a20'), ObjectId('6af5fdada59c4ac5bf810a20')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a21'), ObjectId('6af5fdada59c4ac5bf810a21')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a43'), ObjectId('6af5fdada59c4ac5bf810a43')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a45'), ObjectId('6af5fdada59c4ac5bf810a45')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a4c'), ObjectId('6af5fdada59c4ac5bf810a4c')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a93'), ObjectId('6af5fdada59c4ac5bf810a93')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a9c'), ObjectId('6af5fdada59c4ac5bf810a9c')]",
+            "[ObjectId('6af5fdada59c4ac5bf810a9e'), ObjectId('6af5fdada59c4ac5bf810a9e')]",
+            "[ObjectId('6af5fdada59c4ac5bf810aa0'), ObjectId('6af5fdada59c4ac5bf810aa0')]",
+            "[ObjectId('6af5fdada59c4ac5bf810acb'), ObjectId('6af5fdada59c4ac5bf810acb')]",
+            "[ObjectId('6af5fdada59c4ac5bf810aed'), ObjectId('6af5fdada59c4ac5bf810aed')]",
+            "[ObjectId('6af5fdada59c4ac5bf810b02'), ObjectId('6af5fdada59c4ac5bf810b02')]",
+            "[ObjectId('6af5fdada59c4ac5bf810b1a'), ObjectId('6af5fdada59c4ac5bf810b1a')]",
+            "[ObjectId('6af5fdada59c4ac5bf810b3b'), ObjectId('6af5fdada59c4ac5bf810b3b')]",
+            "[ObjectId('6af5fdada59c4ac5bf810b69'), ObjectId('6af5fdada59c4ac5bf810b69')]",
+            "[ObjectId('6af5fdada59c4ac5bf810b75'), ObjectId('6af5fdada59c4ac5bf810b75')]",
+            "[ObjectId('6af5fdada59c4ac5bf810bd1'), ObjectId('6af5fdada59c4ac5bf810bd1')]",
+            "[ObjectId('6af5fdada59c4ac5bf810c00'), ObjectId('6af5fdada59c4ac5bf810c00')]",
+            "[ObjectId('6af5fdada59c4ac5bf810c0c'), ObjectId('6af5fdada59c4ac5bf810c0c')]",
+            "[ObjectId('6af5fdada59c4ac5bf810c46'), ObjectId('6af5fdada59c4ac5bf810c46')]",
+            "[ObjectId('6af5fdada59c4ac5bf810c47'), ObjectId('6af5fdada59c4ac5bf810c47')]",
+            "[ObjectId('6af5fdada59c4ac5bf810c4e'), ObjectId('6af5fdada59c4ac5bf810c4e')]",
+            "[ObjectId('6af5fdada59c4ac5bf810c7c'), ObjectId('6af5fdada59c4ac5bf810c7c')]",
+            "[ObjectId('6af5fdada59c4ac5bf810cbb'), ObjectId('6af5fdada59c4ac5bf810cbb')]",
+            "[ObjectId('6af5fdada59c4ac5bf810cbf'), ObjectId('6af5fdada59c4ac5bf810cbf')]",
+            "[ObjectId('6af5fdada59c4ac5bf810cfb'), ObjectId('6af5fdada59c4ac5bf810cfb')]",
+            "[ObjectId('6af5fdada59c4ac5bf810cfd'), ObjectId('6af5fdada59c4ac5bf810cfd')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d1f'), ObjectId('6af5fdada59c4ac5bf810d1f')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d23'), ObjectId('6af5fdada59c4ac5bf810d23')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d2c'), ObjectId('6af5fdada59c4ac5bf810d2c')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d32'), ObjectId('6af5fdada59c4ac5bf810d32')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d3d'), ObjectId('6af5fdada59c4ac5bf810d3d')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d66'), ObjectId('6af5fdada59c4ac5bf810d66')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d71'), ObjectId('6af5fdada59c4ac5bf810d71')]",
+            "[ObjectId('6af5fdada59c4ac5bf810d74'), ObjectId('6af5fdada59c4ac5bf810d74')]"
+          ]
+        },
+        "keysExamined": 0,
+        "seeks": 1,
+        "dupsTested": 0,
+        "dupsDropped": 0,
+        "peakTrackedMemBytes": 0
+      }
+    }
+  },
+  "queryShapeHash": "FC3D0A9496C926503CC0B11FFD8CF5DA5BE72DB26E0996B28AB3BED7CE5848BD"
+}

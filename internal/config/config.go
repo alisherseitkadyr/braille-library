@@ -15,6 +15,7 @@ type Config struct {
 	JWTSecret   string
 	JWTTTLHours int
 	CORSOrigins []string
+	RecsMode    string
 }
 
 func Load() (Config, error) {
@@ -26,6 +27,10 @@ func Load() (Config, error) {
 		MongoDB:     getEnv("MONGO_DB", "braille_library"),
 		JWTSecret:   os.Getenv("JWT_SECRET"),
 		CORSOrigins: splitList(getEnv("CORS_ORIGINS", "http://localhost:3000,http://localhost:5173")),
+	}
+	cfg.RecsMode = getEnv("RECS_MODE", "precomputed")
+	if cfg.RecsMode != "precomputed" && cfg.RecsMode != "live" {
+		return cfg, errors.New("RECS_MODE must be precomputed or live")
 	}
 	if cfg.JWTSecret == "" {
 		return cfg, errors.New("JWT_SECRET is required")
