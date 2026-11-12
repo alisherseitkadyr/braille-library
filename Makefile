@@ -1,4 +1,4 @@
-.PHONY: up down run seed recompute swag test
+.PHONY: up down run seed recompute evaluate perf swag test
 
 up:
 	docker compose up -d --build
@@ -15,6 +15,13 @@ seed:
 
 recompute:
 	go run ./cmd/recompute
+
+evaluate:
+	go run ./cmd/evaluate $(ARGS)
+
+# make perf ARGS="live S M" or ARGS=precomputed,cache (replaces the data!)
+perf:
+	scripts/perf/run.sh $(ARGS)
 
 swag:
 	swag init -g cmd/api/main.go -o docs --parseInternal

@@ -35,6 +35,7 @@ var (
 
 func main() {
 	reset := flag.Bool("reset", false, "delete existing users, items, interactions and similarities first")
+	ifEmpty := flag.Bool("if-empty", false, "do nothing (exit 0) if the database already has users; used by docker compose")
 	userCount := flag.Int("users", 50, "number of users (including the two demo accounts)")
 	itemCount := flag.Int("items", 200, "number of items")
 	interactionCount := flag.Int("interactions", 0,
@@ -75,6 +76,10 @@ func main() {
 	} else if n, err := db.Collection(mongo.UsersCollection).CountDocuments(ctx, bson.M{}); err != nil {
 		log.Fatalf("count users: %v", err)
 	} else if n > 0 {
+		if *ifEmpty {
+			fmt.Println("database already has data, seed skipped")
+			return
+		}
 		log.Fatal("database is not empty, run with --reset to replace the data")
 	}
 

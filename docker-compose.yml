@@ -26,6 +26,19 @@ services:
       mongo:
         condition: service_healthy
 
+  # One-shot job on every start: loads the demo data if the database is empty,
+  # then rebuilds the item similarities. Uses the same image as the api.
+  init:
+    build: .
+    env_file: .env
+    environment:
+      MONGO_URI: mongodb://mongo:27017
+    entrypoint: ["sh", "-c", "seed --if-empty && recompute"]
+    restart: "no"
+    depends_on:
+      mongo:
+        condition: service_healthy
+
   api:
     build: .
     restart: unless-stopped
@@ -41,6 +54,8 @@ services:
     depends_on:
       mongo:
         condition: service_healthy
+      init:
+        condition: service_completed_successfully
 
   web:
     build:

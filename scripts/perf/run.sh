@@ -48,7 +48,8 @@ seed_args() {
 
 # start_api <RECS_MODE> <CACHE_TTL>: recreate the api container with these settings and wait for it.
 start_api() {
-  RECS_MODE=$1 CACHE_TTL=$2 docker compose up -d api >/dev/null 2>&1
+  # --no-deps: do not run the init job (seed + rebuild) again.
+  RECS_MODE=$1 CACHE_TTL=$2 docker compose up -d --no-deps api >/dev/null 2>&1
   until curl -sf "$API/health" >/dev/null; do sleep 1; done
 }
 
