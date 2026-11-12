@@ -62,3 +62,10 @@ func (c Category) Valid() bool {
 	}
 	return false
 }
+
+// PopularFilter narrows a popularity query. Empty fields mean "any".
+type PopularFilter struct {
+	Categories []Category
+	Level      Level
+	Language   Language
+}

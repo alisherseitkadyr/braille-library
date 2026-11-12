@@ -13,6 +13,8 @@ const (
 	UsersCollection        = "users"
 	ItemsCollection        = "items"
 	InteractionsCollection = "interactions"
+
+	ItemSimilaritiesCollection = "item_similarities"
 )
 
 // EnsureIndexes creates all indexes. Creating an existing index with the
@@ -69,6 +71,12 @@ func EnsureIndexes(ctx context.Context, db *mongo.Database) error {
 					SetPartialFilterExpression(bson.M{
 						"type": bson.M{"$in": bson.A{"rate", "favorite"}},
 					}),
+			},
+		},
+		ItemSimilaritiesCollection: {
+			{
+				Keys:    bson.D{{Key: "itemId", Value: 1}},
+				Options: options.Index().SetName("itemId_unique").SetUnique(true),
 			},
 		},
 	}

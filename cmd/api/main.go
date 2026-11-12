@@ -57,6 +57,8 @@ func main() {
 		Users:        service.NewUserService(userRepo),
 		Items:        service.NewItemService(itemRepo),
 		Interactions: service.NewInteractionService(mongo.NewInteractionRepository(db), itemRepo),
+		Recommendations: service.NewRecommendationService(
+			mongo.NewRecommendationRepository(db), itemRepo, userRepo),
 	})
 
 	srv := &http.Server{

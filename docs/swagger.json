@@ -8,6 +8,43 @@
     },
     "basePath": "/",
     "paths": {
+        "/admin/recommendations/rebuild": {
+            "post": {
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ],
+                "description": "Recomputes item_similarities from all interactions. Runs synchronously.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "recommendations"
+                ],
+                "summary": "Rebuild item similarities (admin)",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/service.RebuildResult"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/handlers.ErrorResponse"
+                        }
+                    },
+                    "403": {
+                        "description": "not an admin",
+                        "schema": {
+                            "$ref": "#/definitions/handlers.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
         "/auth/login": {
             "post": {
                 "description": "Returns a JWT. Use it in the Authorize dialog as \"Bearer \u003ctoken\u003e\".",
@@ -485,6 +522,56 @@
                 }
             }
         },
+        "/items/{id}/similar": {
+            "get": {
+                "description": "Neighbors from item_similarities (cosine similarity with shrinkage), most similar first.\nEmpty until the first rebuild, or if nobody who liked this item liked anything else.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "recommendations"
+                ],
+                "summary": "Similar items",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Item ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "maximum": 20,
+                        "minimum": 1,
+                        "type": "integer",
+                        "default": 10,
+                        "description": "Number of items (max 20)",
+                        "name": "limit",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/service.SimilarList"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/handlers.ErrorResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/handlers.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
         "/users/me": {
             "get": {
                 "security": [
@@ -617,6 +704,54 @@
                         "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/service.HistoryPage"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/handlers.ErrorResponse"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/handlers.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/me/recommendations": {
+            "get": {
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ],
+                "description": "Item-based collaborative filtering over the last 50 liked items.\nIf there are not enough results, items matching the profile (interests, level, language)\nand then popular items are added. Items already interacted with are never returned.\nreason is \"because you read \u003ctitle\u003e\", \"matches your interests\" or \"popular\" (score 0 for the last two).",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "recommendations"
+                ],
+                "summary": "My recommendations",
+                "parameters": [
+                    {
+                        "maximum": 50,
+                        "minimum": 1,
+                        "type": "integer",
+                        "default": 10,
+                        "description": "Number of items (max 50)",
+                        "name": "limit",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/service.RecommendationList"
                         }
                     },
                     "400": {
@@ -1018,6 +1153,46 @@
                 }
             }
         },
+        "service.RebuildResult": {
+            "type": "object",
+            "properties": {
+                "durationMs": {
+                    "type": "integer",
+                    "example": 85
+                },
+                "items": {
+                    "type": "integer",
+                    "example": 200
+                }
+            }
+        },
+        "service.Recommendation": {
+            "type": "object",
+            "properties": {
+                "item": {
+                    "$ref": "#/definitions/domain.Item"
+                },
+                "reason": {
+                    "type": "string",
+                    "example": "because you read Абай жолы"
+                },
+                "score": {
+                    "type": "number",
+                    "example": 2.415
+                }
+            }
+        },
+        "service.RecommendationList": {
+            "type": "object",
+            "properties": {
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/service.Recommendation"
+                    }
+                }
+            }
+        },
         "service.RegisterInput": {
             "type": "object",
             "properties": {
@@ -1047,6 +1222,29 @@
                 },
                 "role": {
                     "$ref": "#/definitions/domain.Role"
+                }
+            }
+        },
+        "service.SimilarItem": {
+            "type": "object",
+            "properties": {
+                "item": {
+                    "$ref": "#/definitions/domain.Item"
+                },
+                "score": {
+                    "type": "number",
+                    "example": 0.412
+                }
+            }
+        },
+        "service.SimilarList": {
+            "type": "object",
+            "properties": {
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/service.SimilarItem"
+                    }
                 }
             }
         },

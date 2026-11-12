@@ -22,7 +22,8 @@ type Deps struct {
 	Users  *service.UserService
 	Items  *service.ItemService
 
-	Interactions *service.InteractionService
+	Interactions    *service.InteractionService
+	Recommendations *service.RecommendationService
 }
 
 func NewRouter(d Deps) http.Handler {
@@ -36,6 +37,7 @@ func NewRouter(d Deps) http.Handler {
 	usersH := handlers.NewUserHandler(d.Users)
 	itemsH := handlers.NewItemHandler(d.Items)
 	interactionsH := handlers.NewInteractionHandler(d.Interactions)
+	recsH := handlers.NewRecommendationHandler(d.Recommendations)
 
 	r.Get("/health", health.Health)
 	r.Get("/docs", func(w http.ResponseWriter, r *http.Request) {
@@ -48,12 +50,14 @@ func NewRouter(d Deps) http.Handler {
 
 	r.Get("/items", itemsH.List)
 	r.Get("/items/{id}", itemsH.Get)
+	r.Get("/items/{id}/similar", recsH.Similar)
 
 	r.Group(func(r chi.Router) {
 		r.Use(middleware.Authenticate(d.Tokens))
 		r.Get("/users/me", usersH.GetMe)
 		r.Put("/users/me", usersH.UpdateMe)
 		r.Get("/users/me/history", interactionsH.History)
+		r.Get("/users/me/recommendations", recsH.ForMe)
 		r.Post("/interactions", interactionsH.Create)
 
 		r.Group(func(r chi.Router) {
@@ -61,6 +65,7 @@ func NewRouter(d Deps) http.Handler {
 			r.Post("/items", itemsH.Create)
 			r.Put("/items/{id}", itemsH.Update)
 			r.Delete("/items/{id}", itemsH.Delete)
+			r.Post("/admin/recommendations/rebuild", recsH.Rebuild)
 		})
 	})
 

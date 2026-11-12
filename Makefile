@@ -1,4 +1,4 @@
-.PHONY: up down run seed swag test
+.PHONY: up down run seed recompute swag test
 
 up:
 	docker compose up -d --build
@@ -12,6 +12,9 @@ run:
 # make seed ARGS=--reset to replace existing data
 seed:
 	go run ./cmd/seed $(ARGS)
+
+recompute:
+	go run ./cmd/recompute
 
 swag:
 	swag init -g cmd/api/main.go -o docs --parseInternal
