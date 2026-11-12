@@ -3,8 +3,10 @@ package main
 
 import (
 	"context"
+	"flag"
 	"fmt"
 	"log"
+	"os"
 	"time"
 
 	"github.com/alisherseitkadyr/braille-library/internal/config"
@@ -13,6 +15,10 @@ import (
 )
 
 func main() {
+	size := flag.String("size", "", "data set label; with --results, a row size,items,duration_ms is appended")
+	results := flag.String("results", "", "CSV file to append the duration to (e.g. perf/rebuild.csv)")
+	flag.Parse()
+
 	cfg, err := config.Load()
 	if err != nil {
 		log.Fatalf("config: %v", err)
@@ -29,11 +35,32 @@ func main() {
 	}
 
 	recs := service.NewRecommendationService(mongo.NewRecommendationRepository(db),
-		mongo.NewItemRepository(db), mongo.NewUserRepository(db), service.ModePrecomputed)
+		mongo.NewItemRepository(db), mongo.NewUserRepository(db), service.ModePrecomputed, 0)
 	result, err := recs.Rebuild(ctx)
 	if err != nil {
 		log.Fatalf("rebuild: %v", err)
 	}
 	fmt.Printf("rebuilt similarities for %d items in %s\n",
 		result.Items, time.Duration(result.DurationMs)*time.Millisecond)
+
+	if *results != "" {
+		if err := appendRow(*results, fmt.Sprintf("%s,%d,%d", *size, result.Items, result.DurationMs)); err != nil {
+			log.Fatalf("results: %v", err)
+		}
+	}
+}
+
+// appendRow appends a line to a CSV file, writing the header first if the file is new.
+func appendRow(path, row string) error {
+	_, statErr := os.Stat(path)
+	f, err := os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0o644)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+	if os.IsNotExist(statErr) {
+		fmt.Fprintln(f, "size,items,duration_ms")
+	}
+	_, err = fmt.Fprintln(f, row)
+	return err
 }

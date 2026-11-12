@@ -7,6 +7,7 @@ import (
 
 	"go.mongodb.org/mongo-driver/v2/bson"
 
+	"github.com/alisherseitkadyr/braille-library/internal/cache"
 	"github.com/alisherseitkadyr/braille-library/internal/domain"
 	"github.com/alisherseitkadyr/braille-library/internal/recommend"
 )
@@ -40,11 +41,30 @@ type RecommendationService struct {
 	items RecommendationItems
 	users UserRepository
 	mode  string
+	cache *cache.TTL[string, cachedRecommendations] // nil when caching is off
 }
 
-// NewRecommendationService takes the mode: ModePrecomputed or ModeLive.
-func NewRecommendationService(recs RecommendationRepository, items RecommendationItems, users UserRepository, mode string) *RecommendationService {
-	return &RecommendationService{recs: recs, items: items, users: users, mode: mode}
+type cachedRecommendations struct {
+	limit int
+	list  *RecommendationList
+}
+
+// NewRecommendationService takes the mode (ModePrecomputed or ModeLive) and the
+// lifetime of cached recommendations per user; cacheTTL <= 0 turns the cache off.
+func NewRecommendationService(recs RecommendationRepository, items RecommendationItems, users UserRepository, mode string, cacheTTL time.Duration) *RecommendationService {
+	s := &RecommendationService{recs: recs, items: items, users: users, mode: mode}
+	if cacheTTL > 0 {
+		s.cache = cache.NewTTL[string, cachedRecommendations](cacheTTL)
+	}
+	return s
+}
+
+// Invalidate drops the cached recommendations of a user. It is called when
+// the user records an interaction, so the next request sees the new history.
+func (s *RecommendationService) Invalidate(userID string) {
+	if s.cache != nil {
+		s.cache.Delete(userID)
+	}
 }
 
 // neighbors returns the neighbors of the given items from the source of the current mode.
@@ -91,13 +111,34 @@ func (s *RecommendationService) Rebuild(ctx context.Context) (*RebuildResult, er
 	if err := s.recs.SaveSimilarities(ctx, sims, start); err != nil {
 		return nil, err
 	}
+	// Cached lists were built from the old similarities.
+	if s.cache != nil {
+		s.cache.Clear()
+	}
 	return &RebuildResult{Items: len(sims), DurationMs: time.Since(start).Milliseconds()}, nil
 }
 
 // ForUser returns up to limit recommendations: collaborative filtering
 // first, then items matching the user's profile, then popular items.
-// Items the user already interacted with are never returned.
+// Items the user already interacted with are never returned. Results are
+// cached per user when the cache is on.
 func (s *RecommendationService) ForUser(ctx context.Context, userID string, limit int) (*RecommendationList, error) {
+	if s.cache != nil {
+		if c, ok := s.cache.Get(userID); ok && c.limit == limit {
+			return c.list, nil
+		}
+	}
+	list, err := s.forUser(ctx, userID, limit)
+	if err != nil {
+		return nil, err
+	}
+	if s.cache != nil {
+		s.cache.Set(userID, cachedRecommendations{limit: limit, list: list})
+	}
+	return list, nil
+}
+
+func (s *RecommendationService) forUser(ctx context.Context, userID string, limit int) (*RecommendationList, error) {
 	uid, err := bson.ObjectIDFromHex(userID)
 	if err != nil {
 		return nil, domain.ErrNotFound

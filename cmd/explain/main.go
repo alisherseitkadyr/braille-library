@@ -34,7 +34,14 @@ func main() {
 	out := flag.String("out", "perf/explain", "directory for the JSON plans and summary.csv")
 	email := flag.String("email", "user1@perf.kz", "user whose recommendation queries are explained")
 	full := flag.Bool("rebuild", true, "also explain the rebuild job's aggregation over all interactions")
+	resummarize := flag.Bool("resummarize", false,
+		"do not query MongoDB: rebuild --out/summary.csv from the saved JSON plans (keeps time_ms)")
 	flag.Parse()
+
+	if *resummarize {
+		resummarizeDir(*out)
+		return
+	}
 
 	cfg, err := config.Load()
 	if err != nil {
@@ -73,15 +80,22 @@ func main() {
 			log.Fatal(err)
 		}
 
-		s := summarize(plan)
-		rows = append(rows, []string{
-			q.name, q.collection, strconv.FormatInt(elapsed.Milliseconds(), 10),
-			strings.Join(s.stages, "+"), strings.Join(s.indexes, "+"),
-			strconv.FormatInt(s.keys, 10), strconv.FormatInt(s.docs, 10), s.returned,
-		})
+		rows = append(rows, summaryRow(q.name, q.collection, strconv.FormatInt(elapsed.Milliseconds(), 10), plan))
 	}
+	writeSummary(*out, rows)
+}
 
-	f, err := os.Create(filepath.Join(*out, "summary.csv"))
+func summaryRow(name, collection, timeMs string, plan bson.M) []string {
+	s := summarize(plan)
+	return []string{
+		name, collection, timeMs,
+		strings.Join(s.stages, "+"), strings.Join(s.indexes, "+"),
+		strconv.FormatInt(s.keys, 10), strconv.FormatInt(s.docs, 10), s.returned,
+	}
+}
+
+func writeSummary(dir string, rows [][]string) {
+	f, err := os.Create(filepath.Join(dir, "summary.csv"))
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -92,6 +106,34 @@ func main() {
 	for _, r := range rows {
 		fmt.Printf("%-22s %-17s %8s  %-28s %-34s %10s %10s %9s\n", r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7])
 	}
+}
+
+// resummarizeDir rewrites dir/summary.csv from the JSON plans in dir, in the
+// same row order, keeping the collection and time_ms columns of the old file.
+func resummarizeDir(dir string) {
+	f, err := os.Open(filepath.Join(dir, "summary.csv"))
+	if err != nil {
+		log.Fatal(err)
+	}
+	old, err := csv.NewReader(f).ReadAll()
+	f.Close()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	rows := [][]string{old[0]}
+	for _, r := range old[1:] {
+		js, err := os.ReadFile(filepath.Join(dir, r[0]+".json"))
+		if err != nil {
+			log.Fatal(err)
+		}
+		var plan bson.M
+		if err := bson.UnmarshalExtJSON(js, false, &plan); err != nil {
+			log.Fatalf("%s: %v", r[0], err)
+		}
+		rows = append(rows, summaryRow(r[0], r[1], r[2], plan))
+	}
+	writeSummary(dir, rows)
 }
 
 // mainQueries builds the same queries the API runs for one recommendation
@@ -173,22 +215,28 @@ type summary struct {
 }
 
 // summarize walks an explain document of any shape (find, classic or SBE
-// aggregate, $lookup stages) and collects the plan stages, index names and
+// aggregate, $lookup stages) and collects the winning plan's stages, index names and
 // the total keys and documents examined.
 func summarize(plan bson.M) summary {
 	s := summary{returned: "-"}
-	if es, ok := plan["executionStats"].(bson.D); ok {
+	switch es := plan["executionStats"].(type) {
+	case bson.D:
 		for _, e := range es {
 			if e.Key == "nReturned" {
 				s.returned = strconv.FormatInt(toInt(e.Value), 10)
 			}
 		}
+	case bson.M:
+		s.returned = strconv.FormatInt(toInt(es["nReturned"]), 10)
 	}
 	var walk func(v any)
 	walk = func(v any) {
 		switch x := v.(type) {
 		case bson.M:
 			for k, val := range x {
+				if k == "rejectedPlans" {
+					continue // only the winning plan matters
+				}
 				switch k {
 				case "stage":
 					if name, ok := val.(string); ok && isAccessStage(name) && !slices.Contains(s.stages, name) {
@@ -237,7 +285,7 @@ func summarize(plan bson.M) summary {
 // isAccessStage keeps the stages that say how data is read.
 func isAccessStage(name string) bool {
 	switch name {
-	case "COLLSCAN", "IXSCAN", "FETCH", "SORT", "EXPRESS_IXSCAN", "IDHACK", "EXPRESS_CLUSTERED_IXSCAN":
+	case "COLLSCAN", "IXSCAN", "FETCH", "SORT", "SORT_MERGE", "EXPRESS_IXSCAN", "IDHACK", "EXPRESS_CLUSTERED_IXSCAN":
 		return true
 	}
 	return false

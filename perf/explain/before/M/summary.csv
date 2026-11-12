@@ -2,7 +2,7 @@ query,collection,time_ms,plan,indexes,keys_examined,docs_examined,returned
 user_scores,interactions,9,FETCH+IXSCAN,user_createdAt,96,96,-
 similarities_by_item,item_similarities,5,FETCH+IXSCAN,itemId_unique,0,0,0
 items_by_ids,items,3,FETCH+IXSCAN,_id_,20,10,10
-popular_by_profile,items,9,FETCH+IXSCAN+SORT,category_level+_id_+language,153,150,10
+popular_by_profile,items,9,FETCH+IXSCAN+SORT,category_level,153,150,10
 popular_global,items,12,FETCH+IXSCAN+SORT,_id_,1000,959,10
 live_cooccurrence,interactions,1953,FETCH+IXSCAN,item_type+user_createdAt,95949,90124,-
 live_norms,interactions,1092,FETCH+IXSCAN,item_type,200000,100000,-

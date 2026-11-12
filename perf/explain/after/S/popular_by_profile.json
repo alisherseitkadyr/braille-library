@@ -1,0 +1,1121 @@
+{
+  "peakTrackedMemBytes": 213,
+  "ok": 1.0,
+  "queryPlanner": {
+    "namespace": "braille_library.items",
+    "parsedQuery": {
+      "$and": [
+        {
+          "language": {
+            "$eq": "ru"
+          }
+        },
+        {
+          "level": {
+            "$eq": "beginner"
+          }
+        },
+        {
+          "category": {
+            "$in": [
+              "exercises",
+              "textbook"
+            ]
+          }
+        },
+        {
+          "_id": {
+            "$not": {
+              "$in": [
+                {
+                  "$oid": "6af607eee1407803aa9f0625"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f062c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f062f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0630"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f063d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0645"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0648"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0656"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f065d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0667"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f067e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0682"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f069a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06a3"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06a4"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06ad"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06af"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06b1"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06be"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06d2"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06e5"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06ea"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06f5"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06f7"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06f9"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0717"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0727"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0730"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0755"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0765"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0777"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0778"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0779"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0783"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0789"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f079d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07aa"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07ac"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07d5"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07d9"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07dc"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07df"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07e7"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07f4"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "indexFilterSet": false,
+    "queryHash": "806D3CAD",
+    "planCacheShapeHash": "806D3CAD",
+    "planCacheKey": "750F8C52",
+    "optimizationTimeMillis": 1,
+    "maxIndexedOrSolutionsReached": false,
+    "maxIndexedAndSolutionsReached": false,
+    "maxScansToExplodeReached": false,
+    "prunedSimilarIndexes": false,
+    "winningPlan": {
+      "isCached": false,
+      "stage": "LIMIT",
+      "limitAmount": 10,
+      "inputStage": {
+        "stage": "FETCH",
+        "nss": "braille_library.items",
+        "inputStage": {
+          "stage": "SORT_MERGE",
+          "sortPattern": {
+            "ratingsCount": -1,
+            "avgRating": -1,
+            "_id": 1
+          },
+          "inputStages": [
+            {
+              "stage": "IXSCAN",
+              "nss": "braille_library.items",
+              "keyPattern": {
+                "category": 1,
+                "level": 1,
+                "language": 1,
+                "ratingsCount": -1,
+                "avgRating": -1,
+                "_id": 1
+              },
+              "indexName": "profile_popularity",
+              "isMultiKey": false,
+              "multiKeyPaths": {
+                "category": [],
+                "level": [],
+                "language": [],
+                "ratingsCount": [],
+                "avgRating": [],
+                "_id": []
+              },
+              "isUnique": false,
+              "isSparse": false,
+              "isPartial": false,
+              "indexVersion": 2,
+              "direction": "forward",
+              "indexBounds": {
+                "category": [
+                  "[\"exercises\", \"exercises\"]"
+                ],
+                "level": [
+                  "[\"beginner\", \"beginner\"]"
+                ],
+                "language": [
+                  "[\"ru\", \"ru\"]"
+                ],
+                "ratingsCount": [
+                  "[MaxKey, MinKey]"
+                ],
+                "avgRating": [
+                  "[MaxKey, MinKey]"
+                ],
+                "_id": [
+                  "[MinKey, ObjectId('6af607eee1407803aa9f0625'))",
+                  "(ObjectId('6af607eee1407803aa9f0625'), ObjectId('6af607eee1407803aa9f062c'))",
+                  "(ObjectId('6af607eee1407803aa9f062c'), ObjectId('6af607eee1407803aa9f062f'))",
+                  "(ObjectId('6af607eee1407803aa9f062f'), ObjectId('6af607eee1407803aa9f0630'))",
+                  "(ObjectId('6af607eee1407803aa9f0630'), ObjectId('6af607eee1407803aa9f063d'))",
+                  "(ObjectId('6af607eee1407803aa9f063d'), ObjectId('6af607eee1407803aa9f0645'))",
+                  "(ObjectId('6af607eee1407803aa9f0645'), ObjectId('6af607eee1407803aa9f0648'))",
+                  "(ObjectId('6af607eee1407803aa9f0648'), ObjectId('6af607eee1407803aa9f0656'))",
+                  "(ObjectId('6af607eee1407803aa9f0656'), ObjectId('6af607eee1407803aa9f065d'))",
+                  "(ObjectId('6af607eee1407803aa9f065d'), ObjectId('6af607eee1407803aa9f0667'))",
+                  "(ObjectId('6af607eee1407803aa9f0667'), ObjectId('6af607eee1407803aa9f067e'))",
+                  "(ObjectId('6af607eee1407803aa9f067e'), ObjectId('6af607eee1407803aa9f0682'))",
+                  "(ObjectId('6af607eee1407803aa9f0682'), ObjectId('6af607eee1407803aa9f069a'))",
+                  "(ObjectId('6af607eee1407803aa9f069a'), ObjectId('6af607eee1407803aa9f06a3'))",
+                  "(ObjectId('6af607eee1407803aa9f06a3'), ObjectId('6af607eee1407803aa9f06a4'))",
+                  "(ObjectId('6af607eee1407803aa9f06a4'), ObjectId('6af607eee1407803aa9f06ad'))",
+                  "(ObjectId('6af607eee1407803aa9f06ad'), ObjectId('6af607eee1407803aa9f06af'))",
+                  "(ObjectId('6af607eee1407803aa9f06af'), ObjectId('6af607eee1407803aa9f06b1'))",
+                  "(ObjectId('6af607eee1407803aa9f06b1'), ObjectId('6af607eee1407803aa9f06be'))",
+                  "(ObjectId('6af607eee1407803aa9f06be'), ObjectId('6af607eee1407803aa9f06d2'))",
+                  "(ObjectId('6af607eee1407803aa9f06d2'), ObjectId('6af607eee1407803aa9f06e5'))",
+                  "(ObjectId('6af607eee1407803aa9f06e5'), ObjectId('6af607eee1407803aa9f06ea'))",
+                  "(ObjectId('6af607eee1407803aa9f06ea'), ObjectId('6af607eee1407803aa9f06f5'))",
+                  "(ObjectId('6af607eee1407803aa9f06f5'), ObjectId('6af607eee1407803aa9f06f7'))",
+                  "(ObjectId('6af607eee1407803aa9f06f7'), ObjectId('6af607eee1407803aa9f06f9'))",
+                  "(ObjectId('6af607eee1407803aa9f06f9'), ObjectId('6af607eee1407803aa9f0717'))",
+                  "(ObjectId('6af607eee1407803aa9f0717'), ObjectId('6af607eee1407803aa9f0727'))",
+                  "(ObjectId('6af607eee1407803aa9f0727'), ObjectId('6af607eee1407803aa9f0730'))",
+                  "(ObjectId('6af607eee1407803aa9f0730'), ObjectId('6af607eee1407803aa9f0755'))",
+                  "(ObjectId('6af607eee1407803aa9f0755'), ObjectId('6af607eee1407803aa9f0765'))",
+                  "(ObjectId('6af607eee1407803aa9f0765'), ObjectId('6af607eee1407803aa9f0777'))",
+                  "(ObjectId('6af607eee1407803aa9f0777'), ObjectId('6af607eee1407803aa9f0778'))",
+                  "(ObjectId('6af607eee1407803aa9f0778'), ObjectId('6af607eee1407803aa9f0779'))",
+                  "(ObjectId('6af607eee1407803aa9f0779'), ObjectId('6af607eee1407803aa9f0783'))",
+                  "(ObjectId('6af607eee1407803aa9f0783'), ObjectId('6af607eee1407803aa9f0789'))",
+                  "(ObjectId('6af607eee1407803aa9f0789'), ObjectId('6af607eee1407803aa9f079d'))",
+                  "(ObjectId('6af607eee1407803aa9f079d'), ObjectId('6af607eee1407803aa9f07aa'))",
+                  "(ObjectId('6af607eee1407803aa9f07aa'), ObjectId('6af607eee1407803aa9f07ac'))",
+                  "(ObjectId('6af607eee1407803aa9f07ac'), ObjectId('6af607eee1407803aa9f07d5'))",
+                  "(ObjectId('6af607eee1407803aa9f07d5'), ObjectId('6af607eee1407803aa9f07d9'))",
+                  "(ObjectId('6af607eee1407803aa9f07d9'), ObjectId('6af607eee1407803aa9f07dc'))",
+                  "(ObjectId('6af607eee1407803aa9f07dc'), ObjectId('6af607eee1407803aa9f07df'))",
+                  "(ObjectId('6af607eee1407803aa9f07df'), ObjectId('6af607eee1407803aa9f07e7'))",
+                  "(ObjectId('6af607eee1407803aa9f07e7'), ObjectId('6af607eee1407803aa9f07f4'))",
+                  "(ObjectId('6af607eee1407803aa9f07f4'), MaxKey]"
+                ]
+              }
+            },
+            {
+              "stage": "IXSCAN",
+              "nss": "braille_library.items",
+              "keyPattern": {
+                "category": 1,
+                "level": 1,
+                "language": 1,
+                "ratingsCount": -1,
+                "avgRating": -1,
+                "_id": 1
+              },
+              "indexName": "profile_popularity",
+              "isMultiKey": false,
+              "multiKeyPaths": {
+                "category": [],
+                "level": [],
+                "language": [],
+                "ratingsCount": [],
+                "avgRating": [],
+                "_id": []
+              },
+              "isUnique": false,
+              "isSparse": false,
+              "isPartial": false,
+              "indexVersion": 2,
+              "direction": "forward",
+              "indexBounds": {
+                "category": [
+                  "[\"textbook\", \"textbook\"]"
+                ],
+                "level": [
+                  "[\"beginner\", \"beginner\"]"
+                ],
+                "language": [
+                  "[\"ru\", \"ru\"]"
+                ],
+                "ratingsCount": [
+                  "[MaxKey, MinKey]"
+                ],
+                "avgRating": [
+                  "[MaxKey, MinKey]"
+                ],
+                "_id": [
+                  "[MinKey, ObjectId('6af607eee1407803aa9f0625'))",
+                  "(ObjectId('6af607eee1407803aa9f0625'), ObjectId('6af607eee1407803aa9f062c'))",
+                  "(ObjectId('6af607eee1407803aa9f062c'), ObjectId('6af607eee1407803aa9f062f'))",
+                  "(ObjectId('6af607eee1407803aa9f062f'), ObjectId('6af607eee1407803aa9f0630'))",
+                  "(ObjectId('6af607eee1407803aa9f0630'), ObjectId('6af607eee1407803aa9f063d'))",
+                  "(ObjectId('6af607eee1407803aa9f063d'), ObjectId('6af607eee1407803aa9f0645'))",
+                  "(ObjectId('6af607eee1407803aa9f0645'), ObjectId('6af607eee1407803aa9f0648'))",
+                  "(ObjectId('6af607eee1407803aa9f0648'), ObjectId('6af607eee1407803aa9f0656'))",
+                  "(ObjectId('6af607eee1407803aa9f0656'), ObjectId('6af607eee1407803aa9f065d'))",
+                  "(ObjectId('6af607eee1407803aa9f065d'), ObjectId('6af607eee1407803aa9f0667'))",
+                  "(ObjectId('6af607eee1407803aa9f0667'), ObjectId('6af607eee1407803aa9f067e'))",
+                  "(ObjectId('6af607eee1407803aa9f067e'), ObjectId('6af607eee1407803aa9f0682'))",
+                  "(ObjectId('6af607eee1407803aa9f0682'), ObjectId('6af607eee1407803aa9f069a'))",
+                  "(ObjectId('6af607eee1407803aa9f069a'), ObjectId('6af607eee1407803aa9f06a3'))",
+                  "(ObjectId('6af607eee1407803aa9f06a3'), ObjectId('6af607eee1407803aa9f06a4'))",
+                  "(ObjectId('6af607eee1407803aa9f06a4'), ObjectId('6af607eee1407803aa9f06ad'))",
+                  "(ObjectId('6af607eee1407803aa9f06ad'), ObjectId('6af607eee1407803aa9f06af'))",
+                  "(ObjectId('6af607eee1407803aa9f06af'), ObjectId('6af607eee1407803aa9f06b1'))",
+                  "(ObjectId('6af607eee1407803aa9f06b1'), ObjectId('6af607eee1407803aa9f06be'))",
+                  "(ObjectId('6af607eee1407803aa9f06be'), ObjectId('6af607eee1407803aa9f06d2'))",
+                  "(ObjectId('6af607eee1407803aa9f06d2'), ObjectId('6af607eee1407803aa9f06e5'))",
+                  "(ObjectId('6af607eee1407803aa9f06e5'), ObjectId('6af607eee1407803aa9f06ea'))",
+                  "(ObjectId('6af607eee1407803aa9f06ea'), ObjectId('6af607eee1407803aa9f06f5'))",
+                  "(ObjectId('6af607eee1407803aa9f06f5'), ObjectId('6af607eee1407803aa9f06f7'))",
+                  "(ObjectId('6af607eee1407803aa9f06f7'), ObjectId('6af607eee1407803aa9f06f9'))",
+                  "(ObjectId('6af607eee1407803aa9f06f9'), ObjectId('6af607eee1407803aa9f0717'))",
+                  "(ObjectId('6af607eee1407803aa9f0717'), ObjectId('6af607eee1407803aa9f0727'))",
+                  "(ObjectId('6af607eee1407803aa9f0727'), ObjectId('6af607eee1407803aa9f0730'))",
+                  "(ObjectId('6af607eee1407803aa9f0730'), ObjectId('6af607eee1407803aa9f0755'))",
+                  "(ObjectId('6af607eee1407803aa9f0755'), ObjectId('6af607eee1407803aa9f0765'))",
+                  "(ObjectId('6af607eee1407803aa9f0765'), ObjectId('6af607eee1407803aa9f0777'))",
+                  "(ObjectId('6af607eee1407803aa9f0777'), ObjectId('6af607eee1407803aa9f0778'))",
+                  "(ObjectId('6af607eee1407803aa9f0778'), ObjectId('6af607eee1407803aa9f0779'))",
+                  "(ObjectId('6af607eee1407803aa9f0779'), ObjectId('6af607eee1407803aa9f0783'))",
+                  "(ObjectId('6af607eee1407803aa9f0783'), ObjectId('6af607eee1407803aa9f0789'))",
+                  "(ObjectId('6af607eee1407803aa9f0789'), ObjectId('6af607eee1407803aa9f079d'))",
+                  "(ObjectId('6af607eee1407803aa9f079d'), ObjectId('6af607eee1407803aa9f07aa'))",
+                  "(ObjectId('6af607eee1407803aa9f07aa'), ObjectId('6af607eee1407803aa9f07ac'))",
+                  "(ObjectId('6af607eee1407803aa9f07ac'), ObjectId('6af607eee1407803aa9f07d5'))",
+                  "(ObjectId('6af607eee1407803aa9f07d5'), ObjectId('6af607eee1407803aa9f07d9'))",
+                  "(ObjectId('6af607eee1407803aa9f07d9'), ObjectId('6af607eee1407803aa9f07dc'))",
+                  "(ObjectId('6af607eee1407803aa9f07dc'), ObjectId('6af607eee1407803aa9f07df'))",
+                  "(ObjectId('6af607eee1407803aa9f07df'), ObjectId('6af607eee1407803aa9f07e7'))",
+                  "(ObjectId('6af607eee1407803aa9f07e7'), ObjectId('6af607eee1407803aa9f07f4'))",
+                  "(ObjectId('6af607eee1407803aa9f07f4'), MaxKey]"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "rejectedPlans": [
+      {
+        "isCached": false,
+        "stage": "SORT",
+        "sortPattern": {
+          "ratingsCount": -1,
+          "avgRating": -1,
+          "_id": 1
+        },
+        "memLimit": 104857600,
+        "limitAmount": 10,
+        "type": "simple",
+        "inputStage": {
+          "stage": "FETCH",
+          "filter": {
+            "$and": [
+              {
+                "_id": {
+                  "$not": {
+                    "$in": [
+                      {
+                        "$oid": "6af607eee1407803aa9f0625"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f062c"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f062f"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0630"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f063d"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0645"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0648"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0656"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f065d"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0667"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f067e"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0682"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f069a"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f06a3"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f06a4"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f06ad"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f06af"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f06b1"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f06be"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f06d2"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f06e5"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f06ea"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f06f5"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f06f7"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f06f9"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0717"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0727"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0730"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0755"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0765"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0777"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0778"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0779"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0783"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f0789"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f079d"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f07aa"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f07ac"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f07d5"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f07d9"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f07dc"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f07df"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f07e7"
+                      },
+                      {
+                        "$oid": "6af607eee1407803aa9f07f4"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "category": {
+                  "$in": [
+                    "exercises",
+                    "textbook"
+                  ]
+                }
+              },
+              {
+                "level": {
+                  "$eq": "beginner"
+                }
+              }
+            ]
+          },
+          "nss": "braille_library.items",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nss": "braille_library.items",
+            "keyPattern": {
+              "language": 1
+            },
+            "indexName": "language",
+            "isMultiKey": false,
+            "multiKeyPaths": {
+              "language": []
+            },
+            "isUnique": false,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "language": [
+                "[\"ru\", \"ru\"]"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "isCached": false,
+        "stage": "SORT",
+        "sortPattern": {
+          "ratingsCount": -1,
+          "avgRating": -1,
+          "_id": 1
+        },
+        "memLimit": 104857600,
+        "limitAmount": 10,
+        "type": "simple",
+        "inputStage": {
+          "stage": "FETCH",
+          "filter": {
+            "$and": [
+              {
+                "category": {
+                  "$in": [
+                    "exercises",
+                    "textbook"
+                  ]
+                }
+              },
+              {
+                "language": {
+                  "$eq": "ru"
+                }
+              },
+              {
+                "level": {
+                  "$eq": "beginner"
+                }
+              }
+            ]
+          },
+          "nss": "braille_library.items",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nss": "braille_library.items",
+            "keyPattern": {
+              "_id": 1
+            },
+            "indexName": "_id_",
+            "isMultiKey": false,
+            "isUnique": true,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "_id": [
+                "[MinKey, ObjectId('6af607eee1407803aa9f0625'))",
+                "(ObjectId('6af607eee1407803aa9f0625'), ObjectId('6af607eee1407803aa9f062c'))",
+                "(ObjectId('6af607eee1407803aa9f062c'), ObjectId('6af607eee1407803aa9f062f'))",
+                "(ObjectId('6af607eee1407803aa9f062f'), ObjectId('6af607eee1407803aa9f0630'))",
+                "(ObjectId('6af607eee1407803aa9f0630'), ObjectId('6af607eee1407803aa9f063d'))",
+                "(ObjectId('6af607eee1407803aa9f063d'), ObjectId('6af607eee1407803aa9f0645'))",
+                "(ObjectId('6af607eee1407803aa9f0645'), ObjectId('6af607eee1407803aa9f0648'))",
+                "(ObjectId('6af607eee1407803aa9f0648'), ObjectId('6af607eee1407803aa9f0656'))",
+                "(ObjectId('6af607eee1407803aa9f0656'), ObjectId('6af607eee1407803aa9f065d'))",
+                "(ObjectId('6af607eee1407803aa9f065d'), ObjectId('6af607eee1407803aa9f0667'))",
+                "(ObjectId('6af607eee1407803aa9f0667'), ObjectId('6af607eee1407803aa9f067e'))",
+                "(ObjectId('6af607eee1407803aa9f067e'), ObjectId('6af607eee1407803aa9f0682'))",
+                "(ObjectId('6af607eee1407803aa9f0682'), ObjectId('6af607eee1407803aa9f069a'))",
+                "(ObjectId('6af607eee1407803aa9f069a'), ObjectId('6af607eee1407803aa9f06a3'))",
+                "(ObjectId('6af607eee1407803aa9f06a3'), ObjectId('6af607eee1407803aa9f06a4'))",
+                "(ObjectId('6af607eee1407803aa9f06a4'), ObjectId('6af607eee1407803aa9f06ad'))",
+                "(ObjectId('6af607eee1407803aa9f06ad'), ObjectId('6af607eee1407803aa9f06af'))",
+                "(ObjectId('6af607eee1407803aa9f06af'), ObjectId('6af607eee1407803aa9f06b1'))",
+                "(ObjectId('6af607eee1407803aa9f06b1'), ObjectId('6af607eee1407803aa9f06be'))",
+                "(ObjectId('6af607eee1407803aa9f06be'), ObjectId('6af607eee1407803aa9f06d2'))",
+                "(ObjectId('6af607eee1407803aa9f06d2'), ObjectId('6af607eee1407803aa9f06e5'))",
+                "(ObjectId('6af607eee1407803aa9f06e5'), ObjectId('6af607eee1407803aa9f06ea'))",
+                "(ObjectId('6af607eee1407803aa9f06ea'), ObjectId('6af607eee1407803aa9f06f5'))",
+                "(ObjectId('6af607eee1407803aa9f06f5'), ObjectId('6af607eee1407803aa9f06f7'))",
+                "(ObjectId('6af607eee1407803aa9f06f7'), ObjectId('6af607eee1407803aa9f06f9'))",
+                "(ObjectId('6af607eee1407803aa9f06f9'), ObjectId('6af607eee1407803aa9f0717'))",
+                "(ObjectId('6af607eee1407803aa9f0717'), ObjectId('6af607eee1407803aa9f0727'))",
+                "(ObjectId('6af607eee1407803aa9f0727'), ObjectId('6af607eee1407803aa9f0730'))",
+                "(ObjectId('6af607eee1407803aa9f0730'), ObjectId('6af607eee1407803aa9f0755'))",
+                "(ObjectId('6af607eee1407803aa9f0755'), ObjectId('6af607eee1407803aa9f0765'))",
+                "(ObjectId('6af607eee1407803aa9f0765'), ObjectId('6af607eee1407803aa9f0777'))",
+                "(ObjectId('6af607eee1407803aa9f0777'), ObjectId('6af607eee1407803aa9f0778'))",
+                "(ObjectId('6af607eee1407803aa9f0778'), ObjectId('6af607eee1407803aa9f0779'))",
+                "(ObjectId('6af607eee1407803aa9f0779'), ObjectId('6af607eee1407803aa9f0783'))",
+                "(ObjectId('6af607eee1407803aa9f0783'), ObjectId('6af607eee1407803aa9f0789'))",
+                "(ObjectId('6af607eee1407803aa9f0789'), ObjectId('6af607eee1407803aa9f079d'))",
+                "(ObjectId('6af607eee1407803aa9f079d'), ObjectId('6af607eee1407803aa9f07aa'))",
+                "(ObjectId('6af607eee1407803aa9f07aa'), ObjectId('6af607eee1407803aa9f07ac'))",
+                "(ObjectId('6af607eee1407803aa9f07ac'), ObjectId('6af607eee1407803aa9f07d5'))",
+                "(ObjectId('6af607eee1407803aa9f07d5'), ObjectId('6af607eee1407803aa9f07d9'))",
+                "(ObjectId('6af607eee1407803aa9f07d9'), ObjectId('6af607eee1407803aa9f07dc'))",
+                "(ObjectId('6af607eee1407803aa9f07dc'), ObjectId('6af607eee1407803aa9f07df'))",
+                "(ObjectId('6af607eee1407803aa9f07df'), ObjectId('6af607eee1407803aa9f07e7'))",
+                "(ObjectId('6af607eee1407803aa9f07e7'), ObjectId('6af607eee1407803aa9f07f4'))",
+                "(ObjectId('6af607eee1407803aa9f07f4'), MaxKey]"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "queryShapeHash": "7EDE09FFAAD0608C933CE249B829697E3E624DD2923911EAC78CCB49BD554954",
+  "command": {
+    "find": "items",
+    "filter": {
+      "_id": {
+        "$nin": [
+          {
+            "$oid": "6af607eee1407803aa9f06ea"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0730"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f062c"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f062f"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f063d"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f06be"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f07dc"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0727"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0783"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0779"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0625"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f06f9"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f06af"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0777"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0717"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f07d9"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f07aa"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0667"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f06ad"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f06e5"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0789"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f06a4"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0778"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f07f4"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0645"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f065d"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f069a"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f06f7"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f07d5"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0682"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0656"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0755"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f079d"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0630"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f06b1"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f07df"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f06f5"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f07ac"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f07e7"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0648"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f06d2"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f067e"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0765"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f06a3"
+          }
+        ]
+      },
+      "category": {
+        "$in": [
+          "exercises",
+          "textbook"
+        ]
+      },
+      "level": "beginner",
+      "language": "ru"
+    },
+    "sort": {
+      "ratingsCount": -1,
+      "avgRating": -1,
+      "_id": 1
+    },
+    "limit": 10,
+    "$db": "braille_library"
+  },
+  "serverInfo": {
+    "host": "39f69c592185",
+    "port": 27017,
+    "version": "8.3.13",
+    "gitVersion": "3b8a5e1f78cf7b94c40a78ad3fe93708cdca8323"
+  },
+  "serverParameters": {
+    "internalQueryFacetBufferSizeBytes": 104857600,
+    "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+    "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+    "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryMaxAddToSetBytes": 104857600,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "explainVersion": "1",
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 10,
+    "executionTimeMillis": 1,
+    "totalKeysExamined": 22,
+    "totalDocsExamined": 10,
+    "executionStages": {
+      "isCached": false,
+      "stage": "LIMIT",
+      "nReturned": 10,
+      "executionTimeMillisEstimate": 0,
+      "works": 33,
+      "advanced": 10,
+      "needTime": 22,
+      "needYield": 0,
+      "saveState": 1,
+      "restoreState": 1,
+      "isEOF": 1,
+      "limitAmount": 10,
+      "inputStage": {
+        "stage": "FETCH",
+        "nReturned": 10,
+        "executionTimeMillisEstimate": 0,
+        "works": 32,
+        "advanced": 10,
+        "needTime": 22,
+        "needYield": 0,
+        "saveState": 1,
+        "restoreState": 1,
+        "isEOF": 0,
+        "nss": "braille_library.items",
+        "docsExamined": 10,
+        "alreadyHasObj": 0,
+        "inputStage": {
+          "stage": "SORT_MERGE",
+          "nReturned": 10,
+          "executionTimeMillisEstimate": 0,
+          "works": 32,
+          "advanced": 10,
+          "needTime": 22,
+          "needYield": 0,
+          "saveState": 1,
+          "restoreState": 1,
+          "isEOF": 0,
+          "sortPattern": {
+            "ratingsCount": -1,
+            "avgRating": -1,
+            "_id": 1
+          },
+          "dupsTested": 0,
+          "dupsDropped": 0,
+          "peakTrackedMemBytes": 213,
+          "inputStages": [
+            {
+              "stage": "IXSCAN",
+              "nReturned": 6,
+              "executionTimeMillisEstimate": 0,
+              "works": 11,
+              "advanced": 6,
+              "needTime": 5,
+              "needYield": 0,
+              "saveState": 1,
+              "restoreState": 1,
+              "isEOF": 0,
+              "nss": "braille_library.items",
+              "keyPattern": {
+                "category": 1,
+                "level": 1,
+                "language": 1,
+                "ratingsCount": -1,
+                "avgRating": -1,
+                "_id": 1
+              },
+              "indexName": "profile_popularity",
+              "isMultiKey": false,
+              "multiKeyPaths": {
+                "category": [],
+                "level": [],
+                "language": [],
+                "ratingsCount": [],
+                "avgRating": [],
+                "_id": []
+              },
+              "isUnique": false,
+              "isSparse": false,
+              "isPartial": false,
+              "indexVersion": 2,
+              "direction": "forward",
+              "indexBounds": {
+                "category": [
+                  "[\"exercises\", \"exercises\"]"
+                ],
+                "level": [
+                  "[\"beginner\", \"beginner\"]"
+                ],
+                "language": [
+                  "[\"ru\", \"ru\"]"
+                ],
+                "ratingsCount": [
+                  "[MaxKey, MinKey]"
+                ],
+                "avgRating": [
+                  "[MaxKey, MinKey]"
+                ],
+                "_id": [
+                  "[MinKey, ObjectId('6af607eee1407803aa9f0625'))",
+                  "(ObjectId('6af607eee1407803aa9f0625'), ObjectId('6af607eee1407803aa9f062c'))",
+                  "(ObjectId('6af607eee1407803aa9f062c'), ObjectId('6af607eee1407803aa9f062f'))",
+                  "(ObjectId('6af607eee1407803aa9f062f'), ObjectId('6af607eee1407803aa9f0630'))",
+                  "(ObjectId('6af607eee1407803aa9f0630'), ObjectId('6af607eee1407803aa9f063d'))",
+                  "(ObjectId('6af607eee1407803aa9f063d'), ObjectId('6af607eee1407803aa9f0645'))",
+                  "(ObjectId('6af607eee1407803aa9f0645'), ObjectId('6af607eee1407803aa9f0648'))",
+                  "(ObjectId('6af607eee1407803aa9f0648'), ObjectId('6af607eee1407803aa9f0656'))",
+                  "(ObjectId('6af607eee1407803aa9f0656'), ObjectId('6af607eee1407803aa9f065d'))",
+                  "(ObjectId('6af607eee1407803aa9f065d'), ObjectId('6af607eee1407803aa9f0667'))",
+                  "(ObjectId('6af607eee1407803aa9f0667'), ObjectId('6af607eee1407803aa9f067e'))",
+                  "(ObjectId('6af607eee1407803aa9f067e'), ObjectId('6af607eee1407803aa9f0682'))",
+                  "(ObjectId('6af607eee1407803aa9f0682'), ObjectId('6af607eee1407803aa9f069a'))",
+                  "(ObjectId('6af607eee1407803aa9f069a'), ObjectId('6af607eee1407803aa9f06a3'))",
+                  "(ObjectId('6af607eee1407803aa9f06a3'), ObjectId('6af607eee1407803aa9f06a4'))",
+                  "(ObjectId('6af607eee1407803aa9f06a4'), ObjectId('6af607eee1407803aa9f06ad'))",
+                  "(ObjectId('6af607eee1407803aa9f06ad'), ObjectId('6af607eee1407803aa9f06af'))",
+                  "(ObjectId('6af607eee1407803aa9f06af'), ObjectId('6af607eee1407803aa9f06b1'))",
+                  "(ObjectId('6af607eee1407803aa9f06b1'), ObjectId('6af607eee1407803aa9f06be'))",
+                  "(ObjectId('6af607eee1407803aa9f06be'), ObjectId('6af607eee1407803aa9f06d2'))",
+                  "(ObjectId('6af607eee1407803aa9f06d2'), ObjectId('6af607eee1407803aa9f06e5'))",
+                  "(ObjectId('6af607eee1407803aa9f06e5'), ObjectId('6af607eee1407803aa9f06ea'))",
+                  "(ObjectId('6af607eee1407803aa9f06ea'), ObjectId('6af607eee1407803aa9f06f5'))",
+                  "(ObjectId('6af607eee1407803aa9f06f5'), ObjectId('6af607eee1407803aa9f06f7'))",
+                  "(ObjectId('6af607eee1407803aa9f06f7'), ObjectId('6af607eee1407803aa9f06f9'))",
+                  "(ObjectId('6af607eee1407803aa9f06f9'), ObjectId('6af607eee1407803aa9f0717'))",
+                  "(ObjectId('6af607eee1407803aa9f0717'), ObjectId('6af607eee1407803aa9f0727'))",
+                  "(ObjectId('6af607eee1407803aa9f0727'), ObjectId('6af607eee1407803aa9f0730'))",
+                  "(ObjectId('6af607eee1407803aa9f0730'), ObjectId('6af607eee1407803aa9f0755'))",
+                  "(ObjectId('6af607eee1407803aa9f0755'), ObjectId('6af607eee1407803aa9f0765'))",
+                  "(ObjectId('6af607eee1407803aa9f0765'), ObjectId('6af607eee1407803aa9f0777'))",
+                  "(ObjectId('6af607eee1407803aa9f0777'), ObjectId('6af607eee1407803aa9f0778'))",
+                  "(ObjectId('6af607eee1407803aa9f0778'), ObjectId('6af607eee1407803aa9f0779'))",
+                  "(ObjectId('6af607eee1407803aa9f0779'), ObjectId('6af607eee1407803aa9f0783'))",
+                  "(ObjectId('6af607eee1407803aa9f0783'), ObjectId('6af607eee1407803aa9f0789'))",
+                  "(ObjectId('6af607eee1407803aa9f0789'), ObjectId('6af607eee1407803aa9f079d'))",
+                  "(ObjectId('6af607eee1407803aa9f079d'), ObjectId('6af607eee1407803aa9f07aa'))",
+                  "(ObjectId('6af607eee1407803aa9f07aa'), ObjectId('6af607eee1407803aa9f07ac'))",
+                  "(ObjectId('6af607eee1407803aa9f07ac'), ObjectId('6af607eee1407803aa9f07d5'))",
+                  "(ObjectId('6af607eee1407803aa9f07d5'), ObjectId('6af607eee1407803aa9f07d9'))",
+                  "(ObjectId('6af607eee1407803aa9f07d9'), ObjectId('6af607eee1407803aa9f07dc'))",
+                  "(ObjectId('6af607eee1407803aa9f07dc'), ObjectId('6af607eee1407803aa9f07df'))",
+                  "(ObjectId('6af607eee1407803aa9f07df'), ObjectId('6af607eee1407803aa9f07e7'))",
+                  "(ObjectId('6af607eee1407803aa9f07e7'), ObjectId('6af607eee1407803aa9f07f4'))",
+                  "(ObjectId('6af607eee1407803aa9f07f4'), MaxKey]"
+                ]
+              },
+              "keysExamined": 11,
+              "seeks": 6,
+              "dupsTested": 0,
+              "dupsDropped": 0,
+              "peakTrackedMemBytes": 0
+            },
+            {
+              "stage": "IXSCAN",
+              "nReturned": 5,
+              "executionTimeMillisEstimate": 0,
+              "works": 11,
+              "advanced": 5,
+              "needTime": 6,
+              "needYield": 0,
+              "saveState": 1,
+              "restoreState": 1,
+              "isEOF": 0,
+              "nss": "braille_library.items",
+              "keyPattern": {
+                "category": 1,
+                "level": 1,
+                "language": 1,
+                "ratingsCount": -1,
+                "avgRating": -1,
+                "_id": 1
+              },
+              "indexName": "profile_popularity",
+              "isMultiKey": false,
+              "multiKeyPaths": {
+                "category": [],
+                "level": [],
+                "language": [],
+                "ratingsCount": [],
+                "avgRating": [],
+                "_id": []
+              },
+              "isUnique": false,
+              "isSparse": false,
+              "isPartial": false,
+              "indexVersion": 2,
+              "direction": "forward",
+              "indexBounds": {
+                "category": [
+                  "[\"textbook\", \"textbook\"]"
+                ],
+                "level": [
+                  "[\"beginner\", \"beginner\"]"
+                ],
+                "language": [
+                  "[\"ru\", \"ru\"]"
+                ],
+                "ratingsCount": [
+                  "[MaxKey, MinKey]"
+                ],
+                "avgRating": [
+                  "[MaxKey, MinKey]"
+                ],
+                "_id": [
+                  "[MinKey, ObjectId('6af607eee1407803aa9f0625'))",
+                  "(ObjectId('6af607eee1407803aa9f0625'), ObjectId('6af607eee1407803aa9f062c'))",
+                  "(ObjectId('6af607eee1407803aa9f062c'), ObjectId('6af607eee1407803aa9f062f'))",
+                  "(ObjectId('6af607eee1407803aa9f062f'), ObjectId('6af607eee1407803aa9f0630'))",
+                  "(ObjectId('6af607eee1407803aa9f0630'), ObjectId('6af607eee1407803aa9f063d'))",
+                  "(ObjectId('6af607eee1407803aa9f063d'), ObjectId('6af607eee1407803aa9f0645'))",
+                  "(ObjectId('6af607eee1407803aa9f0645'), ObjectId('6af607eee1407803aa9f0648'))",
+                  "(ObjectId('6af607eee1407803aa9f0648'), ObjectId('6af607eee1407803aa9f0656'))",
+                  "(ObjectId('6af607eee1407803aa9f0656'), ObjectId('6af607eee1407803aa9f065d'))",
+                  "(ObjectId('6af607eee1407803aa9f065d'), ObjectId('6af607eee1407803aa9f0667'))",
+                  "(ObjectId('6af607eee1407803aa9f0667'), ObjectId('6af607eee1407803aa9f067e'))",
+                  "(ObjectId('6af607eee1407803aa9f067e'), ObjectId('6af607eee1407803aa9f0682'))",
+                  "(ObjectId('6af607eee1407803aa9f0682'), ObjectId('6af607eee1407803aa9f069a'))",
+                  "(ObjectId('6af607eee1407803aa9f069a'), ObjectId('6af607eee1407803aa9f06a3'))",
+                  "(ObjectId('6af607eee1407803aa9f06a3'), ObjectId('6af607eee1407803aa9f06a4'))",
+                  "(ObjectId('6af607eee1407803aa9f06a4'), ObjectId('6af607eee1407803aa9f06ad'))",
+                  "(ObjectId('6af607eee1407803aa9f06ad'), ObjectId('6af607eee1407803aa9f06af'))",
+                  "(ObjectId('6af607eee1407803aa9f06af'), ObjectId('6af607eee1407803aa9f06b1'))",
+                  "(ObjectId('6af607eee1407803aa9f06b1'), ObjectId('6af607eee1407803aa9f06be'))",
+                  "(ObjectId('6af607eee1407803aa9f06be'), ObjectId('6af607eee1407803aa9f06d2'))",
+                  "(ObjectId('6af607eee1407803aa9f06d2'), ObjectId('6af607eee1407803aa9f06e5'))",
+                  "(ObjectId('6af607eee1407803aa9f06e5'), ObjectId('6af607eee1407803aa9f06ea'))",
+                  "(ObjectId('6af607eee1407803aa9f06ea'), ObjectId('6af607eee1407803aa9f06f5'))",
+                  "(ObjectId('6af607eee1407803aa9f06f5'), ObjectId('6af607eee1407803aa9f06f7'))",
+                  "(ObjectId('6af607eee1407803aa9f06f7'), ObjectId('6af607eee1407803aa9f06f9'))",
+                  "(ObjectId('6af607eee1407803aa9f06f9'), ObjectId('6af607eee1407803aa9f0717'))",
+                  "(ObjectId('6af607eee1407803aa9f0717'), ObjectId('6af607eee1407803aa9f0727'))",
+                  "(ObjectId('6af607eee1407803aa9f0727'), ObjectId('6af607eee1407803aa9f0730'))",
+                  "(ObjectId('6af607eee1407803aa9f0730'), ObjectId('6af607eee1407803aa9f0755'))",
+                  "(ObjectId('6af607eee1407803aa9f0755'), ObjectId('6af607eee1407803aa9f0765'))",
+                  "(ObjectId('6af607eee1407803aa9f0765'), ObjectId('6af607eee1407803aa9f0777'))",
+                  "(ObjectId('6af607eee1407803aa9f0777'), ObjectId('6af607eee1407803aa9f0778'))",
+                  "(ObjectId('6af607eee1407803aa9f0778'), ObjectId('6af607eee1407803aa9f0779'))",
+                  "(ObjectId('6af607eee1407803aa9f0779'), ObjectId('6af607eee1407803aa9f0783'))",
+                  "(ObjectId('6af607eee1407803aa9f0783'), ObjectId('6af607eee1407803aa9f0789'))",
+                  "(ObjectId('6af607eee1407803aa9f0789'), ObjectId('6af607eee1407803aa9f079d'))",
+                  "(ObjectId('6af607eee1407803aa9f079d'), ObjectId('6af607eee1407803aa9f07aa'))",
+                  "(ObjectId('6af607eee1407803aa9f07aa'), ObjectId('6af607eee1407803aa9f07ac'))",
+                  "(ObjectId('6af607eee1407803aa9f07ac'), ObjectId('6af607eee1407803aa9f07d5'))",
+                  "(ObjectId('6af607eee1407803aa9f07d5'), ObjectId('6af607eee1407803aa9f07d9'))",
+                  "(ObjectId('6af607eee1407803aa9f07d9'), ObjectId('6af607eee1407803aa9f07dc'))",
+                  "(ObjectId('6af607eee1407803aa9f07dc'), ObjectId('6af607eee1407803aa9f07df'))",
+                  "(ObjectId('6af607eee1407803aa9f07df'), ObjectId('6af607eee1407803aa9f07e7'))",
+                  "(ObjectId('6af607eee1407803aa9f07e7'), ObjectId('6af607eee1407803aa9f07f4'))",
+                  "(ObjectId('6af607eee1407803aa9f07f4'), MaxKey]"
+                ]
+              },
+              "keysExamined": 11,
+              "seeks": 7,
+              "dupsTested": 0,
+              "dupsDropped": 0,
+              "peakTrackedMemBytes": 0
+            }
+          ]
+        }
+      }
+    }
+  }
+}

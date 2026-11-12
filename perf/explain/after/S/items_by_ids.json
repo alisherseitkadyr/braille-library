@@ -1,0 +1,210 @@
+{
+  "queryShapeHash": "B748CB200F5D5A5EBCF284238AD65754DFA5B0A314251DC3AC21ACF69F781B10",
+  "command": {
+    "find": "items",
+    "filter": {
+      "_id": {
+        "$in": [
+          {
+            "$oid": "6af607eee1407803aa9f0763"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f068f"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f07bd"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f06c0"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0686"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f07c4"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f069c"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f077b"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f061e"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0721"
+          }
+        ]
+      }
+    },
+    "$db": "braille_library"
+  },
+  "serverInfo": {
+    "host": "39f69c592185",
+    "port": 27017,
+    "version": "8.3.13",
+    "gitVersion": "3b8a5e1f78cf7b94c40a78ad3fe93708cdca8323"
+  },
+  "serverParameters": {
+    "internalQueryFacetBufferSizeBytes": 104857600,
+    "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+    "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+    "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryMaxAddToSetBytes": 104857600,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "ok": 1.0,
+  "explainVersion": "1",
+  "queryPlanner": {
+    "namespace": "braille_library.items",
+    "parsedQuery": {
+      "_id": {
+        "$in": [
+          {
+            "$oid": "6af607eee1407803aa9f061e"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0686"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f068f"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f069c"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f06c0"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0721"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f0763"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f077b"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f07bd"
+          },
+          {
+            "$oid": "6af607eee1407803aa9f07c4"
+          }
+        ]
+      }
+    },
+    "indexFilterSet": false,
+    "queryHash": "1CC0FC18",
+    "planCacheShapeHash": "1CC0FC18",
+    "planCacheKey": "C91123C9",
+    "optimizationTimeMillis": 0,
+    "maxIndexedOrSolutionsReached": false,
+    "maxIndexedAndSolutionsReached": false,
+    "maxScansToExplodeReached": false,
+    "prunedSimilarIndexes": false,
+    "winningPlan": {
+      "isCached": false,
+      "stage": "FETCH",
+      "nss": "braille_library.items",
+      "inputStage": {
+        "stage": "IXSCAN",
+        "nss": "braille_library.items",
+        "keyPattern": {
+          "_id": 1
+        },
+        "indexName": "_id_",
+        "isMultiKey": false,
+        "isUnique": true,
+        "isSparse": false,
+        "isPartial": false,
+        "indexVersion": 2,
+        "direction": "forward",
+        "indexBounds": {
+          "_id": [
+            "[ObjectId('6af607eee1407803aa9f061e'), ObjectId('6af607eee1407803aa9f061e')]",
+            "[ObjectId('6af607eee1407803aa9f0686'), ObjectId('6af607eee1407803aa9f0686')]",
+            "[ObjectId('6af607eee1407803aa9f068f'), ObjectId('6af607eee1407803aa9f068f')]",
+            "[ObjectId('6af607eee1407803aa9f069c'), ObjectId('6af607eee1407803aa9f069c')]",
+            "[ObjectId('6af607eee1407803aa9f06c0'), ObjectId('6af607eee1407803aa9f06c0')]",
+            "[ObjectId('6af607eee1407803aa9f0721'), ObjectId('6af607eee1407803aa9f0721')]",
+            "[ObjectId('6af607eee1407803aa9f0763'), ObjectId('6af607eee1407803aa9f0763')]",
+            "[ObjectId('6af607eee1407803aa9f077b'), ObjectId('6af607eee1407803aa9f077b')]",
+            "[ObjectId('6af607eee1407803aa9f07bd'), ObjectId('6af607eee1407803aa9f07bd')]",
+            "[ObjectId('6af607eee1407803aa9f07c4'), ObjectId('6af607eee1407803aa9f07c4')]"
+          ]
+        }
+      }
+    },
+    "rejectedPlans": []
+  },
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 10,
+    "executionTimeMillis": 0,
+    "totalKeysExamined": 20,
+    "totalDocsExamined": 10,
+    "executionStages": {
+      "isCached": false,
+      "stage": "FETCH",
+      "nReturned": 10,
+      "executionTimeMillisEstimate": 0,
+      "works": 20,
+      "advanced": 10,
+      "needTime": 9,
+      "needYield": 0,
+      "saveState": 0,
+      "restoreState": 0,
+      "isEOF": 1,
+      "nss": "braille_library.items",
+      "docsExamined": 10,
+      "alreadyHasObj": 0,
+      "inputStage": {
+        "stage": "IXSCAN",
+        "nReturned": 10,
+        "executionTimeMillisEstimate": 0,
+        "works": 20,
+        "advanced": 10,
+        "needTime": 9,
+        "needYield": 0,
+        "saveState": 0,
+        "restoreState": 0,
+        "isEOF": 1,
+        "nss": "braille_library.items",
+        "keyPattern": {
+          "_id": 1
+        },
+        "indexName": "_id_",
+        "isMultiKey": false,
+        "isUnique": true,
+        "isSparse": false,
+        "isPartial": false,
+        "indexVersion": 2,
+        "direction": "forward",
+        "indexBounds": {
+          "_id": [
+            "[ObjectId('6af607eee1407803aa9f061e'), ObjectId('6af607eee1407803aa9f061e')]",
+            "[ObjectId('6af607eee1407803aa9f0686'), ObjectId('6af607eee1407803aa9f0686')]",
+            "[ObjectId('6af607eee1407803aa9f068f'), ObjectId('6af607eee1407803aa9f068f')]",
+            "[ObjectId('6af607eee1407803aa9f069c'), ObjectId('6af607eee1407803aa9f069c')]",
+            "[ObjectId('6af607eee1407803aa9f06c0'), ObjectId('6af607eee1407803aa9f06c0')]",
+            "[ObjectId('6af607eee1407803aa9f0721'), ObjectId('6af607eee1407803aa9f0721')]",
+            "[ObjectId('6af607eee1407803aa9f0763'), ObjectId('6af607eee1407803aa9f0763')]",
+            "[ObjectId('6af607eee1407803aa9f077b'), ObjectId('6af607eee1407803aa9f077b')]",
+            "[ObjectId('6af607eee1407803aa9f07bd'), ObjectId('6af607eee1407803aa9f07bd')]",
+            "[ObjectId('6af607eee1407803aa9f07c4'), ObjectId('6af607eee1407803aa9f07c4')]"
+          ]
+        },
+        "keysExamined": 20,
+        "seeks": 10,
+        "dupsTested": 0,
+        "dupsDropped": 0,
+        "peakTrackedMemBytes": 0
+      }
+    }
+  }
+}

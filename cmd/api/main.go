@@ -45,22 +45,22 @@ func main() {
 		log.Fatalf("indexes: %v", err)
 	}
 	log.Println("indexes ready")
-	log.Printf("recommendations mode: %s", cfg.RecsMode)
+	log.Printf("recommendations mode: %s, cache TTL: %s", cfg.RecsMode, cfg.CacheTTL)
 
 	tokens := auth.NewTokenManager(cfg.JWTSecret, time.Duration(cfg.JWTTTLHours)*time.Hour)
 	userRepo := mongo.NewUserRepository(db)
 	itemRepo := mongo.NewItemRepository(db)
+	recs := service.NewRecommendationService(mongo.NewRecommendationRepository(db), itemRepo, userRepo, cfg.RecsMode, cfg.CacheTTL)
 
 	router := httpapi.NewRouter(httpapi.Deps{
-		Mongo:        client,
-		CORSOrigins:  cfg.CORSOrigins,
-		Tokens:       tokens,
-		Auth:         service.NewAuthService(userRepo, tokens),
-		Users:        service.NewUserService(userRepo),
-		Items:        service.NewItemService(itemRepo),
-		Interactions: service.NewInteractionService(mongo.NewInteractionRepository(db), itemRepo),
-		Recommendations: service.NewRecommendationService(
-			mongo.NewRecommendationRepository(db), itemRepo, userRepo, cfg.RecsMode),
+		Mongo:           client,
+		CORSOrigins:     cfg.CORSOrigins,
+		Tokens:          tokens,
+		Auth:            service.NewAuthService(userRepo, tokens),
+		Users:           service.NewUserService(userRepo),
+		Items:           service.NewItemService(itemRepo),
+		Interactions:    service.NewInteractionService(mongo.NewInteractionRepository(db), itemRepo, recs.Invalidate),
+		Recommendations: recs,
 	})
 
 	srv := &http.Server{

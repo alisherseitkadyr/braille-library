@@ -6,6 +6,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type Config struct {
@@ -16,6 +17,7 @@ type Config struct {
 	JWTTTLHours int
 	CORSOrigins []string
 	RecsMode    string
+	CacheTTL    time.Duration
 }
 
 func Load() (Config, error) {
@@ -32,6 +34,11 @@ func Load() (Config, error) {
 	if cfg.RecsMode != "precomputed" && cfg.RecsMode != "live" {
 		return cfg, errors.New("RECS_MODE must be precomputed or live")
 	}
+	cacheTTL, err := time.ParseDuration(getEnv("CACHE_TTL", "60s"))
+	if err != nil || cacheTTL < 0 {
+		return cfg, errors.New("CACHE_TTL must be a duration like 60s, or 0 to turn the cache off")
+	}
+	cfg.CacheTTL = cacheTTL
 	if cfg.JWTSecret == "" {
 		return cfg, errors.New("JWT_SECRET is required")
 	}

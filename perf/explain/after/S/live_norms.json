@@ -1,0 +1,4151 @@
+{
+  "queryShapeHash": "DA5961DB4A0EABD96F38B0C76240B455FB66256FCF1AF81BB4BD30CDBA646756",
+  "peakTrackedMemBytes": 389068,
+  "serverInfo": {
+    "host": "39f69c592185",
+    "port": 27017,
+    "version": "8.3.13",
+    "gitVersion": "3b8a5e1f78cf7b94c40a78ad3fe93708cdca8323"
+  },
+  "serverParameters": {
+    "internalQueryFacetBufferSizeBytes": 104857600,
+    "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+    "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+    "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryMaxAddToSetBytes": 104857600,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "command": {
+    "aggregate": "interactions",
+    "pipeline": [
+      {
+        "$match": {
+          "itemId": {
+            "$in": [
+              {
+                "$oid": "6af607eee1407803aa9f06f9"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f063d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06af"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06a4"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f065d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0645"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06ea"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06be"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06a3"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07df"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07aa"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0777"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0778"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0625"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0630"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06e5"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0717"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0779"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0667"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07e7"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0789"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07ac"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f062f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06b1"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07d5"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0682"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f069a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0727"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f067e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06d2"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0765"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07d9"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0783"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0730"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0755"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f079d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0656"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06f7"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07f4"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f062c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06f5"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06ad"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07dc"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0648"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0763"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f068f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07bd"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06c0"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0686"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07c4"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f069c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f077b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f061e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0721"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06e2"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0702"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f067c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0752"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0657"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06cb"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f068a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f067a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f078e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06ac"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07c3"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f075d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f078f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f070a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f077e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07eb"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f066a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f065b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f079b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f079a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0761"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f068e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07e2"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06e9"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07c1"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0691"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f065f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0756"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f064f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0609"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0622"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0710"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0722"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f076d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f075a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0734"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07a9"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0638"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07b4"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06b0"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0723"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f069e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0712"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07f1"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0652"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06d9"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0673"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f067f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0696"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0699"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0660"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0628"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0738"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07d0"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07b1"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06dd"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06a2"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06db"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07ee"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07ba"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07cb"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0615"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06c7"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0798"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0742"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f063f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f077d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0680"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07d1"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0620"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f071b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06a5"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0647"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0715"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0643"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0635"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f076f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06bc"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07b3"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07e3"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0610"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0632"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0731"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07a0"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0626"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06b6"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f079e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06ab"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06e8"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f061c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06d1"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0637"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f072f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06d7"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07ca"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06b9"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f074e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0753"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0771"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0784"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0769"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06dc"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06da"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f060d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f073d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06a0"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f071e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06d5"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f072a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0757"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0697"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07e9"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06f4"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f061a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07ef"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f071a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f063a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07db"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f065e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0698"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06e7"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0616"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0720"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06c3"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0666"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06d8"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f069d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0653"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0640"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07af"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f062b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f068d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0737"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0774"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06cd"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f074a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06ae"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f060c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f061f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0658"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0780"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f072e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f067d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0629"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0772"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0676"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07c5"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07bf"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0781"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06bf"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f068b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06b3"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07f3"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f060e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06c6"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f066c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f073c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0623"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f062a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f073e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0655"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0775"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f070c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07a4"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f064b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06fe"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f072b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06a6"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f075c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0796"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06c5"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0636"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0785"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0758"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07a8"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0683"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0639"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f070d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f061d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0685"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0633"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0681"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07c6"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0672"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07ea"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f070b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0677"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06b4"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06c8"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0618"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07d8"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f062e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0641"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07d3"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07a7"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f079f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06d0"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06d3"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07a5"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f076a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f063e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0799"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0621"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f072d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0716"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f075e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07e4"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0709"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0762"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06b7"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07e8"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07c8"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0659"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f074d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06fa"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0694"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06f0"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06a8"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0767"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0735"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07ec"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0612"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f075b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07d7"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f075f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f060f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0764"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f073a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f071d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06ed"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0689"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0750"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0732"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07b9"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06e4"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06e0"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f074f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0791"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07f0"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f060a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f065c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0684"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f077c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07a3"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0705"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f077a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0724"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f067b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0707"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06ee"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0619"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0741"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06df"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0650"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0608"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0688"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f066e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07f2"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07e6"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0746"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0782"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0708"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f064c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06bb"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f078b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0773"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0649"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0613"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0792"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07a1"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0760"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0759"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0793"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0654"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07c2"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07ad"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0787"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f074b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0713"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f069b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0700"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f066b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f065a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0661"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0627"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07b6"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0795"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0790"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f064d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07a6"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f068c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06f2"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0703"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07ce"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07b7"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07e0"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06e1"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0701"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07d4"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06de"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0670"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06b2"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0603"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0693"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07c0"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06d6"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f072c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06c1"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0604"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0617"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07e5"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07b2"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0624"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07ae"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0786"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0745"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f064a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06cf"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0751"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0766"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f063b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07ed"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0671"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06fc"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0768"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06c9"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f063c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06c2"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0743"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f078d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0679"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0711"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0665"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07c7"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f061b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07bb"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f060b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06eb"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0719"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07d6"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06cc"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07e1"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0614"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0668"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0726"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0749"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06ca"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0690"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06f8"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0714"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07be"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06aa"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f076e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07da"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f064e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0706"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06ec"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06e6"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07de"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f076c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06b8"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0687"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0669"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06ef"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06f1"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f062d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f070f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f066f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06ba"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07dd"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0725"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f073f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07b0"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f073b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07b5"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0729"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0733"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0744"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f071c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0747"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0728"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0718"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f078a"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0606"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0695"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06a9"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0678"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0794"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0748"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07cd"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07c9"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0704"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0663"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06a1"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06ff"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0740"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06e3"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f079c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f066d"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07bc"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06ce"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0642"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0754"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07cf"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f069f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06f6"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0601"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f071f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06fb"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f077f"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0611"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0797"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0664"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f076b"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0607"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0692"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0631"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07a2"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06fd"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f074c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0776"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0662"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0634"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07b8"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0770"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0736"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06b5"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0674"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0646"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07d2"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06a7"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06d4"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0644"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0675"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f078c"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0739"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07ab"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f070e"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0651"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0605"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06bd"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0602"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f07cc"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f0788"
+              },
+              {
+                "$oid": "6af607eee1407803aa9f06c4"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "$group": {
+          "rating": {
+            "$max": {
+              "$cond": [
+                {
+                  "$eq": [
+                    "$type",
+                    "rate"
+                  ]
+                },
+                {
+                  "$switch": {
+                    "branches": [
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "view"
+                          ]
+                        },
+                        "then": 1.0
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "listen"
+                          ]
+                        },
+                        "then": 2.0
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "correction"
+                          ]
+                        },
+                        "then": 1.0
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "favorite"
+                          ]
+                        },
+                        "then": 4.0
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "read"
+                          ]
+                        },
+                        "then": {
+                          "$cond": [
+                            {
+                              "$gte": [
+                                "$value",
+                                80
+                              ]
+                            },
+                            3.0,
+                            1.5
+                          ]
+                        }
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "rate"
+                          ]
+                        },
+                        "then": {
+                          "$switch": {
+                            "branches": [
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    1
+                                  ]
+                                },
+                                "then": -2.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    2
+                                  ]
+                                },
+                                "then": -1.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    3
+                                  ]
+                                },
+                                "then": 1.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    4
+                                  ]
+                                },
+                                "then": 3.0
+                              },
+                              {
+                                "then": 5.0,
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    5
+                                  ]
+                                }
+                              }
+                            ],
+                            "default": 0
+                          }
+                        }
+                      }
+                    ],
+                    "default": 0
+                  }
+                },
+                null
+              ]
+            }
+          },
+          "implicit": {
+            "$max": {
+              "$cond": [
+                {
+                  "$eq": [
+                    "$type",
+                    "rate"
+                  ]
+                },
+                null,
+                {
+                  "$switch": {
+                    "branches": [
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "view"
+                          ]
+                        },
+                        "then": 1.0
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "listen"
+                          ]
+                        },
+                        "then": 2.0
+                      },
+                      {
+                        "then": 1.0,
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "correction"
+                          ]
+                        }
+                      },
+                      {
+                        "then": 4.0,
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "favorite"
+                          ]
+                        }
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "read"
+                          ]
+                        },
+                        "then": {
+                          "$cond": [
+                            {
+                              "$gte": [
+                                "$value",
+                                80
+                              ]
+                            },
+                            3.0,
+                            1.5
+                          ]
+                        }
+                      },
+                      {
+                        "case": {
+                          "$eq": [
+                            "$type",
+                            "rate"
+                          ]
+                        },
+                        "then": {
+                          "$switch": {
+                            "branches": [
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    1
+                                  ]
+                                },
+                                "then": -2.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    2
+                                  ]
+                                },
+                                "then": -1.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    3
+                                  ]
+                                },
+                                "then": 1.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    4
+                                  ]
+                                },
+                                "then": 3.0
+                              },
+                              {
+                                "case": {
+                                  "$eq": [
+                                    "$value",
+                                    5
+                                  ]
+                                },
+                                "then": 5.0
+                              }
+                            ],
+                            "default": 0
+                          }
+                        }
+                      }
+                    ],
+                    "default": 0
+                  }
+                }
+              ]
+            }
+          },
+          "_id": {
+            "i": "$itemId",
+            "u": "$userId"
+          }
+        }
+      },
+      {
+        "$project": {
+          "u": "$_id.u",
+          "i": "$_id.i",
+          "s": {
+            "$ifNull": [
+              "$rating",
+              "$implicit"
+            ]
+          },
+          "_id": 0
+        }
+      },
+      {
+        "$match": {
+          "s": {
+            "$gt": 0
+          }
+        }
+      },
+      {
+        "$group": {
+          "_id": "$i",
+          "sumSq": {
+            "$sum": {
+              "$multiply": [
+                "$s",
+                "$s"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "cursor": {},
+    "$db": "braille_library"
+  },
+  "ok": 1.0,
+  "explainVersion": "2",
+  "stages": [
+    {
+      "$cursor": {
+        "queryPlanner": {
+          "namespace": "braille_library.interactions",
+          "parsedQuery": {
+            "itemId": {
+              "$in": [
+                {
+                  "$oid": "6af607eee1407803aa9f0601"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0602"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0603"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0604"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0605"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0606"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0607"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0608"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0609"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f060a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f060b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f060c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f060d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f060e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f060f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0610"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0611"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0612"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0613"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0614"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0615"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0616"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0617"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0618"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0619"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f061a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f061b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f061c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f061d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f061e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f061f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0620"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0621"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0622"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0623"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0624"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0625"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0626"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0627"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0628"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0629"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f062a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f062b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f062c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f062d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f062e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f062f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0630"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0631"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0632"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0633"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0634"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0635"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0636"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0637"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0638"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0639"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f063a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f063b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f063c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f063d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f063e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f063f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0640"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0641"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0642"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0643"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0644"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0645"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0646"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0647"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0648"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0649"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f064a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f064b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f064c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f064d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f064e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f064f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0650"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0651"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0652"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0653"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0654"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0655"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0656"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0657"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0658"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0659"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f065a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f065b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f065c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f065d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f065e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f065f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0660"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0661"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0662"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0663"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0664"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0665"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0666"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0667"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0668"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0669"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f066a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f066b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f066c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f066d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f066e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f066f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0670"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0671"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0672"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0673"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0674"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0675"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0676"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0677"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0678"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0679"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f067a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f067b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f067c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f067d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f067e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f067f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0680"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0681"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0682"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0683"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0684"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0685"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0686"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0687"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0688"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0689"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f068a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f068b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f068c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f068d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f068e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f068f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0690"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0691"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0692"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0693"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0694"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0695"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0696"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0697"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0698"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0699"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f069a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f069b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f069c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f069d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f069e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f069f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06a0"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06a1"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06a2"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06a3"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06a4"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06a5"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06a6"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06a7"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06a8"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06a9"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06aa"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06ab"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06ac"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06ad"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06ae"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06af"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06b0"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06b1"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06b2"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06b3"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06b4"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06b5"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06b6"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06b7"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06b8"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06b9"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06ba"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06bb"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06bc"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06bd"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06be"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06bf"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06c0"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06c1"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06c2"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06c3"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06c4"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06c5"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06c6"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06c7"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06c8"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06c9"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06ca"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06cb"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06cc"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06cd"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06ce"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06cf"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06d0"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06d1"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06d2"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06d3"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06d4"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06d5"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06d6"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06d7"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06d8"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06d9"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06da"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06db"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06dc"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06dd"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06de"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06df"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06e0"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06e1"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06e2"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06e3"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06e4"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06e5"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06e6"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06e7"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06e8"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06e9"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06ea"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06eb"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06ec"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06ed"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06ee"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06ef"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06f0"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06f1"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06f2"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06f4"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06f5"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06f6"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06f7"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06f8"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06f9"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06fa"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06fb"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06fc"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06fd"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06fe"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f06ff"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0700"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0701"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0702"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0703"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0704"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0705"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0706"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0707"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0708"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0709"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f070a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f070b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f070c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f070d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f070e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f070f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0710"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0711"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0712"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0713"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0714"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0715"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0716"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0717"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0718"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0719"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f071a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f071b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f071c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f071d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f071e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f071f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0720"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0721"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0722"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0723"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0724"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0725"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0726"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0727"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0728"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0729"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f072a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f072b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f072c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f072d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f072e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f072f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0730"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0731"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0732"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0733"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0734"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0735"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0736"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0737"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0738"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0739"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f073a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f073b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f073c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f073d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f073e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f073f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0740"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0741"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0742"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0743"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0744"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0745"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0746"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0747"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0748"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0749"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f074a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f074b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f074c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f074d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f074e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f074f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0750"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0751"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0752"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0753"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0754"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0755"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0756"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0757"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0758"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0759"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f075a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f075b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f075c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f075d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f075e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f075f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0760"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0761"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0762"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0763"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0764"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0765"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0766"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0767"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0768"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0769"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f076a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f076b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f076c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f076d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f076e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f076f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0770"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0771"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0772"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0773"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0774"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0775"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0776"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0777"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0778"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0779"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f077a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f077b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f077c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f077d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f077e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f077f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0780"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0781"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0782"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0783"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0784"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0785"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0786"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0787"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0788"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0789"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f078a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f078b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f078c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f078d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f078e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f078f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0790"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0791"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0792"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0793"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0794"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0795"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0796"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0797"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0798"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f0799"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f079a"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f079b"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f079c"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f079d"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f079e"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f079f"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07a0"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07a1"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07a2"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07a3"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07a4"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07a5"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07a6"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07a7"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07a8"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07a9"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07aa"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07ab"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07ac"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07ad"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07ae"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07af"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07b0"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07b1"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07b2"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07b3"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07b4"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07b5"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07b6"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07b7"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07b8"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07b9"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07ba"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07bb"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07bc"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07bd"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07be"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07bf"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07c0"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07c1"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07c2"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07c3"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07c4"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07c5"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07c6"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07c7"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07c8"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07c9"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07ca"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07cb"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07cc"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07cd"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07ce"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07cf"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07d0"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07d1"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07d2"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07d3"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07d4"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07d5"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07d6"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07d7"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07d8"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07d9"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07da"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07db"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07dc"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07dd"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07de"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07df"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07e0"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07e1"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07e2"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07e3"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07e4"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07e5"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07e6"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07e7"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07e8"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07e9"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07ea"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07eb"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07ec"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07ed"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07ee"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07ef"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07f0"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07f1"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07f2"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07f3"
+                },
+                {
+                  "$oid": "6af607eee1407803aa9f07f4"
+                }
+              ]
+            }
+          },
+          "indexFilterSet": false,
+          "queryHash": "37CED41C",
+          "planCacheShapeHash": "37CED41C",
+          "planCacheKey": "231811E6",
+          "optimizationTimeMillis": 2,
+          "cursorType": "regular",
+          "maxIndexedOrSolutionsReached": false,
+          "maxIndexedAndSolutionsReached": false,
+          "maxScansToExplodeReached": false,
+          "prunedSimilarIndexes": false,
+          "winningPlan": {
+            "isCached": false,
+            "queryPlan": {
+              "stage": "GROUP",
+              "planNodeId": 4,
+              "inputStage": {
+                "stage": "FETCH",
+                "planNodeId": 2,
+                "nss": "braille_library.interactions",
+                "inputStage": {
+                  "stage": "IXSCAN",
+                  "planNodeId": 1,
+                  "nss": "braille_library.interactions",
+                  "keyPattern": {
+                    "itemId": 1,
+                    "type": 1
+                  },
+                  "indexName": "item_type",
+                  "isMultiKey": false,
+                  "multiKeyPaths": {
+                    "itemId": [],
+                    "type": []
+                  },
+                  "isUnique": false,
+                  "isSparse": false,
+                  "isPartial": false,
+                  "indexVersion": 2,
+                  "direction": "forward",
+                  "indexBounds": {
+                    "itemId": [
+                      "[ObjectId('6af607eee1407803aa9f0601'), ObjectId('6af607eee1407803aa9f0601')]",
+                      "[ObjectId('6af607eee1407803aa9f0602'), ObjectId('6af607eee1407803aa9f0602')]",
+                      "[ObjectId('6af607eee1407803aa9f0603'), ObjectId('6af607eee1407803aa9f0603')]",
+                      "[ObjectId('6af607eee1407803aa9f0604'), ObjectId('6af607eee1407803aa9f0604')]",
+                      "[ObjectId('6af607eee1407803aa9f0605'), ObjectId('6af607eee1407803aa9f0605')]",
+                      "[ObjectId('6af607eee1407803aa9f0606'), ObjectId('6af607eee1407803aa9f0606')]",
+                      "[ObjectId('6af607eee1407803aa9f0607'), ObjectId('6af607eee1407803aa9f0607')]",
+                      "[ObjectId('6af607eee1407803aa9f0608'), ObjectId('6af607eee1407803aa9f0608')]",
+                      "[ObjectId('6af607eee1407803aa9f0609'), ObjectId('6af607eee1407803aa9f0609')]",
+                      "[ObjectId('6af607eee1407803aa9f060a'), ObjectId('6af607eee1407803aa9f060a')]",
+                      "[ObjectId('6af607eee1407803aa9f060b'), ObjectId('6af607eee1407803aa9f060b')]",
+                      "[ObjectId('6af607eee1407803aa9f060c'), ObjectId('6af607eee1407803aa9f060c')]",
+                      "[ObjectId('6af607eee1407803aa9f060d'), ObjectId('6af607eee1407803aa9f060d')]",
+                      "[ObjectId('6af607eee1407803aa9f060e'), ObjectId('6af607eee1407803aa9f060e')]",
+                      "[ObjectId('6af607eee1407803aa9f060f'), ObjectId('6af607eee1407803aa9f060f')]",
+                      "[ObjectId('6af607eee1407803aa9f0610'), ObjectId('6af607eee1407803aa9f0610')]",
+                      "[ObjectId('6af607eee1407803aa9f0611'), ObjectId('6af607eee1407803aa9f0611')]",
+                      "[ObjectId('6af607eee1407803aa9f0612'), ObjectId('6af607eee1407803aa9f0612')]",
+                      "[ObjectId('6af607eee1407803aa9f0613'), ObjectId('6af607eee1407803aa9f0613')]",
+                      "[ObjectId('6af607eee1407803aa9f0614'), ObjectId('6af607eee1407803aa9f0614')]",
+                      "[ObjectId('6af607eee1407803aa9f0615'), ObjectId('6af607eee1407803aa9f0615')]",
+                      "[ObjectId('6af607eee1407803aa9f0616'), ObjectId('6af607eee1407803aa9f0616')]",
+                      "[ObjectId('6af607eee1407803aa9f0617'), ObjectId('6af607eee1407803aa9f0617')]",
+                      "[ObjectId('6af607eee1407803aa9f0618'), ObjectId('6af607eee1407803aa9f0618')]",
+                      "[ObjectId('6af607eee1407803aa9f0619'), ObjectId('6af607eee1407803aa9f0619')]",
+                      "[ObjectId('6af607eee1407803aa9f061a'), ObjectId('6af607eee1407803aa9f061a')]",
+                      "[ObjectId('6af607eee1407803aa9f061b'), ObjectId('6af607eee1407803aa9f061b')]",
+                      "[ObjectId('6af607eee1407803aa9f061c'), ObjectId('6af607eee1407803aa9f061c')]",
+                      "[ObjectId('6af607eee1407803aa9f061d'), ObjectId('6af607eee1407803aa9f061d')]",
+                      "[ObjectId('6af607eee1407803aa9f061e'), ObjectId('6af607eee1407803aa9f061e')]",
+                      "[ObjectId('6af607eee1407803aa9f061f'), ObjectId('6af607eee1407803aa9f061f')]",
+                      "[ObjectId('6af607eee1407803aa9f0620'), ObjectId('6af607eee1407803aa9f0620')]",
+                      "[ObjectId('6af607eee1407803aa9f0621'), ObjectId('6af607eee1407803aa9f0621')]",
+                      "[ObjectId('6af607eee1407803aa9f0622'), ObjectId('6af607eee1407803aa9f0622')]",
+                      "[ObjectId('6af607eee1407803aa9f0623'), ObjectId('6af607eee1407803aa9f0623')]",
+                      "[ObjectId('6af607eee1407803aa9f0624'), ObjectId('6af607eee1407803aa9f0624')]",
+                      "[ObjectId('6af607eee1407803aa9f0625'), ObjectId('6af607eee1407803aa9f0625')]",
+                      "[ObjectId('6af607eee1407803aa9f0626'), ObjectId('6af607eee1407803aa9f0626')]",
+                      "[ObjectId('6af607eee1407803aa9f0627'), ObjectId('6af607eee1407803aa9f0627')]",
+                      "[ObjectId('6af607eee1407803aa9f0628'), ObjectId('6af607eee1407803aa9f0628')]",
+                      "[ObjectId('6af607eee1407803aa9f0629'), ObjectId('6af607eee1407803aa9f0629')]",
+                      "[ObjectId('6af607eee1407803aa9f062a'), ObjectId('6af607eee1407803aa9f062a')]",
+                      "[ObjectId('6af607eee1407803aa9f062b'), ObjectId('6af607eee1407803aa9f062b')]",
+                      "[ObjectId('6af607eee1407803aa9f062c'), ObjectId('6af607eee1407803aa9f062c')]",
+                      "[ObjectId('6af607eee1407803aa9f062d'), ObjectId('6af607eee1407803aa9f062d')]",
+                      "[ObjectId('6af607eee1407803aa9f062e'), ObjectId('6af607eee1407803aa9f062e')]",
+                      "[ObjectId('6af607eee1407803aa9f062f'), ObjectId('6af607eee1407803aa9f062f')]",
+                      "[ObjectId('6af607eee1407803aa9f0630'), ObjectId('6af607eee1407803aa9f0630')]",
+                      "[ObjectId('6af607eee1407803aa9f0631'), ObjectId('6af607eee1407803aa9f0631')]",
+                      "[ObjectId('6af607eee1407803aa9f0632'), ObjectId('6af607eee1407803aa9f0632')]",
+                      "[ObjectId('6af607eee1407803aa9f0633'), ObjectId('6af607eee1407803aa9f0633')]",
+                      "[ObjectId('6af607eee1407803aa9f0634'), ObjectId('6af607eee1407803aa9f0634')]",
+                      "[ObjectId('6af607eee1407803aa9f0635'), ObjectId('6af607eee1407803aa9f0635')]",
+                      "[ObjectId('6af607eee1407803aa9f0636'), ObjectId('6af607eee1407803aa9f0636')]",
+                      "[ObjectId('6af607eee1407803aa9f0637'), ObjectId('6af607eee1407803aa9f0637')]",
+                      "[ObjectId('6af607eee1407803aa9f0638'), ObjectId('6af607eee1407803aa9f0638')]",
+                      "[ObjectId('6af607eee1407803aa9f0639'), ObjectId('6af607eee1407803aa9f0639')]",
+                      "[ObjectId('6af607eee1407803aa9f063a'), ObjectId('6af607eee1407803aa9f063a')]",
+                      "[ObjectId('6af607eee1407803aa9f063b'), ObjectId('6af607eee1407803aa9f063b')]",
+                      "[ObjectId('6af607eee1407803aa9f063c'), ObjectId('6af607eee1407803aa9f063c')]",
+                      "[ObjectId('6af607eee1407803aa9f063d'), ObjectId('6af607eee1407803aa9f063d')]",
+                      "[ObjectId('6af607eee1407803aa9f063e'), ObjectId('6af607eee1407803aa9f063e')]",
+                      "[ObjectId('6af607eee1407803aa9f063f'), ObjectId('6af607eee1407803aa9f063f')]",
+                      "[ObjectId('6af607eee1407803aa9f0640'), ObjectId('6af607eee1407803aa9f0640')]",
+                      "[ObjectId('6af607eee1407803aa9f0641'), ObjectId('6af607eee1407803aa9f0641')]",
+                      "[ObjectId('6af607eee1407803aa9f0642'), ObjectId('6af607eee1407803aa9f0642')]",
+                      "[ObjectId('6af607eee1407803aa9f0643'), ObjectId('6af607eee1407803aa9f0643')]",
+                      "[ObjectId('6af607eee1407803aa9f0644'), ObjectId('6af607eee1407803aa9f0644')]",
+                      "[ObjectId('6af607eee1407803aa9f0645'), ObjectId('6af607eee1407803aa9f0645')]",
+                      "[ObjectId('6af607eee1407803aa9f0646'), ObjectId('6af607eee1407803aa9f0646')]",
+                      "[ObjectId('6af607eee1407803aa9f0647'), ObjectId('6af607eee1407803aa9f0647')]",
+                      "[ObjectId('6af607eee1407803aa9f0648'), ObjectId('6af607eee1407803aa9f0648')]",
+                      "[ObjectId('6af607eee1407803aa9f0649'), ObjectId('6af607eee1407803aa9f0649')]",
+                      "[ObjectId('6af607eee1407803aa9f064a'), ObjectId('6af607eee1407803aa9f064a')]",
+                      "[ObjectId('6af607eee1407803aa9f064b'), ObjectId('6af607eee1407803aa9f064b')]",
+                      "[ObjectId('6af607eee1407803aa9f064c'), ObjectId('6af607eee1407803aa9f064c')]",
+                      "[ObjectId('6af607eee1407803aa9f064d'), ObjectId('6af607eee1407803aa9f064d')]",
+                      "[ObjectId('6af607eee1407803aa9f064e'), ObjectId('6af607eee1407803aa9f064e')]",
+                      "[ObjectId('6af607eee1407803aa9f064f'), ObjectId('6af607eee1407803aa9f064f')]",
+                      "[ObjectId('6af607eee1407803aa9f0650'), ObjectId('6af607eee1407803aa9f0650')]",
+                      "[ObjectId('6af607eee1407803aa9f0651'), ObjectId('6af607eee1407803aa9f0651')]",
+                      "[ObjectId('6af607eee1407803aa9f0652'), ObjectId('6af607eee1407803aa9f0652')]",
+                      "[ObjectId('6af607eee1407803aa9f0653'), ObjectId('6af607eee1407803aa9f0653')]",
+                      "[ObjectId('6af607eee1407803aa9f0654'), ObjectId('6af607eee1407803aa9f0654')]",
+                      "[ObjectId('6af607eee1407803aa9f0655'), ObjectId('6af607eee1407803aa9f0655')]",
+                      "[ObjectId('6af607eee1407803aa9f0656'), ObjectId('6af607eee1407803aa9f0656')]",
+                      "[ObjectId('6af607eee1407803aa9f0657'), ObjectId('6af607eee1407803aa9f0657')]",
+                      "[ObjectId('6af607eee1407803aa9f0658'), ObjectId('6af607eee1407803aa9f0658')]",
+                      "[ObjectId('6af607eee1407803aa9f0659'), ObjectId('6af607eee1407803aa9f0659')]",
+                      "[ObjectId('6af607eee1407803aa9f065a'), ObjectId('6af607eee1407803aa9f065a')]",
+                      "[ObjectId('6af607eee1407803aa9f065b'), ObjectId('6af607eee1407803aa9f065b')]",
+                      "[ObjectId('6af607eee1407803aa9f065c'), ObjectId('6af607eee1407803aa9f065c')]",
+                      "[ObjectId('6af607eee1407803aa9f065d'), ObjectId('6af607eee1407803aa9f065d')]",
+                      "[ObjectId('6af607eee1407803aa9f065e'), ObjectId('6af607eee1407803aa9f065e')]",
+                      "[ObjectId('6af607eee1407803aa9f065f'), ObjectId('6af607eee1407803aa9f065f')]",
+                      "[ObjectId('6af607eee1407803aa9f0660'), ObjectId('6af607eee1407803aa9f0660')]",
+                      "[ObjectId('6af607eee1407803aa9f0661'), ObjectId('6af607eee1407803aa9f0661')]",
+                      "[ObjectId('6af607eee1407803aa9f0662'), ObjectId('6af607eee1407803aa9f0662')]",
+                      "[ObjectId('6af607eee1407803aa9f0663'), ObjectId('6af607eee1407803aa9f0663')]",
+                      "[ObjectId('6af607eee1407803aa9f0664'), ObjectId('6af607eee1407803aa9f0664')]",
+                      "[ObjectId('6af607eee1407803aa9f0665'), ObjectId('6af607eee1407803aa9f0665')]",
+                      "[ObjectId('6af607eee1407803aa9f0666'), ObjectId('6af607eee1407803aa9f0666')]",
+                      "[ObjectId('6af607eee1407803aa9f0667'), ObjectId('6af607eee1407803aa9f0667')]",
+                      "[ObjectId('6af607eee1407803aa9f0668'), ObjectId('6af607eee1407803aa9f0668')]",
+                      "[ObjectId('6af607eee1407803aa9f0669'), ObjectId('6af607eee1407803aa9f0669')]",
+                      "[ObjectId('6af607eee1407803aa9f066a'), ObjectId('6af607eee1407803aa9f066a')]",
+                      "[ObjectId('6af607eee1407803aa9f066b'), ObjectId('6af607eee1407803aa9f066b')]",
+                      "[ObjectId('6af607eee1407803aa9f066c'), ObjectId('6af607eee1407803aa9f066c')]",
+                      "[ObjectId('6af607eee1407803aa9f066d'), ObjectId('6af607eee1407803aa9f066d')]",
+                      "[ObjectId('6af607eee1407803aa9f066e'), ObjectId('6af607eee1407803aa9f066e')]",
+                      "[ObjectId('6af607eee1407803aa9f066f'), ObjectId('6af607eee1407803aa9f066f')]",
+                      "[ObjectId('6af607eee1407803aa9f0670'), ObjectId('6af607eee1407803aa9f0670')]",
+                      "[ObjectId('6af607eee1407803aa9f0671'), ObjectId('6af607eee1407803aa9f0671')]",
+                      "[ObjectId('6af607eee1407803aa9f0672'), ObjectId('6af607eee1407803aa9f0672')]",
+                      "[ObjectId('6af607eee1407803aa9f0673'), ObjectId('6af607eee1407803aa9f0673')]",
+                      "[ObjectId('6af607eee1407803aa9f0674'), ObjectId('6af607eee1407803aa9f0674')]",
+                      "[ObjectId('6af607eee1407803aa9f0675'), ObjectId('6af607eee1407803aa9f0675')]",
+                      "[ObjectId('6af607eee1407803aa9f0676'), ObjectId('6af607eee1407803aa9f0676')]",
+                      "[ObjectId('6af607eee1407803aa9f0677'), ObjectId('6af607eee1407803aa9f0677')]",
+                      "[ObjectId('6af607eee1407803aa9f0678'), ObjectId('6af607eee1407803aa9f0678')]",
+                      "[ObjectId('6af607eee1407803aa9f0679'), ObjectId('6af607eee1407803aa9f0679')]",
+                      "[ObjectId('6af607eee1407803aa9f067a'), ObjectId('6af607eee1407803aa9f067a')]",
+                      "[ObjectId('6af607eee1407803aa9f067b'), ObjectId('6af607eee1407803aa9f067b')]",
+                      "[ObjectId('6af607eee1407803aa9f067c'), ObjectId('6af607eee1407803aa9f067c')]",
+                      "[ObjectId('6af607eee1407803aa9f067d'), ObjectId('6af607eee1407803aa9f067d')]",
+                      "[ObjectId('6af607eee1407803aa9f067e'), ObjectId('6af607eee1407803aa9f067e')]",
+                      "[ObjectId('6af607eee1407803aa9f067f'), ObjectId('6af607eee1407803aa9f067f')]",
+                      "[ObjectId('6af607eee1407803aa9f0680'), ObjectId('6af607eee1407803aa9f0680')]",
+                      "[ObjectId('6af607eee1407803aa9f0681'), ObjectId('6af607eee1407803aa9f0681')]",
+                      "[ObjectId('6af607eee1407803aa9f0682'), ObjectId('6af607eee1407803aa9f0682')]",
+                      "[ObjectId('6af607eee1407803aa9f0683'), ObjectId('6af607eee1407803aa9f0683')]",
+                      "[ObjectId('6af607eee1407803aa9f0684'), ObjectId('6af607eee1407803aa9f0684')]",
+                      "[ObjectId('6af607eee1407803aa9f0685'), ObjectId('6af607eee1407803aa9f0685')]",
+                      "[ObjectId('6af607eee1407803aa9f0686'), ObjectId('6af607eee1407803aa9f0686')]",
+                      "[ObjectId('6af607eee1407803aa9f0687'), ObjectId('6af607eee1407803aa9f0687')]",
+                      "[ObjectId('6af607eee1407803aa9f0688'), ObjectId('6af607eee1407803aa9f0688')]",
+                      "[ObjectId('6af607eee1407803aa9f0689'), ObjectId('6af607eee1407803aa9f0689')]",
+                      "[ObjectId('6af607eee1407803aa9f068a'), ObjectId('6af607eee1407803aa9f068a')]",
+                      "[ObjectId('6af607eee1407803aa9f068b'), ObjectId('6af607eee1407803aa9f068b')]",
+                      "[ObjectId('6af607eee1407803aa9f068c'), ObjectId('6af607eee1407803aa9f068c')]",
+                      "[ObjectId('6af607eee1407803aa9f068d'), ObjectId('6af607eee1407803aa9f068d')]",
+                      "[ObjectId('6af607eee1407803aa9f068e'), ObjectId('6af607eee1407803aa9f068e')]",
+                      "[ObjectId('6af607eee1407803aa9f068f'), ObjectId('6af607eee1407803aa9f068f')]",
+                      "[ObjectId('6af607eee1407803aa9f0690'), ObjectId('6af607eee1407803aa9f0690')]",
+                      "[ObjectId('6af607eee1407803aa9f0691'), ObjectId('6af607eee1407803aa9f0691')]",
+                      "[ObjectId('6af607eee1407803aa9f0692'), ObjectId('6af607eee1407803aa9f0692')]",
+                      "[ObjectId('6af607eee1407803aa9f0693'), ObjectId('6af607eee1407803aa9f0693')]",
+                      "[ObjectId('6af607eee1407803aa9f0694'), ObjectId('6af607eee1407803aa9f0694')]",
+                      "[ObjectId('6af607eee1407803aa9f0695'), ObjectId('6af607eee1407803aa9f0695')]",
+                      "[ObjectId('6af607eee1407803aa9f0696'), ObjectId('6af607eee1407803aa9f0696')]",
+                      "[ObjectId('6af607eee1407803aa9f0697'), ObjectId('6af607eee1407803aa9f0697')]",
+                      "[ObjectId('6af607eee1407803aa9f0698'), ObjectId('6af607eee1407803aa9f0698')]",
+                      "[ObjectId('6af607eee1407803aa9f0699'), ObjectId('6af607eee1407803aa9f0699')]",
+                      "[ObjectId('6af607eee1407803aa9f069a'), ObjectId('6af607eee1407803aa9f069a')]",
+                      "[ObjectId('6af607eee1407803aa9f069b'), ObjectId('6af607eee1407803aa9f069b')]",
+                      "[ObjectId('6af607eee1407803aa9f069c'), ObjectId('6af607eee1407803aa9f069c')]",
+                      "[ObjectId('6af607eee1407803aa9f069d'), ObjectId('6af607eee1407803aa9f069d')]",
+                      "[ObjectId('6af607eee1407803aa9f069e'), ObjectId('6af607eee1407803aa9f069e')]",
+                      "[ObjectId('6af607eee1407803aa9f069f'), ObjectId('6af607eee1407803aa9f069f')]",
+                      "[ObjectId('6af607eee1407803aa9f06a0'), ObjectId('6af607eee1407803aa9f06a0')]",
+                      "[ObjectId('6af607eee1407803aa9f06a1'), ObjectId('6af607eee1407803aa9f06a1')]",
+                      "[ObjectId('6af607eee1407803aa9f06a2'), ObjectId('6af607eee1407803aa9f06a2')]",
+                      "[ObjectId('6af607eee1407803aa9f06a3'), ObjectId('6af607eee1407803aa9f06a3')]",
+                      "[ObjectId('6af607eee1407803aa9f06a4'), ObjectId('6af607eee1407803aa9f06a4')]",
+                      "[ObjectId('6af607eee1407803aa9f06a5'), ObjectId('6af607eee1407803aa9f06a5')]",
+                      "[ObjectId('6af607eee1407803aa9f06a6'), ObjectId('6af607eee1407803aa9f06a6')]",
+                      "[ObjectId('6af607eee1407803aa9f06a7'), ObjectId('6af607eee1407803aa9f06a7')]",
+                      "[ObjectId('6af607eee1407803aa9f06a8'), ObjectId('6af607eee1407803aa9f06a8')]",
+                      "[ObjectId('6af607eee1407803aa9f06a9'), ObjectId('6af607eee1407803aa9f06a9')]",
+                      "[ObjectId('6af607eee1407803aa9f06aa'), ObjectId('6af607eee1407803aa9f06aa')]",
+                      "[ObjectId('6af607eee1407803aa9f06ab'), ObjectId('6af607eee1407803aa9f06ab')]",
+                      "[ObjectId('6af607eee1407803aa9f06ac'), ObjectId('6af607eee1407803aa9f06ac')]",
+                      "[ObjectId('6af607eee1407803aa9f06ad'), ObjectId('6af607eee1407803aa9f06ad')]",
+                      "[ObjectId('6af607eee1407803aa9f06ae'), ObjectId('6af607eee1407803aa9f06ae')]",
+                      "[ObjectId('6af607eee1407803aa9f06af'), ObjectId('6af607eee1407803aa9f06af')]",
+                      "[ObjectId('6af607eee1407803aa9f06b0'), ObjectId('6af607eee1407803aa9f06b0')]",
+                      "[ObjectId('6af607eee1407803aa9f06b1'), ObjectId('6af607eee1407803aa9f06b1')]",
+                      "[ObjectId('6af607eee1407803aa9f06b2'), ObjectId('6af607eee1407803aa9f06b2')]",
+                      "[ObjectId('6af607eee1407803aa9f06b3'), ObjectId('6af607eee1407803aa9f06b3')]",
+                      "[ObjectId('6af607eee1407803aa9f06b4'), ObjectId('6af607eee1407803aa9f06b4')]",
+                      "[ObjectId('6af607eee1407803aa9f06b5'), ObjectId('6af607eee1407803aa9f06b5')]",
+                      "[ObjectId('6af607eee1407803aa9f06b6'), ObjectId('6af607eee1407803aa9f06b6')]",
+                      "[ObjectId('6af607eee1407803aa9f06b7'), ObjectId('6af607eee1407803aa9f06b7')]",
+                      "[ObjectId('6af607eee1407803aa9f06b8'), ObjectId('6af607eee1407803aa9f06b8')]",
+                      "[ObjectId('6af607eee1407803aa9f06b9'), ObjectId('6af607eee1407803aa9f06b9')]",
+                      "[ObjectId('6af607eee1407803aa9f06ba'), ObjectId('6af607eee1407803aa9f06ba')]",
+                      "[ObjectId('6af607eee1407803aa9f06bb'), ObjectId('6af607eee1407803aa9f06bb')]",
+                      "[ObjectId('6af607eee1407803aa9f06bc'), ObjectId('6af607eee1407803aa9f06bc')]",
+                      "[ObjectId('6af607eee1407803aa9f06bd'), ObjectId('6af607eee1407803aa9f06bd')]",
+                      "[ObjectId('6af607eee1407803aa9f06be'), ObjectId('6af607eee1407803aa9f06be')]",
+                      "[ObjectId('6af607eee1407803aa9f06bf'), ObjectId('6af607eee1407803aa9f06bf')]",
+                      "[ObjectId('6af607eee1407803aa9f06c0'), ObjectId('6af607eee1407803aa9f06c0')]",
+                      "[ObjectId('6af607eee1407803aa9f06c1'), ObjectId('6af607eee1407803aa9f06c1')]",
+                      "[ObjectId('6af607eee1407803aa9f06c2'), ObjectId('6af607eee1407803aa9f06c2')]",
+                      "[ObjectId('6af607eee1407803aa9f06c3'), ObjectId('6af607eee1407803aa9f06c3')]",
+                      "[ObjectId('6af607eee1407803aa9f06c4'), ObjectId('6af607eee1407803aa9f06c4')]",
+                      "[ObjectId('6af607eee1407803aa9f06c5'), ObjectId('6af607eee1407803aa9f06c5')]",
+                      "[ObjectId('6af607eee1407803aa9f06c6'), ObjectId('6af607eee1407803aa9f06c6')]",
+                      "[ObjectId('6af607eee1407803aa9f06c7'), ObjectId('6af607eee1407803aa9f06c7')]",
+                      "[ObjectId('6af607eee1407803aa9f06c8'), ObjectId('6af607eee1407803aa9f06c8')]",
+                      "[ObjectId('6af607eee1407803aa9f06c9'), ObjectId('6af607eee1407803aa9f06c9')]",
+                      "[ObjectId('6af607eee1407803aa9f06ca'), ObjectId('6af607eee1407803aa9f06ca')]",
+                      "[ObjectId('6af607eee1407803aa9f06cb'), ObjectId('6af607eee1407803aa9f06cb')]",
+                      "[ObjectId('6af607eee1407803aa9f06cc'), ObjectId('6af607eee1407803aa9f06cc')]",
+                      "[ObjectId('6af607eee1407803aa9f06cd'), ObjectId('6af607eee1407803aa9f06cd')]",
+                      "[ObjectId('6af607eee1407803aa9f06ce'), ObjectId('6af607eee1407803aa9f06ce')]",
+                      "[ObjectId('6af607eee1407803aa9f06cf'), ObjectId('6af607eee1407803aa9f06cf')]",
+                      "[ObjectId('6af607eee1407803aa9f06d0'), ObjectId('6af607eee1407803aa9f06d0')]",
+                      "[ObjectId('6af607eee1407803aa9f06d1'), ObjectId('6af607eee1407803aa9f06d1')]",
+                      "[ObjectId('6af607eee1407803aa9f06d2'), ObjectId('6af607eee1407803aa9f06d2')]",
+                      "[ObjectId('6af607eee1407803aa9f06d3'), ObjectId('6af607eee1407803aa9f06d3')]",
+                      "[ObjectId('6af607eee1407803aa9f06d4'), ObjectId('6af607eee1407803aa9f06d4')]",
+                      "[ObjectId('6af607eee1407803aa9f06d5'), ObjectId('6af607eee1407803aa9f06d5')]",
+                      "[ObjectId('6af607eee1407803aa9f06d6'), ObjectId('6af607eee1407803aa9f06d6')]",
+                      "[ObjectId('6af607eee1407803aa9f06d7'), ObjectId('6af607eee1407803aa9f06d7')]",
+                      "[ObjectId('6af607eee1407803aa9f06d8'), ObjectId('6af607eee1407803aa9f06d8')]",
+                      "[ObjectId('6af607eee1407803aa9f06d9'), ObjectId('6af607eee1407803aa9f06d9')]",
+                      "[ObjectId('6af607eee1407803aa9f06da'), ObjectId('6af607eee1407803aa9f06da')]",
+                      "[ObjectId('6af607eee1407803aa9f06db'), ObjectId('6af607eee1407803aa9f06db')]",
+                      "[ObjectId('6af607eee1407803aa9f06dc'), ObjectId('6af607eee1407803aa9f06dc')]",
+                      "[ObjectId('6af607eee1407803aa9f06dd'), ObjectId('6af607eee1407803aa9f06dd')]",
+                      "[ObjectId('6af607eee1407803aa9f06de'), ObjectId('6af607eee1407803aa9f06de')]",
+                      "[ObjectId('6af607eee1407803aa9f06df'), ObjectId('6af607eee1407803aa9f06df')]",
+                      "[ObjectId('6af607eee1407803aa9f06e0'), ObjectId('6af607eee1407803aa9f06e0')]",
+                      "[ObjectId('6af607eee1407803aa9f06e1'), ObjectId('6af607eee1407803aa9f06e1')]",
+                      "[ObjectId('6af607eee1407803aa9f06e2'), ObjectId('6af607eee1407803aa9f06e2')]",
+                      "[ObjectId('6af607eee1407803aa9f06e3'), ObjectId('6af607eee1407803aa9f06e3')]",
+                      "[ObjectId('6af607eee1407803aa9f06e4'), ObjectId('6af607eee1407803aa9f06e4')]",
+                      "[ObjectId('6af607eee1407803aa9f06e5'), ObjectId('6af607eee1407803aa9f06e5')]",
+                      "[ObjectId('6af607eee1407803aa9f06e6'), ObjectId('6af607eee1407803aa9f06e6')]",
+                      "[ObjectId('6af607eee1407803aa9f06e7'), ObjectId('6af607eee1407803aa9f06e7')]",
+                      "[ObjectId('6af607eee1407803aa9f06e8'), ObjectId('6af607eee1407803aa9f06e8')]",
+                      "[ObjectId('6af607eee1407803aa9f06e9'), ObjectId('6af607eee1407803aa9f06e9')]",
+                      "[ObjectId('6af607eee1407803aa9f06ea'), ObjectId('6af607eee1407803aa9f06ea')]",
+                      "[ObjectId('6af607eee1407803aa9f06eb'), ObjectId('6af607eee1407803aa9f06eb')]",
+                      "[ObjectId('6af607eee1407803aa9f06ec'), ObjectId('6af607eee1407803aa9f06ec')]",
+                      "[ObjectId('6af607eee1407803aa9f06ed'), ObjectId('6af607eee1407803aa9f06ed')]",
+                      "[ObjectId('6af607eee1407803aa9f06ee'), ObjectId('6af607eee1407803aa9f06ee')]",
+                      "[ObjectId('6af607eee1407803aa9f06ef'), ObjectId('6af607eee1407803aa9f06ef')]",
+                      "[ObjectId('6af607eee1407803aa9f06f0'), ObjectId('6af607eee1407803aa9f06f0')]",
+                      "[ObjectId('6af607eee1407803aa9f06f1'), ObjectId('6af607eee1407803aa9f06f1')]",
+                      "[ObjectId('6af607eee1407803aa9f06f2'), ObjectId('6af607eee1407803aa9f06f2')]",
+                      "[ObjectId('6af607eee1407803aa9f06f4'), ObjectId('6af607eee1407803aa9f06f4')]",
+                      "[ObjectId('6af607eee1407803aa9f06f5'), ObjectId('6af607eee1407803aa9f06f5')]",
+                      "[ObjectId('6af607eee1407803aa9f06f6'), ObjectId('6af607eee1407803aa9f06f6')]",
+                      "[ObjectId('6af607eee1407803aa9f06f7'), ObjectId('6af607eee1407803aa9f06f7')]",
+                      "[ObjectId('6af607eee1407803aa9f06f8'), ObjectId('6af607eee1407803aa9f06f8')]",
+                      "[ObjectId('6af607eee1407803aa9f06f9'), ObjectId('6af607eee1407803aa9f06f9')]",
+                      "[ObjectId('6af607eee1407803aa9f06fa'), ObjectId('6af607eee1407803aa9f06fa')]",
+                      "[ObjectId('6af607eee1407803aa9f06fb'), ObjectId('6af607eee1407803aa9f06fb')]",
+                      "[ObjectId('6af607eee1407803aa9f06fc'), ObjectId('6af607eee1407803aa9f06fc')]",
+                      "[ObjectId('6af607eee1407803aa9f06fd'), ObjectId('6af607eee1407803aa9f06fd')]",
+                      "[ObjectId('6af607eee1407803aa9f06fe'), ObjectId('6af607eee1407803aa9f06fe')]",
+                      "[ObjectId('6af607eee1407803aa9f06ff'), ObjectId('6af607eee1407803aa9f06ff')]",
+                      "[ObjectId('6af607eee1407803aa9f0700'), ObjectId('6af607eee1407803aa9f0700')]",
+                      "[ObjectId('6af607eee1407803aa9f0701'), ObjectId('6af607eee1407803aa9f0701')]",
+                      "[ObjectId('6af607eee1407803aa9f0702'), ObjectId('6af607eee1407803aa9f0702')]",
+                      "[ObjectId('6af607eee1407803aa9f0703'), ObjectId('6af607eee1407803aa9f0703')]",
+                      "[ObjectId('6af607eee1407803aa9f0704'), ObjectId('6af607eee1407803aa9f0704')]",
+                      "[ObjectId('6af607eee1407803aa9f0705'), ObjectId('6af607eee1407803aa9f0705')]",
+                      "[ObjectId('6af607eee1407803aa9f0706'), ObjectId('6af607eee1407803aa9f0706')]",
+                      "[ObjectId('6af607eee1407803aa9f0707'), ObjectId('6af607eee1407803aa9f0707')]",
+                      "[ObjectId('6af607eee1407803aa9f0708'), ObjectId('6af607eee1407803aa9f0708')]",
+                      "[ObjectId('6af607eee1407803aa9f0709'), ObjectId('6af607eee1407803aa9f0709')]",
+                      "[ObjectId('6af607eee1407803aa9f070a'), ObjectId('6af607eee1407803aa9f070a')]",
+                      "[ObjectId('6af607eee1407803aa9f070b'), ObjectId('6af607eee1407803aa9f070b')]",
+                      "[ObjectId('6af607eee1407803aa9f070c'), ObjectId('6af607eee1407803aa9f070c')]",
+                      "[ObjectId('6af607eee1407803aa9f070d'), ObjectId('6af607eee1407803aa9f070d')]",
+                      "[ObjectId('6af607eee1407803aa9f070e'), ObjectId('6af607eee1407803aa9f070e')]",
+                      "[ObjectId('6af607eee1407803aa9f070f'), ObjectId('6af607eee1407803aa9f070f')]",
+                      "[ObjectId('6af607eee1407803aa9f0710'), ObjectId('6af607eee1407803aa9f0710')]",
+                      "[ObjectId('6af607eee1407803aa9f0711'), ObjectId('6af607eee1407803aa9f0711')]",
+                      "[ObjectId('6af607eee1407803aa9f0712'), ObjectId('6af607eee1407803aa9f0712')]",
+                      "[ObjectId('6af607eee1407803aa9f0713'), ObjectId('6af607eee1407803aa9f0713')]",
+                      "[ObjectId('6af607eee1407803aa9f0714'), ObjectId('6af607eee1407803aa9f0714')]",
+                      "[ObjectId('6af607eee1407803aa9f0715'), ObjectId('6af607eee1407803aa9f0715')]",
+                      "[ObjectId('6af607eee1407803aa9f0716'), ObjectId('6af607eee1407803aa9f0716')]",
+                      "[ObjectId('6af607eee1407803aa9f0717'), ObjectId('6af607eee1407803aa9f0717')]",
+                      "[ObjectId('6af607eee1407803aa9f0718'), ObjectId('6af607eee1407803aa9f0718')]",
+                      "[ObjectId('6af607eee1407803aa9f0719'), ObjectId('6af607eee1407803aa9f0719')]",
+                      "[ObjectId('6af607eee1407803aa9f071a'), ObjectId('6af607eee1407803aa9f071a')]",
+                      "[ObjectId('6af607eee1407803aa9f071b'), ObjectId('6af607eee1407803aa9f071b')]",
+                      "[ObjectId('6af607eee1407803aa9f071c'), ObjectId('6af607eee1407803aa9f071c')]",
+                      "[ObjectId('6af607eee1407803aa9f071d'), ObjectId('6af607eee1407803aa9f071d')]",
+                      "[ObjectId('6af607eee1407803aa9f071e'), ObjectId('6af607eee1407803aa9f071e')]",
+                      "[ObjectId('6af607eee1407803aa9f071f'), ObjectId('6af607eee1407803aa9f071f')]",
+                      "[ObjectId('6af607eee1407803aa9f0720'), ObjectId('6af607eee1407803aa9f0720')]",
+                      "[ObjectId('6af607eee1407803aa9f0721'), ObjectId('6af607eee1407803aa9f0721')]",
+                      "[ObjectId('6af607eee1407803aa9f0722'), ObjectId('6af607eee1407803aa9f0722')]",
+                      "[ObjectId('6af607eee1407803aa9f0723'), ObjectId('6af607eee1407803aa9f0723')]",
+                      "[ObjectId('6af607eee1407803aa9f0724'), ObjectId('6af607eee1407803aa9f0724')]",
+                      "[ObjectId('6af607eee1407803aa9f0725'), ObjectId('6af607eee1407803aa9f0725')]",
+                      "[ObjectId('6af607eee1407803aa9f0726'), ObjectId('6af607eee1407803aa9f0726')]",
+                      "[ObjectId('6af607eee1407803aa9f0727'), ObjectId('6af607eee1407803aa9f0727')]",
+                      "[ObjectId('6af607eee1407803aa9f0728'), ObjectId('6af607eee1407803aa9f0728')]",
+                      "[ObjectId('6af607eee1407803aa9f0729'), ObjectId('6af607eee1407803aa9f0729')]",
+                      "[ObjectId('6af607eee1407803aa9f072a'), ObjectId('6af607eee1407803aa9f072a')]",
+                      "[ObjectId('6af607eee1407803aa9f072b'), ObjectId('6af607eee1407803aa9f072b')]",
+                      "[ObjectId('6af607eee1407803aa9f072c'), ObjectId('6af607eee1407803aa9f072c')]",
+                      "[ObjectId('6af607eee1407803aa9f072d'), ObjectId('6af607eee1407803aa9f072d')]",
+                      "[ObjectId('6af607eee1407803aa9f072e'), ObjectId('6af607eee1407803aa9f072e')]",
+                      "[ObjectId('6af607eee1407803aa9f072f'), ObjectId('6af607eee1407803aa9f072f')]",
+                      "[ObjectId('6af607eee1407803aa9f0730'), ObjectId('6af607eee1407803aa9f0730')]",
+                      "[ObjectId('6af607eee1407803aa9f0731'), ObjectId('6af607eee1407803aa9f0731')]",
+                      "[ObjectId('6af607eee1407803aa9f0732'), ObjectId('6af607eee1407803aa9f0732')]",
+                      "[ObjectId('6af607eee1407803aa9f0733'), ObjectId('6af607eee1407803aa9f0733')]",
+                      "[ObjectId('6af607eee1407803aa9f0734'), ObjectId('6af607eee1407803aa9f0734')]",
+                      "[ObjectId('6af607eee1407803aa9f0735'), ObjectId('6af607eee1407803aa9f0735')]",
+                      "[ObjectId('6af607eee1407803aa9f0736'), ObjectId('6af607eee1407803aa9f0736')]",
+                      "[ObjectId('6af607eee1407803aa9f0737'), ObjectId('6af607eee1407803aa9f0737')]",
+                      "[ObjectId('6af607eee1407803aa9f0738'), ObjectId('6af607eee1407803aa9f0738')]",
+                      "[ObjectId('6af607eee1407803aa9f0739'), ObjectId('6af607eee1407803aa9f0739')]",
+                      "[ObjectId('6af607eee1407803aa9f073a'), ObjectId('6af607eee1407803aa9f073a')]",
+                      "[ObjectId('6af607eee1407803aa9f073b'), ObjectId('6af607eee1407803aa9f073b')]",
+                      "[ObjectId('6af607eee1407803aa9f073c'), ObjectId('6af607eee1407803aa9f073c')]",
+                      "[ObjectId('6af607eee1407803aa9f073d'), ObjectId('6af607eee1407803aa9f073d')]",
+                      "[ObjectId('6af607eee1407803aa9f073e'), ObjectId('6af607eee1407803aa9f073e')]",
+                      "[ObjectId('6af607eee1407803aa9f073f'), ObjectId('6af607eee1407803aa9f073f')]",
+                      "[ObjectId('6af607eee1407803aa9f0740'), ObjectId('6af607eee1407803aa9f0740')]",
+                      "[ObjectId('6af607eee1407803aa9f0741'), ObjectId('6af607eee1407803aa9f0741')]",
+                      "[ObjectId('6af607eee1407803aa9f0742'), ObjectId('6af607eee1407803aa9f0742')]",
+                      "[ObjectId('6af607eee1407803aa9f0743'), ObjectId('6af607eee1407803aa9f0743')]",
+                      "[ObjectId('6af607eee1407803aa9f0744'), ObjectId('6af607eee1407803aa9f0744')]",
+                      "[ObjectId('6af607eee1407803aa9f0745'), ObjectId('6af607eee1407803aa9f0745')]",
+                      "[ObjectId('6af607eee1407803aa9f0746'), ObjectId('6af607eee1407803aa9f0746')]",
+                      "[ObjectId('6af607eee1407803aa9f0747'), ObjectId('6af607eee1407803aa9f0747')]",
+                      "[ObjectId('6af607eee1407803aa9f0748'), ObjectId('6af607eee1407803aa9f0748')]",
+                      "[ObjectId('6af607eee1407803aa9f0749'), ObjectId('6af607eee1407803aa9f0749')]",
+                      "[ObjectId('6af607eee1407803aa9f074a'), ObjectId('6af607eee1407803aa9f074a')]",
+                      "[ObjectId('6af607eee1407803aa9f074b'), ObjectId('6af607eee1407803aa9f074b')]",
+                      "[ObjectId('6af607eee1407803aa9f074c'), ObjectId('6af607eee1407803aa9f074c')]",
+                      "[ObjectId('6af607eee1407803aa9f074d'), ObjectId('6af607eee1407803aa9f074d')]",
+                      "[ObjectId('6af607eee1407803aa9f074e'), ObjectId('6af607eee1407803aa9f074e')]",
+                      "[ObjectId('6af607eee1407803aa9f074f'), ObjectId('6af607eee1407803aa9f074f')]",
+                      "[ObjectId('6af607eee1407803aa9f0750'), ObjectId('6af607eee1407803aa9f0750')]",
+                      "[ObjectId('6af607eee1407803aa9f0751'), ObjectId('6af607eee1407803aa9f0751')]",
+                      "[ObjectId('6af607eee1407803aa9f0752'), ObjectId('6af607eee1407803aa9f0752')]",
+                      "[ObjectId('6af607eee1407803aa9f0753'), ObjectId('6af607eee1407803aa9f0753')]",
+                      "[ObjectId('6af607eee1407803aa9f0754'), ObjectId('6af607eee1407803aa9f0754')]",
+                      "[ObjectId('6af607eee1407803aa9f0755'), ObjectId('6af607eee1407803aa9f0755')]",
+                      "[ObjectId('6af607eee1407803aa9f0756'), ObjectId('6af607eee1407803aa9f0756')]",
+                      "[ObjectId('6af607eee1407803aa9f0757'), ObjectId('6af607eee1407803aa9f0757')]",
+                      "[ObjectId('6af607eee1407803aa9f0758'), ObjectId('6af607eee1407803aa9f0758')]",
+                      "[ObjectId('6af607eee1407803aa9f0759'), ObjectId('6af607eee1407803aa9f0759')]",
+                      "[ObjectId('6af607eee1407803aa9f075a'), ObjectId('6af607eee1407803aa9f075a')]",
+                      "[ObjectId('6af607eee1407803aa9f075b'), ObjectId('6af607eee1407803aa9f075b')]",
+                      "[ObjectId('6af607eee1407803aa9f075c'), ObjectId('6af607eee1407803aa9f075c')]",
+                      "[ObjectId('6af607eee1407803aa9f075d'), ObjectId('6af607eee1407803aa9f075d')]",
+                      "[ObjectId('6af607eee1407803aa9f075e'), ObjectId('6af607eee1407803aa9f075e')]",
+                      "[ObjectId('6af607eee1407803aa9f075f'), ObjectId('6af607eee1407803aa9f075f')]",
+                      "[ObjectId('6af607eee1407803aa9f0760'), ObjectId('6af607eee1407803aa9f0760')]",
+                      "[ObjectId('6af607eee1407803aa9f0761'), ObjectId('6af607eee1407803aa9f0761')]",
+                      "[ObjectId('6af607eee1407803aa9f0762'), ObjectId('6af607eee1407803aa9f0762')]",
+                      "[ObjectId('6af607eee1407803aa9f0763'), ObjectId('6af607eee1407803aa9f0763')]",
+                      "[ObjectId('6af607eee1407803aa9f0764'), ObjectId('6af607eee1407803aa9f0764')]",
+                      "[ObjectId('6af607eee1407803aa9f0765'), ObjectId('6af607eee1407803aa9f0765')]",
+                      "[ObjectId('6af607eee1407803aa9f0766'), ObjectId('6af607eee1407803aa9f0766')]",
+                      "[ObjectId('6af607eee1407803aa9f0767'), ObjectId('6af607eee1407803aa9f0767')]",
+                      "[ObjectId('6af607eee1407803aa9f0768'), ObjectId('6af607eee1407803aa9f0768')]",
+                      "[ObjectId('6af607eee1407803aa9f0769'), ObjectId('6af607eee1407803aa9f0769')]",
+                      "[ObjectId('6af607eee1407803aa9f076a'), ObjectId('6af607eee1407803aa9f076a')]",
+                      "[ObjectId('6af607eee1407803aa9f076b'), ObjectId('6af607eee1407803aa9f076b')]",
+                      "[ObjectId('6af607eee1407803aa9f076c'), ObjectId('6af607eee1407803aa9f076c')]",
+                      "[ObjectId('6af607eee1407803aa9f076d'), ObjectId('6af607eee1407803aa9f076d')]",
+                      "[ObjectId('6af607eee1407803aa9f076e'), ObjectId('6af607eee1407803aa9f076e')]",
+                      "[ObjectId('6af607eee1407803aa9f076f'), ObjectId('6af607eee1407803aa9f076f')]",
+                      "[ObjectId('6af607eee1407803aa9f0770'), ObjectId('6af607eee1407803aa9f0770')]",
+                      "[ObjectId('6af607eee1407803aa9f0771'), ObjectId('6af607eee1407803aa9f0771')]",
+                      "[ObjectId('6af607eee1407803aa9f0772'), ObjectId('6af607eee1407803aa9f0772')]",
+                      "[ObjectId('6af607eee1407803aa9f0773'), ObjectId('6af607eee1407803aa9f0773')]",
+                      "[ObjectId('6af607eee1407803aa9f0774'), ObjectId('6af607eee1407803aa9f0774')]",
+                      "[ObjectId('6af607eee1407803aa9f0775'), ObjectId('6af607eee1407803aa9f0775')]",
+                      "[ObjectId('6af607eee1407803aa9f0776'), ObjectId('6af607eee1407803aa9f0776')]",
+                      "[ObjectId('6af607eee1407803aa9f0777'), ObjectId('6af607eee1407803aa9f0777')]",
+                      "[ObjectId('6af607eee1407803aa9f0778'), ObjectId('6af607eee1407803aa9f0778')]",
+                      "[ObjectId('6af607eee1407803aa9f0779'), ObjectId('6af607eee1407803aa9f0779')]",
+                      "[ObjectId('6af607eee1407803aa9f077a'), ObjectId('6af607eee1407803aa9f077a')]",
+                      "[ObjectId('6af607eee1407803aa9f077b'), ObjectId('6af607eee1407803aa9f077b')]",
+                      "[ObjectId('6af607eee1407803aa9f077c'), ObjectId('6af607eee1407803aa9f077c')]",
+                      "[ObjectId('6af607eee1407803aa9f077d'), ObjectId('6af607eee1407803aa9f077d')]",
+                      "[ObjectId('6af607eee1407803aa9f077e'), ObjectId('6af607eee1407803aa9f077e')]",
+                      "[ObjectId('6af607eee1407803aa9f077f'), ObjectId('6af607eee1407803aa9f077f')]",
+                      "[ObjectId('6af607eee1407803aa9f0780'), ObjectId('6af607eee1407803aa9f0780')]",
+                      "[ObjectId('6af607eee1407803aa9f0781'), ObjectId('6af607eee1407803aa9f0781')]",
+                      "[ObjectId('6af607eee1407803aa9f0782'), ObjectId('6af607eee1407803aa9f0782')]",
+                      "[ObjectId('6af607eee1407803aa9f0783'), ObjectId('6af607eee1407803aa9f0783')]",
+                      "[ObjectId('6af607eee1407803aa9f0784'), ObjectId('6af607eee1407803aa9f0784')]",
+                      "[ObjectId('6af607eee1407803aa9f0785'), ObjectId('6af607eee1407803aa9f0785')]",
+                      "[ObjectId('6af607eee1407803aa9f0786'), ObjectId('6af607eee1407803aa9f0786')]",
+                      "[ObjectId('6af607eee1407803aa9f0787'), ObjectId('6af607eee1407803aa9f0787')]",
+                      "[ObjectId('6af607eee1407803aa9f0788'), ObjectId('6af607eee1407803aa9f0788')]",
+                      "[ObjectId('6af607eee1407803aa9f0789'), ObjectId('6af607eee1407803aa9f0789')]",
+                      "[ObjectId('6af607eee1407803aa9f078a'), ObjectId('6af607eee1407803aa9f078a')]",
+                      "[ObjectId('6af607eee1407803aa9f078b'), ObjectId('6af607eee1407803aa9f078b')]",
+                      "[ObjectId('6af607eee1407803aa9f078c'), ObjectId('6af607eee1407803aa9f078c')]",
+                      "[ObjectId('6af607eee1407803aa9f078d'), ObjectId('6af607eee1407803aa9f078d')]",
+                      "[ObjectId('6af607eee1407803aa9f078e'), ObjectId('6af607eee1407803aa9f078e')]",
+                      "[ObjectId('6af607eee1407803aa9f078f'), ObjectId('6af607eee1407803aa9f078f')]",
+                      "[ObjectId('6af607eee1407803aa9f0790'), ObjectId('6af607eee1407803aa9f0790')]",
+                      "[ObjectId('6af607eee1407803aa9f0791'), ObjectId('6af607eee1407803aa9f0791')]",
+                      "[ObjectId('6af607eee1407803aa9f0792'), ObjectId('6af607eee1407803aa9f0792')]",
+                      "[ObjectId('6af607eee1407803aa9f0793'), ObjectId('6af607eee1407803aa9f0793')]",
+                      "[ObjectId('6af607eee1407803aa9f0794'), ObjectId('6af607eee1407803aa9f0794')]",
+                      "[ObjectId('6af607eee1407803aa9f0795'), ObjectId('6af607eee1407803aa9f0795')]",
+                      "[ObjectId('6af607eee1407803aa9f0796'), ObjectId('6af607eee1407803aa9f0796')]",
+                      "[ObjectId('6af607eee1407803aa9f0797'), ObjectId('6af607eee1407803aa9f0797')]",
+                      "[ObjectId('6af607eee1407803aa9f0798'), ObjectId('6af607eee1407803aa9f0798')]",
+                      "[ObjectId('6af607eee1407803aa9f0799'), ObjectId('6af607eee1407803aa9f0799')]",
+                      "[ObjectId('6af607eee1407803aa9f079a'), ObjectId('6af607eee1407803aa9f079a')]",
+                      "[ObjectId('6af607eee1407803aa9f079b'), ObjectId('6af607eee1407803aa9f079b')]",
+                      "[ObjectId('6af607eee1407803aa9f079c'), ObjectId('6af607eee1407803aa9f079c')]",
+                      "[ObjectId('6af607eee1407803aa9f079d'), ObjectId('6af607eee1407803aa9f079d')]",
+                      "[ObjectId('6af607eee1407803aa9f079e'), ObjectId('6af607eee1407803aa9f079e')]",
+                      "[ObjectId('6af607eee1407803aa9f079f'), ObjectId('6af607eee1407803aa9f079f')]",
+                      "[ObjectId('6af607eee1407803aa9f07a0'), ObjectId('6af607eee1407803aa9f07a0')]",
+                      "[ObjectId('6af607eee1407803aa9f07a1'), ObjectId('6af607eee1407803aa9f07a1')]",
+                      "[ObjectId('6af607eee1407803aa9f07a2'), ObjectId('6af607eee1407803aa9f07a2')]",
+                      "[ObjectId('6af607eee1407803aa9f07a3'), ObjectId('6af607eee1407803aa9f07a3')]",
+                      "[ObjectId('6af607eee1407803aa9f07a4'), ObjectId('6af607eee1407803aa9f07a4')]",
+                      "[ObjectId('6af607eee1407803aa9f07a5'), ObjectId('6af607eee1407803aa9f07a5')]",
+                      "[ObjectId('6af607eee1407803aa9f07a6'), ObjectId('6af607eee1407803aa9f07a6')]",
+                      "[ObjectId('6af607eee1407803aa9f07a7'), ObjectId('6af607eee1407803aa9f07a7')]",
+                      "[ObjectId('6af607eee1407803aa9f07a8'), ObjectId('6af607eee1407803aa9f07a8')]",
+                      "[ObjectId('6af607eee1407803aa9f07a9'), ObjectId('6af607eee1407803aa9f07a9')]",
+                      "[ObjectId('6af607eee1407803aa9f07aa'), ObjectId('6af607eee1407803aa9f07aa')]",
+                      "[ObjectId('6af607eee1407803aa9f07ab'), ObjectId('6af607eee1407803aa9f07ab')]",
+                      "[ObjectId('6af607eee1407803aa9f07ac'), ObjectId('6af607eee1407803aa9f07ac')]",
+                      "[ObjectId('6af607eee1407803aa9f07ad'), ObjectId('6af607eee1407803aa9f07ad')]",
+                      "[ObjectId('6af607eee1407803aa9f07ae'), ObjectId('6af607eee1407803aa9f07ae')]",
+                      "[ObjectId('6af607eee1407803aa9f07af'), ObjectId('6af607eee1407803aa9f07af')]",
+                      "[ObjectId('6af607eee1407803aa9f07b0'), ObjectId('6af607eee1407803aa9f07b0')]",
+                      "[ObjectId('6af607eee1407803aa9f07b1'), ObjectId('6af607eee1407803aa9f07b1')]",
+                      "[ObjectId('6af607eee1407803aa9f07b2'), ObjectId('6af607eee1407803aa9f07b2')]",
+                      "[ObjectId('6af607eee1407803aa9f07b3'), ObjectId('6af607eee1407803aa9f07b3')]",
+                      "[ObjectId('6af607eee1407803aa9f07b4'), ObjectId('6af607eee1407803aa9f07b4')]",
+                      "[ObjectId('6af607eee1407803aa9f07b5'), ObjectId('6af607eee1407803aa9f07b5')]",
+                      "[ObjectId('6af607eee1407803aa9f07b6'), ObjectId('6af607eee1407803aa9f07b6')]",
+                      "[ObjectId('6af607eee1407803aa9f07b7'), ObjectId('6af607eee1407803aa9f07b7')]",
+                      "[ObjectId('6af607eee1407803aa9f07b8'), ObjectId('6af607eee1407803aa9f07b8')]",
+                      "[ObjectId('6af607eee1407803aa9f07b9'), ObjectId('6af607eee1407803aa9f07b9')]",
+                      "[ObjectId('6af607eee1407803aa9f07ba'), ObjectId('6af607eee1407803aa9f07ba')]",
+                      "[ObjectId('6af607eee1407803aa9f07bb'), ObjectId('6af607eee1407803aa9f07bb')]",
+                      "[ObjectId('6af607eee1407803aa9f07bc'), ObjectId('6af607eee1407803aa9f07bc')]",
+                      "[ObjectId('6af607eee1407803aa9f07bd'), ObjectId('6af607eee1407803aa9f07bd')]",
+                      "[ObjectId('6af607eee1407803aa9f07be'), ObjectId('6af607eee1407803aa9f07be')]",
+                      "[ObjectId('6af607eee1407803aa9f07bf'), ObjectId('6af607eee1407803aa9f07bf')]",
+                      "[ObjectId('6af607eee1407803aa9f07c0'), ObjectId('6af607eee1407803aa9f07c0')]",
+                      "[ObjectId('6af607eee1407803aa9f07c1'), ObjectId('6af607eee1407803aa9f07c1')]",
+                      "[ObjectId('6af607eee1407803aa9f07c2'), ObjectId('6af607eee1407803aa9f07c2')]",
+                      "[ObjectId('6af607eee1407803aa9f07c3'), ObjectId('6af607eee1407803aa9f07c3')]",
+                      "[ObjectId('6af607eee1407803aa9f07c4'), ObjectId('6af607eee1407803aa9f07c4')]",
+                      "[ObjectId('6af607eee1407803aa9f07c5'), ObjectId('6af607eee1407803aa9f07c5')]",
+                      "[ObjectId('6af607eee1407803aa9f07c6'), ObjectId('6af607eee1407803aa9f07c6')]",
+                      "[ObjectId('6af607eee1407803aa9f07c7'), ObjectId('6af607eee1407803aa9f07c7')]",
+                      "[ObjectId('6af607eee1407803aa9f07c8'), ObjectId('6af607eee1407803aa9f07c8')]",
+                      "[ObjectId('6af607eee1407803aa9f07c9'), ObjectId('6af607eee1407803aa9f07c9')]",
+                      "[ObjectId('6af607eee1407803aa9f07ca'), ObjectId('6af607eee1407803aa9f07ca')]",
+                      "[ObjectId('6af607eee1407803aa9f07cb'), ObjectId('6af607eee1407803aa9f07cb')]",
+                      "[ObjectId('6af607eee1407803aa9f07cc'), ObjectId('6af607eee1407803aa9f07cc')]",
+                      "[ObjectId('6af607eee1407803aa9f07cd'), ObjectId('6af607eee1407803aa9f07cd')]",
+                      "[ObjectId('6af607eee1407803aa9f07ce'), ObjectId('6af607eee1407803aa9f07ce')]",
+                      "[ObjectId('6af607eee1407803aa9f07cf'), ObjectId('6af607eee1407803aa9f07cf')]",
+                      "[ObjectId('6af607eee1407803aa9f07d0'), ObjectId('6af607eee1407803aa9f07d0')]",
+                      "[ObjectId('6af607eee1407803aa9f07d1'), ObjectId('6af607eee1407803aa9f07d1')]",
+                      "[ObjectId('6af607eee1407803aa9f07d2'), ObjectId('6af607eee1407803aa9f07d2')]",
+                      "[ObjectId('6af607eee1407803aa9f07d3'), ObjectId('6af607eee1407803aa9f07d3')]",
+                      "[ObjectId('6af607eee1407803aa9f07d4'), ObjectId('6af607eee1407803aa9f07d4')]",
+                      "[ObjectId('6af607eee1407803aa9f07d5'), ObjectId('6af607eee1407803aa9f07d5')]",
+                      "[ObjectId('6af607eee1407803aa9f07d6'), ObjectId('6af607eee1407803aa9f07d6')]",
+                      "[ObjectId('6af607eee1407803aa9f07d7'), ObjectId('6af607eee1407803aa9f07d7')]",
+                      "[ObjectId('6af607eee1407803aa9f07d8'), ObjectId('6af607eee1407803aa9f07d8')]",
+                      "[ObjectId('6af607eee1407803aa9f07d9'), ObjectId('6af607eee1407803aa9f07d9')]",
+                      "[ObjectId('6af607eee1407803aa9f07da'), ObjectId('6af607eee1407803aa9f07da')]",
+                      "[ObjectId('6af607eee1407803aa9f07db'), ObjectId('6af607eee1407803aa9f07db')]",
+                      "[ObjectId('6af607eee1407803aa9f07dc'), ObjectId('6af607eee1407803aa9f07dc')]",
+                      "[ObjectId('6af607eee1407803aa9f07dd'), ObjectId('6af607eee1407803aa9f07dd')]",
+                      "[ObjectId('6af607eee1407803aa9f07de'), ObjectId('6af607eee1407803aa9f07de')]",
+                      "[ObjectId('6af607eee1407803aa9f07df'), ObjectId('6af607eee1407803aa9f07df')]",
+                      "[ObjectId('6af607eee1407803aa9f07e0'), ObjectId('6af607eee1407803aa9f07e0')]",
+                      "[ObjectId('6af607eee1407803aa9f07e1'), ObjectId('6af607eee1407803aa9f07e1')]",
+                      "[ObjectId('6af607eee1407803aa9f07e2'), ObjectId('6af607eee1407803aa9f07e2')]",
+                      "[ObjectId('6af607eee1407803aa9f07e3'), ObjectId('6af607eee1407803aa9f07e3')]",
+                      "[ObjectId('6af607eee1407803aa9f07e4'), ObjectId('6af607eee1407803aa9f07e4')]",
+                      "[ObjectId('6af607eee1407803aa9f07e5'), ObjectId('6af607eee1407803aa9f07e5')]",
+                      "[ObjectId('6af607eee1407803aa9f07e6'), ObjectId('6af607eee1407803aa9f07e6')]",
+                      "[ObjectId('6af607eee1407803aa9f07e7'), ObjectId('6af607eee1407803aa9f07e7')]",
+                      "[ObjectId('6af607eee1407803aa9f07e8'), ObjectId('6af607eee1407803aa9f07e8')]",
+                      "[ObjectId('6af607eee1407803aa9f07e9'), ObjectId('6af607eee1407803aa9f07e9')]",
+                      "[ObjectId('6af607eee1407803aa9f07ea'), ObjectId('6af607eee1407803aa9f07ea')]",
+                      "[ObjectId('6af607eee1407803aa9f07eb'), ObjectId('6af607eee1407803aa9f07eb')]",
+                      "[ObjectId('6af607eee1407803aa9f07ec'), ObjectId('6af607eee1407803aa9f07ec')]",
+                      "[ObjectId('6af607eee1407803aa9f07ed'), ObjectId('6af607eee1407803aa9f07ed')]",
+                      "[ObjectId('6af607eee1407803aa9f07ee'), ObjectId('6af607eee1407803aa9f07ee')]",
+                      "[ObjectId('6af607eee1407803aa9f07ef'), ObjectId('6af607eee1407803aa9f07ef')]",
+                      "[ObjectId('6af607eee1407803aa9f07f0'), ObjectId('6af607eee1407803aa9f07f0')]",
+                      "[ObjectId('6af607eee1407803aa9f07f1'), ObjectId('6af607eee1407803aa9f07f1')]",
+                      "[ObjectId('6af607eee1407803aa9f07f2'), ObjectId('6af607eee1407803aa9f07f2')]",
+                      "[ObjectId('6af607eee1407803aa9f07f3'), ObjectId('6af607eee1407803aa9f07f3')]",
+                      "[ObjectId('6af607eee1407803aa9f07f4'), ObjectId('6af607eee1407803aa9f07f4')]"
+                    ],
+                    "type": [
+                      "[MinKey, MaxKey]"
+                    ]
+                  }
+                }
+              }
+            },
+            "slotBasedPlan": {
+              "slots": "$$RESULT=s24 env: { s1 = [{\"l\" : KS(646AF607EEE1407803AA9F06010A01), \"h\" : KS(646AF607EEE1407803AA9F0601F0FE)}, {\"l\" : KS(646AF607EEE1407803AA9F06020A01), \"h\" : KS(646AF607EEE1407803AA9F0602F0FE)}, {\"l\" : KS(646AF607EEE1407803AA9F06030A01), \"h\" : KS(646AF607EEE1407803AA9F0603F0FE)}, {\"l\" : KS(646AF607EEE1407803AA9F06040A01), \"h\" : KS(646AF607EEE1407803AA9F0604F0FE)}, {\"l\" : KS(646AF607EEE1407803AA9F06050A01), \"h\" : KS(646AF607EEE1407803AA9F0605F0FE)}, {\"l\" : KS(646AF607EEE1407803AA9F06060A01), \"h\" : KS(646AF607EEE1407803AA9F0606F0FE)}, {\"l\" : KS(646AF607EEE1407803AA9F06070A01), \"h\" : KS(646AF607EEE1407803AA9F0607F0FE)}, {\"l\" : KS(646AF607EEE1407803AA9F06080A01), \"h\" : KS(646AF607EEE1407803AA9F0608F0FE)}, {...}, ...], s10 = {\"itemId\" : 1, \"type\" : 1} }",
+              "stages": "[4] project [s24 = newObj(\"_id\", s21, \"rating\", s22, \"implicit\", s23)] \n[4] project [s21 = newObj(\"i\", s13, \"u\", s15), s22 = (s18 ?: null), s23 = (s20 ?: null)] \n[4] group [s13, s15] [s18 = max(fillType(\n    if (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n    then \n        if (((s14 <=> \"view\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"listen\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 2L \n        elif (((s14 <=> \"correction\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"favorite\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 4L \n        elif (((s14 <=> \"read\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 80) >= 0) ?: ((exists(s16) && typeMatch(s16, -65)) >= true)) \n            then 3L \n            else 1.5L \n        \n        elif (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 1) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -2L \n            elif (((s16 <=> 2) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -1L \n            elif (((s16 <=> 3) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 1L \n            elif (((s16 <=> 4) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 3L \n            elif (((s16 <=> 5) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 5L \n            else 0 \n        \n        else 0 \n    \n    else null \n, 1088, Nothing)), s20 = max(fillType(\n    if (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n    then null \n    else \n        if (((s14 <=> \"view\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"listen\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 2L \n        elif (((s14 <=> \"correction\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"favorite\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 4L \n        elif (((s14 <=> \"read\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 80) >= 0) ?: ((exists(s16) && typeMatch(s16, -65)) >= true)) \n            then 3L \n            else 1.5L \n        \n        elif (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 1) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -2L \n            elif (((s16 <=> 2) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -1L \n            elif (((s16 <=> 3) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 1L \n            elif (((s16 <=> 4) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 3L \n            elif (((s16 <=> 5) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 5L \n            else 0 \n        \n        else 0 \n, 1088, Nothing))] spillSlots[s17, s19] mergingExprs[max(fillType(s17, 1088, Nothing)), max(fillType(s19, 1088, Nothing))] \n[2] fetch s6 = seek, s11 = result, s12 = recordId, s9 = inSnapshotId, s7 = inIndexIdent, s8 = inIndexKey, s10 = inIndexKeyPattern [s13 = itemId, s14 = type, s15 = userId, s16 = value] @\"d6afec0e-fefc-423c-a0f5-7e76f67f71d1\" \n[1] nlj inner [] [s4, s5] \n    left \n        [1] project [s4 = getField(s2, \"l\"), s5 = getField(s2, \"h\")] \n        [1] unwind s2 = outField, s3 = outIndex, s1 = inField !_preserveNullAndEmptyArrays \n        [1] limit 1ll \n        [1] coscan \n    right \n        [1] ixseek seekKeyLow = s4 seekKeyHigh = s5 [s8 = indexKey, s6 = recordId, s9 = snapshotId, s7 = indexIdent] [] @\"d6afec0e-fefc-423c-a0f5-7e76f67f71d1\" @\"item_type\" forward \n"
+            }
+          },
+          "rejectedPlans": []
+        },
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 4578,
+          "executionTimeMillis": 50,
+          "totalKeysExamined": 9997,
+          "totalDocsExamined": 9997,
+          "executionStages": {
+            "stage": "project",
+            "planNodeId": 4,
+            "nReturned": 4578,
+            "executionTimeMillisEstimate": 23,
+            "opens": 1,
+            "closes": 1,
+            "saveState": 12,
+            "restoreState": 11,
+            "isEOF": 1,
+            "projections": {
+              "24": "newObj(\"_id\", s21, \"rating\", s22, \"implicit\", s23) "
+            },
+            "inputStage": {
+              "stage": "project",
+              "planNodeId": 4,
+              "nReturned": 4578,
+              "executionTimeMillisEstimate": 22,
+              "opens": 1,
+              "closes": 1,
+              "saveState": 12,
+              "restoreState": 11,
+              "isEOF": 1,
+              "projections": {
+                "21": "newObj(\"i\", s13, \"u\", s15) ",
+                "22": "(s18 ?: null) ",
+                "23": "(s20 ?: null) "
+              },
+              "inputStage": {
+                "stage": "group",
+                "planNodeId": 4,
+                "nReturned": 4578,
+                "executionTimeMillisEstimate": 22,
+                "opens": 1,
+                "closes": 1,
+                "saveState": 12,
+                "restoreState": 11,
+                "isEOF": 1,
+                "groupBySlots": [
+                  13,
+                  15
+                ],
+                "expressions": {
+                  "18": "max(fillType(\n    if (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n    then \n        if (((s14 <=> \"view\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"listen\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 2L \n        elif (((s14 <=> \"correction\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"favorite\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 4L \n        elif (((s14 <=> \"read\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 80) >= 0) ?: ((exists(s16) && typeMatch(s16, -65)) >= true)) \n            then 3L \n            else 1.5L \n        \n        elif (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 1) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -2L \n            elif (((s16 <=> 2) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -1L \n            elif (((s16 <=> 3) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 1L \n            elif (((s16 <=> 4) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 3L \n            elif (((s16 <=> 5) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 5L \n            else 0 \n        \n        else 0 \n    \n    else null \n, 1088, Nothing)) ",
+                  "20": "max(fillType(\n    if (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n    then null \n    else \n        if (((s14 <=> \"view\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"listen\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 2L \n        elif (((s14 <=> \"correction\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 1L \n        elif (((s14 <=> \"favorite\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then 4L \n        elif (((s14 <=> \"read\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 80) >= 0) ?: ((exists(s16) && typeMatch(s16, -65)) >= true)) \n            then 3L \n            else 1.5L \n        \n        elif (((s14 <=> \"rate\") == 0) ?: (exists(s14) && typeMatch(s14, -65))) \n        then \n            if (((s16 <=> 1) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -2L \n            elif (((s16 <=> 2) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then -1L \n            elif (((s16 <=> 3) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 1L \n            elif (((s16 <=> 4) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 3L \n            elif (((s16 <=> 5) == 0) ?: (exists(s16) && typeMatch(s16, -65))) \n            then 5L \n            else 0 \n        \n        else 0 \n, 1088, Nothing)) ",
+                  "initExprs": {
+                    "18": null,
+                    "20": null,
+                    "mergingExprs": {
+                      "17": "max(fillType(s17, 1088, Nothing)) ",
+                      "19": "max(fillType(s19, 1088, Nothing)) "
+                    }
+                  }
+                },
+                "usedDisk": false,
+                "spills": 0,
+                "spilledBytes": 0,
+                "spilledRecords": 0,
+                "spilledDataStorageSize": 0,
+                "peakTrackedMemBytes": 389068,
+                "inputStage": {
+                  "stage": "fetch",
+                  "planNodeId": 2,
+                  "nReturned": 9997,
+                  "executionTimeMillisEstimate": 14,
+                  "opens": 1,
+                  "closes": 1,
+                  "saveState": 12,
+                  "restoreState": 11,
+                  "isEOF": 1,
+                  "numReads": 9997,
+                  "inputStage": {
+                    "stage": "nlj",
+                    "planNodeId": 1,
+                    "nReturned": 9997,
+                    "executionTimeMillisEstimate": 7,
+                    "opens": 1,
+                    "closes": 1,
+                    "saveState": 12,
+                    "restoreState": 11,
+                    "isEOF": 1,
+                    "totalDocsExamined": 0,
+                    "totalKeysExamined": 9997,
+                    "collectionScans": 0,
+                    "collectionSeeks": 0,
+                    "indexScans": 0,
+                    "indexSeeks": 499,
+                    "indexesUsed": [
+                      "item_type"
+                    ],
+                    "innerOpens": 499,
+                    "innerCloses": 1,
+                    "outerProjects": [],
+                    "outerCorrelated": [
+                      4,
+                      5
+                    ],
+                    "outerStage": {
+                      "stage": "project",
+                      "planNodeId": 1,
+                      "nReturned": 499,
+                      "executionTimeMillisEstimate": 0,
+                      "opens": 1,
+                      "closes": 1,
+                      "saveState": 12,
+                      "restoreState": 11,
+                      "isEOF": 1,
+                      "projections": {
+                        "4": "getField(s2, \"l\") ",
+                        "5": "getField(s2, \"h\") "
+                      },
+                      "inputStage": {
+                        "stage": "unwind",
+                        "planNodeId": 1,
+                        "nReturned": 499,
+                        "executionTimeMillisEstimate": 0,
+                        "opens": 1,
+                        "closes": 1,
+                        "saveState": 12,
+                        "restoreState": 11,
+                        "isEOF": 1,
+                        "inputSlot": 1,
+                        "outSlot": 2,
+                        "outIndexSlot": 3,
+                        "preserveNullAndEmptyArrays": 0,
+                        "inputStage": {
+                          "stage": "limit",
+                          "planNodeId": 1,
+                          "nReturned": 1,
+                          "executionTimeMillisEstimate": 0,
+                          "opens": 1,
+                          "closes": 1,
+                          "saveState": 12,
+                          "restoreState": 11,
+                          "isEOF": 1,
+                          "limit": 1,
+                          "inputStage": {
+                            "stage": "coscan",
+                            "planNodeId": 1,
+                            "nReturned": 1,
+                            "executionTimeMillisEstimate": 0,
+                            "opens": 1,
+                            "closes": 1,
+                            "saveState": 12,
+                            "restoreState": 11,
+                            "isEOF": 0
+                          }
+                        }
+                      }
+                    },
+                    "innerStage": {
+                      "stage": "ixseek",
+                      "planNodeId": 1,
+                      "nReturned": 9997,
+                      "executionTimeMillisEstimate": 6,
+                      "opens": 499,
+                      "closes": 1,
+                      "saveState": 12,
+                      "restoreState": 11,
+                      "isEOF": 1,
+                      "indexName": "item_type",
+                      "keysExamined": 9997,
+                      "seeks": 499,
+                      "numReads": 10496,
+                      "indexKeySlot": 8,
+                      "recordIdSlot": 6,
+                      "snapshotIdSlot": 9,
+                      "indexIdentSlot": 7,
+                      "outputSlots": [],
+                      "indexKeysToInclude": "00000000000000000000000000000000",
+                      "seekKeyLow": "s4 ",
+                      "seekKeyHigh": "s5 "
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "nReturned": 4578,
+      "executionTimeMillisEstimate": 46
+    },
+    {
+      "$project": {
+        "u": "$_id.u",
+        "i": "$_id.i",
+        "s": {
+          "$ifNull": [
+            "$rating",
+            "$implicit"
+          ]
+        },
+        "_id": false
+      },
+      "nReturned": 4578,
+      "executionTimeMillisEstimate": 46
+    },
+    {
+      "$match": {
+        "s": {
+          "$gt": 0
+        }
+      },
+      "nReturned": 4522,
+      "executionTimeMillisEstimate": 46
+    },
+    {
+      "$group": {
+        "_id": "$i",
+        "sumSq": {
+          "$sum": {
+            "$multiply": [
+              "$s",
+              "$s"
+            ]
+          }
+        },
+        "$willBeMerged": false
+      },
+      "nReturned": 499,
+      "executionTimeMillisEstimate": 46,
+      "maxAccumulatorMemoryUsageBytes": {
+        "sumSq": 95808
+      },
+      "totalOutputDataSizeBytes": 118263,
+      "usedDisk": false,
+      "spills": 0,
+      "spilledDataStorageSize": 0,
+      "spilledBytes": 0,
+      "spilledRecords": 0,
+      "peakTrackedMemBytes": 103792
+    }
+  ]
+}

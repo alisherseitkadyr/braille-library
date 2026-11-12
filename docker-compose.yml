@@ -34,8 +34,10 @@ services:
     env_file: .env
     environment:
       MONGO_URI: mongodb://mongo:27017
-      # precomputed (default) or live; the perf script switches it
+      # precomputed (default) or live; the perf script switches them
       RECS_MODE: ${RECS_MODE:-precomputed}
+      # lifetime of cached recommendations per user, 0 = no cache
+      CACHE_TTL: ${CACHE_TTL:-60s}
     depends_on:
       mongo:
         condition: service_healthy

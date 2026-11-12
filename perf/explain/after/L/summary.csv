@@ -1,0 +1,10 @@
+query,collection,time_ms,plan,indexes,keys_examined,docs_examined,returned
+user_scores,interactions,11,IXSCAN,user_item_scores,125,0,-
+similarities_by_item,item_similarities,2,FETCH+IXSCAN,itemId_unique,99,50,50
+items_by_ids,items,1,FETCH+IXSCAN,_id_,20,10,10
+popular_by_profile,items,2,FETCH+IXSCAN+SORT_MERGE,profile_popularity,15,10,10
+popular_global,items,2,FETCH+IXSCAN,popularity,10,10,10
+live_cooccurrence,interactions,3753,FETCH+IXSCAN,item_type+user_item_scores,378734,15628,-
+live_norms,interactions,2428,FETCH+IXSCAN,item_type,500000,500000,-
+history_page,interactions,2,FETCH+IXSCAN,user_createdAt_id,20,20,20
+rebuild_scores,interactions,1911,COLLSCAN,,0,500000,-

@@ -3,3 +3,11 @@ S,live,1831.4,2491.8,1809.9,10.9
 M,live,15828.9,19477.0,15425.5,1.2
 L,live,61518.0,63971.2,60254.3,0.3
 XL,live,91784.3,94746.7,87529.9,0.2
+S,precomputed,44.0,69.4,45.2,438.8
+S,precomputed+cache,3.6,8.4,4.1,4357.5
+M,precomputed,49.6,79.1,51.0,389.3
+M,precomputed+cache,3.7,8.8,4.2,4243.5
+L,precomputed,51.1,81.0,52.6,377.9
+L,precomputed+cache,3.7,8.5,4.1,4332.4
+XL,precomputed,50.2,79.2,51.6,385.2
+XL,precomputed+cache,3.6,8.3,4.1,4409.1

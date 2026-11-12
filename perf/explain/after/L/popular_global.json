@@ -1,0 +1,911 @@
+{
+  "serverParameters": {
+    "internalQueryFacetBufferSizeBytes": 104857600,
+    "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+    "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+    "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryMaxAddToSetBytes": 104857600,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "ok": 1.0,
+  "explainVersion": "1",
+  "queryPlanner": {
+    "namespace": "braille_library.items",
+    "parsedQuery": {
+      "_id": {
+        "$not": {
+          "$in": [
+            {
+              "$oid": "6af6089316dab356275003ec"
+            },
+            {
+              "$oid": "6af6089316dab356275003f3"
+            },
+            {
+              "$oid": "6af6089316dab35627500422"
+            },
+            {
+              "$oid": "6af6089316dab3562750044c"
+            },
+            {
+              "$oid": "6af6089316dab3562750047d"
+            },
+            {
+              "$oid": "6af6089316dab3562750048c"
+            },
+            {
+              "$oid": "6af6089316dab356275004ab"
+            },
+            {
+              "$oid": "6af6089316dab356275004f5"
+            },
+            {
+              "$oid": "6af6089316dab356275004fa"
+            },
+            {
+              "$oid": "6af6089316dab3562750050c"
+            },
+            {
+              "$oid": "6af6089316dab35627500526"
+            },
+            {
+              "$oid": "6af6089316dab356275005b8"
+            },
+            {
+              "$oid": "6af6089316dab356275005f8"
+            },
+            {
+              "$oid": "6af6089316dab35627500609"
+            },
+            {
+              "$oid": "6af6089316dab35627500618"
+            },
+            {
+              "$oid": "6af6089316dab35627500665"
+            },
+            {
+              "$oid": "6af6089316dab3562750066b"
+            },
+            {
+              "$oid": "6af6089316dab3562750067f"
+            },
+            {
+              "$oid": "6af6089316dab356275006c4"
+            },
+            {
+              "$oid": "6af6089316dab356275006fc"
+            },
+            {
+              "$oid": "6af6089316dab35627500702"
+            },
+            {
+              "$oid": "6af6089316dab35627500710"
+            },
+            {
+              "$oid": "6af6089316dab3562750072a"
+            },
+            {
+              "$oid": "6af6089316dab35627500739"
+            },
+            {
+              "$oid": "6af6089316dab3562750074b"
+            },
+            {
+              "$oid": "6af6089316dab35627500759"
+            },
+            {
+              "$oid": "6af6089316dab3562750077d"
+            },
+            {
+              "$oid": "6af6089316dab356275007a0"
+            },
+            {
+              "$oid": "6af6089316dab356275007a2"
+            },
+            {
+              "$oid": "6af6089316dab356275007bb"
+            },
+            {
+              "$oid": "6af6089316dab356275007c1"
+            },
+            {
+              "$oid": "6af6089316dab356275007da"
+            },
+            {
+              "$oid": "6af6089316dab356275007f2"
+            },
+            {
+              "$oid": "6af6089316dab35627500824"
+            },
+            {
+              "$oid": "6af6089316dab35627500827"
+            },
+            {
+              "$oid": "6af6089316dab35627500838"
+            },
+            {
+              "$oid": "6af6089316dab3562750084e"
+            },
+            {
+              "$oid": "6af6089316dab35627500851"
+            },
+            {
+              "$oid": "6af6089316dab35627500852"
+            },
+            {
+              "$oid": "6af6089316dab35627500867"
+            },
+            {
+              "$oid": "6af6089316dab3562750086b"
+            },
+            {
+              "$oid": "6af6089316dab3562750097b"
+            },
+            {
+              "$oid": "6af6089316dab35627500984"
+            },
+            {
+              "$oid": "6af6089316dab356275009de"
+            },
+            {
+              "$oid": "6af6089316dab35627500a5c"
+            },
+            {
+              "$oid": "6af6089316dab35627500a72"
+            },
+            {
+              "$oid": "6af6089316dab35627500b36"
+            },
+            {
+              "$oid": "6af6089316dab35627500b4d"
+            },
+            {
+              "$oid": "6af6089316dab35627500b5c"
+            },
+            {
+              "$oid": "6af6089316dab35627500b5f"
+            },
+            {
+              "$oid": "6af6089316dab35627500b8b"
+            },
+            {
+              "$oid": "6af6089316dab35627500ba1"
+            }
+          ]
+        }
+      }
+    },
+    "indexFilterSet": false,
+    "queryHash": "7BF04C62",
+    "planCacheShapeHash": "7BF04C62",
+    "planCacheKey": "BDC9BAA7",
+    "optimizationTimeMillis": 0,
+    "maxIndexedOrSolutionsReached": false,
+    "maxIndexedAndSolutionsReached": false,
+    "maxScansToExplodeReached": false,
+    "prunedSimilarIndexes": false,
+    "winningPlan": {
+      "isCached": false,
+      "stage": "LIMIT",
+      "limitAmount": 10,
+      "inputStage": {
+        "stage": "FETCH",
+        "filter": {
+          "_id": {
+            "$not": {
+              "$in": [
+                {
+                  "$oid": "6af6089316dab356275003ec"
+                },
+                {
+                  "$oid": "6af6089316dab356275003f3"
+                },
+                {
+                  "$oid": "6af6089316dab35627500422"
+                },
+                {
+                  "$oid": "6af6089316dab3562750044c"
+                },
+                {
+                  "$oid": "6af6089316dab3562750047d"
+                },
+                {
+                  "$oid": "6af6089316dab3562750048c"
+                },
+                {
+                  "$oid": "6af6089316dab356275004ab"
+                },
+                {
+                  "$oid": "6af6089316dab356275004f5"
+                },
+                {
+                  "$oid": "6af6089316dab356275004fa"
+                },
+                {
+                  "$oid": "6af6089316dab3562750050c"
+                },
+                {
+                  "$oid": "6af6089316dab35627500526"
+                },
+                {
+                  "$oid": "6af6089316dab356275005b8"
+                },
+                {
+                  "$oid": "6af6089316dab356275005f8"
+                },
+                {
+                  "$oid": "6af6089316dab35627500609"
+                },
+                {
+                  "$oid": "6af6089316dab35627500618"
+                },
+                {
+                  "$oid": "6af6089316dab35627500665"
+                },
+                {
+                  "$oid": "6af6089316dab3562750066b"
+                },
+                {
+                  "$oid": "6af6089316dab3562750067f"
+                },
+                {
+                  "$oid": "6af6089316dab356275006c4"
+                },
+                {
+                  "$oid": "6af6089316dab356275006fc"
+                },
+                {
+                  "$oid": "6af6089316dab35627500702"
+                },
+                {
+                  "$oid": "6af6089316dab35627500710"
+                },
+                {
+                  "$oid": "6af6089316dab3562750072a"
+                },
+                {
+                  "$oid": "6af6089316dab35627500739"
+                },
+                {
+                  "$oid": "6af6089316dab3562750074b"
+                },
+                {
+                  "$oid": "6af6089316dab35627500759"
+                },
+                {
+                  "$oid": "6af6089316dab3562750077d"
+                },
+                {
+                  "$oid": "6af6089316dab356275007a0"
+                },
+                {
+                  "$oid": "6af6089316dab356275007a2"
+                },
+                {
+                  "$oid": "6af6089316dab356275007bb"
+                },
+                {
+                  "$oid": "6af6089316dab356275007c1"
+                },
+                {
+                  "$oid": "6af6089316dab356275007da"
+                },
+                {
+                  "$oid": "6af6089316dab356275007f2"
+                },
+                {
+                  "$oid": "6af6089316dab35627500824"
+                },
+                {
+                  "$oid": "6af6089316dab35627500827"
+                },
+                {
+                  "$oid": "6af6089316dab35627500838"
+                },
+                {
+                  "$oid": "6af6089316dab3562750084e"
+                },
+                {
+                  "$oid": "6af6089316dab35627500851"
+                },
+                {
+                  "$oid": "6af6089316dab35627500852"
+                },
+                {
+                  "$oid": "6af6089316dab35627500867"
+                },
+                {
+                  "$oid": "6af6089316dab3562750086b"
+                },
+                {
+                  "$oid": "6af6089316dab3562750097b"
+                },
+                {
+                  "$oid": "6af6089316dab35627500984"
+                },
+                {
+                  "$oid": "6af6089316dab356275009de"
+                },
+                {
+                  "$oid": "6af6089316dab35627500a5c"
+                },
+                {
+                  "$oid": "6af6089316dab35627500a72"
+                },
+                {
+                  "$oid": "6af6089316dab35627500b36"
+                },
+                {
+                  "$oid": "6af6089316dab35627500b4d"
+                },
+                {
+                  "$oid": "6af6089316dab35627500b5c"
+                },
+                {
+                  "$oid": "6af6089316dab35627500b5f"
+                },
+                {
+                  "$oid": "6af6089316dab35627500b8b"
+                },
+                {
+                  "$oid": "6af6089316dab35627500ba1"
+                }
+              ]
+            }
+          }
+        },
+        "nss": "braille_library.items",
+        "inputStage": {
+          "stage": "IXSCAN",
+          "nss": "braille_library.items",
+          "keyPattern": {
+            "ratingsCount": -1,
+            "avgRating": -1,
+            "_id": 1
+          },
+          "indexName": "popularity",
+          "isMultiKey": false,
+          "multiKeyPaths": {
+            "ratingsCount": [],
+            "avgRating": [],
+            "_id": []
+          },
+          "isUnique": false,
+          "isSparse": false,
+          "isPartial": false,
+          "indexVersion": 2,
+          "direction": "forward",
+          "indexBounds": {
+            "ratingsCount": [
+              "[MaxKey, MinKey]"
+            ],
+            "avgRating": [
+              "[MaxKey, MinKey]"
+            ],
+            "_id": [
+              "[MinKey, MaxKey]"
+            ]
+          }
+        }
+      }
+    },
+    "rejectedPlans": [
+      {
+        "isCached": false,
+        "stage": "SORT",
+        "sortPattern": {
+          "ratingsCount": -1,
+          "avgRating": -1,
+          "_id": 1
+        },
+        "memLimit": 104857600,
+        "limitAmount": 10,
+        "type": "simple",
+        "inputStage": {
+          "stage": "FETCH",
+          "nss": "braille_library.items",
+          "inputStage": {
+            "stage": "IXSCAN",
+            "nss": "braille_library.items",
+            "keyPattern": {
+              "_id": 1
+            },
+            "indexName": "_id_",
+            "isMultiKey": false,
+            "isUnique": true,
+            "isSparse": false,
+            "isPartial": false,
+            "indexVersion": 2,
+            "direction": "forward",
+            "indexBounds": {
+              "_id": [
+                "[MinKey, ObjectId('6af6089316dab356275003ec'))",
+                "(ObjectId('6af6089316dab356275003ec'), ObjectId('6af6089316dab356275003f3'))",
+                "(ObjectId('6af6089316dab356275003f3'), ObjectId('6af6089316dab35627500422'))",
+                "(ObjectId('6af6089316dab35627500422'), ObjectId('6af6089316dab3562750044c'))",
+                "(ObjectId('6af6089316dab3562750044c'), ObjectId('6af6089316dab3562750047d'))",
+                "(ObjectId('6af6089316dab3562750047d'), ObjectId('6af6089316dab3562750048c'))",
+                "(ObjectId('6af6089316dab3562750048c'), ObjectId('6af6089316dab356275004ab'))",
+                "(ObjectId('6af6089316dab356275004ab'), ObjectId('6af6089316dab356275004f5'))",
+                "(ObjectId('6af6089316dab356275004f5'), ObjectId('6af6089316dab356275004fa'))",
+                "(ObjectId('6af6089316dab356275004fa'), ObjectId('6af6089316dab3562750050c'))",
+                "(ObjectId('6af6089316dab3562750050c'), ObjectId('6af6089316dab35627500526'))",
+                "(ObjectId('6af6089316dab35627500526'), ObjectId('6af6089316dab356275005b8'))",
+                "(ObjectId('6af6089316dab356275005b8'), ObjectId('6af6089316dab356275005f8'))",
+                "(ObjectId('6af6089316dab356275005f8'), ObjectId('6af6089316dab35627500609'))",
+                "(ObjectId('6af6089316dab35627500609'), ObjectId('6af6089316dab35627500618'))",
+                "(ObjectId('6af6089316dab35627500618'), ObjectId('6af6089316dab35627500665'))",
+                "(ObjectId('6af6089316dab35627500665'), ObjectId('6af6089316dab3562750066b'))",
+                "(ObjectId('6af6089316dab3562750066b'), ObjectId('6af6089316dab3562750067f'))",
+                "(ObjectId('6af6089316dab3562750067f'), ObjectId('6af6089316dab356275006c4'))",
+                "(ObjectId('6af6089316dab356275006c4'), ObjectId('6af6089316dab356275006fc'))",
+                "(ObjectId('6af6089316dab356275006fc'), ObjectId('6af6089316dab35627500702'))",
+                "(ObjectId('6af6089316dab35627500702'), ObjectId('6af6089316dab35627500710'))",
+                "(ObjectId('6af6089316dab35627500710'), ObjectId('6af6089316dab3562750072a'))",
+                "(ObjectId('6af6089316dab3562750072a'), ObjectId('6af6089316dab35627500739'))",
+                "(ObjectId('6af6089316dab35627500739'), ObjectId('6af6089316dab3562750074b'))",
+                "(ObjectId('6af6089316dab3562750074b'), ObjectId('6af6089316dab35627500759'))",
+                "(ObjectId('6af6089316dab35627500759'), ObjectId('6af6089316dab3562750077d'))",
+                "(ObjectId('6af6089316dab3562750077d'), ObjectId('6af6089316dab356275007a0'))",
+                "(ObjectId('6af6089316dab356275007a0'), ObjectId('6af6089316dab356275007a2'))",
+                "(ObjectId('6af6089316dab356275007a2'), ObjectId('6af6089316dab356275007bb'))",
+                "(ObjectId('6af6089316dab356275007bb'), ObjectId('6af6089316dab356275007c1'))",
+                "(ObjectId('6af6089316dab356275007c1'), ObjectId('6af6089316dab356275007da'))",
+                "(ObjectId('6af6089316dab356275007da'), ObjectId('6af6089316dab356275007f2'))",
+                "(ObjectId('6af6089316dab356275007f2'), ObjectId('6af6089316dab35627500824'))",
+                "(ObjectId('6af6089316dab35627500824'), ObjectId('6af6089316dab35627500827'))",
+                "(ObjectId('6af6089316dab35627500827'), ObjectId('6af6089316dab35627500838'))",
+                "(ObjectId('6af6089316dab35627500838'), ObjectId('6af6089316dab3562750084e'))",
+                "(ObjectId('6af6089316dab3562750084e'), ObjectId('6af6089316dab35627500851'))",
+                "(ObjectId('6af6089316dab35627500851'), ObjectId('6af6089316dab35627500852'))",
+                "(ObjectId('6af6089316dab35627500852'), ObjectId('6af6089316dab35627500867'))",
+                "(ObjectId('6af6089316dab35627500867'), ObjectId('6af6089316dab3562750086b'))",
+                "(ObjectId('6af6089316dab3562750086b'), ObjectId('6af6089316dab3562750097b'))",
+                "(ObjectId('6af6089316dab3562750097b'), ObjectId('6af6089316dab35627500984'))",
+                "(ObjectId('6af6089316dab35627500984'), ObjectId('6af6089316dab356275009de'))",
+                "(ObjectId('6af6089316dab356275009de'), ObjectId('6af6089316dab35627500a5c'))",
+                "(ObjectId('6af6089316dab35627500a5c'), ObjectId('6af6089316dab35627500a72'))",
+                "(ObjectId('6af6089316dab35627500a72'), ObjectId('6af6089316dab35627500b36'))",
+                "(ObjectId('6af6089316dab35627500b36'), ObjectId('6af6089316dab35627500b4d'))",
+                "(ObjectId('6af6089316dab35627500b4d'), ObjectId('6af6089316dab35627500b5c'))",
+                "(ObjectId('6af6089316dab35627500b5c'), ObjectId('6af6089316dab35627500b5f'))",
+                "(ObjectId('6af6089316dab35627500b5f'), ObjectId('6af6089316dab35627500b8b'))",
+                "(ObjectId('6af6089316dab35627500b8b'), ObjectId('6af6089316dab35627500ba1'))",
+                "(ObjectId('6af6089316dab35627500ba1'), MaxKey]"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 10,
+    "executionTimeMillis": 0,
+    "totalKeysExamined": 10,
+    "totalDocsExamined": 10,
+    "executionStages": {
+      "isCached": false,
+      "stage": "LIMIT",
+      "nReturned": 10,
+      "executionTimeMillisEstimate": 0,
+      "works": 11,
+      "advanced": 10,
+      "needTime": 0,
+      "needYield": 0,
+      "saveState": 1,
+      "restoreState": 1,
+      "isEOF": 1,
+      "limitAmount": 10,
+      "inputStage": {
+        "stage": "FETCH",
+        "filter": {
+          "_id": {
+            "$not": {
+              "$in": [
+                {
+                  "$oid": "6af6089316dab356275003ec"
+                },
+                {
+                  "$oid": "6af6089316dab356275003f3"
+                },
+                {
+                  "$oid": "6af6089316dab35627500422"
+                },
+                {
+                  "$oid": "6af6089316dab3562750044c"
+                },
+                {
+                  "$oid": "6af6089316dab3562750047d"
+                },
+                {
+                  "$oid": "6af6089316dab3562750048c"
+                },
+                {
+                  "$oid": "6af6089316dab356275004ab"
+                },
+                {
+                  "$oid": "6af6089316dab356275004f5"
+                },
+                {
+                  "$oid": "6af6089316dab356275004fa"
+                },
+                {
+                  "$oid": "6af6089316dab3562750050c"
+                },
+                {
+                  "$oid": "6af6089316dab35627500526"
+                },
+                {
+                  "$oid": "6af6089316dab356275005b8"
+                },
+                {
+                  "$oid": "6af6089316dab356275005f8"
+                },
+                {
+                  "$oid": "6af6089316dab35627500609"
+                },
+                {
+                  "$oid": "6af6089316dab35627500618"
+                },
+                {
+                  "$oid": "6af6089316dab35627500665"
+                },
+                {
+                  "$oid": "6af6089316dab3562750066b"
+                },
+                {
+                  "$oid": "6af6089316dab3562750067f"
+                },
+                {
+                  "$oid": "6af6089316dab356275006c4"
+                },
+                {
+                  "$oid": "6af6089316dab356275006fc"
+                },
+                {
+                  "$oid": "6af6089316dab35627500702"
+                },
+                {
+                  "$oid": "6af6089316dab35627500710"
+                },
+                {
+                  "$oid": "6af6089316dab3562750072a"
+                },
+                {
+                  "$oid": "6af6089316dab35627500739"
+                },
+                {
+                  "$oid": "6af6089316dab3562750074b"
+                },
+                {
+                  "$oid": "6af6089316dab35627500759"
+                },
+                {
+                  "$oid": "6af6089316dab3562750077d"
+                },
+                {
+                  "$oid": "6af6089316dab356275007a0"
+                },
+                {
+                  "$oid": "6af6089316dab356275007a2"
+                },
+                {
+                  "$oid": "6af6089316dab356275007bb"
+                },
+                {
+                  "$oid": "6af6089316dab356275007c1"
+                },
+                {
+                  "$oid": "6af6089316dab356275007da"
+                },
+                {
+                  "$oid": "6af6089316dab356275007f2"
+                },
+                {
+                  "$oid": "6af6089316dab35627500824"
+                },
+                {
+                  "$oid": "6af6089316dab35627500827"
+                },
+                {
+                  "$oid": "6af6089316dab35627500838"
+                },
+                {
+                  "$oid": "6af6089316dab3562750084e"
+                },
+                {
+                  "$oid": "6af6089316dab35627500851"
+                },
+                {
+                  "$oid": "6af6089316dab35627500852"
+                },
+                {
+                  "$oid": "6af6089316dab35627500867"
+                },
+                {
+                  "$oid": "6af6089316dab3562750086b"
+                },
+                {
+                  "$oid": "6af6089316dab3562750097b"
+                },
+                {
+                  "$oid": "6af6089316dab35627500984"
+                },
+                {
+                  "$oid": "6af6089316dab356275009de"
+                },
+                {
+                  "$oid": "6af6089316dab35627500a5c"
+                },
+                {
+                  "$oid": "6af6089316dab35627500a72"
+                },
+                {
+                  "$oid": "6af6089316dab35627500b36"
+                },
+                {
+                  "$oid": "6af6089316dab35627500b4d"
+                },
+                {
+                  "$oid": "6af6089316dab35627500b5c"
+                },
+                {
+                  "$oid": "6af6089316dab35627500b5f"
+                },
+                {
+                  "$oid": "6af6089316dab35627500b8b"
+                },
+                {
+                  "$oid": "6af6089316dab35627500ba1"
+                }
+              ]
+            }
+          }
+        },
+        "nReturned": 10,
+        "executionTimeMillisEstimate": 0,
+        "works": 10,
+        "advanced": 10,
+        "needTime": 0,
+        "needYield": 0,
+        "saveState": 1,
+        "restoreState": 1,
+        "isEOF": 0,
+        "nss": "braille_library.items",
+        "docsExamined": 10,
+        "alreadyHasObj": 0,
+        "inputStage": {
+          "stage": "IXSCAN",
+          "nReturned": 10,
+          "executionTimeMillisEstimate": 0,
+          "works": 10,
+          "advanced": 10,
+          "needTime": 0,
+          "needYield": 0,
+          "saveState": 1,
+          "restoreState": 1,
+          "isEOF": 0,
+          "nss": "braille_library.items",
+          "keyPattern": {
+            "ratingsCount": -1,
+            "avgRating": -1,
+            "_id": 1
+          },
+          "indexName": "popularity",
+          "isMultiKey": false,
+          "multiKeyPaths": {
+            "ratingsCount": [],
+            "avgRating": [],
+            "_id": []
+          },
+          "isUnique": false,
+          "isSparse": false,
+          "isPartial": false,
+          "indexVersion": 2,
+          "direction": "forward",
+          "indexBounds": {
+            "ratingsCount": [
+              "[MaxKey, MinKey]"
+            ],
+            "avgRating": [
+              "[MaxKey, MinKey]"
+            ],
+            "_id": [
+              "[MinKey, MaxKey]"
+            ]
+          },
+          "keysExamined": 10,
+          "seeks": 1,
+          "dupsTested": 0,
+          "dupsDropped": 0,
+          "peakTrackedMemBytes": 0
+        }
+      }
+    }
+  },
+  "queryShapeHash": "DBBD071D45A22614C2F3553494C9DA32068544477B0A834827AA3691394D11E5",
+  "command": {
+    "find": "items",
+    "filter": {
+      "_id": {
+        "$nin": [
+          {
+            "$oid": "6af6089316dab356275006fc"
+          },
+          {
+            "$oid": "6af6089316dab3562750048c"
+          },
+          {
+            "$oid": "6af6089316dab356275007bb"
+          },
+          {
+            "$oid": "6af6089316dab35627500824"
+          },
+          {
+            "$oid": "6af6089316dab3562750074b"
+          },
+          {
+            "$oid": "6af6089316dab356275005f8"
+          },
+          {
+            "$oid": "6af6089316dab35627500618"
+          },
+          {
+            "$oid": "6af6089316dab356275004fa"
+          },
+          {
+            "$oid": "6af6089316dab35627500827"
+          },
+          {
+            "$oid": "6af6089316dab35627500a72"
+          },
+          {
+            "$oid": "6af6089316dab35627500702"
+          },
+          {
+            "$oid": "6af6089316dab356275004ab"
+          },
+          {
+            "$oid": "6af6089316dab356275003f3"
+          },
+          {
+            "$oid": "6af6089316dab35627500b36"
+          },
+          {
+            "$oid": "6af6089316dab35627500b5c"
+          },
+          {
+            "$oid": "6af6089316dab35627500739"
+          },
+          {
+            "$oid": "6af6089316dab3562750047d"
+          },
+          {
+            "$oid": "6af6089316dab356275007f2"
+          },
+          {
+            "$oid": "6af6089316dab3562750050c"
+          },
+          {
+            "$oid": "6af6089316dab356275007a2"
+          },
+          {
+            "$oid": "6af6089316dab356275006c4"
+          },
+          {
+            "$oid": "6af6089316dab356275005b8"
+          },
+          {
+            "$oid": "6af6089316dab35627500984"
+          },
+          {
+            "$oid": "6af6089316dab35627500609"
+          },
+          {
+            "$oid": "6af6089316dab356275007da"
+          },
+          {
+            "$oid": "6af6089316dab35627500b5f"
+          },
+          {
+            "$oid": "6af6089316dab356275009de"
+          },
+          {
+            "$oid": "6af6089316dab35627500665"
+          },
+          {
+            "$oid": "6af6089316dab3562750044c"
+          },
+          {
+            "$oid": "6af6089316dab3562750084e"
+          },
+          {
+            "$oid": "6af6089316dab35627500759"
+          },
+          {
+            "$oid": "6af6089316dab35627500867"
+          },
+          {
+            "$oid": "6af6089316dab35627500a5c"
+          },
+          {
+            "$oid": "6af6089316dab3562750077d"
+          },
+          {
+            "$oid": "6af6089316dab35627500710"
+          },
+          {
+            "$oid": "6af6089316dab356275004f5"
+          },
+          {
+            "$oid": "6af6089316dab356275007a0"
+          },
+          {
+            "$oid": "6af6089316dab3562750072a"
+          },
+          {
+            "$oid": "6af6089316dab356275007c1"
+          },
+          {
+            "$oid": "6af6089316dab3562750086b"
+          },
+          {
+            "$oid": "6af6089316dab356275003ec"
+          },
+          {
+            "$oid": "6af6089316dab35627500422"
+          },
+          {
+            "$oid": "6af6089316dab3562750097b"
+          },
+          {
+            "$oid": "6af6089316dab35627500b8b"
+          },
+          {
+            "$oid": "6af6089316dab3562750066b"
+          },
+          {
+            "$oid": "6af6089316dab35627500ba1"
+          },
+          {
+            "$oid": "6af6089316dab35627500526"
+          },
+          {
+            "$oid": "6af6089316dab3562750067f"
+          },
+          {
+            "$oid": "6af6089316dab35627500838"
+          },
+          {
+            "$oid": "6af6089316dab35627500b4d"
+          },
+          {
+            "$oid": "6af6089316dab35627500852"
+          },
+          {
+            "$oid": "6af6089316dab35627500851"
+          }
+        ]
+      }
+    },
+    "sort": {
+      "ratingsCount": -1,
+      "avgRating": -1,
+      "_id": 1
+    },
+    "limit": 10,
+    "$db": "braille_library"
+  },
+  "serverInfo": {
+    "host": "39f69c592185",
+    "port": 27017,
+    "version": "8.3.13",
+    "gitVersion": "3b8a5e1f78cf7b94c40a78ad3fe93708cdca8323"
+  }
+}

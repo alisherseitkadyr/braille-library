@@ -1,0 +1,210 @@
+{
+  "ok": 1.0,
+  "explainVersion": "1",
+  "queryPlanner": {
+    "namespace": "braille_library.items",
+    "parsedQuery": {
+      "_id": {
+        "$in": [
+          {
+            "$oid": "6af60840d0c3dfce6f2d1640"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d165d"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d16d1"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d1730"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d180a"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d189d"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d18f3"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d1953"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d1991"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d19d9"
+          }
+        ]
+      }
+    },
+    "indexFilterSet": false,
+    "queryHash": "1CC0FC18",
+    "planCacheShapeHash": "1CC0FC18",
+    "planCacheKey": "C91123C9",
+    "optimizationTimeMillis": 0,
+    "maxIndexedOrSolutionsReached": false,
+    "maxIndexedAndSolutionsReached": false,
+    "maxScansToExplodeReached": false,
+    "prunedSimilarIndexes": false,
+    "winningPlan": {
+      "isCached": false,
+      "stage": "FETCH",
+      "nss": "braille_library.items",
+      "inputStage": {
+        "stage": "IXSCAN",
+        "nss": "braille_library.items",
+        "keyPattern": {
+          "_id": 1
+        },
+        "indexName": "_id_",
+        "isMultiKey": false,
+        "isUnique": true,
+        "isSparse": false,
+        "isPartial": false,
+        "indexVersion": 2,
+        "direction": "forward",
+        "indexBounds": {
+          "_id": [
+            "[ObjectId('6af60840d0c3dfce6f2d1640'), ObjectId('6af60840d0c3dfce6f2d1640')]",
+            "[ObjectId('6af60840d0c3dfce6f2d165d'), ObjectId('6af60840d0c3dfce6f2d165d')]",
+            "[ObjectId('6af60840d0c3dfce6f2d16d1'), ObjectId('6af60840d0c3dfce6f2d16d1')]",
+            "[ObjectId('6af60840d0c3dfce6f2d1730'), ObjectId('6af60840d0c3dfce6f2d1730')]",
+            "[ObjectId('6af60840d0c3dfce6f2d180a'), ObjectId('6af60840d0c3dfce6f2d180a')]",
+            "[ObjectId('6af60840d0c3dfce6f2d189d'), ObjectId('6af60840d0c3dfce6f2d189d')]",
+            "[ObjectId('6af60840d0c3dfce6f2d18f3'), ObjectId('6af60840d0c3dfce6f2d18f3')]",
+            "[ObjectId('6af60840d0c3dfce6f2d1953'), ObjectId('6af60840d0c3dfce6f2d1953')]",
+            "[ObjectId('6af60840d0c3dfce6f2d1991'), ObjectId('6af60840d0c3dfce6f2d1991')]",
+            "[ObjectId('6af60840d0c3dfce6f2d19d9'), ObjectId('6af60840d0c3dfce6f2d19d9')]"
+          ]
+        }
+      }
+    },
+    "rejectedPlans": []
+  },
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 10,
+    "executionTimeMillis": 0,
+    "totalKeysExamined": 20,
+    "totalDocsExamined": 10,
+    "executionStages": {
+      "isCached": false,
+      "stage": "FETCH",
+      "nReturned": 10,
+      "executionTimeMillisEstimate": 0,
+      "works": 20,
+      "advanced": 10,
+      "needTime": 9,
+      "needYield": 0,
+      "saveState": 0,
+      "restoreState": 0,
+      "isEOF": 1,
+      "nss": "braille_library.items",
+      "docsExamined": 10,
+      "alreadyHasObj": 0,
+      "inputStage": {
+        "stage": "IXSCAN",
+        "nReturned": 10,
+        "executionTimeMillisEstimate": 0,
+        "works": 20,
+        "advanced": 10,
+        "needTime": 9,
+        "needYield": 0,
+        "saveState": 0,
+        "restoreState": 0,
+        "isEOF": 1,
+        "nss": "braille_library.items",
+        "keyPattern": {
+          "_id": 1
+        },
+        "indexName": "_id_",
+        "isMultiKey": false,
+        "isUnique": true,
+        "isSparse": false,
+        "isPartial": false,
+        "indexVersion": 2,
+        "direction": "forward",
+        "indexBounds": {
+          "_id": [
+            "[ObjectId('6af60840d0c3dfce6f2d1640'), ObjectId('6af60840d0c3dfce6f2d1640')]",
+            "[ObjectId('6af60840d0c3dfce6f2d165d'), ObjectId('6af60840d0c3dfce6f2d165d')]",
+            "[ObjectId('6af60840d0c3dfce6f2d16d1'), ObjectId('6af60840d0c3dfce6f2d16d1')]",
+            "[ObjectId('6af60840d0c3dfce6f2d1730'), ObjectId('6af60840d0c3dfce6f2d1730')]",
+            "[ObjectId('6af60840d0c3dfce6f2d180a'), ObjectId('6af60840d0c3dfce6f2d180a')]",
+            "[ObjectId('6af60840d0c3dfce6f2d189d'), ObjectId('6af60840d0c3dfce6f2d189d')]",
+            "[ObjectId('6af60840d0c3dfce6f2d18f3'), ObjectId('6af60840d0c3dfce6f2d18f3')]",
+            "[ObjectId('6af60840d0c3dfce6f2d1953'), ObjectId('6af60840d0c3dfce6f2d1953')]",
+            "[ObjectId('6af60840d0c3dfce6f2d1991'), ObjectId('6af60840d0c3dfce6f2d1991')]",
+            "[ObjectId('6af60840d0c3dfce6f2d19d9'), ObjectId('6af60840d0c3dfce6f2d19d9')]"
+          ]
+        },
+        "keysExamined": 20,
+        "seeks": 10,
+        "dupsTested": 0,
+        "dupsDropped": 0,
+        "peakTrackedMemBytes": 0
+      }
+    }
+  },
+  "queryShapeHash": "B748CB200F5D5A5EBCF284238AD65754DFA5B0A314251DC3AC21ACF69F781B10",
+  "command": {
+    "find": "items",
+    "filter": {
+      "_id": {
+        "$in": [
+          {
+            "$oid": "6af60840d0c3dfce6f2d1991"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d180a"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d19d9"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d1730"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d1640"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d16d1"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d18f3"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d165d"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d189d"
+          },
+          {
+            "$oid": "6af60840d0c3dfce6f2d1953"
+          }
+        ]
+      }
+    },
+    "$db": "braille_library"
+  },
+  "serverInfo": {
+    "host": "39f69c592185",
+    "port": 27017,
+    "version": "8.3.13",
+    "gitVersion": "3b8a5e1f78cf7b94c40a78ad3fe93708cdca8323"
+  },
+  "serverParameters": {
+    "internalQueryFacetBufferSizeBytes": 104857600,
+    "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+    "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+    "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryMaxAddToSetBytes": 104857600,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  }
+}

@@ -42,6 +42,11 @@ func LikedScoresPipeline() mongo.Pipeline {
 		bson.D{{Key: "$match", Value: bson.M{"score": bson.M{"$gt": 0}}}})
 }
 
+// AllScoresPipeline returns s(u,i) for all pairs, liked or not.
+func AllScoresPipeline() mongo.Pipeline {
+	return scoresPipeline(bson.M{})
+}
+
 // UserScoresPipeline returns s(u,i) of one user for every item.
 func UserScoresPipeline(userID bson.ObjectID) mongo.Pipeline {
 	return scoresPipeline(bson.M{"userId": userID})

@@ -26,10 +26,13 @@ type RatingUpdater interface {
 type InteractionService struct {
 	interactions InteractionRepository
 	items        RatingUpdater
+	onRecord     func(userID string)
 }
 
-func NewInteractionService(interactions InteractionRepository, items RatingUpdater) *InteractionService {
-	return &InteractionService{interactions: interactions, items: items}
+// NewInteractionService takes onRecord, called after each recorded interaction
+// (used to drop the user's cached recommendations); it may be nil.
+func NewInteractionService(interactions InteractionRepository, items RatingUpdater, onRecord func(userID string)) *InteractionService {
+	return &InteractionService{interactions: interactions, items: items, onRecord: onRecord}
 }
 
 type InteractionInput struct {
@@ -95,6 +98,14 @@ func ValidateInteraction(in InteractionInput) error {
 // Record saves an interaction. It returns true if a new document was created
 // (false when an existing rating was updated or a favorite already existed).
 func (s *InteractionService) Record(ctx context.Context, userID string, in InteractionInput) (*domain.Interaction, bool, error) {
+	it, created, err := s.record(ctx, userID, in)
+	if err == nil && s.onRecord != nil {
+		s.onRecord(userID)
+	}
+	return it, created, err
+}
+
+func (s *InteractionService) record(ctx context.Context, userID string, in InteractionInput) (*domain.Interaction, bool, error) {
 	if err := ValidateInteraction(in); err != nil {
 		return nil, false, err
 	}
