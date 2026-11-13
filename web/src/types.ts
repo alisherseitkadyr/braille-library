@@ -61,6 +61,7 @@ export interface Item {
   recognitionAccuracy: number;
   avgRating: number;
   ratingsCount: number;
+  content?: string; // only in GET /items/{id}
 }
 
 export interface Page<T> {
@@ -87,5 +88,6 @@ export interface HistoryEntry {
   itemTitle: string;
   type: InteractionType;
   value?: number;
+  correction?: { position: number; original: string; suggested: string };
   createdAt: string;
 }

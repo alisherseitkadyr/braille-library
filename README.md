@@ -103,6 +103,13 @@ interactions. A fixed random seed is used, so every run produces the same data. 
 are realistic: learners mostly read beginner texts, users mostly read their interest
 categories, and texts with lower recognition accuracy get more corrections.
 
+Every item has a `content`: the recognized text, 3-6 paragraphs in the item's language built
+from sentences that fit its category. Texts below 95% recognition accuracy get 1-6 typical
+recognition errors: a Kazakh letter read as the plain Cyrillic letter (қ→к, ә→а, ң→н, ...)
+or a Braille cell read as its mirror image (е↔и, д↔ф, ж↔х). The seeded corrections point at
+exactly these errors. The texts use their own random generator, so adding them did not
+change the rest of the data.
+
 | Flag | Meaning |
 |---|---|
 | `--reset` | delete all users, items, interactions and similarities first; without it the seed refuses to run on a non-empty database |
@@ -159,7 +166,7 @@ Kazakh stemming, so words must match exactly (case-insensitive).
 | `read` | progress 0-100, required | |
 | `rate` | 1-5, required | one per user and item: rating again updates it and recalculates the item's `avgRating` and `ratingsCount` |
 | `favorite` | none | one per user and item; repeating it returns the existing one |
-| `correction` | none | needs `correction: {position, original, suggested}` |
+| `correction` | none | needs `correction: {position, original, suggested}`; see below |
 | `view`, `listen` | none | |
 
 ```bash
@@ -170,6 +177,14 @@ curl -X POST localhost:8080/interactions \
 
 `POST /interactions` returns 201 when it creates a document, and 200 when an existing rating
 was updated or the favorite already existed.
+
+**Corrections.** `position` is the character index (Unicode code point, not byte) in the item's
+`content` where `original` starts, and `original` must be exactly the text there; otherwise
+the API answers 400. This keeps the collected training data consistent with the text. Items
+without content accept any position.
+
+**Item text.** `GET /items/{id}` returns `content` (paragraphs separated by a blank line).
+Lists (`/items`, recommendations, similar items) leave it out to stay light.
 
 ## Recommendations
 
@@ -244,11 +259,30 @@ served by nginx on http://localhost:3000.
 | Log in, Register | account; registration also asks for reading preferences |
 | Recommended (home) | "Recommended for you" with the reason for each text |
 | Catalog | search with filters for category, level, language and sort |
-| Text page | details; rate 1-5, add to favorites, save reading progress, listen (texts with audio), report a recognition error; "Similar texts" |
+| Text page | details; **Listen** (read aloud); **Read** (the text); rate 1-5, add to favorites, reading progress, report a recognition error; "Similar texts" |
 | History | all my actions, newest first, with a filter by type |
 | Profile | name, interests, reading level, language, audio preference |
 
 Opening a text page while logged in records a `view`.
+
+**Read.** The text is shown with a comfortable line length and spacing, marked with the item's
+language. While the user scrolls (mouse, touch, or keyboard: arrows, Page Down, Space), read
+progress is recorded at 25, 50, 80 and 100%, each step at most once per visit, and announced
+to screen readers. Only scrolling while the text is on screen counts. The manual "Reading
+progress" form stays for texts read elsewhere.
+
+**Listen.** The browser's speech synthesis reads the text aloud, one paragraph after another,
+with a voice for the item's language. If the browser has no such voice (Kazakh voices are
+rarely installed), the default voice is used and a note says so. Play/Pause is one toggle
+button, so the keyboard focus never gets lost; Stop returns the focus to it. The first playback
+on a page records a `listen`.
+
+**Report a recognition error.** Select the wrong word in the text (a double-click is enough;
+partly selected words are completed): the form fills in the recognized text and its exact
+position, moves the focus to "Correct text" and announces it. Selecting text without a mouse
+needs caret browsing, which few people use, so the wrong word can also be typed: the form finds
+it in the text and, if it occurs more than once, asks which occurrence is meant (with the words
+around each). History shows the reported correction as `"wrong" → "right"`.
 
 **Accessibility.** Many users are blind or have low vision and use screen readers, so the UI
 uses semantic HTML (landmarks, headings, lists, `fieldset`/`legend`) and every input has a
@@ -276,7 +310,7 @@ npm run dev                          # http://localhost:5173
 | Collection | Main fields | Indexes |
 |---|---|---|
 | `users` | email, passwordHash, name, role, preferredLanguage, readingLevel, interests, prefersAudio | `email` unique |
-| `items` | title, description, category, level, language, brailleGrade, pages, author, tags, hasAudio, recognitionAccuracy, avgRating, ratingsCount | text (title, description, tags); `language`; `avgRating` desc; `popularity`; `profile_popularity` |
+| `items` | title, description, content (the text), category, level, language, brailleGrade, pages, author, tags, hasAudio, recognitionAccuracy, avgRating, ratingsCount | text (title, description, tags); `language`; `avgRating` desc; `popularity`; `profile_popularity` |
 | `interactions` | userId, itemId, type, value, correction, createdAt | `user_createdAt_id`; `item_type`; `user_item_scores`; unique partial `userId + itemId + type` for `rate` and `favorite` |
 | `item_similarities` | itemId, neighbors [{itemId, score}], updatedAt | `itemId` unique |
 
@@ -417,6 +451,13 @@ items than the popularity baseline.
   scheduled; run it after bulk changes, or restart Docker Compose.
 - The live baseline is slow by design. It computes on request what the rebuild precomputes,
   and exists to measure that difference.
+- **Read progress is an estimate.** It is based on scrolling, so it shows how far a reader got,
+  not that they read every word. A fast smooth scroll through the text also counts (for example,
+  the End key records 50% when the scroll animation passes part of the text).
+- **Listening depends on the voices installed in the browser.** Kazakh voices are rarely
+  available, so Kazakh texts are usually read by a Russian or English voice, which mispronounces
+  letters like қ, ә and ң. The item field `hasAudio` (a recorded audio version) is separate
+  from this speech synthesis and is only shown as information.
 
 ## Tests
 
@@ -425,8 +466,9 @@ go test ./...                        # make test
 ```
 
 Unit tests cover the interaction weights and scores, the similarity formula, the top-20 cut,
-the recommendation scoring, the equality of the live and precomputed neighbors, and the TTL
-cache.
+the recommendation scoring, the equality of the live and precomputed neighbors, the TTL
+cache, and the check that a correction matches the text at its position (in characters, also
+for multi-byte Kazakh letters).
 
 ## Swagger docs
 

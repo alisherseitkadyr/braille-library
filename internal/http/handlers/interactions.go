@@ -20,6 +20,8 @@ func NewInteractionHandler(interactions *service.InteractionService) *Interactio
 // @Summary  Record an interaction
 // @Description value: read = progress 0-100, rate = 1-5, other types must not have it.
 // @Description correction {position, original, suggested} is required for type correction only.
+// @Description position is the character index (Unicode code point) in the item's content where original starts;
+// @Description original must be exactly the text there (400 otherwise). Items without content accept any position.
 // @Description rate is an upsert (one rating per user and item) and updates the item's avgRating.
 // @Description favorite is stored once per user and item.
 // @Tags     interactions

@@ -85,6 +85,12 @@ definitions:
         type: integer
       category:
         $ref: '#/definitions/domain.Category'
+      content:
+        description: |-
+          Content is the recognized text: paragraphs separated by a blank line.
+          It is returned by GET /items/{id} only; lists leave it out.
+        example: Күз келіп, дала сарғая бастады...
+        type: string
       createdAt:
         type: string
       description:
@@ -230,6 +236,10 @@ definitions:
         type: integer
       category:
         $ref: '#/definitions/domain.Category'
+      content:
+        description: Content is the recognized text, paragraphs separated by a blank
+          line (optional).
+        type: string
       description:
         type: string
       hasAudio:
@@ -457,6 +467,8 @@ paths:
       description: |-
         value: read = progress 0-100, rate = 1-5, other types must not have it.
         correction {position, original, suggested} is required for type correction only.
+        position is the character index (Unicode code point) in the item's content where original starts;
+        original must be exactly the text there (400 otherwise). Items without content accept any position.
         rate is an upsert (one rating per user and item) and updates the item's avgRating.
         favorite is stored once per user and item.
       parameters:
@@ -499,6 +511,7 @@ paths:
       description: |-
         q is a full-text search over title, description and tags (sorted by text score, sort is ignored).
         Without q, sort=new (default) is newest first and sort=rating is highest rated first.
+        Items in lists have no content (the text); get it with GET /items/{id}.
       parameters:
       - description: Search words
         in: query
@@ -629,6 +642,8 @@ paths:
       tags:
       - items
     get:
+      description: 'Includes content: the recognized text, paragraphs separated by
+        a blank line.'
       parameters:
       - description: Item ID
         in: path
@@ -834,6 +849,7 @@ paths:
         If there are not enough results, items matching the profile (interests, level, language)
         and then popular items are added. Items already interacted with are never returned.
         reason is "because you read <title>", "matches your interests" or "popular" (score 0 for the last two).
+        Items have no content (the text); get it with GET /items/{id}.
       parameters:
       - default: 10
         description: Number of items (max 50)

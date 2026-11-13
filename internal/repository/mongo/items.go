@@ -15,6 +15,9 @@ type ItemRepository struct {
 	coll *mongo.Collection
 }
 
+// withoutContent keeps list results light: the text is only returned by GetByID.
+var withoutContent = bson.M{"content": 0}
+
 func NewItemRepository(db *mongo.Database) *ItemRepository {
 	return &ItemRepository{coll: db.Collection(ItemsCollection)}
 }
@@ -99,6 +102,7 @@ func (r *ItemRepository) List(ctx context.Context, f domain.ItemFilter) ([]domai
 	}
 
 	opts := options.Find().
+		SetProjection(withoutContent).
 		SetSort(sort).
 		SetSkip(int64((f.Page - 1) * f.Limit)).
 		SetLimit(int64(f.Limit))
@@ -113,13 +117,14 @@ func (r *ItemRepository) List(ctx context.Context, f domain.ItemFilter) ([]domai
 	return items, total, nil
 }
 
-// GetMany returns the items with the given ids, in any order. Missing ids are skipped.
+// GetMany returns the items with the given ids (without content), in any order.
+// Missing ids are skipped.
 func (r *ItemRepository) GetMany(ctx context.Context, ids []bson.ObjectID) ([]domain.Item, error) {
 	items := []domain.Item{}
 	if len(ids) == 0 {
 		return items, nil
 	}
-	cur, err := r.coll.Find(ctx, bson.M{"_id": bson.M{"$in": ids}})
+	cur, err := r.coll.Find(ctx, bson.M{"_id": bson.M{"$in": ids}}, options.Find().SetProjection(withoutContent))
 	if err != nil {
 		return nil, err
 	}
@@ -133,7 +138,7 @@ func (r *ItemRepository) GetMany(ctx context.Context, ids []bson.ObjectID) ([]do
 // average rating), skipping the excluded ids. Empty filter fields mean "any".
 func (r *ItemRepository) Popular(ctx context.Context, f domain.PopularFilter, exclude []bson.ObjectID, limit int) ([]domain.Item, error) {
 	filter, sort := PopularQuery(f, exclude)
-	opts := options.Find().SetSort(sort).SetLimit(int64(limit))
+	opts := options.Find().SetProjection(withoutContent).SetSort(sort).SetLimit(int64(limit))
 	cur, err := r.coll.Find(ctx, filter, opts)
 	if err != nil {
 		return nil, err

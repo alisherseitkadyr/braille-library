@@ -31,6 +31,7 @@ func NewRecommendationHandler(recs *service.RecommendationService) *Recommendati
 // @Description If there are not enough results, items matching the profile (interests, level, language)
 // @Description and then popular items are added. Items already interacted with are never returned.
 // @Description reason is "because you read <title>", "matches your interests" or "popular" (score 0 for the last two).
+// @Description Items have no content (the text); get it with GET /items/{id}.
 // @Tags     recommendations
 // @Produce  json
 // @Security BearerAuth

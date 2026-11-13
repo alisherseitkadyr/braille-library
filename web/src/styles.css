@@ -333,3 +333,23 @@ main:focus {
     animation: none !important;
   }
 }
+
+/* The text of an item: a comfortable line length and spacing for reading. */
+.reading {
+  max-width: 42rem;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  border-left: 0.3rem solid var(--border);
+  padding-left: 1rem;
+}
+.reading p {
+  margin: 0 0 1.25rem;
+}
+/* A clearly visible selection, for picking a wrong word. */
+.reading ::selection {
+  background: var(--focus);
+  color: var(--text);
+}
+.listen .button-row {
+  margin-bottom: 0.25rem;
+}

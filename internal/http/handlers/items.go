@@ -21,6 +21,7 @@ func NewItemHandler(items *service.ItemService) *ItemHandler {
 // @Summary  Search the catalog
 // @Description q is a full-text search over title, description and tags (sorted by text score, sort is ignored).
 // @Description Without q, sort=new (default) is newest first and sort=rating is highest rated first.
+// @Description Items in lists have no content (the text); get it with GET /items/{id}.
 // @Tags     items
 // @Produce  json
 // @Param    q        query string false "Search words"
@@ -58,6 +59,7 @@ func (h *ItemHandler) List(w http.ResponseWriter, r *http.Request) {
 
 // Get godoc
 // @Summary  Get an item
+// @Description Includes content: the recognized text, paragraphs separated by a blank line.
 // @Tags     items
 // @Produce  json
 // @Param    id  path string true "Item ID"

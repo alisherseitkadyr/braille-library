@@ -177,7 +177,7 @@ const docTemplate = `{
                         "BearerAuth": []
                     }
                 ],
-                "description": "value: read = progress 0-100, rate = 1-5, other types must not have it.\ncorrection {position, original, suggested} is required for type correction only.\nrate is an upsert (one rating per user and item) and updates the item's avgRating.\nfavorite is stored once per user and item.",
+                "description": "value: read = progress 0-100, rate = 1-5, other types must not have it.\ncorrection {position, original, suggested} is required for type correction only.\nposition is the character index (Unicode code point) in the item's content where original starts;\noriginal must be exactly the text there (400 otherwise). Items without content accept any position.\nrate is an upsert (one rating per user and item) and updates the item's avgRating.\nfavorite is stored once per user and item.",
                 "consumes": [
                     "application/json"
                 ],
@@ -235,7 +235,7 @@ const docTemplate = `{
         },
         "/items": {
             "get": {
-                "description": "q is a full-text search over title, description and tags (sorted by text score, sort is ignored).\nWithout q, sort=new (default) is newest first and sort=rating is highest rated first.",
+                "description": "q is a full-text search over title, description and tags (sorted by text score, sort is ignored).\nWithout q, sort=new (default) is newest first and sort=rating is highest rated first.\nItems in lists have no content (the text); get it with GET /items/{id}.",
                 "produces": [
                     "application/json"
                 ],
@@ -386,6 +386,7 @@ const docTemplate = `{
         },
         "/items/{id}": {
             "get": {
+                "description": "Includes content: the recognized text, paragraphs separated by a blank line.",
                 "produces": [
                     "application/json"
                 ],
@@ -735,7 +736,7 @@ const docTemplate = `{
                         "BearerAuth": []
                     }
                 ],
-                "description": "Item-based collaborative filtering over the last 50 liked items.\nIf there are not enough results, items matching the profile (interests, level, language)\nand then popular items are added. Items already interacted with are never returned.\nreason is \"because you read \u003ctitle\u003e\", \"matches your interests\" or \"popular\" (score 0 for the last two).",
+                "description": "Item-based collaborative filtering over the last 50 liked items.\nIf there are not enough results, items matching the profile (interests, level, language)\nand then popular items are added. Items already interacted with are never returned.\nreason is \"because you read \u003ctitle\u003e\", \"matches your interests\" or \"popular\" (score 0 for the last two).\nItems have no content (the text); get it with GET /items/{id}.",
                 "produces": [
                     "application/json"
                 ],
@@ -897,6 +898,11 @@ const docTemplate = `{
                 },
                 "category": {
                     "$ref": "#/definitions/domain.Category"
+                },
+                "content": {
+                    "description": "Content is the recognized text: paragraphs separated by a blank line.\nIt is returned by GET /items/{id} only; lists leave it out.",
+                    "type": "string",
+                    "example": "Күз келіп, дала сарғая бастады..."
                 },
                 "createdAt": {
                     "type": "string"
@@ -1110,6 +1116,10 @@ const docTemplate = `{
                 },
                 "category": {
                     "$ref": "#/definitions/domain.Category"
+                },
+                "content": {
+                    "description": "Content is the recognized text, paragraphs separated by a blank line (optional).",
+                    "type": "string"
                 },
                 "description": {
                     "type": "string"

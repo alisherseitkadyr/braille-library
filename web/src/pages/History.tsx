@@ -10,6 +10,9 @@ function describe(e: HistoryEntry): string {
   let text = INTERACTION_LABELS[e.type];
   if (e.type === "rate") text += ` ${e.value} of 5`;
   if (e.type === "read") text += `, progress ${e.value}%`;
+  if (e.type === "correction" && e.correction) {
+    text += ` "${e.correction.original}" → "${e.correction.suggested}"`;
+  }
   return text;
 }
 

@@ -31,6 +31,8 @@ var (
 	levels = []domain.Level{domain.LevelBeginner, domain.LevelIntermediate, domain.LevelAdvanced}
 	now    = time.Now().UTC().Truncate(time.Second)
 	f      = gofakeit.New(randomSeed)
+	// The item texts use their own generator, so adding them did not change the rest of the data.
+	contentRand = gofakeit.New(randomSeed + 1)
 )
 
 func main() {
@@ -85,8 +87,8 @@ func main() {
 
 	perf := *interactionCount > 0
 	users := makeUsers(*userCount, perf)
-	items := makeItems(*itemCount)
-	interactions := makeInteractions(users, items, *interactionCount)
+	items, textErrors := makeItems(*itemCount)
+	interactions := makeInteractions(users, items, textErrors, *interactionCount)
 
 	insertAll(ctx, db.Collection(mongo.UsersCollection), users)
 	insertAll(ctx, db.Collection(mongo.ItemsCollection), items)
@@ -177,7 +179,9 @@ func newUser(email, name string, role domain.Role, lang domain.Language, level d
 	}
 }
 
-func makeItems(itemCount int) []domain.Item {
+// makeItems also returns the recognition errors put into each item's content.
+func makeItems(itemCount int) ([]domain.Item, map[bson.ObjectID][]textError) {
+	textErrors := map[bson.ObjectID][]textError{}
 	seen := map[string]bool{}
 	items := make([]domain.Item, 0, itemCount)
 	for len(items) < itemCount {
@@ -245,15 +249,19 @@ func makeItems(itemCount int) []domain.Item {
 		}
 
 		created := f.DateRange(now.AddDate(-1, 0, 0), now.AddDate(0, -1, 0))
+		id := bson.NewObjectID()
+		accuracy = math.Round(accuracy*1000) / 1000
+		content, errs := makeContent(contentRand, category, lang, accuracy)
+		textErrors[id] = errs
 		items = append(items, domain.Item{
-			ID: bson.NewObjectID(), Title: title, Description: desc, Category: category,
+			ID: id, Title: title, Description: desc, Category: category,
 			Level: level, Language: lang, BrailleGrade: grade, Pages: pages, Author: author,
 			Tags: tags[:f.Number(2, 3)], HasAudio: f.Float64() < audioChance,
-			RecognitionAccuracy: math.Round(accuracy*1000) / 1000,
-			CreatedAt:           created, UpdatedAt: created,
+			RecognitionAccuracy: accuracy, Content: content,
+			CreatedAt: created, UpdatedAt: created,
 		})
 	}
-	return items
+	return items, textErrors
 }
 
 // makeInteractions simulates reading sessions. Each user picks items with weights based on
@@ -261,7 +269,7 @@ func makeItems(itemCount int) []domain.Item {
 //
 // total = 0 gives the demo data (35-85 interactions per user). total > 0 gives exactly
 // that many interactions, about total/users per user, for performance tests.
-func makeInteractions(users []domain.User, items []domain.Item, total int) []domain.Interaction {
+func makeInteractions(users []domain.User, items []domain.Item, textErrors map[bson.ObjectID][]textError, total int) []domain.Interaction {
 	result := make([]domain.Interaction, 0, total)
 	ratings := map[bson.ObjectID][]int{}
 	// One rating and one favorite per user and item (unique index), across all passes.
@@ -342,11 +350,11 @@ func makeInteractions(users []domain.User, items []domain.Item, total int) []dom
 				}
 
 				// Lower recognition accuracy means more errors for readers to correct.
-				if progress > 0 && f.Float64() < (1-it.RecognitionAccuracy)*3 {
-					pairs := corrections[it.Language]
-					c := pairs[f.IntN(len(pairs))]
+				// A correction points at one of the errors in the item's text.
+				if errs := textErrors[it.ID]; progress > 0 && len(errs) > 0 && f.Float64() < (1-it.RecognitionAccuracy)*3 {
+					e := errs[f.IntN(len(errs))]
 					add(domain.InteractionCorrection, nil, &domain.Correction{
-						Position: f.Number(0, it.Pages*1200), Original: c[0], Suggested: c[1],
+						Position: e.Position, Original: e.Wrong, Suggested: e.Correct,
 					})
 				}
 			}

@@ -41,6 +41,8 @@ type ItemInput struct {
 	Tags                []string        `json:"tags"`
 	HasAudio            bool            `json:"hasAudio"`
 	RecognitionAccuracy float64         `json:"recognitionAccuracy"`
+	// Content is the recognized text, paragraphs separated by a blank line (optional).
+	Content string `json:"content"`
 }
 
 type ItemPage struct {
@@ -126,6 +128,7 @@ func validateItem(in *ItemInput) error {
 	in.Title = strings.TrimSpace(in.Title)
 	in.Description = strings.TrimSpace(in.Description)
 	in.Author = strings.TrimSpace(in.Author)
+	in.Content = strings.TrimSpace(in.Content)
 
 	tags := []string{}
 	for _, t := range in.Tags {
@@ -166,5 +169,6 @@ func applyItemInput(item *domain.Item, in ItemInput, now time.Time) {
 	item.Tags = in.Tags
 	item.HasAudio = in.HasAudio
 	item.RecognitionAccuracy = in.RecognitionAccuracy
+	item.Content = in.Content
 	item.UpdatedAt = now
 }

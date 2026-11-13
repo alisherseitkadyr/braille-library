@@ -117,8 +117,14 @@ func (s *InteractionService) record(ctx context.Context, userID string, in Inter
 	if err != nil {
 		return nil, false, domain.Invalid("itemId is not a valid id")
 	}
-	if _, err := s.items.GetByID(ctx, itemID); err != nil {
+	item, err := s.items.GetByID(ctx, itemID)
+	if err != nil {
 		return nil, false, err
+	}
+	if in.Type == domain.InteractionCorrection {
+		if err := CheckCorrection(item.Content, *in.Correction); err != nil {
+			return nil, false, err
+		}
 	}
 
 	it := &domain.Interaction{
@@ -170,4 +176,20 @@ func (s *InteractionService) updateItemRating(ctx context.Context, itemID bson.O
 		return err
 	}
 	return s.items.SetRating(ctx, itemID, math.Round(avg*100)/100, count)
+}
+
+// CheckCorrection makes sure a correction points at real text: original must be
+// what the content says at position (counted in characters, i.e. Unicode code
+// points). Items without content (created without a text) accept any position.
+func CheckCorrection(content string, c domain.Correction) error {
+	if content == "" {
+		return nil
+	}
+	text := []rune(content)
+	original := []rune(c.Original)
+	end := c.Position + len(original)
+	if end > len(text) || string(text[c.Position:end]) != c.Original {
+		return domain.Invalid("correction.original does not match the text at correction.position")
+	}
+	return nil
 }

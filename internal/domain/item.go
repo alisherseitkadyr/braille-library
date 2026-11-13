@@ -32,10 +32,13 @@ type Item struct {
 	Tags                []string      `bson:"tags" json:"tags"`
 	HasAudio            bool          `bson:"hasAudio" json:"hasAudio"`
 	RecognitionAccuracy float64       `bson:"recognitionAccuracy" json:"recognitionAccuracy"`
-	AvgRating           float64       `bson:"avgRating" json:"avgRating"`
-	RatingsCount        int           `bson:"ratingsCount" json:"ratingsCount"`
-	CreatedAt           time.Time     `bson:"createdAt" json:"createdAt"`
-	UpdatedAt           time.Time     `bson:"updatedAt" json:"updatedAt"`
+	// Content is the recognized text: paragraphs separated by a blank line.
+	// It is returned by GET /items/{id} only; lists leave it out.
+	Content      string    `bson:"content,omitempty" json:"content,omitempty" example:"Күз келіп, дала сарғая бастады..."`
+	AvgRating    float64   `bson:"avgRating" json:"avgRating"`
+	RatingsCount int       `bson:"ratingsCount" json:"ratingsCount"`
+	CreatedAt    time.Time `bson:"createdAt" json:"createdAt"`
+	UpdatedAt    time.Time `bson:"updatedAt" json:"updatedAt"`
 }
 
 const (
