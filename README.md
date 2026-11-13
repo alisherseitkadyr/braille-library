@@ -32,7 +32,7 @@ data and only rebuild the similarities.
 | Service | URL |
 |---|---|
 | Web UI | http://localhost:3000 |
-| API | http://localhost:8080 |
+| API (the root redirects to Swagger UI) | http://localhost:8080 |
 | Swagger UI | http://localhost:8080/docs |
 | mongo-express (basic auth from `.env`) | http://localhost:8081 |
 | MongoDB (local machine only) | `mongodb://localhost:27017` |

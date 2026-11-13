@@ -42,6 +42,11 @@ func NewRouter(d Deps) http.Handler {
 	recsH := handlers.NewRecommendationHandler(d.Recommendations)
 
 	r.Get("/health", health.Health)
+	// The API has no page of its own at "/": send visitors to the API docs.
+	// (The web UI is a separate service on port 3000.)
+	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
+		http.Redirect(w, r, "/docs/index.html", http.StatusFound)
+	})
 	r.Get("/docs", func(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/docs/index.html", http.StatusMovedPermanently)
 	})
