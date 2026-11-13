@@ -78,6 +78,9 @@ export default function Layout() {
                   <NavLink to="/history">History</NavLink>
                 </li>
                 <li>
+                  <NavLink to="/braille">Braille converter</NavLink>
+                </li>
+                <li>
                   <NavLink to="/profile">Profile</NavLink>
                 </li>
                 <li>
@@ -90,6 +93,9 @@ export default function Layout() {
               <>
                 <li>
                   <NavLink to="/catalog">Catalog</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/braille">Braille converter</NavLink>
                 </li>
                 <li>
                   <NavLink to="/login">Log in</NavLink>

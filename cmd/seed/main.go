@@ -223,9 +223,10 @@ func makeItems(itemCount int) ([]domain.Item, map[bson.ObjectID][]textError) {
 		}
 
 		// Grade 2 uses contractions, so it is more common at higher levels and harder to recognise.
+		// Kazakh Braille has no contractions, so Kazakh texts are always grade 1.
 		grade := 1
 		gradeTwoChance := map[domain.Level]float64{domain.LevelBeginner: 0.15, domain.LevelIntermediate: 0.5, domain.LevelAdvanced: 0.8}
-		if f.Float64() < gradeTwoChance[level] {
+		if lang == domain.LangRussian && f.Float64() < gradeTwoChance[level] {
 			grade = 2
 		}
 		accuracy := f.Float64Range(0.88, 0.99)

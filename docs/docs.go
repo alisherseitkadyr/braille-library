@@ -144,6 +144,66 @@ const docTemplate = `{
                 }
             }
         },
+        "/braille/convert": {
+            "post": {
+                "description": "Uncontracted Kazakh Braille (the Russian letters use the same cells) as Unicode Braille patterns.\nLetters are lowercased: there is no capital sign, because sources disagree on it.\nDigits get the number sign ⠼ once before each run. Spaces and line breaks stay.\nAny other character is left out and listed once in skipped.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "braille"
+                ],
+                "summary": "Convert text to Braille",
+                "parameters": [
+                    {
+                        "description": "Text",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/handlers.ConvertRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/handlers.ConvertResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/handlers.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/braille/table": {
+            "get": {
+                "description": "All cells with their dot numbers: letters in alphabet order, punctuation, the number sign, digits.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "braille"
+                ],
+                "summary": "The Braille table",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/handlers.BrailleTable"
+                        }
+                    }
+                }
+            }
+        },
         "/health": {
             "get": {
                 "description": "Checks that the API is running and MongoDB answers a ping.",
@@ -530,6 +590,41 @@ const docTemplate = `{
                 }
             }
         },
+        "/items/{id}/braille": {
+            "get": {
+                "description": "The content converted like POST /braille/convert; paragraphs stay separated by a blank line.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "braille"
+                ],
+                "summary": "An item's text in Braille",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Item ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/handlers.ConvertResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/handlers.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
         "/items/{id}/similar": {
             "get": {
                 "description": "Neighbors from item_similarities (cosine similarity with shrinkage), most similar first.\nEmpty until the first rebuild, or if nobody who liked this item liked anything else.",
@@ -779,6 +874,33 @@ const docTemplate = `{
         }
     },
     "definitions": {
+        "braille.Entry": {
+            "type": "object",
+            "properties": {
+                "braille": {
+                    "type": "string",
+                    "example": "⠹"
+                },
+                "char": {
+                    "type": "string",
+                    "example": "қ"
+                },
+                "dots": {
+                    "type": "string",
+                    "example": "1-4-5-6"
+                },
+                "kind": {
+                    "type": "string",
+                    "enum": [
+                        "letter",
+                        "punctuation",
+                        "digit",
+                        "sign"
+                    ],
+                    "example": "letter"
+                }
+            }
+        },
         "domain.Category": {
             "type": "string",
             "enum": [
@@ -1019,6 +1141,45 @@ const docTemplate = `{
                 },
                 "updatedAt": {
                     "type": "string"
+                }
+            }
+        },
+        "handlers.BrailleTable": {
+            "type": "object",
+            "properties": {
+                "entries": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/braille.Entry"
+                    }
+                }
+            }
+        },
+        "handlers.ConvertRequest": {
+            "type": "object",
+            "properties": {
+                "text": {
+                    "type": "string",
+                    "example": "Абай жолы 2026!"
+                }
+            }
+        },
+        "handlers.ConvertResponse": {
+            "type": "object",
+            "properties": {
+                "braille": {
+                    "type": "string",
+                    "example": "⠁⠃⠁⠯ ⠚⠕⠇⠮ ⠼⠃⠚⠃⠋⠖"
+                },
+                "skipped": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "«",
+                        "»"
+                    ]
                 }
             }
         },

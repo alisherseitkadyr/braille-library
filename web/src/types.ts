@@ -91,3 +91,15 @@ export interface HistoryEntry {
   correction?: { position: number; original: string; suggested: string };
   createdAt: string;
 }
+
+export interface BrailleResult {
+  braille: string;
+  skipped: string[];
+}
+
+export interface BrailleEntry {
+  char: string;
+  braille: string;
+  dots: string;
+  kind: "letter" | "punctuation" | "digit" | "sign";
+}

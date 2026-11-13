@@ -1,5 +1,25 @@
 basePath: /
 definitions:
+  braille.Entry:
+    properties:
+      braille:
+        example: ⠹
+        type: string
+      char:
+        example: қ
+        type: string
+      dots:
+        example: 1-4-5-6
+        type: string
+      kind:
+        enum:
+        - letter
+        - punctuation
+        - digit
+        - sign
+        example: letter
+        type: string
+    type: object
   domain.Category:
     enum:
     - fiction
@@ -172,6 +192,32 @@ definitions:
         $ref: '#/definitions/domain.Role'
       updatedAt:
         type: string
+    type: object
+  handlers.BrailleTable:
+    properties:
+      entries:
+        items:
+          $ref: '#/definitions/braille.Entry'
+        type: array
+    type: object
+  handlers.ConvertRequest:
+    properties:
+      text:
+        example: Абай жолы 2026!
+        type: string
+    type: object
+  handlers.ConvertResponse:
+    properties:
+      braille:
+        example: ⠁⠃⠁⠯ ⠚⠕⠇⠮ ⠼⠃⠚⠃⠋⠖
+        type: string
+      skipped:
+        example:
+        - «
+        - »
+        items:
+          type: string
+        type: array
     type: object
   handlers.ErrorResponse:
     properties:
@@ -443,6 +489,50 @@ paths:
       summary: Register a new user
       tags:
       - auth
+  /braille/convert:
+    post:
+      consumes:
+      - application/json
+      description: |-
+        Uncontracted Kazakh Braille (the Russian letters use the same cells) as Unicode Braille patterns.
+        Letters are lowercased: there is no capital sign, because sources disagree on it.
+        Digits get the number sign ⠼ once before each run. Spaces and line breaks stay.
+        Any other character is left out and listed once in skipped.
+      parameters:
+      - description: Text
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/handlers.ConvertRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handlers.ConvertResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      summary: Convert text to Braille
+      tags:
+      - braille
+  /braille/table:
+    get:
+      description: 'All cells with their dot numbers: letters in alphabet order, punctuation,
+        the number sign, digits.'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handlers.BrailleTable'
+      summary: The Braille table
+      tags:
+      - braille
   /health:
     get:
       description: Checks that the API is running and MongoDB answers a ping.
@@ -708,6 +798,30 @@ paths:
       summary: Update an item (admin)
       tags:
       - items
+  /items/{id}/braille:
+    get:
+      description: The content converted like POST /braille/convert; paragraphs stay
+        separated by a blank line.
+      parameters:
+      - description: Item ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handlers.ConvertResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handlers.ErrorResponse'
+      summary: An item's text in Braille
+      tags:
+      - braille
   /items/{id}/similar:
     get:
       description: |-

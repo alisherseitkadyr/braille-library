@@ -12,6 +12,7 @@ import Catalog from "./pages/Catalog";
 import ItemPage from "./pages/ItemPage";
 import History from "./pages/History";
 import Profile from "./pages/Profile";
+import Converter from "./pages/Converter";
 import "./styles.css";
 
 function RequireAuth({ children }: { children: ReactNode }) {
@@ -41,6 +42,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/register" element={<Register />} />
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/items/:id" element={<ItemPage />} />
+            <Route path="/braille" element={<Converter />} />
             <Route path="/" element={<RequireAuth><Home /></RequireAuth>} />
             <Route path="/history" element={<RequireAuth><History /></RequireAuth>} />
             <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />

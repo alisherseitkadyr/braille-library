@@ -1,5 +1,8 @@
 import { useEffect, useMemo, useRef } from "react";
 import { expandToWords, charLength, paragraphs } from "../textpos";
+import type { BrailleLine } from "../braille";
+import BrailleView from "./BrailleView";
+import { Loading } from "./common";
 
 export const PROGRESS_STEPS = [25, 50, 80, 100];
 
@@ -14,14 +17,20 @@ export interface PickedText {
  * each step at most once. Selecting text calls onPick with the selection
  * expanded to whole words and its character position in the content.
  */
+export type ReadingView = "text" | "braille" | "side";
+
 export default function Reader({
   content,
   lang,
+  view = "text",
+  braille,
   onProgress,
   onPick,
 }: {
   content: string;
   lang: string;
+  view?: ReadingView;
+  braille?: BrailleLine[] | null; // the paragraphs in Braille, needed for "braille" and "side"
   onProgress: (step: number) => void;
   onPick: (picked: PickedText) => void;
 }) {
@@ -80,13 +89,25 @@ export default function Reader({
     });
   };
 
+  if (view !== "text" && !braille) {
+    return <Loading what="the Braille text" />;
+  }
   return (
-    <div ref={textRef} className="reading" lang={lang} onMouseUp={pickSelection} onKeyUp={pickSelection}>
-      {parts.map((part) => (
-        <p key={part.start} data-start={part.start}>
-          {part.text}
-        </p>
-      ))}
+    <div
+      ref={textRef}
+      className={view === "text" ? "reading" : "reading braille-reading"}
+      lang={view === "braille" ? undefined : lang}
+      onMouseUp={pickSelection}
+      onKeyUp={pickSelection}
+    >
+      {view === "text" &&
+        parts.map((part) => (
+          <p key={part.start} data-start={part.start}>
+            {part.text}
+          </p>
+        ))}
+      {view === "braille" && braille && <BrailleView lines={braille} />}
+      {view === "side" && braille && <BrailleView lines={braille} texts={parts} lang={lang} />}
     </div>
   );
 }

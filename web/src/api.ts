@@ -1,7 +1,8 @@
-import type { HistoryEntry, Item, Page, Recommendation, SimilarItem, User } from "./types";
+import type { BrailleEntry, BrailleResult, HistoryEntry, Item, Page, Recommendation, SimilarItem, User } from "./types";
 
 const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:8080";
 const TOKEN_KEY = "token";
+let brailleTable: Promise<BrailleEntry[]> | undefined;
 
 export class ApiError extends Error {
   constructor(public status: number, message: string) {
@@ -101,4 +102,16 @@ export const api = {
 
   interact: (itemId: string, type: string, value?: number, correction?: Correction) =>
     request<unknown>("POST", "/interactions", { itemId, type, value, correction }),
+
+  brailleConvert: (text: string) => request<BrailleResult>("POST", "/braille/convert", { text }),
+  itemBraille: (id: string) => request<BrailleResult>("GET", `/items/${id}/braille`),
+  // The table never changes while the app runs, so it is loaded once.
+  brailleTable: () =>
+    (brailleTable ??= request<{ entries: BrailleEntry[] }>("GET", "/braille/table").then(
+      (r) => r.entries,
+      (e) => {
+        brailleTable = undefined; // try again next time
+        throw e;
+      },
+    )),
 };

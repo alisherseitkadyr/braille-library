@@ -40,6 +40,7 @@ func NewRouter(d Deps) http.Handler {
 	itemsH := handlers.NewItemHandler(d.Items)
 	interactionsH := handlers.NewInteractionHandler(d.Interactions)
 	recsH := handlers.NewRecommendationHandler(d.Recommendations)
+	brailleH := handlers.NewBrailleHandler(d.Items)
 
 	r.Get("/health", health.Health)
 	// The API has no page of its own at "/": send visitors to the API docs.
@@ -58,6 +59,9 @@ func NewRouter(d Deps) http.Handler {
 	r.Get("/items", itemsH.List)
 	r.Get("/items/{id}", itemsH.Get)
 	r.Get("/items/{id}/similar", recsH.Similar)
+	r.Get("/items/{id}/braille", brailleH.Item)
+	r.Post("/braille/convert", brailleH.Convert)
+	r.Get("/braille/table", brailleH.Table)
 
 	r.Group(func(r chi.Router) {
 		r.Use(middleware.Authenticate(d.Tokens))

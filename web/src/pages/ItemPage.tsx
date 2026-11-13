@@ -4,7 +4,8 @@ import { api } from "../api";
 import { useAuth } from "../auth";
 import { ErrorMessage, ItemCard, Loading, PageHeading, itemMeta, ratingText } from "../components/common";
 import Listen from "../components/Listen";
-import Reader, { type PickedText } from "../components/Reader";
+import Reader, { type PickedText, type ReadingView } from "../components/Reader";
+import { decodeParagraphs, type BrailleLine } from "../braille";
 import { occurrences } from "../textpos";
 import type { Item, SimilarItem } from "../types";
 
@@ -16,6 +17,9 @@ export default function ItemPage() {
   const [error, setError] = useState("");
   const [readStatus, setReadStatus] = useState("");
   const [picked, setPicked] = useState<PickedText | null>(null);
+  const [view, setView] = useState<ReadingView>("text");
+  const [braille, setBraille] = useState<{ lines: BrailleLine[]; skipped: string[] } | null>(null);
+  const [brailleError, setBrailleError] = useState("");
   const viewed = useRef("");
 
   useEffect(() => {
@@ -24,6 +28,8 @@ export default function ItemPage() {
     setError("");
     setReadStatus("");
     setPicked(null);
+    setBraille(null);
+    setBrailleError("");
     api.item(id).then(setItem).catch((e) => setError(e.message));
     api.similar(id, 10).then((r) => setSimilar(r.items)).catch(() => setSimilar([]));
   }, [id]);
@@ -35,6 +41,14 @@ export default function ItemPage() {
       api.interact(item.id, "view").catch(() => {});
     }
   }, [user, item]);
+
+  // The Braille text is loaded the first time a Braille view is chosen.
+  useEffect(() => {
+    if (view === "text" || braille || brailleError) return;
+    Promise.all([api.itemBraille(id), api.brailleTable()])
+      .then(([b, table]) => setBraille({ lines: decodeParagraphs(b.braille, table), skipped: b.skipped }))
+      .catch((e) => setBrailleError(e.message));
+  }, [view, id, braille, brailleError]);
 
   const loggedIn = Boolean(user);
   const onProgress = useCallback(
@@ -99,8 +113,33 @@ export default function ItemPage() {
                 ? "Your reading progress is saved as you scroll. To report a recognition error, select the wrong word in the text, or type it in the form below the text."
                 : "Log in to save your reading progress and report recognition errors."}
             </p>
+            <fieldset className="view-switch">
+              <legend>Show the text as</legend>
+              {(
+                [
+                  ["text", "Text"],
+                  ["braille", "Braille"],
+                  ["side", "Side by side"],
+                ] as const
+              ).map(([value, text]) => (
+                <div key={value} className="check">
+                  <input type="radio" name="view" id={`view-${value}`} value={value}
+                    checked={view === value} onChange={() => setView(value)} />
+                  <label htmlFor={`view-${value}`}>{text}</label>
+                </div>
+              ))}
+            </fieldset>
+            {view !== "text" && (
+              <p className="hint">
+                Uncontracted Kazakh Braille (Russian letters use the same cells). Letters are shown without a capital
+                sign, because sources disagree on it.
+                {braille && braille.skipped.length > 0 && <> Not converted: {braille.skipped.join(" ")}</>}
+              </p>
+            )}
+            <ErrorMessage error={brailleError} />
             <p role="status" className="success">{readStatus}</p>
-            <Reader content={item.content} lang={item.language} onProgress={onProgress} onPick={setPicked} />
+            <Reader content={item.content} lang={item.language} view={view} braille={braille?.lines}
+              onProgress={onProgress} onPick={setPicked} />
           </section>
         </>
       ) : (

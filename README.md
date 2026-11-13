@@ -148,6 +148,9 @@ Protected endpoints need the header `Authorization: Bearer <token>`. You get a t
 | GET | `/items?q=&category=&level=&language=&sort=new\|rating&page=&limit=` | | Search the catalog |
 | GET | `/items/{id}` | | One item |
 | GET | `/items/{id}/similar?limit=` | | Most similar items (limit default 10, max 20) |
+| GET | `/items/{id}/braille` | | The item text in Braille (`{braille, skipped}`, paragraphs kept) |
+| POST | `/braille/convert` | | Convert `{text}` to Braille, returns `{braille, skipped}` |
+| GET | `/braille/table` | | All Braille cells with their dot numbers |
 | POST | `/items` | admin | Create an item |
 | PUT | `/items/{id}` | admin | Replace an item's fields |
 | DELETE | `/items/{id}` | admin | Delete an item |
@@ -259,7 +262,8 @@ served by nginx on http://localhost:3000.
 | Log in, Register | account; registration also asks for reading preferences |
 | Recommended (home) | "Recommended for you" with the reason for each text |
 | Catalog | search with filters for category, level, language and sort |
-| Text page | details; **Listen** (read aloud); **Read** (the text); rate 1-5, add to favorites, reading progress, report a recognition error; "Similar texts" |
+| Braille converter | text to Braille, the characters that were not converted, a copy button, and the table of all cells with dot numbers |
+| Text page | details; **Listen** (read aloud); **Read** (the text as Text, Braille or Side by side); rate 1-5, add to favorites, reading progress, report a recognition error; "Similar texts" |
 | History | all my actions, newest first, with a filter by type |
 | Profile | name, interests, reading level, language, audio preference |
 
@@ -276,6 +280,14 @@ with a voice for the item's language. If the browser has no such voice (Kazakh v
 rarely installed), the default voice is used and a note says so. Play/Pause is one toggle
 button, so the keyboard focus never gets lost; Stop returns the focus to it. The first playback
 on a page records a `listen`.
+
+**Braille view.** The Read section can show the text as Text, Braille, or Side by side (each
+paragraph next to its Braille). The Braille comes from `GET /items/{id}/braille`, in a large
+font. Clicking or focusing a cell shows its letter, its dot numbers and a picture of the six
+dots. All cells are one stop for the Tab key; the arrow keys, Home and End move between cells,
+so a long text does not mean hundreds of Tab presses. Screen readers do not read the Braille
+glyphs (they are `aria-hidden`); a cell is announced by its meaning ("қ, dots 1-4-5-6"), and a
+visually hidden note says that blind readers get Braille through their own Braille display.
 
 **Report a recognition error.** Select the wrong word in the text (a double-click is enough;
 partly selected words are completed): the form fills in the recognized text and its exact
@@ -304,6 +316,26 @@ cd web
 npm install
 npm run dev                          # http://localhost:5173
 ```
+
+## Braille converter
+
+`internal/braille` converts text to **uncontracted Kazakh Braille** as Unicode Braille cells
+(U+2800-U+28FF). Table: Wikipedia "Kazakh Braille", based on UNESCO "World Braille Usage". The
+Russian letters have the same cells as in Kazakh Braille, so one table serves `kk` and `ru`.
+
+| Rule | |
+|---|---|
+| Letters | 42 letters, e.g. а ⠁, ә ⠜, қ ⠹, ң ⠩, ө ⠣, ұ ⠬, ү ⠌, і ⠽ (full table: `GET /braille/table` or the converter page) |
+| Capitals | none: text is lowercased first, because sources disagree on the Kazakh capital sign |
+| Punctuation | `,` ⠂ `.` ⠲ `?` ⠢ `!` ⠖ `;` ⠆ `:` ⠒ |
+| Digits | the number sign ⠼ once before each run of digits, then 1 ⠁ 2 ⠃ 3 ⠉ 4 ⠙ 5 ⠑ 6 ⠋ 7 ⠛ 8 ⠓ 9 ⠊ 0 ⠚ |
+| Spaces, line breaks | kept |
+| Anything else | left out and listed in `skipped` (each character once), e.g. `-`, `«`, `—`, Latin letters |
+
+Examples: "Абай" → ⠁⠃⠁⠯, "Қазақ" → ⠹⠁⠵⠁⠹, "2026" → ⠼⠃⠚⠃⠋.
+
+Kazakh Braille has no contractions, so the seed makes all Kazakh texts `brailleGrade` 1; only
+Russian texts can be grade 2.
 
 ## Data model and indexes
 
@@ -454,6 +486,12 @@ items than the popularity baseline.
 - **Read progress is an estimate.** It is based on scrolling, so it shows how far a reader got,
   not that they read every word. A fast smooth scroll through the text also counts (for example,
   the End key records 50% when the scroll animation passes part of the text).
+- **The Braille converter is simplified.** It writes uncontracted Braille only, with no capital
+  sign (sources disagree on it) and no letter sign: a letter right after a number (for example
+  "2а") would be read as a digit, because the digits use the cells of ten letters (1 = а,
+  2 = б, 3 = ц, ...). Characters
+  outside the table (hyphens, dashes, quotes, Latin letters) are left out and listed. It is a
+  learning aid, not a replacement for professional Braille transcription.
 - **Listening depends on the voices installed in the browser.** Kazakh voices are rarely
   available, so Kazakh texts are usually read by a Russian or English voice, which mispronounces
   letters like қ, ә and ң. The item field `hasAudio` (a recorded audio version) is separate
@@ -467,8 +505,10 @@ go test ./...                        # make test
 
 Unit tests cover the interaction weights and scores, the similarity formula, the top-20 cut,
 the recommendation scoring, the equality of the live and precomputed neighbors, the TTL
-cache, and the check that a correction matches the text at its position (in characters, also
-for multi-byte Kazakh letters).
+cache, the check that a correction matches the text at its position (in characters, also
+for multi-byte Kazakh letters), and the Braille converter (every letter of the table in lower
+and upper case, digits with the number sign, punctuation, skipped characters, dot numbers, and
+that every letter cell is unique).
 
 ## Swagger docs
 
@@ -493,6 +533,7 @@ internal/
   domain/               User, Item, Interaction, allowed values, errors
   auth/                 bcrypt passwords and JWT tokens
   recommend/            the algorithm: scores, similarities, ranking (no database code)
+  braille/              text to uncontracted Kazakh Braille (Unicode), the table, dot numbers
   cache/                in-memory TTL cache
   repository/mongo/     MongoDB connection, indexes, queries and aggregations
   service/              business logic and validation

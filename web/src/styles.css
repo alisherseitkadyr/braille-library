@@ -353,3 +353,134 @@ main:focus {
 .listen .button-row {
   margin-bottom: 0.25rem;
 }
+
+/* Braille */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.view-switch .check {
+  display: inline-flex;
+  margin-right: 1.5rem;
+}
+.braille-reading {
+  max-width: none;
+}
+.braille-line,
+.braille-glyph,
+.cell-info-glyph {
+  font-family: "Segoe UI Symbol", "DejaVu Sans", "Apple Braille", sans-serif;
+}
+.braille-line {
+  font-size: 2rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.braille-space {
+  display: inline-block;
+  width: 0.6em;
+}
+button.cell {
+  min-height: 0;
+  padding: 0 0.05em;
+  border: none;
+  border-radius: 0.15rem;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-weight: normal;
+}
+button.cell:hover {
+  background: var(--card-bg);
+}
+/* Shows the meaning of the focused or clicked cell; stays visible while scrolling. */
+.cell-info {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  min-height: 3.5rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  background: var(--card-bg);
+  border: 0.15rem solid var(--border);
+  border-radius: 0.25rem;
+  font-size: 1.125rem;
+}
+.cell-info-glyph {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+.dot-picture {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 0.8rem);
+  gap: 0.25rem;
+}
+.dot {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 0.12rem solid var(--text);
+}
+.dot.raised {
+  background: var(--text);
+}
+/* Side by side: text and Braille of each paragraph in one row. */
+.side-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.side-row .braille-line {
+  font-size: 1.6rem;
+  margin-top: 0;
+}
+@media (max-width: 45rem) {
+  .side-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+textarea {
+  font: inherit;
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 0.15rem solid var(--border);
+  border-radius: 0.25rem;
+  background: var(--bg);
+  color: var(--text);
+}
+.braille-table {
+  border-collapse: collapse;
+  margin: 0 1.5rem 1.5rem 0;
+  display: inline-table;
+  vertical-align: top;
+}
+.braille-table caption {
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 0.25rem;
+}
+.braille-table th,
+.braille-table td {
+  border: 0.1rem solid var(--border);
+  padding: 0.2rem 0.75rem;
+  text-align: left;
+}
+.braille-table .braille-glyph {
+  font-size: 1.75rem;
+}
+.skipped code {
+  font-size: 1.25rem;
+}
